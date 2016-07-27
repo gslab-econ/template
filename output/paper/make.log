@@ -1,0 +1,69 @@
+
+ make.py started: 2016-07-27 15:59:34 /Users/mrsull/Desktop/admin/template/source/paper 
+
+
+Path: gslab_make
+URL: https://econ-gentzkow-svn.stanford.edu/repos/main/trunk/lib/python/gslab_make
+Repository Root: https://econ-gentzkow-svn.stanford.edu/repos/main
+Repository UUID: 89b4331b-4301-411a-8e06-9c78d9cdb83d
+Revision: 34748
+Node Kind: directory
+Last Changed Author: jwchoi2
+Last Changed Rev: 33502
+Last Changed Date: 2016-02-07 17:40:17 -0800 (Sun, 07 Feb 2016)
+
+
+ get_externals.py started: 2016-07-27 15:59:35 /Users/mrsull/Desktop/admin/template/source/paper
+Note: not using filename externals.txt.
+
+
+ Input was: "33730	%svn%/lib/python/gslab_misc	*	../../external/paper/lib/python/gslab_misc	""""".
+SVN command passed: https://econ-gentzkow-svn.stanford.edu/repos/main/trunk/lib/python/gslab_misc/ @33730 exported to ../../external/paper/../../external/paper/lib/python/gslab_misc/.
+
+ get_externals.py ended: 2016-07-27 15:59:35
+
+
+Execute:  lyx -e pdf2 "./paper.lyx"
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+
+
+Execute:  lyx -e pdf2 "./paper_online.lyx"
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper_online.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper_online.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+
+
+Execute:  lyx -e pdf2 "./claims.lyx"
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./claims.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+
+ make.py ended: 2016-07-27 15:59:38

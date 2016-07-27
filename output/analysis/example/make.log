@@ -1,0 +1,51 @@
+Starting source/analysis/example/sample_plots.R at 07/27/16:16:07:05
+[1] "This is a sample message for the log."
+null device 
+          1 
+Finished source/analysis/example/sample_plots.R at 07/27/16:16:07:05
+Starting source/analysis/example/sample_stata.do at 07/27/16:16:07:05
+
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   14.1   Copyright 1985-2015 StataCorp LP
+  Statistics/Data Analysis            StataCorp
+                                      4905 Lakeway Drive
+     MP - Parallel Edition            College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+Unlimited-user 4-core Stata network license expires 21 Jul 2017:
+       Serial number:  501409012939
+         Licensed to:  SIEPR
+                       Stanford University
+
+Notes:
+      1.  Stata is running in batch mode.
+      2.  Unicode is supported; see help unicode_advice.
+      3.  More than 2 billion observations are allowed; see help obs_advice.
+      4.  Maximum number of variables is set to 5000; see help set_maxvar.
+
+. do source/analysis/example/sample_stata.do 
+
+. version 13
+
+. set more off
+
+. 
+. program main
+  1.     sub_function
+  2. end
+
+. 
+. program sub_function
+  1.    display "Hello world! This is a test Stata script."
+  2. end
+
+. 
+. main
+Hello world! This is a test Stata script.
+
+. 
+end of do-file
+Finished source/analysis/example/sample_stata.do at 07/27/16:16:07:05

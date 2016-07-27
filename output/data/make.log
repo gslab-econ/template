@@ -1,0 +1,4 @@
+"Starting at " $(date +%D:%H:%M:%S) 
+Starting source/data/process_stopwords.R at 07/27/16:07:17:16
+Finished source/data/process_stopwords.R at 07/27/16:07:17:16
+'Finished at ' $(date +%D:%H:%M:%S) 

@@ -1,0 +1,3 @@
+JOB_NAME	example
+JOB_DIR	source/analysis/example
+OUTPUT_DIR	output/analysis/example
