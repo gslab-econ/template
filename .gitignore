@@ -1,0 +1,11 @@
+*.lyx~
+*.lyx#
+*.Rhistory
+*.Rapp.history
+/data
+/log/
+/results/
+/saved
+/external/
+/temp/
+*.DS_Store
