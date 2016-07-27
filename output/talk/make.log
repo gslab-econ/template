@@ -1,13 +1,12 @@
 
- make.py started: 2016-07-26 16:54:35 C:\Users\Michael Sullivan\Desktop\admin\template\source\talk 
+ make.py started: 2016-07-27 16:41:58 /Users/mrsull/Desktop/template/source/talk 
 
 
 Path: gslab_make
 URL: https://econ-gentzkow-svn.stanford.edu/repos/main/trunk/lib/python/gslab_make
-Relative URL: ^/trunk/lib/python/gslab_make
 Repository Root: https://econ-gentzkow-svn.stanford.edu/repos/main
 Repository UUID: 89b4331b-4301-411a-8e06-9c78d9cdb83d
-Revision: 34744
+Revision: 34748
 Node Kind: directory
 Last Changed Author: jwchoi2
 Last Changed Rev: 33502
@@ -15,134 +14,37 @@ Last Changed Date: 2016-02-07 17:40:17 -0800 (Sun, 07 Feb 2016)
 
 
 
-Execute:  lyx -e pdf2 ".\slides.lyx"
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9)
-
+Execute:  lyx -e pdf2 "./slides.lyx"
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
 entering extended mode
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
-(slides.tex
-
-LaTeX2e <2016/03/31> patch level 2
-
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-
-
-
-
-
-======================================================================
-
-starting package maintenance...
-
-installation directory: "C:\Users\Michael Sullivan\AppData\Local\Programs\MiKTeX 2.9"
-
-package repository: ftp://ftp.fernuni-hagen.de/pub/mirrors/www.ctan.org/systems/win32/miktex/tm/packages/
-
-lightweight database digest: 8d781beb33a6b52d9d7258ce725a98e7
-
-going to download 168929 bytes
-
-going to install 22 file(s) (1 package(s))
-
-downloading ftp://ftp.fernuni-hagen.de/pub/mirrors/www.ctan.org/systems/win32/miktex/tm/packages/sansmathaccent.tar.lzma...
-
-168929 bytes, 27.88 KB/Sec
-
-extracting files from sansmathaccent.tar.lzma...
-
-======================================================================
-
-
-
-Unfortunately, the package sansmathaccent could not be installed.Please check the log file:
-
-C:/Users/Michael Sullivan/AppData/Local/MiKTeX/2.9/miktex/log/pdflatex.log
-
-D:\LyXGit\LyX22\src\support\Systemcall.cpp (291): Systemcall: 'pdflatex  "slides.tex"' finished with exit code 1
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9)
-
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
 entering extended mode
-
-(slides.tex
-
-LaTeX2e <2016/03/31> patch level 2
-
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
 
 
-
-
-======================================================================
-
-starting package maintenance...
-
-installation directory: "C:\Users\Michael Sullivan\AppData\Local\Programs\MiKTeX 2.9"
-
-package repository: ftp://ftp.fernuni-hagen.de/pub/mirrors/www.ctan.org/systems/win32/miktex/tm/packages/
-
-lightweight database digest: 8d781beb33a6b52d9d7258ce725a98e7
-
-going to download 205529 bytes
-
-going to install 13 file(s) (1 package(s))
-
-downloading ftp://ftp.fernuni-hagen.de/pub/mirrors/www.ctan.org/systems/win32/miktex/tm/packages/beamertheme-metropolis.tar.lzma...
-
-205529 bytes, 36.41 KB/Sec
-
-extracting files from beamertheme-metropolis.tar.lzma...
-
-======================================================================
-
-
-
-Unfortunately, the package beamertheme-metropolis could not be installed.Please check the log file:
-
-C:/Users/Michael Sullivan/AppData/Local/MiKTeX/2.9/miktex/log/pdflatex.log
-
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9)
-
+Execute:  lyx -e pdf2 "./slides_handout.lyx"
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
 entering extended mode
+(./slides_handout.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
-(slides.tex
-
-LaTeX2e <2016/03/31> patch level 2
-
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-
-
-
-ERROR! Command lyx -e pdf2 ".\slides.lyx" executed with errors 
-Command 'lyx -e pdf2 ".\slides.lyx"' returned non-zero exit status -1073740940
-
-
-Execute:  lyx -e pdf2 ".\slides_handout.lyx"
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9)
-
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
 entering extended mode
-
-(slides_handout.tex
-
-LaTeX2e <2016/03/31> patch level 2
-
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+(./slides_handout.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
 
-
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9)
-
-entering extended mode
-
-(slides_handout.tex
-
-LaTeX2e <2016/03/31> patch level 2
-
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-
-
-
-ERROR! Command lyx -e pdf2 ".\slides_handout.lyx" executed with errors 
-Command 'lyx -e pdf2 ".\slides_handout.lyx"' returned non-zero exit status -1073740940
-
- make.py ended: 2016-07-26 16:55:05
+ make.py ended: 2016-07-27 16:42:03
