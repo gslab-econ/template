@@ -1,0 +1,16 @@
+#! python
+
+def build(ctx):
+	ctx(
+		features = 'run_r_script',
+		source = 'sample_plots.R',
+		deps = [ctx.path_to(ctx, 'MAKE_LIB', 'library.py')],
+		target = [
+			ctx.path_to(ctx, 'OUT_EXAMPLE', 'plot.pdf'),
+			ctx.path_to(ctx, 'OUT_EXAMPLE', 'appendix_plot.pdf'),
+			ctx.path_to(ctx, 'OUT_EXAMPLE', 'online_plot.pdf')
+			],
+		name = 'run_analysis_example'
+	)
+
+

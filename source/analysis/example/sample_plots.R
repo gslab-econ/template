@@ -1,5 +1,7 @@
 Main <- function(){
-    OUTPUT_DIR <- Sys.getenv('OUTPUT_DIR')
+    source("project_paths.r")
+
+    OUTPUT_DIR <- PATH_OUT_EXAMPLE
     library(lattice)
 
     x    <- seq(-10, 10, 0.1)
