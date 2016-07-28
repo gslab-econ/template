@@ -1,9 +1,9 @@
-Starting source/analysis/example/sample_plots.R at 07/27/16:16:07:05
+Starting source/analysis/example/sample_plots.R at 07/28/16:07:26:19
 [1] "This is a sample message for the log."
 null device 
           1 
-Finished source/analysis/example/sample_plots.R at 07/27/16:16:07:05
-Starting source/analysis/example/sample_stata.do at 07/27/16:16:07:05
+Finished source/analysis/example/sample_plots.R at 07/28/16:07:26:20
+Starting source/analysis/example/sample_stata.do at 07/28/16:07:26:20
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -48,4 +48,4 @@ Hello world! This is a test Stata script.
 
 . 
 end of do-file
-Finished source/analysis/example/sample_stata.do at 07/27/16:16:07:05
+Finished source/analysis/example/sample_stata.do at 07/28/16:07:26:21

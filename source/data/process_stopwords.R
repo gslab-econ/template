@@ -1,4 +1,5 @@
 Main <- function(){
+  print(getwd())
   word        <- readLines("data/raw/stopWords_Fox.txt")
   len          <- sapply(word, nchar)
   word_lengths <- data.frame(word, len)
