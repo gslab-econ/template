@@ -1,9 +1,9 @@
-Starting source/analysis/example/sample_plots.R at 07/28/16:07:26:19
+Starting source/analysis/example/sample_plots.R at 07/28/16:10:04:42
 [1] "This is a sample message for the log."
 null device 
           1 
-Finished source/analysis/example/sample_plots.R at 07/28/16:07:26:20
-Starting source/analysis/example/sample_stata.do at 07/28/16:07:26:20
+Finished source/analysis/example/sample_plots.R at 07/28/16:10:04:42
+Starting source/analysis/example/sample_stata.do at 07/28/16:10:04:42
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -28,24 +28,34 @@ Notes:
 
 . do source/analysis/example/sample_stata.do 
 
-. version 13
-
 . set more off
+
+. adopath + ../external/lib/stata/gslab_misc/ado
+  [1]  (BASE)      "/Applications/Stata/ado/base/"
+  [2]  (SITE)      "/Applications/Stata/ado/site/"
+  [3]              "."
+  [4]  (PERSONAL)  "~/Library/Application Support/Stata/ado/personal/"
+  [5]  (PLUS)      "~/Library/Application Support/Stata/ado/plus/"
+  [6]  (OLDPLACE)  "~/ado/"
+  [7]              "../external/lib/stata/gslab_misc/ado"
 
 . 
 . program main
-  1.     sub_function
-  2. end
+  1.     say_hello
+  2.     drop_shortwords
+  3. end
 
 . 
-. program sub_function
-  1.    display "Hello world! This is a test Stata script."
+. program say_hello
+  1.     display "Hello world! This is a test Stata script."
   2. end
 
 . 
 . main
 Hello world! This is a test Stata script.
+command drop_shortwords is unrecognized
+r(199);
 
-. 
 end of do-file
-Finished source/analysis/example/sample_stata.do at 07/28/16:07:26:21
+r(199);
+Finished source/analysis/example/sample_stata.do at 07/28/16:10:04:42

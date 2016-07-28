@@ -1,12 +1,12 @@
-version 13
 set more off
+adopath + ../external/lib/stata/gslab_misc/ado
 
 program main
-    sub_function
+    say_hello
 end
 
-program sub_function
-   display "Hello world! This is a test Stata script."
+program say_hello
+    display "Hello world! This is a test Stata script."
 end
 
 main
