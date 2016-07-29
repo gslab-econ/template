@@ -1,9 +1,9 @@
-Starting source/analysis/example/sample_plots.R at 07/28/16:10:04:42
+Starting sample_plots.R at 07/29/16:15:22:34
 [1] "This is a sample message for the log."
 null device 
           1 
-Finished source/analysis/example/sample_plots.R at 07/28/16:10:04:42
-Starting source/analysis/example/sample_stata.do at 07/28/16:10:04:42
+Finished sample_plots.R at 07/29/16:15:22:34
+Starting sample_stata.do at 07/29/16:15:22:34
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -26,23 +26,14 @@ Notes:
       3.  More than 2 billion observations are allowed; see help obs_advice.
       4.  Maximum number of variables is set to 5000; see help set_maxvar.
 
-. do source/analysis/example/sample_stata.do 
+. do sample_stata.do 
 
 . set more off
-
-. adopath + ../external/lib/stata/gslab_misc/ado
-  [1]  (BASE)      "/Applications/Stata/ado/base/"
-  [2]  (SITE)      "/Applications/Stata/ado/site/"
-  [3]              "."
-  [4]  (PERSONAL)  "~/Library/Application Support/Stata/ado/personal/"
-  [5]  (PLUS)      "~/Library/Application Support/Stata/ado/plus/"
-  [6]  (OLDPLACE)  "~/ado/"
-  [7]              "../external/lib/stata/gslab_misc/ado"
 
 . 
 . program main
   1.     say_hello
-  2.     drop_shortwords
+  2.     first_letters
   3. end
 
 . 
@@ -51,11 +42,21 @@ Notes:
   2. end
 
 . 
+. program first_letters
+  1.      import delimited ../../output/data/stopWords_Fox_lengths.csv
+  2.          generate first_letter = substr(word, 1, 1)
+  3.          generate count = 1
+  4.          collapse (count) count (mean) len, by(first_letter)
+  5.          rename len mean_letter_count
+  6.          save ../../output/analysis/first_letters.dta
+  7. end
+
+. 
 . main
 Hello world! This is a test Stata script.
-command drop_shortwords is unrecognized
-r(199);
+(2 vars, 421 obs)
+file ../../output/analysis/first_letters.dta saved
 
+. 
 end of do-file
-r(199);
-Finished source/analysis/example/sample_stata.do at 07/28/16:10:04:42
+Finished sample_stata.do at 07/29/16:15:22:34

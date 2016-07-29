@@ -63,5 +63,20 @@ def run_StataMP(program, make_log):
     
 
 def getSVN(USERNAME, PASSWORD, SVNROOT, SVN_PATH, LOCAL_PATH, LOGFILE):
-    os.system('''svn co --username ''' + USERNAME + ''' --password ''' + PASSWORD + ''' "''' + SVNROOT + SVN_PATH + '''" ''' + LOCAL_PATH + ''' >> ''' + LOGFILE)
+    os.system('''svn co --username ''' + \
+              USERNAME + ''' --password ''' + \
+              PASSWORD + ''' "''' + \
+              SVNROOT + SVN_PATH + \
+              '''" ''' + LOCAL_PATH + ''' >> ''' + LOGFILE)
+
+def source_make(DIR, LOG, SVNMOD = False):
+    make_log = open(LOG, "a")
+    os.chdir("source/" + DIR)
+    
+    make_log.write("Running make.py for " + DIR + " at " + datetime.datetime.now().strftime("%m/%d/%y:%H:%M:%S") + "\n")
+    execfile("make.py")
+    make_log.write("Finished make.py for " + DIR + " at " + datetime.datetime.now().strftime("%m/%d/%y:%H:%M:%S") + "\n")
+    os.system("cat ../../output/" + DIR + "/make.log >> ../../"  + LOG)
+    os.chdir("../..")
+
 

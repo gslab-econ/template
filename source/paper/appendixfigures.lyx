@@ -132,7 +132,7 @@ name "fig:variants"
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../output/analysis/example/appendix_plot.pdf
+	filename ../../output/analysis/appendix_plot.pdf
 	width 100text%
 
 \end_inset
