@@ -502,7 +502,7 @@ Figure
 \begin_layout Standard
 \align left
 \begin_inset Graphics
-	filename input/sample.jpg
+	filename ../../raw/images/sample.jpg
 	scale 65
 
 \end_inset

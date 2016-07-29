@@ -6,9 +6,9 @@ from gslab_make.py.make_log import *
 from gslab_make.py.run_program import *
 from gslab_make.py.dir_mod import *
 
-LOG = "make.log"
+LOG = "./output/make.log"
 
-if os.path.isfile("make.log"):
+if os.path.isfile(LOG):
 	os.remove(LOG)
 
 source_make("data", LOG)

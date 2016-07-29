@@ -1,12 +1,12 @@
 
- make.py started: 2016-07-29 15:22:40 /Users/mrsull/Desktop/template/source/talk 
+ make.py started: 2016-07-29 16:34:14 /Users/mrsull/Desktop/ttest/template/source/talk 
 
 
 Path: gslab_make
 URL: https://econ-gentzkow-svn.stanford.edu/repos/main/trunk/lib/python/gslab_make
 Repository Root: https://econ-gentzkow-svn.stanford.edu/repos/main
 Repository UUID: 89b4331b-4301-411a-8e06-9c78d9cdb83d
-Revision: 34766
+Revision: 34771
 Node Kind: directory
 Last Changed Author: jwchoi2
 Last Changed Rev: 33502
@@ -47,4 +47,4 @@ LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
 
- make.py ended: 2016-07-29 15:22:45
+ make.py ended: 2016-07-29 16:34:19
