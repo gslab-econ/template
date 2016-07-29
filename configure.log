@@ -1,0 +1,18 @@
+Setting top to                           : /Users/leviboxell/Desktop/template 
+Setting out to                           : /Users/leviboxell/Desktop/template/output 
+Checking for program 'RScript, Rscript'  : /usr/bin/RScript 
+Checking for program 'python'            : /Users/leviboxell/anaconda/bin/python 
+Checking for program 'sphinx-build'      : /Users/leviboxell/anaconda/bin/sphinx-build 
+Checking for program 'makeinfo'          : /usr/local/bin/makeinfo 
+Checking for program 'tex'               : /Library/TeX/texbin/tex 
+Checking for program 'latex'             : /Library/TeX/texbin/latex 
+Checking for program 'pdflatex'          : /Library/TeX/texbin/pdflatex 
+Checking for program 'xelatex'           : /Library/TeX/texbin/xelatex 
+Checking for program 'bibtex'            : /Library/TeX/texbin/bibtex 
+Checking for program 'dvips'             : /Library/TeX/texbin/dvips 
+Checking for program 'dvipdf'            : /usr/local/bin/dvipdf 
+Checking for program 'ps2pdf'            : /usr/local/bin/ps2pdf 
+Checking for program 'makeindex'         : /Library/TeX/texbin/makeindex 
+Checking for program 'pdf2ps'            : /usr/local/bin/pdf2ps 
+Checking for program 'makeglossaries'    : /Library/TeX/texbin/makeglossaries 
+'configure' finished successfully (0.520s)
