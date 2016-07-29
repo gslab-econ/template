@@ -1,5 +1,0 @@
-JOB_NAME	results_example
-JOB_DIR	source/analysis/results_example
-OUTPUT_DIR	output/analysis/results_example
-DATA_DIR	data/derived
-RESULTS_DIR	results/analysis/results_example

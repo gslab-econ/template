@@ -28,9 +28,10 @@ def set_project_paths(ctx):
     pp = {}
     pp['PROJECT_ROOT'] = '.'
     pp['OUTPUT_DIR'] = 'output'
-    pp['IN_EXAMPLE'] = 'source/analysis/example'
-    pp['OUT_EXAMPLE'] = 'output/analysis/example'
+    pp['IN_EXAMPLE'] = 'source/analysis'
+    pp['OUT_EXAMPLE'] = 'output/analysis'
     pp['MAKE_LIB'] = 'lib/make/py'
+    pp['OUT_DATA'] = 'output/data'
  
     # Convert the directories into Waf nodes.
     for key, val in pp.items():

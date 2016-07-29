@@ -7,8 +7,9 @@
 #
 
 
-PATH_IN_EXAMPLE <<- '/Users/leviboxell/Desktop/template/source/analysis/example'
+PATH_IN_EXAMPLE <<- '/Users/leviboxell/Desktop/template/source/analysis'
 PATH_MAKE_LIB <<- '/Users/leviboxell/Desktop/template/lib/make/py'
 PATH_OUTPUT_DIR <<- '/Users/leviboxell/Desktop/template/output'
-PATH_OUT_EXAMPLE <<- '/Users/leviboxell/Desktop/template/output/analysis/example'
+PATH_OUT_DATA <<- '/Users/leviboxell/Desktop/template/output/data'
+PATH_OUT_EXAMPLE <<- '/Users/leviboxell/Desktop/template/output/analysis'
 PATH_PROJECT_ROOT <<- '/Users/leviboxell/Desktop/template'

@@ -12,10 +12,11 @@ import re
 
 
 project_paths = {}
-project_paths['IN_EXAMPLE'] = r'/Users/leviboxell/Desktop/template/source/analysis/example'
+project_paths['IN_EXAMPLE'] = r'/Users/leviboxell/Desktop/template/source/analysis'
 project_paths['MAKE_LIB'] = r'/Users/leviboxell/Desktop/template/lib/make/py'
 project_paths['OUTPUT_DIR'] = r'/Users/leviboxell/Desktop/template/output'
-project_paths['OUT_EXAMPLE'] = r'/Users/leviboxell/Desktop/template/output/analysis/example'
+project_paths['OUT_DATA'] = r'/Users/leviboxell/Desktop/template/output/data'
+project_paths['OUT_EXAMPLE'] = r'/Users/leviboxell/Desktop/template/output/analysis'
 project_paths['PROJECT_ROOT'] = r'/Users/leviboxell/Desktop/template'
 
 

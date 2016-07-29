@@ -1,4 +1,0 @@
-JOB_NAME	data
-JOB_DIR	source/data
-OUTPUT_DIR	output/data
-DATA_DIR	data

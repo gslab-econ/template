@@ -1,0 +1,12 @@
+#! python
+
+def build(ctx):
+	ctx(
+		features = 'run_r_script',
+		source = 'code.R',
+		target = [
+			ctx.path_to(ctx, 'OUT_DATA', 'data.rds')
+			],
+		name = 'run_data'
+	)
+
