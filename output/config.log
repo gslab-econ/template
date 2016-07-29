@@ -1,0 +1,78 @@
+# project  configured on Fri Jul 29 16:36:54 2016 by
+# waf 1.8.19 (abi 98, python 2070af0 on darwin)
+# using waf.py configure
+#
+----------------------------------------
+Setting top to
+/Users/leviboxell/Desktop/template
+----------------------------------------
+Setting out to
+/Users/leviboxell/Desktop/template/output
+----------------------------------------
+Checking for program 'RScript, Rscript'
+/usr/bin/RScript
+find program=['RScript', 'Rscript'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='RCMD' -> ['/usr/bin/RScript']
+----------------------------------------
+Checking for program 'python'
+/Users/leviboxell/anaconda/bin/python
+find program=['python'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='PYCMD' -> ['/Users/leviboxell/anaconda/bin/python']
+----------------------------------------
+Checking for program 'sphinx-build'
+/Users/leviboxell/anaconda/bin/sphinx-build
+find program=['sphinx-build'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='SPHINX_BUILD' -> ['/Users/leviboxell/anaconda/bin/sphinx-build']
+----------------------------------------
+Checking for program 'makeinfo'
+/usr/local/bin/makeinfo
+find program=['makeinfo'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='MAKEINFO' -> ['/usr/local/bin/makeinfo']
+['/usr/local/bin/makeinfo', '--version']
+out: makeinfo (GNU texinfo) 5.2
+
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+----------------------------------------
+Checking for program 'tex'
+/Library/TeX/texbin/tex
+find program=['tex'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='TEX' -> ['/Library/TeX/texbin/tex']
+----------------------------------------
+Checking for program 'latex'
+/Library/TeX/texbin/latex
+find program=['latex'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='LATEX' -> ['/Library/TeX/texbin/latex']
+----------------------------------------
+Checking for program 'pdflatex'
+/Library/TeX/texbin/pdflatex
+find program=['pdflatex'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='PDFLATEX' -> ['/Library/TeX/texbin/pdflatex']
+----------------------------------------
+Checking for program 'xelatex'
+/Library/TeX/texbin/xelatex
+find program=['xelatex'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='XELATEX' -> ['/Library/TeX/texbin/xelatex']
+----------------------------------------
+Checking for program 'bibtex'
+/Library/TeX/texbin/bibtex
+find program=['bibtex'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='BIBTEX' -> ['/Library/TeX/texbin/bibtex']
+----------------------------------------
+Checking for program 'dvips'
+/Library/TeX/texbin/dvips
+find program=['dvips'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='DVIPS' -> ['/Library/TeX/texbin/dvips']
+----------------------------------------
+Checking for program 'dvipdf'
+/usr/local/bin/dvipdf
+find program=['dvipdf'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='DVIPDF' -> ['/usr/local/bin/dvipdf']
+----------------------------------------
+Checking for program 'ps2pdf'
+/usr/local/bin/ps2pdf
+find program=['ps2pdf'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='PS2PDF' -> ['/usr/local/bin/ps2pdf']
+----------------------------------------
+Checking for program 'makeindex'
+/Library/TeX/texbin/makeindex
+find program=['makeindex'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='MAKEINDEX' -> ['/Library/TeX/texbin/makeindex']
+----------------------------------------
+Checking for program 'pdf2ps'
+/usr/local/bin/pdf2ps
+find program=['pdf2ps'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='PDF2PS' -> ['/usr/local/bin/pdf2ps']
+----------------------------------------
+Checking for program 'makeglossaries'
+/Library/TeX/texbin/makeglossaries
+find program=['makeglossaries'] paths=['/Users/leviboxell/anaconda/bin', '/opt/local/bin', '/opt/local/sbin', '/Applications/MATLAB_R2015b.app/bin/', '/Applications/QGIS.app/Contents/MacOS/bin', '/Applications/LyX.app/Contents/MacOS/', '/Applications/Stata/StataMP.app/Contents/MacOS/', '/Library/Frameworks/Python.framework/Versions/2.7/bin', '/usr/local/bin', '/usr/bin', '/bin', '/usr/sbin', '/sbin', '/opt/X11/bin', '/Library/TeX/texbin'] var='MAKEGLOSSARIES' -> ['/Library/TeX/texbin/makeglossaries']
