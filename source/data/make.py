@@ -20,6 +20,9 @@ getSVN(USERNAME, PASSWORD, SVNROOT,
        DATA_DIR,    
        OUTPUT_DIR + "/externals.log")
  
+if (os.path.exists("../../raw/data/.svn")): 
+    shutil.rmtree("../../raw/data/.svn")
+
 run_R("process_stopwords.R",  LOG)
 
 os.system("echo 'Finished at ' $(date +%D:%H:%M:%S) >> " + LOG)

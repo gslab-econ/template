@@ -1,9 +1,9 @@
-Starting sample_plots.R at 07/29/16:16:34:09
+Starting sample_plots.R at 07/29/16:17:43:14
 [1] "This is a sample message for the log."
 null device 
           1 
-Finished sample_plots.R at 07/29/16:16:34:09
-Starting sample_stata.do at 07/29/16:16:34:09
+Finished sample_plots.R at 07/29/16:17:43:14
+Starting sample_stata.do at 07/29/16:17:43:14
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -59,4 +59,4 @@ file ../../output/analysis/first_letters.dta saved
 
 . 
 end of do-file
-Finished sample_stata.do at 07/29/16:16:34:09
+Finished sample_stata.do at 07/29/16:17:43:14
