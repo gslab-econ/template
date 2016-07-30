@@ -11,10 +11,10 @@ LOG = "./output/make.log"
 if os.path.isfile(LOG):
 	os.remove(LOG)
 
-source_make("data", LOG)
-source_make("analysis", LOG)
-source_make("paper", LOG)
-source_make("talk", LOG)
+source_make("source/data",     "output/data",     LOG)
+source_make("source/analysis", "output/analysis", LOG)
+source_make("source/paper",    "output/paper",    LOG)
+source_make("source/talk",     "output/talk",     LOG)
 
 shutil.rmtree('gslab_make')
 raw_input('\n Press <Enter> to exit.')

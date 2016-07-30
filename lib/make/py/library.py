@@ -69,14 +69,13 @@ def getSVN(USERNAME, PASSWORD, SVNROOT, SVN_PATH, LOCAL_PATH, LOGFILE):
               SVNROOT + SVN_PATH + \
               '''" ''' + LOCAL_PATH + ''' >> ''' + LOGFILE)
 
-def source_make(DIR, LOG, SVNMOD = False):
+def source_make(IN_DIR, OUT_DIR, LOG):
     make_log = open(LOG, "a")
-    os.chdir("source/" + DIR)
-    
-    make_log.write("Running make.py for " + DIR + " at " + datetime.datetime.now().strftime("%m/%d/%y:%H:%M:%S") + "\n")
+    MAIN_DIR = os.getcwd()
+    os.chdir(IN_DIR)
+    make_log.write("Running make.py for " + IN_DIR + " at " + datetime.datetime.now().strftime("%m/%d/%y:%H:%M:%S") + "\n")
     execfile("make.py")
-    make_log.write("Finished make.py for " + DIR + " at " + datetime.datetime.now().strftime("%m/%d/%y:%H:%M:%S") + "\n")
-    os.system("cat ../../output/" + DIR + "/make.log >> ../../"  + LOG)
-    os.chdir("../..")
-
+    make_log.write("Finished make.py for " + IN_DIR + " at " + datetime.datetime.now().strftime("%m/%d/%y:%H:%M:%S") + "\n")
+    os.chdir(MAIN_DIR)
+    os.system("cat " + OUT_DIR + "/make.log >> " + MAIN_DIR + '/' + LOG)
 

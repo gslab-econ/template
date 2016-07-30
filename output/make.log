@@ -1,15 +1,15 @@
-Starting at  07/29/16:17:43:04
-Starting process_stopwords.R at 07/29/16:17:43:14
-Finished process_stopwords.R at 07/29/16:17:43:14
-Finished at  07/29/16:17:43:14
-Running make.py for data at 07/29/16:17:43:04
-Finished make.py for data at 07/29/16:17:43:14
-Starting sample_plots.R at 07/29/16:17:43:14
+Starting at  07/30/16:15:01:55
+Starting process_stopwords.R at 07/30/16:15:02:07
+Finished process_stopwords.R at 07/30/16:15:02:07
+Finished at  07/30/16:15:02:07
+Running make.py for source/data at 07/30/16:15:01:55
+Finished make.py for source/data at 07/30/16:15:02:07
+Starting sample_plots.R at 07/30/16:15:02:07
 [1] "This is a sample message for the log."
 null device 
           1 
-Finished sample_plots.R at 07/29/16:17:43:14
-Starting sample_stata.do at 07/29/16:17:43:14
+Finished sample_plots.R at 07/30/16:15:02:07
+Starting sample_stata.do at 07/30/16:15:02:07
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -65,18 +65,18 @@ file ../../output/analysis/first_letters.dta saved
 
 . 
 end of do-file
-Finished sample_stata.do at 07/29/16:17:43:14
-Running make.py for analysis at 07/29/16:17:43:14
-Finished make.py for analysis at 07/29/16:17:43:14
+Finished sample_stata.do at 07/30/16:15:02:07
+Running make.py for source/analysis at 07/30/16:15:02:07
+Finished make.py for source/analysis at 07/30/16:15:02:07
 
- make.py started: 2016-07-29 17:43:14 /Users/mrsull/Desktop/ttest/template/source/paper 
+ make.py started: 2016-07-30 15:02:07 /Users/mrsull/Desktop/sandbox/template/source/paper 
 
 
 Path: gslab_make
 URL: https://econ-gentzkow-svn.stanford.edu/repos/main/trunk/lib/python/gslab_make
 Repository Root: https://econ-gentzkow-svn.stanford.edu/repos/main
 Repository UUID: 89b4331b-4301-411a-8e06-9c78d9cdb83d
-Revision: 34773
+Revision: 34776
 Node Kind: directory
 Last Changed Author: jwchoi2
 Last Changed Rev: 33502
@@ -127,18 +127,18 @@ LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
 
- make.py ended: 2016-07-29 17:43:20
-Running make.py for paper at 07/29/16:17:43:14
-Finished make.py for paper at 07/29/16:17:43:20
+ make.py ended: 2016-07-30 15:02:15
+Running make.py for source/paper at 07/30/16:15:02:07
+Finished make.py for source/paper at 07/30/16:15:02:15
 
- make.py started: 2016-07-29 17:43:20 /Users/mrsull/Desktop/ttest/template/source/talk 
+ make.py started: 2016-07-30 15:02:15 /Users/mrsull/Desktop/sandbox/template/source/talk 
 
 
 Path: gslab_make
 URL: https://econ-gentzkow-svn.stanford.edu/repos/main/trunk/lib/python/gslab_make
 Repository Root: https://econ-gentzkow-svn.stanford.edu/repos/main
 Repository UUID: 89b4331b-4301-411a-8e06-9c78d9cdb83d
-Revision: 34773
+Revision: 34776
 Node Kind: directory
 Last Changed Author: jwchoi2
 Last Changed Rev: 33502
@@ -179,6 +179,6 @@ LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
 
- make.py ended: 2016-07-29 17:43:26
-Running make.py for talk at 07/29/16:17:43:20
-Finished make.py for talk at 07/29/16:17:43:26
+ make.py ended: 2016-07-30 15:02:22
+Running make.py for source/talk at 07/30/16:15:02:15
+Finished make.py for source/talk at 07/30/16:15:02:22
