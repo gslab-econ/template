@@ -9,4 +9,4 @@
 /external/
 /temp/
 *.DS_Store
-/raw/.svn
+*.svn
