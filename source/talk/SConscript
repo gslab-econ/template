@@ -1,0 +1,5 @@
+import os
+Import('*')
+
+env.PDF(target = '#output/talk/slides.pdf', source = 'slides.lyx')
+

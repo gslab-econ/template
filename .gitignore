@@ -15,4 +15,8 @@
 *.lof
 *.lot
 *.tex
+*.nav
+*.snm
+*.toc
+*.out
 *.svn
