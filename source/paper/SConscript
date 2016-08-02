@@ -1,0 +1,25 @@
+import os
+Import('*')
+
+env.PDF(target = '#output/paper/paper.pdf', source = 'paper.lyx')
+env.PDF(target = '#output/paper/paper_online.pdf', source = 'paper_online.lyx')
+env.PDF(target = '#output/paper/claims.pdf', source='claims.lyx')
+
+
+def cleanup(target, source, env):
+	os.system("rm source/paper/*.aux")
+	os.system("rm source/paper/*.tex")
+	os.system("rm source/paper/*.fls")
+	os.system("rm source/paper/*.lof")
+	os.system("rm source/paper/*.lot")
+	os.system("rm source/paper/*.out")
+	os.system("rm -rf output/paper/")
+	os.mkdir("output/paper/")
+	os.system("mv source/paper/*.pdf output/paper/")
+	os.system("mv source/paper/*.log output/paper/")
+
+#env.Command(
+#	target = '',
+#	source = ['paper.lyx', 'paper_online.lyx', 'claims.lyx'],
+#	action = cleanup
+#	)
