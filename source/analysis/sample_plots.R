@@ -1,11 +1,8 @@
 Main <- function(){
-    OUTPUT_DIR <- Sys.getenv('OUTPUT_DIR')
     library(lattice)
+    OUTPUT_DIR <- "output/analysis"
 
-    x    <- seq(-10, 10, 0.1)
-    exp  <- exp(x)
-    quad <- sapply(x, function(z) z**2)
-    data <- data.frame(x, exp, quad)
+    data <- readRDS("output/data/data.rds")
     
     lin_plot  <- xyplot(x    ~ x, data, type = 'l', ylab = 'y')
     exp_plot  <- xyplot(exp  ~ x, data, type = 'l', ylab = 'y')

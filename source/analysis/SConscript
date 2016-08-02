@@ -1,0 +1,9 @@
+Import('*')
+
+env.Command(
+	target = ['#output/analysis/plot.pdf', '#output/analysis/appendix_plot.pdf', '#output/analysis/online_plot.pdf', '#output/analysis/make.log'], 
+	source = ['#output/data/data.rds', 'sample_plots.R'],
+	action = 'Rscript source/analysis/sample_plots.R > output/analysis/make.log'
+	)
+
+	

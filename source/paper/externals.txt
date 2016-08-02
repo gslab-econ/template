@@ -1,2 +1,0 @@
-rev	dir	file	outdir	outfile	notes	
-33730	%svn%/lib/python/gslab_misc	*	../../external/paper/lib/python/gslab_misc	""""
