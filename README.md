@@ -35,10 +35,12 @@ README.md template
 
 template
 
-# Overview
+Overview
+--------
 
 Briefly describe your directory here. 
 
-# Notes
+Notes
+-----
 
 Record notes pertaining to your directory here. 
