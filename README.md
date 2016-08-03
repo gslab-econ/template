@@ -22,12 +22,9 @@ organisation. Set the repository's privacy setting appropriately and do not add 
   - Under **Merge button**, deselect "Allow merge commits" and ensure that "Allow squash merging" is selected. 
 
 5. Initialise the new repository with the template
-  - Download `gslab-econ/admin/issues/33/template_maker_2.sh` to the location in which you wish to place your new
-   repository.
-  - At the command line, set your working directory to that containing `template_maker_2.sh` and then enter the command 
-    `source template_maker_2.sh`; this will initialise your repository. If you encounter an error, try this steop again,
-    replacing `gslab-econ/admin/issues/33/template_maker_2.sh` with `gslab-econ/admin/issues/33/template_maker_1.sh`.
-
+  - Clone the template repository to the local directory where you would like to store the new directory.
+  - At the command line, set your working directory to the template clone and enter the command 
+    `source repo_maker.sh`; this will initialise your repository. 
 
 
 README.md template
