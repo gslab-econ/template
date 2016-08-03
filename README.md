@@ -1,5 +1,5 @@
 Using the repository template
------------------------------
+=============================
 
 In order to create a new repository using this template:
 
@@ -31,7 +31,7 @@ organisation. Set the repository's privacy setting appropriately and do not add 
 
 
 README.md template
-------------------
+==================
 
 template
 
