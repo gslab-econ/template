@@ -1,7 +1,7 @@
 Import('*')
 
 env.Command(
-	target = ['#output/data/data.rds', '#output/data/make.log'],  # '#' identifies a path relative to the top-level 'SConstruct' file
+	target = ['#output/data/data.txt', '#output/data/make.log'],  # '#' identifies a path relative to the top-level 'SConstruct' file
 	source = 'code.R',
 	action = 'Rscript source/data/code.R > output/data/make.log'
 	)

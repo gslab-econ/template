@@ -1,6 +1,6 @@
 Import('*')
 
-paper_dependencies = ['#source/paper/paper.lyx', '#source/paper/figures.lyx', '#source/paper/appendixfigures.lyx', '#output/analysis/plot.pdf', '#output/analysis/appendix_plot.pdf']
+paper_dependencies = ['#source/paper/paper.lyx', '#source/paper/figures.lyx', '#source/paper/appendixfigures.lyx', '#output/analysis/plot.eps', '#output/analysis/appendix_plot.eps']
 paper_targets = ['#output/paper/paper.pdf', '#output/paper/paper.log']
 env.Command(
 	target = paper_targets,
@@ -8,7 +8,7 @@ env.Command(
 	action = 'lyx -e pdf2 source/paper/paper.lyx > output/paper/paper.log && mv source/paper/paper.pdf output/paper/paper.pdf'
 	)
 
-online_dependencies = ['#source/paper/paper_online.lyx', '#source/paper/paper_online_figures.lyx', '#output/analysis/online_plot.pdf']
+online_dependencies = ['#source/paper/paper_online.lyx', '#source/paper/paper_online_figures.lyx', '#output/analysis/online_plot.eps']
 online_targets = ['#output/paper/paper_online.pdf', '#output/paper/online_paper.log']
 env.Command(
 	target = online_targets,

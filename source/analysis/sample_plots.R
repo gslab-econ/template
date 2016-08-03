@@ -2,7 +2,7 @@ Main <- function(){
     library(lattice)
     OUTPUT_DIR <- "output/analysis"
 
-    data <- readRDS("output/data/data.rds")
+    data <- read.table("output/data/data.txt", sep = "|", header = TRUE)
     
     lin_plot  <- xyplot(x    ~ x, data, type = 'l', ylab = 'y')
     exp_plot  <- xyplot(exp  ~ x, data, type = 'l', ylab = 'y')
@@ -16,7 +16,8 @@ Main <- function(){
 }
 
 SavePlot <- function(plot,  filename, OUTPUT_DIR){
-    pdf(sprintf("%s/%s.pdf", OUTPUT_DIR, filename))
+    setEPS()
+    postscript(sprintf("%s/%s.eps", OUTPUT_DIR, filename))
     print(plot)
     dev.off()
 }

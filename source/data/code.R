@@ -3,7 +3,7 @@ main <- function(){
     exp  <- exp(x)
     quad <- sapply(x, function(z) z**2)
     data <- data.frame(x, exp, quad)
-    saveRDS(data, "output/data/data.rds") 
+    write.table(data, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = TRUE) 
 }
 
 main()
