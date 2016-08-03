@@ -16,11 +16,11 @@ rm -rf template
 
 cd $REPO_NAME
 
+rm repo_maker.sh
+
 git add .gitignore
 git add .
-git reset HEAD repo_maker.sh
+
 
 git commit -m "Initialised repository with the gslab-econ template."
 git push
-
-rm repo_maker.sh
