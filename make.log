@@ -1,6 +1,5 @@
 [?1034hscons: Reading SConscript files ...
 scons: done reading SConscript files.
 scons: Building targets ...
-Rscript source/data/code.R > output/data/make.log
-Rscript source/analysis/sample_plots.R > output/analysis/make.log
+scons: `.' is up to date.
 scons: done building targets.

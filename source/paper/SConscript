@@ -1,23 +1,25 @@
 Import('*')
 
-
-paper_dependencies = ['#source/paper/paper.lyx', '#output/analysis/plot.pdf']
+paper_dependencies = ['#source/paper/paper.lyx', '#source/paper/figures.lyx', '#source/paper/appendixfigures.lyx', '#output/analysis/plot.pdf', '#output/analysis/appendix_plot.pdf']
+paper_targets = ['#output/paper/paper.pdf', '#output/paper/paper.log']
 env.Command(
-	target = '#source/paper/paper.pdf',
+	target = paper_targets,
 	source = paper_dependencies,
-	action = 'lyx -e pdf2 source/paper/paper.lyx'
+	action = 'lyx -e pdf2 source/paper/paper.lyx > output/paper/paper.log && mv source/paper/paper.pdf output/paper/paper.pdf'
 	)
 
-online_dependencies = ['#source/paper/paper_online.lyx', '#output/analysis/online_plot.pdf']
+online_dependencies = ['#source/paper/paper_online.lyx', '#source/paper/paper_online_figures.lyx', '#output/analysis/online_plot.pdf']
+online_targets = ['#output/paper/paper_online.pdf', '#output/paper/online_paper.log']
 env.Command(
-	target = '#source/paper/paper_online.pdf',
+	target = online_targets,
 	source = online_dependencies,
-	action = 'lyx -e pdf2 source/paper/paper_online.lyx'
+	action = 'lyx -e pdf2 source/paper/paper_online.lyx >> output/paper/online_paper.log && mv source/paper/paper_online.pdf output/paper/paper_online.pdf'
 	)
 
 claims_dependencies = ['#source/paper/claims.lyx']
+claims_targets = ['#output/paper/claims.pdf', '#output/paper/claims.log']
 env.Command(
-	target = '#source/paper/claims.pdf',
+	target = claims_targets,
 	source = claims_dependencies,
-	action = 'lyx -e pdf2 source/paper/claims.lyx'
+	action = 'lyx -e pdf2 source/paper/claims.lyx >> output/paper/claims.log && mv source/paper/claims.pdf output/paper/claims.pdf'
 	)
