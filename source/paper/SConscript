@@ -1,7 +1,23 @@
-import os
 Import('*')
 
-env.PDF(target = '#output/paper/paper.pdf', source = 'paper.lyx')
-env.PDF(target = '#output/paper/paper_online.pdf', source = 'paper_online.lyx')
-env.PDF(target = '#output/paper/claims.pdf', source='claims.lyx')
 
+paper_dependencies = ['#source/paper/paper.lyx', '#output/analysis/plot.pdf']
+env.Command(
+	target = '#source/paper/paper.pdf',
+	source = paper_dependencies,
+	action = 'lyx -e pdf2 source/paper/paper.lyx'
+	)
+
+online_dependencies = ['#source/paper/paper_online.lyx', '#output/analysis/online_plot.pdf']
+env.Command(
+	target = '#source/paper/paper_online.pdf',
+	source = online_dependencies,
+	action = 'lyx -e pdf2 source/paper/paper_online.lyx'
+	)
+
+claims_dependencies = ['#source/paper/claims.lyx']
+env.Command(
+	target = '#source/paper/claims.pdf',
+	source = claims_dependencies,
+	action = 'lyx -e pdf2 source/paper/claims.lyx'
+	)

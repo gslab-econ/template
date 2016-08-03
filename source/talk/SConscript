@@ -1,5 +1,9 @@
 import os
 Import('*')
 
-env.PDF(target = '#output/talk/slides.pdf', source = 'slides.lyx')
+talk_dependencies = ['#source/talk/slides.lyx']
 
+env.Command(
+	target = '#source/talk/slides.pdf',
+	source = talk_dependencies,
+	action = 'lyx -e pdf2 source/talk/slides.lyx')
