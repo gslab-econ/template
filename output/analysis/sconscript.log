@@ -1,7 +1,7 @@
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   14.1   Copyright 1985-2015 StataCorp LP
+___/   /   /___/   /   /___/   14.0   Copyright 1985-2015 StataCorp LP
   Statistics/Data Analysis            StataCorp
                                       4905 Lakeway Drive
      MP - Parallel Edition            College Station, Texas 77845 USA
@@ -19,9 +19,6 @@ Notes:
       2.  Unicode is supported; see help unicode_advice.
       3.  More than 2 billion observations are allowed; see help obs_advice.
       4.  Maximum number of variables is set to 5000; see help set_maxvar.
-
-
-running /Applications/Stata/profile.do ...
 
 . do "source/analysis/analysis.do" 
 

@@ -1,6 +1,5 @@
 scons: done reading SConscript files.
 scons: Building targets ...
-Rscript source/data/build.R > output/data/sconscript.log
 statamp -e source/analysis/analysis.do && mv analysis.log output/analysis/sconscript.log
 lyx -e pdf2 source/paper/online_appendix.lyx >> output/paper/sconscript.log && mv source/paper/online_appendix.pdf output/paper/online_appendix.pdf
 lyx -e pdf2 source/paper/paper.lyx > output/paper/sconscript.log && mv source/paper/paper.pdf output/paper/paper.pdf
