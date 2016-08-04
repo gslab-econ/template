@@ -2,8 +2,8 @@ Import('*')
 
 env.Command(
 	target = ['#output/data/data.txt', '#output/data/scons.log'],  
-	source = 'code.R',
-	action = 'Rscript source/data/code.R > output/data/scons.log'
+	source = 'build.R',
+	action = 'Rscript source/data/build.R > output/data/scons.log'
 	)
 
 	

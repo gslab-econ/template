@@ -100,12 +100,11 @@ Title
 \end_layout
 
 \begin_layout Author
-Matthew Gentzkow (Stanford)
+Author 1 (Affiliation 1)
 \begin_inset Newline newline
 \end_inset
 
-Jesse M.
- Shapiro (Brown)
+Author 2 (Affiliation 2)
 \end_layout
 
 \begin_layout Date
@@ -502,7 +501,7 @@ Figure
 \begin_layout Standard
 \align left
 \begin_inset Graphics
-	filename ../../raw/images/sample.png
+	filename ../../output/analysis/plot.eps
 	scale 65
 
 \end_inset

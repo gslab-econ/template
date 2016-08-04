@@ -105,7 +105,7 @@ hanging
 
 \series bold
 \size largest
-Title: 
+Online Appendix: 
 \size default
 
 \begin_inset Newline newline
@@ -113,20 +113,17 @@ Title:
 
 
 \size largest
-Subtitle
+Title
 \end_layout
 
 \begin_layout Author
 \noindent
-
-\size large
-Matthew Gentzkow,
+Author 1,
 \series bold
-\size default
  
 \series default
 \shape italic
-Stanford University
+Affiliation 1
 \series bold
 \shape default
 
@@ -138,7 +135,8 @@ E-mail:
 \begin_inset space \space{}
 \end_inset
 
-gentzkow@stanford.edu, jesse_shapiro_1@Brown.edu
+author1@affiliation1.edu, author2@affiliation2.edu.
+ Acknowledgements here.
 \end_layout
 
 \end_inset
@@ -149,12 +147,9 @@ gentzkow@stanford.edu, jesse_shapiro_1@Brown.edu
 
 
 \series default
-\size large
-Jesse M.
- Shapiro, 
+Author 2, 
 \shape italic
-\size default
-Brown University 
+Affiliation 2
 \end_layout
 
 \begin_layout Date
@@ -245,9 +240,40 @@ figurename}{Online Appendix Figure}
 
 \begin_layout Standard
 \noindent
-\begin_inset CommandInset include
-LatexCommand include
-filename "paper_online_figures.lyx"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Figure Title
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../output/analysis/plot.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 

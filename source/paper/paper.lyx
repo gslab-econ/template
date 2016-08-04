@@ -111,17 +111,17 @@ theorems-ams
 \noindent
 
 \series bold
-Paper
+Title
 \end_layout
 
 \begin_layout Author
 \noindent
-Matthew Gentzkow,
+Author 1,
 \series bold
  
 \series default
 \shape italic
-Stanford University
+Affiliation 1
 \series bold
 \shape default
 
@@ -133,7 +133,7 @@ E-mail:
 \begin_inset space \space{}
 \end_inset
 
-gentzkow@stanford.edu, jesse_shapiro_1@Brown.edu.
+author1@affiliation1.edu, author2@affiliation2.edu.
  Acknowledgements here.
 \end_layout
 
@@ -145,13 +145,11 @@ gentzkow@stanford.edu, jesse_shapiro_1@Brown.edu.
 
 
 \series default
-Jesse M.
- Shapiro, 
+Author 2, 
 \shape italic
-Brown University
-\shape default
- 
+Affiliation 2
 \series bold
+\shape default
 
 \begin_inset Newline newline
 \end_inset
@@ -218,158 +216,6 @@ begin{spacing}{1.4}
 
 \begin_layout Section
 Introduction
-\end_layout
-
-\begin_layout Standard
-This is a sample introduction.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-This is a sample footnote.
- 
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Section
-Data
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:data"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Data description here.
- 
-\end_layout
-
-\begin_layout Section
-Model
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:model"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Probability model
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:prob-model"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This is the first model section.
- Below is some inserted math.
-\begin_inset Formula 
-\begin{equation}
-{\bf x}_{t}\sim\text{{N}}\left(0,1\right),\label{eq:multinomial}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\mathbf{x}_{t}$
-\end_inset
-
- is a random variable.
-\end_layout
-
-\begin_layout Subsection
-Other model subsection.
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:cmodel_subsection"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Other model information goes here.
- 
-\end_layout
-
-\begin_layout Definition*
-You can place a definition here.
- 
-\end_layout
-
-\begin_layout Section
-Estimation
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:estimation"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This is the estimation section.
-\end_layout
-
-\begin_layout Section
-Results
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:results"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:plot"
-
-\end_inset
-
- is a sample figure.
- 
-\end_layout
-
-\begin_layout Section
-Discussion
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Discussion"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This is a discussion.
-\end_layout
-
-\begin_layout Section
-Conclusion
-\end_layout
-
-\begin_layout Standard
-This is the conclusion.
 \end_layout
 
 \begin_layout Standard
@@ -447,45 +293,14 @@ noindent
 \end_layout
 
 \begin_layout Standard
-Gentzkow, Matthew and Jesse M.
- Shapiro.
- 2010.
- What drives media slant? Evidence from U.S.
- daily newspapers.
+Last, First.
+ Year.
+ Title.
  
 \shape italic
-Econometrica
+Journal
 \shape default
- 78(1): 35–71.
-\end_layout
-
-\begin_layout Standard
-Gentzkow, Matthew, Jesse M.
- Shapiro, and Matt Taddy.
- 2015.
- Measuring polarization in high-dimensional data: Method and application
- to Congressional speech.
- Stanford University mimeo.
- Accessed at 
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $<$
-\end_inset
-
-
-\begin_inset CommandInset href
-LatexCommand href
-target "http://web.stanford.edu/~gentzkow/research/politext.pdf"
-
-\end_inset
-
-
-\begin_inset Formula $>$
-\end_inset
-
- on July 6, 2016.
+ Volume#(issue#): page range.
 \end_layout
 
 \begin_layout Standard
@@ -523,41 +338,44 @@ leftskip=0em
 \end_layout
 
 \begin_layout Standard
-\start_of_appendix
-\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
-\series bold
-\size largest
-Appendices
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Figure Title
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../output/analysis/plot.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Table appendix
+\start_of_appendix
+Appendix
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:table_appendix"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This appendix links to tables and is followed by links to figures.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "figures.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "appendixfigures.lyx"
+name "sec:appendix"
 
 \end_inset
 
@@ -567,6 +385,10 @@ filename "appendixfigures.lyx"
 \begin_layout Standard
 \begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -582,6 +404,39 @@ figurename}{Appendix Figure}
 
 \backslash
 setcounter{figure}{0}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Figure Title
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../../output/analysis/plot.eps
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
