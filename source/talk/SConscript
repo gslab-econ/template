@@ -5,4 +5,5 @@ talk_targets = ['#output/talk/slides.pdf', '#output/talk/scons.log']
 env.Command(
 	target = talk_targets,
 	source = talk_dependencies,
-	action = 'lyx -e pdf2 source/talk/slides.lyx > output/talk/scons.log && mv source/talk/slides.pdf output/talk/slides.pdf')
+	action = 'lyx -e pdf2 source/talk/slides.lyx > output/talk/scons.log && mv source/talk/slides.pdf output/talk/slides.pdf'
+	)
