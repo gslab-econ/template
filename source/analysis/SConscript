@@ -1,9 +1,9 @@
 Import('*')
 
 env.Command(
-	target = ['#output/analysis/plot.eps', '#output/analysis/appendix_plot.eps', '#output/analysis/online_plot.eps', '#output/analysis/make.log'], 
+	target = ['#output/analysis/plot.eps', '#output/analysis/appendix_plot.eps', '#output/analysis/online_plot.eps', '#output/analysis/scons.log'], 
 	source = ['#output/data/data.txt', 'sample_plots.R'],
-	action = 'Rscript source/analysis/sample_plots.R > output/analysis/make.log'
+	action = 'Rscript source/analysis/sample_plots.R > output/analysis/scons.log'
 	)
 
 	

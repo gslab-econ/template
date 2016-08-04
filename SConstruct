@@ -1,4 +1,7 @@
-import os
+import os, sys
+os.system('mkdir -p output')
+os.system('rm output/scons.log')
+sys.stdout = open('output/scons.log', 'a')
 
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, IMPLICIT_COMMAND_DEPENDENCIES = 0)
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed

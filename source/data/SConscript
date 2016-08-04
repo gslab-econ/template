@@ -1,9 +1,9 @@
 Import('*')
 
 env.Command(
-	target = ['#output/data/data.txt', '#output/data/make.log'],  # '#' identifies a path relative to the top-level 'SConstruct' file
+	target = ['#output/data/data.txt', '#output/data/scons.log'],  
 	source = 'code.R',
-	action = 'Rscript source/data/code.R > output/data/make.log'
+	action = 'Rscript source/data/code.R > output/data/scons.log'
 	)
 
 	

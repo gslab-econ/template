@@ -1,0 +1,9 @@
+scons: done reading SConscript files.
+scons: Building targets ...
+Rscript source/data/code.R > output/data/scons.log
+Rscript source/analysis/sample_plots.R > output/analysis/scons.log
+lyx -e pdf2 source/paper/claims.lyx >> output/paper/scons.log && mv source/paper/claims.pdf output/paper/claims.pdf
+lyx -e pdf2 source/paper/paper.lyx > output/paper/scons.log && mv source/paper/paper.pdf output/paper/paper.pdf
+lyx -e pdf2 source/paper/paper_online.lyx >> output/paper/scons.log && mv source/paper/paper_online.pdf output/paper/paper_online.pdf
+lyx -e pdf2 source/talk/slides.lyx > output/talk/scons.log && mv source/talk/slides.pdf output/talk/slides.pdf
+scons: done building targets.
