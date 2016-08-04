@@ -104,7 +104,7 @@ name "fig:online_plot"
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../output/analysis/online_plot.pdf
+	filename ../../output/analysis/online_plot.eps
 	width 100text%
 
 \end_inset

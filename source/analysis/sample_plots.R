@@ -1,11 +1,8 @@
 Main <- function(){
-    OUTPUT_DIR <- Sys.getenv('OUTPUT_DIR')
     library(lattice)
+    OUTPUT_DIR <- "output/analysis"
 
-    x    <- seq(-10, 10, 0.1)
-    exp  <- exp(x)
-    quad <- sapply(x, function(z) z**2)
-    data <- data.frame(x, exp, quad)
+    data <- read.table("output/data/data.txt", sep = "|", header = TRUE)
     
     lin_plot  <- xyplot(x    ~ x, data, type = 'l', ylab = 'y')
     exp_plot  <- xyplot(exp  ~ x, data, type = 'l', ylab = 'y')
@@ -19,7 +16,8 @@ Main <- function(){
 }
 
 SavePlot <- function(plot,  filename, OUTPUT_DIR){
-    pdf(sprintf("%s/%s.pdf", OUTPUT_DIR, filename))
+    setEPS()
+    postscript(sprintf("%s/%s.eps", OUTPUT_DIR, filename))
     print(plot)
     dev.off()
 }

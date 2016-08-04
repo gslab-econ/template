@@ -1,0 +1,31 @@
+Import('*')
+
+paper_dependencies = ['#source/paper/paper.lyx', 
+			'#source/paper/figures.lyx',
+			'#source/paper/appendixfigures.lyx', 
+			'#output/analysis/plot.eps', 
+			'#output/analysis/appendix_plot.eps']
+paper_targets = ['#output/paper/paper.pdf']
+env.Command(
+	target = paper_targets,
+	source = paper_dependencies,
+	action = 'lyx -e pdf2 source/paper/paper.lyx > output/paper/scons.log && mv source/paper/paper.pdf output/paper/paper.pdf'
+	)
+
+online_dependencies = ['#source/paper/paper_online.lyx', 
+			'#source/paper/paper_online_figures.lyx', 
+			'#output/analysis/online_plot.eps']
+online_targets = ['#output/paper/paper_online.pdf']
+env.Command(
+	target = online_targets,
+	source = online_dependencies,
+	action = 'lyx -e pdf2 source/paper/paper_online.lyx >> output/paper/scons.log && mv source/paper/paper_online.pdf output/paper/paper_online.pdf'
+	)
+
+claims_dependencies = ['#source/paper/claims.lyx']
+claims_targets = ['#output/paper/claims.pdf']
+env.Command(
+	target = claims_targets,
+	source = claims_dependencies,
+	action = 'lyx -e pdf2 source/paper/claims.lyx >> output/paper/scons.log && mv source/paper/claims.pdf output/paper/claims.pdf'
+	)

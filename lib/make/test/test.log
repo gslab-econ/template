@@ -1,9 +1,0 @@
-PASS: VAR1 defined properly.
-PASS: VAR2 defined properly.
-PASS: VERYVERYVERYLONGVARNAME3 defined properly.
-PASS: VAR1 defined.
-PASS: VAR1 defined at correct value.
-PASS: VAR2 defined.
-PASS: VAR2 defined at correct value.
-PASS: VERYVERYVERYLONGVARNAME3 defined.
-PASS: VERYVERYVERYLONGVARNAME3 defined at correct value.

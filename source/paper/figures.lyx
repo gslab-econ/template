@@ -122,7 +122,7 @@ name "fig:plot"
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../output/analysis/plot.pdf
+	filename ../../output/analysis/plot.eps
 	scale 75
 
 \end_inset

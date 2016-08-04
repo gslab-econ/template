@@ -1,3 +1,4 @@
+*.pyc
 *.lyx~
 *.lyx#
 *.Rhistory
@@ -9,4 +10,13 @@
 /external/
 /temp/
 *.DS_Store
+*.aux
+*.fls
+*.lof
+*.lot
+*.tex
+*.nav
+*.snm
+*.toc
+*.out
 *.svn

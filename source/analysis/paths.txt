@@ -1,3 +1,0 @@
-JOB_NAME	analysis
-JOB_DIR	 analysis
-OUTPUT_DIR	../../output/analysis
