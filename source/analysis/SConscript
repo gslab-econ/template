@@ -1,9 +1,9 @@
 Import('*')
 
 env.Command(
-	target = ['#output/analysis/plot.eps', '#output/analysis/scons.log'], 
+	target = ['#output/analysis/plot.eps', '#output/analysis/sconscript.log'], 
 	source = ['#output/data/data.txt', 'analysis.do'],
-	action = 'statamp -e source/analysis/analysis.do && mv analysis.log output/analysis/scons.log'
+	action = 'statamp -e source/analysis/analysis.do && mv analysis.log output/analysis/sconscript.log'
 	)
 
 	

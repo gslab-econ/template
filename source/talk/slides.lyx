@@ -7,7 +7,7 @@
 \textclass beamer
 \begin_preamble
 \PassOptionsToPackage{no-math}{fontspec}
-\usetheme{metropolis} 
+\usetheme{metropolis_gslab} 
 \usepackage{graphicx} 
 \usepackage{hyperref} 
 \usepackage{multirow} 
