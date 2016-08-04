@@ -36,8 +36,8 @@ Pre-requisites:
  - git and git-lfs (installed)
 
 
- To run:
-  - In the root directory, type 'scons'. This should run everything that is flagged as being modified or with dependencies that have modified.
+To run:
+ - In the root directory, type 'scons'. This should run everything that is flagged as being modified or with dependencies that have modified.
 
 
 README.md template
