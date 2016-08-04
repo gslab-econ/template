@@ -27,6 +27,19 @@ organisation. Set the repository's privacy setting appropriately and do not add 
     `source repo_maker.sh`; this will initialise your repository. 
 
 
+Pre-requisites:
+ - Stata MP (installed and added to path)
+ - R (installed and added to path)
+ - scons (installed -- 'pip install scons' if pip is available)
+ - Latex and Lyx (installed and added to path)
+ - Metropolis beamer theme (installed)
+ - git and git-lfs (installed)
+
+
+ To run:
+  - In the root directory, type 'scons'. This should run everything that is flagged as being modified or with dependencies that have modified.
+
+
 README.md template
 ==================
 
