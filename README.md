@@ -34,6 +34,8 @@ Using the repository template
     - `scons output/paper/paper.pdf` will re-run only the code needed to update `output/paper/paper.pdf` without rebuilding other files.
 
 
+Individual scripts can be run directly within Stata and R if they are run in order.
+
 See the following for more information about scons:
   *  [Data analysis with SCons](http://zacharytessler.com/2015/03/05/data-workflows-with-scons/)
   *  [SCons User Guide](http://scons.org/doc/production/PDF/scons-user.pdf)
