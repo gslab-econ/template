@@ -23,7 +23,7 @@ Using the repository template
 
  - Either:
     - [Fork](https://help.github.com/articles/fork-a-repo/) this repository
-    - Create a completely empty repository in GitHub. Clone this empty repository locally. Copy the contents of this template repository into the empty repository (making sure to __exclude__ the `.git` folder, but __include__ the .gitattributes and .gitignore files). Re-run with SCons. Commit and push to the new repository.
+    - Create a completely empty repository in GitHub. Clone this empty repository locally. Copy the contents of this template repository into the empty repository (making sure to __exclude__ the `.git` folder, but __include__ the `.gitattributes` and `.gitignore` files). Re-run with SCons. Commit and push to the new repository.
 
 #### To run:
  - The entire directory:
