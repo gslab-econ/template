@@ -27,7 +27,7 @@ Using the repository template
 
 #### To run:
  - The entire directory:
-    - In the root directory, type 'scons'. This should run everything that is flagged as being modified or with dependencies that have been modified.
+    - In the root directory, type `scons`. This should run everything that is flagged as being modified or with dependencies that have been modified.
  - A single directory of targets:
     - `scons output/data` will re-build the `output/data` folder if it is out of sync, without rebuilding other files.
  - A single target file:
