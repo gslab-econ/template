@@ -15,7 +15,9 @@ Using the repository template
  - [git-lfs](https://git-lfs.github.com/)
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
- Installing the some of the applications above above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/). E.g., `brew install scons`.
+ Installing the some of the applications above above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) as they will set up the PATH variable for you.
+ 
+ E.g., `brew install scons`.
 
 #### In order to create a new repository using this template:
 
