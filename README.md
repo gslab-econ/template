@@ -30,7 +30,11 @@ Using the repository template
 
 Individual scripts can be run directly within Stata and R if they are run in order.
 
-See the following for more information about scons:
+#### More information about scons:
   *  [Data analysis with SCons](http://zacharytessler.com/2015/03/05/data-workflows-with-scons/)
   *  [SCons User Guide](http://scons.org/doc/production/PDF/scons-user.pdf)
   *  [SCons Manual](http://scons.org/doc/production/PDF/scons-man.pdf)
+  
+
+#### Copy the template:
+In order to use this repository template for your own purposes, see the [wiki](https://github.com/gslab-econ/template/wiki) for instructions.
