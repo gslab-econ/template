@@ -18,6 +18,8 @@ Using the repository template
  Installing the some of the applications above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the PATH variable for you.
  
  E.g., `brew install scons`.
+ 
+ Note: SCons can also be installed with [pip](https://pip.pypa.io/en/stable/) using `pip install --egg scons`.
 
 #### To run:
  - The entire directory:
