@@ -9,13 +9,13 @@ Using the repository template
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `statamp`
  - [R](https://www.r-project.org/)
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `Rscript`
- - scons (installed -- 'brew install scons' if brew is installed)
+ - [scons](http://scons.org/) 
  - [Lyx](https://www.lyx.org/)
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `lyx`
  - [git-lfs](https://git-lfs.github.com/)
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
- Installing the some of the applications above above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/)
+ Installing the some of the applications above above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/). E.g., `brew install scons`.
 
 #### In order to create a new repository using this template:
 
