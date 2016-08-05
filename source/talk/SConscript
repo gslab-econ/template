@@ -1,9 +1,8 @@
 Import('*')
 
-talk_dependencies = ['#source/talk/slides.lyx']
-talk_targets = ['#output/talk/slides.pdf', '#output/talk/scons.log']
 env.Command(
-	target = talk_targets,
-	source = talk_dependencies,
-	action = 'lyx -e pdf2 source/talk/slides.lyx > output/talk/sconscript.log && mv source/talk/slides.pdf output/talk/slides.pdf'
+	target = '#output/talk/slides.pdf',
+	source = '#source/talk/slides.lyx',
+	action = '''lyx -e pdf2 source/talk/slides.lyx > output/talk/sconscript.log && \
+				mv source/talk/slides.pdf output/talk/slides.pdf'''
 	)

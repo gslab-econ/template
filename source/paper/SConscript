@@ -1,19 +1,17 @@
 Import('*')
 
-paper_dependencies = ['#source/paper/paper.lyx', 
-			'#output/analysis/plot.eps']
-paper_targets = ['#output/paper/paper.pdf']
+
 env.Command(
-	target = paper_targets,
-	source = paper_dependencies,
-	action = 'lyx -e pdf2 source/paper/paper.lyx > output/paper/sconscript.log && mv source/paper/paper.pdf output/paper/paper.pdf'
+	target = '#output/paper/paper.pdf',
+	source = ['#source/paper/paper.lyx', '#output/analysis/plot.eps'],
+	action = '''lyx -e pdf2 source/paper/paper.lyx > output/paper/sconscript.log &&  \
+				mv source/paper/paper.pdf output/paper/paper.pdf'''
 	)
 
-online_dependencies = ['#source/paper/online_appendix.lyx', 
-			'#output/analysis/plot.eps']
-online_targets = ['#output/paper/online_appendix.pdf']
 env.Command(
-	target = online_targets,
-	source = online_dependencies,
-	action = 'lyx -e pdf2 source/paper/online_appendix.lyx >> output/paper/sconscript.log && mv source/paper/online_appendix.pdf output/paper/online_appendix.pdf'
+	target = '#output/paper/online_appendix.pdf',
+	source = ['#source/paper/online_appendix.lyx', 
+				'#output/analysis/plot.eps'],
+	action = '''lyx -e pdf2 source/paper/online_appendix.lyx >> output/paper/sconscript.log && \
+				 mv source/paper/online_appendix.pdf output/paper/online_appendix.pdf'''
 	)
