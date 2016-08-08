@@ -3,10 +3,6 @@
 *.lyx#
 *.Rhistory
 *.Rapp.history
-/data
-/log/
-/results/
-/saved
 /external/
 /temp/
 *.DS_Store
@@ -14,7 +10,6 @@
 *.fls
 *.lof
 *.lot
-*.tex
 *.nav
 *.snm
 *.toc
