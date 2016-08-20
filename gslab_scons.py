@@ -41,6 +41,10 @@ def build_stata(target, source, env, executable = 'StataMP'):
         try:
           subprocess.check_output('statamp -e ' + source_file, shell=True)
         except subprocess.CalledProcessError:       
-          subprocess.check_output('statase -e ' + source_file, shell=True)      
+          try: 
+            subprocess.check_output('statase -e ' + source_file, shell=True)      
+          except subprocess.CalledProcessError:     
+            subprocess.check_output('stata -e ' + source_file, shell=True)      
       shutil.move(loc_log, log_file)
+
     return None
