@@ -23,11 +23,11 @@ Notes:
 . do "source/analysis/analysis.do" 
 
 . program main
-  1.         import delimited "output/data/data.txt", delimiter("|") varnames(nonames
-> ) clear
+  1.         import delimited "output/data/data.txt", delimiter("|") varnames(nona
+> mes) clear
   2.         rename v1 obs_value
   3.         gen obs_number = _n
-  4.         graph twoway line obs_value obs_number
+  4.         graph twoway line obs_value obs_numbe
   5.         graph export "output/analysis/plot.eps"
   6. end
 
