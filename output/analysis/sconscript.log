@@ -1,7 +1,7 @@
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   14.1   Copyright 1985-2015 StataCorp LP
+___/   /   /___/   /   /___/   14.0   Copyright 1985-2015 StataCorp LP
   Statistics/Data Analysis            StataCorp
                                       4905 Lakeway Drive
      MP - Parallel Edition            College Station, Texas 77845 USA
@@ -9,10 +9,10 @@ ___/   /   /___/   /   /___/   14.1   Copyright 1985-2015 StataCorp LP
                                       979-696-4600        stata@stata.com
                                       979-696-4601 (fax)
 
-Unlimited-user 4-core Stata network license expires 21 Jul 2017:
-       Serial number:  501409012939
-         Licensed to:  Economics
-                       Stanford University
+8-user 4-core Stata network perpetual license:
+       Serial number:  501406225577
+         Licensed to:  Andres Shahidinejad
+                       GSLab
 
 Notes:
       1.  Stata is running in batch mode.
@@ -20,13 +20,11 @@ Notes:
       3.  More than 2 billion observations are allowed; see help obs_advice.
       4.  Maximum number of variables is set to 5000; see help set_maxvar.
 
-
-running /Applications/Stata/profile.do ...
-
 . do "source/analysis/analysis.do" 
 
 . program main
-  1.         import delimited "output/data/data.txt", delimiter("|") varnames(nonames) clear
+  1.         import delimited "output/data/data.txt", delimiter("|") varnames(nonames
+> ) clear
   2.         rename v1 obs_value
   3.         gen obs_number = _n
   4.         graph twoway line obs_value obs_number
@@ -35,7 +33,7 @@ running /Applications/Stata/profile.do ...
 
 . 
 . main    
-(1 var, 201 obs)
+(1 var, 101 obs)
 (file output/analysis/plot.eps written in EPS format)
 
 . 
