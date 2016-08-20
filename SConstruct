@@ -1,6 +1,6 @@
 import os, sys
-sys.stdout = os.popen("tee sconstruct_out.log", "w")
-sys.stderr = os.popen("tee sconstruct_err.log", "w")
+sys.stdout = os.popen("tee sconstruct.log", "w")
+sys.stderr = sys.stdout 
 
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
 					IMPLICIT_COMMAND_DEPENDENCIES = 0)
@@ -12,5 +12,4 @@ SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
 
-os.system('cat sconstruct_out.log  > sconstruct.log')
-Install('./output', 'sconstruct.log')
+env.Install('./output', 'sconstruct.log')
