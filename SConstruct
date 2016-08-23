@@ -12,4 +12,22 @@ SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
 
-env.Install('./output', 'sconstruct.log')
+Ignore("./output", "sconstruct.log")
+Command(
+	target = "./output", 
+	source = "sconstruct.log", 
+	action = [
+	           env.Install("$TARGET", "$SOURCE"),  
+	           Delete("$SOURCE")
+	         ]
+)
+
+# env.Install('./output', 'sconstruct.log')
+
+# env.Command(
+# 	target = "sconstruct.log", 
+# 	source = [], 
+# 	action = "rm $TARGET"
+# )
+
+# Execute(Delete('sconstruct.log'))

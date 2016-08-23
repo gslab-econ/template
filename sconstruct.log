@@ -1,4 +1,3 @@
 scons: done reading SConscript files.
 scons: Building targets ...
-Install file: "sconstruct.log" as "output/sconstruct.log"
 scons: done building targets.
