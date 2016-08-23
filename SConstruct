@@ -13,8 +13,3 @@ SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
 
-Command(
-	target = "output/sconstruct.log", 
-	source = ['sconstruct.log', 'output/talk'], 
-	action = 'mv sconstruct.log output/scontstruct.log',
-)
