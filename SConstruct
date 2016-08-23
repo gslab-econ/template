@@ -1,11 +1,10 @@
 import os, sys
 import gslab_scons
-sys.stdout = os.popen("tee sconstruct.log", "w")
-sys.stderr = sys.stdout 
-
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
 				 IMPLICIT_COMMAND_DEPENDENCIES = 0,
-				 BUILDERS = { 'Tablefill' : Builder(action = gslab_scons.build_tables),
+				 BUILDERS = { 
+                              'Log'       : Builder(action = gslab_scons.build_log),
+				              'Tablefill' : Builder(action = gslab_scons.build_tables),
                   			  'Lyx'       : Builder(action = gslab_scons.build_lyx),
                   			  'R'         : Builder(action = gslab_scons.build_r),
                   			  'Stata'     : Builder(action = gslab_scons.build_stata)})

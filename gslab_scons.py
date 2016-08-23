@@ -2,6 +2,14 @@ import os, sys, shutil, subprocess
 from sys import platform
 from gslab_fill.tablefill import tablefill
 
+def build_log(target, source, env):
+    if platform == "win32":
+      sys.stdout = os.popen("sconstruct.log & type sconstruct.log")
+    elif platform == "darwin" or platform == "linux" or platform == "linux2":
+      sys.stdout = os.popen("tee sconstruct.log", "w")
+    sys.stderr = sys.stdout 
+    return None
+
 def build_tables(target, source, env):
     tablefill(input    = ' '.join(env.GetBuildPath(env['INPUTS'])), 
               template = env.GetBuildPath(source[0]), 
