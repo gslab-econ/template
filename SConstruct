@@ -1,8 +1,7 @@
 import os
 import sys
 import gslab_scons
-sys.stdout = os.popen("tee sconstruct.log", "w")
-sys.stderr = sys.stdout 
+gslab_scons.start_log()
 
 
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
