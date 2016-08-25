@@ -4,7 +4,8 @@ from gslab_fill.tablefill import tablefill
 
 def start_log(log = "sconstruct.log"):
   # Prints to log file and shell for *nix platforms
-  if platform == "darwin" or platform == "linux" or platform == "linux2": 
+  unix = ["darwin", "linux", "linux2"]
+  if platform in unix: 
     sys.stdout = os.popen("tee %s" % log, "w")
 
   # Prints to log file only for Windows.  

@@ -1,8 +1,7 @@
 import os
 import sys
 import gslab_scons
-execfile("gslab_scons.py")
-start_log()
+gslab_scons.start_log()
 
 
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
