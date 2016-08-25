@@ -39,43 +39,32 @@ def build_r(target, source, env):
     os.system('Rscript %s >> %s' % (source_file, log_file))
     return None
 
-def build_stata(target, source, env, executable = 'StataMP'):
+def build_stata(target, source, env):
     source_file = str(source[0])
     target_file = str(target[0])
     target_dir  = os.path.dirname(target_file)
+    executable  = env["stata_flavour"]
   
-    if platform == "darwin":
-      log_file  = target_dir + '/sconscript.log'
-      loc_log   = os.path.basename(source_file).replace('.do','.log')
-      if executable == 'StataSE':
-        os.system('statase -e %s ' % source_file)        
-      elif executable == 'Stata':
-        os.system('stata -e %s ' % source_file)
-      elif executable == 'StataMP': 
-        try:
-          subprocess.check_output('statamp -e ' + source_file, shell=True)
-        except subprocess.CalledProcessError:       
-          try: 
-            subprocess.check_output('statase -e ' + source_file, shell=True)      
-          except subprocess.CalledProcessError:     
-            subprocess.check_output('stata -e ' + source_file, shell=True)      
+    unix         = ["darwin", "linux", "linux2"]
+    unix_options = ["-e"    , "-b"   , "-b"    ]
+
+    # List of executables and lower-case for bash commands
+    execs        = ["StataMP", "StataSE", "Stata"]
+    execs_lower  = [str.lower(x) for x in execs]
+
+    if platform in unix:
+      log_file = target_dir + '/sconscript.log'
+      loc_log  = os.path.basename(source_file).replace('.do','.log')
+
+      # Picking out appropriate option based on platform
+      option   = dict(zip(unix, unix_options))[platform]
+      exec_call   = dict(zip(execs,execs_lower))[executable]
+
+      command  = exec_call + " " + option + " %s "
+
+      os.system(command % source_file)    
+ 
       shutil.move(loc_log, log_file)
 
-    if platform == "linux" or platform == "linux2":
-      log_file  = target_dir + '/sconscript.log'
-      loc_log   = os.path.basename(source_file).replace('.do','.log')
-      if executable == 'StataSE':
-        os.system('statase -b %s ' % source_file)        
-      elif executable == 'Stata':
-        os.system('stata -b %s ' % source_file)
-      elif executable == 'StataMP': 
-        try:
-          subprocess.check_output('statamp -b ' + source_file, shell=True)
-        except subprocess.CalledProcessError:       
-          try: 
-            subprocess.check_output('statase -b ' + source_file, shell=True)      
-          except subprocess.CalledProcessError:     
-            subprocess.check_output('stata -b ' + source_file, shell=True)      
-      shutil.move(loc_log, log_file)
-
+  
     return None
