@@ -11,7 +11,7 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                   			  'Stata'     : Builder(action = gslab_scons.build_stata)})
 
 # Set Stata flavour here
-env.Append(stata_flavour = 'StataMP')
+env.Append(stata_flavour = None)
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
 Export('env')
