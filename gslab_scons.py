@@ -72,7 +72,7 @@ def stata_command_unix(flavor):
                 "linux2": "-b"}
     option   = options[platform]
     if flavor != "Stata":
-        flavor.replace("Stata", "Stata-")
+        flavor = flavor.replace("Stata", "Stata-")
     command  = str.lower(flavor) + " " + option + " %s "
     print(command)
     return command
