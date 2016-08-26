@@ -34,7 +34,7 @@ def build_r(target, source, env):
     target_file = str(target[0])
     target_dir  = os.path.dirname(target_file)
     log_file    = target_dir + '/sconscript.log'
-    os.system('Rscript %s >> %s' % (source_file, log_file))
+    os.system('Rscript %s &> %s' % (source_file, log_file))
     return None
 
 def build_stata(target, source, env):
