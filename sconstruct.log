@@ -1,8 +1,4 @@
 scons: done reading SConscript files.
 scons: Building targets ...
-Rscript source/data/build.R > output/data/sconscript.log
-statamp -e source/analysis/analysis.do && mv analysis.log output/analysis/sconscript.log
-lyx -e pdf2 source/paper/online_appendix.lyx >> output/paper/sconscript.log && mv source/paper/online_appendix.pdf output/paper/online_appendix.pdf
-lyx -e pdf2 source/paper/paper.lyx > output/paper/sconscript.log && mv source/paper/paper.pdf output/paper/paper.pdf
-lyx -e pdf2 source/talk/slides.lyx > output/talk/sconscript.log && mv source/talk/slides.pdf output/talk/slides.pdf
+Install file: "build/data/data.txt" as "output/data/data.txt"
 scons: done building targets.
