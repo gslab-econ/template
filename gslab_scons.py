@@ -37,29 +37,27 @@ def build_r(target, source, env):
     os.system('Rscript %s >> %s' % (source_file, log_file))
     return None
 
-
-
 def build_stata(target, source, env):
     source_file  = str(source[0])
     target_file  = str(target[0])
     target_dir   = os.path.dirname(target_file)
-    user_flavour = env["stata_flavour"]  
     unix         = ["darwin", "linux", "linux2"]
 
-    # List of flavours to be tried
-    flavours  = ["StataMP", "StataSE", "Stata"]
-    if user_flavour != None:
-        flavours  = [flavour]
+    # List of flavors to be tried, dependent on input
+    user_flavor  = env["user_flavor"]  
+    flavors      = ["StataMP", "StataSE", "Stata"]
+    if user_flavor != None:
+        flavors  = [user_flavor]
 
     log_file = target_dir + '/sconscript.log'
     loc_log  = os.path.basename(source_file).replace('.do','.log')
     
-    for flavour in flavours:
+    for flavor in flavors:
         try: 
             if platform in unix:
-                command = stata_command_unix(flavour)
+                command = stata_command_unix(flavor)
             elif platform == "win32":
-                command = stata_command_win(flavour)
+                command = stata_command_win(flavor)
             subprocess.check_output(command % source_file, shell = True)
             break
         except subprocess.CalledProcessError:
@@ -68,22 +66,20 @@ def build_stata(target, source, env):
     shutil.move(loc_log, log_file)
     return None
 
-def stata_command_unix(flavour):
-    
-    # Picking out appropriate option based on platform
+def stata_command_unix(flavor):
     options  = {"darwin": "-e",
                 "linux" : "-b",
                 "linux2": "-b"}
     option   = options[platform]
-    command  = str.lower(flavour) + " " + option + " %s "
+    command  = str.lower(flavor) + " " + option + " %s "
     return command
 
-def stata_command_win(flavour):
+def stata_command_win(flavor):
     if Is64Windows():
-        flavour = flavour + "-64"
-    command  = flavour + ".exe " + "/e" + " %s "
-
+        flavor = flavor + "-64"
+    command  = flavor + ".exe " + "/e" + " %s "
     return command
+
 
 def Is64Windows():
     return 'PROGRAMFILES(X86)' in os.environ

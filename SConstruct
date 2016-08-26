@@ -10,8 +10,15 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                   			  'R'         : Builder(action = gslab_scons.build_r),
                   			  'Stata'     : Builder(action = gslab_scons.build_stata)})
 
-# Set Stata flavour here
-env.Append(stata_flavour = None)
+# Set Stata flavor here
+AddOption('--sf', 
+          type    = 'string',
+          nargs   = 1,
+          dest    = 'flavor_input',
+          action  = 'store',
+          default = None  )
+env.Append(user_flavor = GetOption('flavor_input'))
+
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
 Export('env')
