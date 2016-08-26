@@ -3,9 +3,7 @@ from sys import platform
 from gslab_fill.tablefill import tablefill
 
 def start_log(log = "sconstruct.log"):
-    unix = ["darwin", "linux", "linux2"]
-  
-    if platform in unix: 
+    if IsUnix():
         sys.stdout = os.popen("tee %s" % log, "w")
     elif platform == "win32":
         sys.stdout = open(log, "w")
@@ -25,7 +23,7 @@ def build_lyx(target, source, env):
     target_dir  = os.path.dirname(target_file)
     newpdf      = source_file.replace('.lyx','.pdf')
     log_file    = target_dir + '/sconscript.log'
-    os.system('lyx -e pdf2 %s >> %s' % (source_file, log_file))
+    os.system('lyx -e pdf2 %s > %s' % (source_file, log_file))
     shutil.move(newpdf, target_file)
     return None
 
@@ -34,14 +32,16 @@ def build_r(target, source, env):
     target_file = str(target[0])
     target_dir  = os.path.dirname(target_file)
     log_file    = target_dir + '/sconscript.log'
-    os.system('Rscript %s &> %s' % (source_file, log_file))
+    if IsUnix():
+        os.system('Rscript %s > %s' % (source_file, log_file))
+    elif platform == "win32":
+        os.system('R CMD BATCH --no-save %s %s' % (source_file, log_file))
     return None
 
 def build_stata(target, source, env):
     source_file  = str(source[0])
     target_file  = str(target[0])
     target_dir   = os.path.dirname(target_file)
-    unix         = ["darwin", "linux", "linux2"]
 
     # List of flavors to be tried, dependent on input
     user_flavor  = env["user_flavor"]  
@@ -54,7 +54,7 @@ def build_stata(target, source, env):
     
     for flavor in flavors:
         try: 
-            if platform in unix:
+            if IsUnix():
                 command = stata_command_unix(flavor)
             elif platform == "win32":
                 command = stata_command_win(flavor)
@@ -86,3 +86,6 @@ def stata_command_win(flavor):
 def Is64Windows():
     return 'PROGRAMFILES(X86)' in os.environ
     
+def IsUnix():
+    unix = ["darwin", "linux", "linux2"]
+    return platform in unix
