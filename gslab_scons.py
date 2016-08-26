@@ -2,7 +2,7 @@ import os, sys, shutil, subprocess
 from sys import platform
 from gslab_fill.tablefill import tablefill
 
-def start_log(log = "sconstruct.log"):
+def start_log(mode, vers, log = "sconstruct.log"):
   # Prints to log file and shell for *nix platforms
   unix = ["darwin", "linux", "linux2"]
   if platform in unix: 
@@ -13,7 +13,21 @@ def start_log(log = "sconstruct.log"):
     sys.stdout = open(log, "w")
 
   sys.stderr = sys.stdout 
+  if not (mode in ['develop', 'cache', 'release']):
+     print("Error: %s is not a defined mode" % mode)
+     sys.exit()
+
+  if mode == 'release' and vers == '':
+      print("Error: Version must be defined in release mode")
+      sys.exit()
+
   return None
+
+def Release(env, ReleaseFiles, local_release):
+    os.system('mkdir -p "%s"' % local_release)
+    env.Install('#release', ReleaseFiles)
+    env.Install(local_release, ReleaseFiles)
+    env.Alias('drive', local_release)
 
 def build_tables(target, source, env):
     tablefill(input    = ' '.join(env.GetBuildPath(env['INPUTS'])), 
