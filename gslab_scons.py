@@ -3,15 +3,15 @@ from sys import platform
 from gslab_fill.tablefill import tablefill
 
 def start_log(log = "sconstruct.log"):
-  unix = ["darwin", "linux", "linux2"]
+    unix = ["darwin", "linux", "linux2"]
   
-  if platform in unix: 
-    sys.stdout = os.popen("tee %s" % log, "w")
-  elif platform == "win32":
-    sys.stdout = open(log, "w")
+    if platform in unix: 
+        sys.stdout = os.popen("tee %s" % log, "w")
+    elif platform == "win32":
+        sys.stdout = open(log, "w")
 
-  sys.stderr = sys.stdout 
-  return None
+    sys.stderr = sys.stdout 
+    return None
 
 def build_tables(target, source, env):
     tablefill(input    = ' '.join(env.GetBuildPath(env['INPUTS'])), 
