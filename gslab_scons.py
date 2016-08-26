@@ -37,35 +37,54 @@ def build_r(target, source, env):
     os.system('Rscript %s >> %s' % (source_file, log_file))
     return None
 
+
+
 def build_stata(target, source, env):
     source_file  = str(source[0])
     target_file  = str(target[0])
     target_dir   = os.path.dirname(target_file)
-    executable   = env["stata_flavour"]
-  
+    user_flavour = env["stata_flavour"]  
     unix         = ["darwin", "linux", "linux2"]
-    unix_options = ["-e"    , "-b"   , "-b"    ]
+
+    # List of flavours to be tried
+    flavours  = ["StataMP", "StataSE", "Stata"]
+    if user_flavour != None:
+        flavours  = [flavour]
+
+    log_file = target_dir + '/sconscript.log'
+    loc_log  = os.path.basename(source_file).replace('.do','.log')
     
-    # List of executables to be tried
-    exec_list    = ["statamp", "statase", "stata"]
-    if executable in exec_list:
-        exec_list  = [executable]
-
-    if platform in unix:
-        log_file = target_dir + '/sconscript.log'
-        loc_log  = os.path.basename(source_file).replace('.do','.log')
-
-        # Picking out appropriate option based on platform
-        option   = dict(zip(unix, unix_options))[platform]
-
-        for x in exec_list:
-            command  = x + " " + option + " %s "
-            try: 
-                # Call `x' flavour of Stata here
-                subprocess.check_output(command % source_file, shell = True)
-                break
-            except subprocess.CalledProcessError:
-                continue
+    for flavour in flavours:
+        try: 
+            if platform in unix:
+                command = stata_command_unix(flavour)
+            elif platform == "win32":
+                command = stata_command_win(flavour)
+            subprocess.check_output(command % source_file, shell = True)
+            break
+        except subprocess.CalledProcessError:
+            continue
 
     shutil.move(loc_log, log_file)
     return None
+
+def stata_command_unix(flavour):
+    
+    # Picking out appropriate option based on platform
+    options  = {"darwin": "-e",
+                "linux" : "-b",
+                "linux2": "-b"}
+    option   = options[platform]
+    command  = str.lower(flavour) + " " + option + " %s "
+    return command
+
+def stata_command_win(flavour):
+    if Is64Windows():
+        flavour = flavour + "-64"
+    command  = flavour + ".exe " + "/e" + " %s "
+
+    return command
+
+def Is64Windows():
+    return 'PROGRAMFILES(X86)' in os.environ
+    
