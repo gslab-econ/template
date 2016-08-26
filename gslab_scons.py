@@ -74,6 +74,7 @@ def stata_command_unix(flavor):
     if flavor != "Stata":
         flavor.replace("Stata", "Stata-")
     command  = str.lower(flavor) + " " + option + " %s "
+    print(command)
     return command
 
 def stata_command_win(flavor):
