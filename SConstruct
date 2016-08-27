@@ -10,12 +10,13 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                                'R'         : Builder(action = gslab_scons.build_r),
                                'Stata'     : Builder(action = gslab_scons.build_stata)})
 
-# Set Stata flavor here
+# Set Stata flavor here, syntax:  `scons --sf=StataMP`
 AddOption('--sf', 
           type    = 'string',
           nargs   = 1,
           dest    = 'flavor_input',
           action  = 'store',
+          help    = 'Provide Stata flavour between "StataMP", "StataSE", or "Stata"',
           default = None)
 env.Append(user_flavor = GetOption('flavor_input'))
 

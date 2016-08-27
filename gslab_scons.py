@@ -3,7 +3,7 @@ from sys import platform
 from gslab_fill.tablefill import tablefill
 
 def start_log(log = "sconstruct.log"):
-    if IsUnix():
+    if is_unix():
         sys.stdout = os.popen("tee %s" % log, "w")
     elif platform == "win32":
         sys.stdout = open(log, "w")
@@ -51,7 +51,7 @@ def build_stata(target, source, env):
     
     for flavor in flavors:
         try: 
-            if IsUnix():
+            if is_unix():
                 command = stata_command_unix(flavor)
             elif platform == "win32":
                 command = stata_command_win(flavor)
@@ -64,25 +64,26 @@ def build_stata(target, source, env):
     return None
 
 def stata_command_unix(flavor):
-    options  = {"darwin": "-e",
-                "linux" : "-b",
-                "linux2": "-b"}
-    option   = options[platform]
-    if flavor != "Stata":
-        flavor = flavor.replace("Stata", "Stata-")
-    command  = str.lower(flavor) + " " + option + " %s "
+    options = {"darwin": "-e",
+               "linux" : "-b",
+               "linux2": "-b"}
+    option  = options[platform]
+    flavor  = str.lower(flavor)
+    if flavor != "stata":
+        flavor = flavor.replace("stata", "stata-")
+    command  =  flavor + " " + option + " %s "
     return command
 
 def stata_command_win(flavor):
-    if Is64Windows():
+    if is_64_windows():
         flavor = flavor + "-64"
     command  = flavor + ".exe " + "/e" + " %s "
     return command
 
-
-def Is64Windows():
-    return 'PROGRAMFILES(X86)' in os.environ
-    
-def IsUnix():
+def is_unix():
     unix = ["darwin", "linux", "linux2"]
     return platform in unix
+
+def is_64_windows():
+    return 'PROGRAMFILES(X86)' in os.environ
+    

@@ -1,5 +1,6 @@
 Import('*')
 
 target = '#output/analysis/plot.eps'       
-source = ['#source/analysis/analysis.do', '#output/data/data.txt']        
+source = ['#source/analysis/analysis.do', 
+          '#output/data/data.txt']        
 env.Stata(target, source)
