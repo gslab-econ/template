@@ -24,7 +24,7 @@ Using the repository template
 
 #### To run:
  - The entire directory:
-    - In the root directory, type `scons`. This should run everything that is flagged as being modified or with dependencies that have been modified.
+    - In the root directory, type `scons` (or one of its derivatives outlined below). This should run everything that is flagged as being modified or with dependencies that have been modified.
  - A single directory of targets:
     - `scons output/data` will re-build the `output/data` folder if it is out of sync, without rebuilding other files.
  - A single target file:
@@ -34,7 +34,7 @@ Using the repository template
 Individual scripts can be run directly within Stata and R if they are run in order.
 
 
- "Cache and release" protocol:
+#### "Cache and release" protocol:
 
 - Manually create relevant 'cache' and 'release' google drive folder and share them. Assign ownership as appropriate. (If already created and shared, make sure to place them within your "My Drive" folder). 
 	- The 'release' drive folder is only necessary if the releases will be stored on drive instead of GitHub.
@@ -42,9 +42,9 @@ Individual scripts can be run directly within Stata and R if they are run in ord
 - Run scons in 'cache' mode. `scons mode=cache`.
 - Modify code and run scons in 'develop' mode as you make intermediate commits to the issue branch. `scons mode=develop` or just `scons`
 - Before merging to master, run scons in 'cache' mode with [force caching](http://scons.org/doc/2.0.1/HTML/scons-user/x4276.html) turned on before committing. `scons mode=cache --cache-force`
-- Merge
-- If you want to create a release, run scons in 'release' mode. `scons mode=release version=0.1`
-- If you wnat to create a release that pushes to google drive, run scons in 'release'+drive mode. `scons drive mode=release version=0.1`
+- Merge with master
+- Create a release by runing scons in 'release' mode. `scons mode=release version=issue###`
+- If need to create a release that pushes to google drive, run scons in 'release'+drive mode. `scons drive mode=release version=issue###`
 
 
 
