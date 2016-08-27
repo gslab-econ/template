@@ -3,4 +3,5 @@ Import('*')
 target = '#output/talk/slides.pdf'
 source = ['#source/talk/slides.lyx',
 		  '#output/analysis/plot.eps']
+
 env.Lyx(target, source)

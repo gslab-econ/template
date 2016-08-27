@@ -1,8 +1,8 @@
 Import('*')
 
 target = '#output/paper/paper.pdf'
-source = ['#source/paper/paper.lyx', 
-		  '#output/analysis/plot.eps']
+source = ['#source/paper/paper.lyx',
+          '#output/analysis/plot.eps']
 env.Lyx(target, source)
 
 target = '#output/paper/online_appendix.pdf'
