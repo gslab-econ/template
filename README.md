@@ -4,11 +4,11 @@ Using the repository template
 
 
 #### Pre-requisites:
- - Mac OS or Linux OS
- - [Stata MP](http://www.stata.com/statamp/)
-    - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `statamp`
+ - Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
+ - [Stata](http://www.stata.com/statamp/)
+    - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `stata-mp` (or `stata-se` or `stata`, depends on the flavor installed). User can specify Stata flavor by typing `scons --sf=StataSE` for example.
  - [R](https://www.r-project.org/)
-    - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `Rscript`
+    - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `R`
  - [scons](http://scons.org/) 
  - [Lyx](https://www.lyx.org/)
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `lyx`
@@ -29,14 +29,10 @@ Using the repository template
  - A single target file:
     - `scons output/paper/paper.pdf` will re-run only the code needed to update `output/paper/paper.pdf` without rebuilding other files.
 
-
-Individual scripts can be run directly within Stata and R if they are run in order.
-
 #### More information about scons:
   *  [Data analysis with SCons](http://zacharytessler.com/2015/03/05/data-workflows-with-scons/)
   *  [SCons User Guide](http://scons.org/doc/production/PDF/scons-user.pdf)
   *  [SCons Manual](http://scons.org/doc/production/PDF/scons-man.pdf)
-  
 
 #### Copy the template:
 In order to use this repository template for your own purposes, see the [wiki](https://github.com/gslab-econ/template/wiki) for instructions.
