@@ -46,7 +46,7 @@ Individual scripts can be run directly within Stata and R if they are run in ord
 - Create a release by runing scons in 'release' mode (Note that no code changes should be made at this point. This `scons` run should __only__ push files to Drive or create a tag in GitHub). `scons mode=release version=issue###`
 - If need to create a release that pushes to google drive, run scons in 'release'+drive mode. `scons drive mode=release version=issue###`
 
-The `release` folder should only store files that will be versioned in GitHub and are intende to be used outside of the directory. `DriveReleaseFiles` should only call files from within `build`, so no extra installation step is necessary.
+The `release` folder should only store files that will be versioned in GitHub and are intended to be used outside of the directory. `DriveReleaseFiles` should only call files from within `build`, so no extra installation step is necessary.
 
 
 
