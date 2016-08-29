@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 import sys
 import gslab_scons
