@@ -1,3 +1,42 @@
+'''
+#################################################################
+#  gslab_scons.py - Help/Documentation for gslab_scons.py       #
+#################################################################
+
+# Description:
+gslab_scons.py is a Python module containing functions used in GSLab's recommended Scons repo template.
+
+# Usage:
+
+## Pre-requisites
+- OS supported: Windows (`cmd`), Mac OS, Linux OS
+- Stata: Support for Stata-MP, Stata-SE, and Stata. Executable should be added to the `PATH` environment and callable from command line. 
+- R: executable should be added to the `PATH` environment so that it is callable from command line with `R`.
+- scons
+- Lyx: executable should be added to the `PATH` environment so that it is callable from command line with `lyx`.
+
+## Setup
+In setting up GSLab's repo Scons template, SConstruct requires this module to supply its builders with specific
+executable and commands. 
+The location of executables for R, Stata, and Lyx must first be added to the PATH environment.
+Top-directory SConstruct file should include:
+```
+import gslab_scons
+```
+Builders are setup using Scons' default format for builder and added to Scons' environment dictionary.
+SConscript files can then call the builder through the environment dictionary, e.g. `env.Stata`.
+
+## Run
+ - The entire directory:
+    - In the root directory, type `scons`. This should run everything that is flagged as being modified or with dependencies that have been modified.
+ - A single directory of targets:
+    - `scons output/data` will re-build the `output/data` folder if it is out of sync, without rebuilding other files.
+ - A single target file:
+    - `scons output/paper/paper.pdf` will re-run only the code needed to update `output/paper/paper.pdf` without rebuilding other files.
+
+User can specify flavour by typing `scons --sf=StataMP` (default: Scons will try to find each flavour).
+'''
+
 import os, sys, shutil, subprocess
 from sys import platform
 from gslab_fill.tablefill import tablefill
