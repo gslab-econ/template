@@ -6,3 +6,5 @@ env.Command(
 	source = 'build.R',
 	action = 'Rscript source/data/build.R > build/data/sconscript.log'
 	)
+
+env.Install('#release', '#build/data/data.txt')

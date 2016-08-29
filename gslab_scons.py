@@ -23,13 +23,11 @@ def start_log(mode, vers, log = "sconstruct.log"):
 
   return None
 
-def Release(env, GitHubReleaseFiles, DriveReleaseFiles, local_release, vers):
-    if GitHubReleaseFiles != '':
-        env.Install('#release', GitHubReleaseFiles)
+def Release(env, vers, DriveReleaseFiles = '', local_release = ''):
     if DriveReleaseFiles != '':
-        os.system('mkdir -p "%s"' % local_release)
         env.Install(local_release, DriveReleaseFiles)
         env.Alias('drive', local_release)
+    os.system("git fetch --prune origin '+refs/tags/*:refs/tags/*'")
     os.system('git tag %s' % vers)
     os.system('git push origin --tags')
 

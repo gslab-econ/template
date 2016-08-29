@@ -35,7 +35,6 @@ if mode == 'release':
 	local_release = '/Users/%s/Google Drive/release/large_template/' % USER
 	local_release = local_release + vers + '/'
 	DriveReleaseFiles = ['#build/data/data.txt']
-	GitHubReleaseFiles = ['#build/data/data.txt']
-	gslab_scons.Release(env, GitHubReleaseFiles, DriveReleaseFiles, local_release, vers)
+	gslab_scons.Release(env, vers, DriveReleaseFiles, local_release)
 
 
