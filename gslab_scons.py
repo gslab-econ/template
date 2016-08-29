@@ -27,7 +27,9 @@ def Release(env, vers, DriveReleaseFiles = '', local_release = ''):
     if DriveReleaseFiles != '':
         env.Install(local_release, DriveReleaseFiles)
         env.Alias('drive', local_release)
-    os.system("git fetch --prune origin '+refs/tags/*:refs/tags/*'")
+    # Removes any local tags not pushed to remote to avoid re-populating tags removed from remote
+    os.system("git fetch --prune origin '+refs/tags/*:refs/tags/*'") 
+    
     os.system('git tag %s' % vers)
     os.system('git push origin --tags')
 
