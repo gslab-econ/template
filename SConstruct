@@ -23,7 +23,7 @@ Export('env')
 SConscript('source/data/SConscript') 
 
 # Additional mode options
-if mode != "develop":
+if mode in ['cache', 'release']:
 	# Defines cache in cache mode
 	USER        = os.environ['USER']
 	local_cache = '/Users/%s/Google Drive/cache/large_template' % USER
@@ -34,7 +34,8 @@ if mode == 'release':
 	# Installs files appropirate locations in release mode
 	local_release = '/Users/%s/Google Drive/release/large_template/' % USER
 	local_release = local_release + vers + '/'
-	ReleaseFiles = ['#build/data/data.txt']
-	gslab_scons.Release(env, ReleaseFiles, local_release)
+	DriveReleaseFiles = ['#build/data/data.txt']
+	GitHubReleaseFiles = ['#build/data/data.txt']
+	gslab_scons.Release(env, GitHubReleaseFiles, DriveReleaseFiles, local_release, vers)
 
 
