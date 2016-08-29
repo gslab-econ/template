@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 import sys
 import gslab_scons
@@ -27,4 +28,3 @@ SConscript('source/data/SConscript')
 SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
-
