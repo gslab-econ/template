@@ -26,6 +26,8 @@ import gslab_scons
 Builders are setup using Scons' default format for builder and added to Scons' environment dictionary.
 SConscript files can then call the builder through the environment dictionary, e.g. `env.Stata`.
 
+When calling builders from SConscript, the source code file (e.g. `.do` for Stata) must be listed as the first argument in source.
+
 ## Run
  - The entire directory:
     - In the root directory, type `scons`. This should run everything that is flagged as being modified or with dependencies that have been modified.
@@ -38,6 +40,7 @@ User can specify flavour by typing `scons --sf=StataMP` (default: Scons will try
 '''
 
 import os, sys, shutil, subprocess
+from datetime import datetime
 from sys import platform
 from gslab_fill.tablefill import tablefill
 
@@ -46,8 +49,8 @@ def start_log(log = "sconstruct.log"):
         sys.stdout = os.popen("tee %s" % log, "w")
     elif platform == "win32":
         sys.stdout = open(log, "w")
-
     sys.stderr = sys.stdout 
+    time_prepender(log)
     return None
 
 def build_tables(target, source, env):
@@ -60,46 +63,62 @@ def build_lyx(target, source, env):
     source_file = str(source[0])
     target_file = str(target[0])
     target_dir  = os.path.dirname(target_file)
+    check_source_code_extension(source_file, 'lyx')
     newpdf      = source_file.replace('.lyx','.pdf')
+    
     log_file    = target_dir + '/sconscript.log'
+    silent_remove(log_file)
+    
     os.system('lyx -e pdf2 %s > %s' % (source_file, log_file))
+    
     shutil.move(newpdf, target_file)
+    time_prepender(log_file)
     return None
 
 def build_r(target, source, env):
     source_file = str(source[0])
     target_file = str(target[0])
     target_dir  = os.path.dirname(target_file)
+    check_source_code_extension(source_file, 'r')
+
     log_file    = target_dir + '/sconscript.log'
+    silent_remove(log_file)
+
     os.system('R CMD BATCH --no-save %s %s' % (source_file, log_file))
+    
+    time_prepender(log_file)
     return None
 
 def build_stata(target, source, env):
     source_file  = str(source[0])
     target_file  = str(target[0])
     target_dir   = os.path.dirname(target_file)
+    check_source_code_extension(source_file, 'stata')
 
     # List of flavors to be tried, dependent on input
     user_flavor  = env["user_flavor"]  
-    flavors      = ["StataMP", "StataSE", "Stata"]
-    if user_flavor != None:
+    flavors      = ["Stata-MP", "Stata-SE", "Stata"]
+    if user_flavor is not None:
         flavors  = [user_flavor]
 
     log_file = target_dir + '/sconscript.log'
+    silent_remove(log_file)
     loc_log  = os.path.basename(source_file).replace('.do','.log')
-    
+
     for flavor in flavors:
         try: 
-            if is_unix():
-                command = stata_command_unix(flavor)
-            elif platform == "win32":
-                command = stata_command_win(flavor)
-            subprocess.check_output(command % source_file, shell = True)
-            break
+             if is_in_path(flavor):
+                if is_unix():
+                    command = stata_command_unix(flavor)
+                elif platform == "win32":
+                    command = stata_command_win(flavor)
+                subprocess.check_output(command % source_file, shell = True)
+                break
         except subprocess.CalledProcessError:
             continue
 
     shutil.move(loc_log, log_file)
+    time_prepender(log_file)
     return None
 
 def stata_command_unix(flavor):
@@ -107,10 +126,7 @@ def stata_command_unix(flavor):
                "linux" : "-b",
                "linux2": "-b"}
     option  = options[platform]
-    flavor  = str.lower(flavor)
-    if flavor != "stata":
-        flavor = flavor.replace("stata", "stata-")
-    command  =  flavor + " " + option + " %s "
+    command  =  str.lower(flavor) + " " + option + " %s "
     return command
 
 def stata_command_win(flavor):
@@ -125,4 +141,51 @@ def is_unix():
 
 def is_64_windows():
     return 'PROGRAMFILES(X86)' in os.environ
-    
+
+def silent_remove(filename):
+    try:
+        os.remove(filename)
+    except OSError:
+        pass
+    return None
+
+def is_in_path(program):
+    # General helper function to check if `program` exist in the path env
+    def is_exe(fpath):
+        return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+    fpath, fname = os.path.split(program)
+    if fpath:
+        if is_exe(program):
+            return program
+    else:
+        for path in os.environ["PATH"].split(os.pathsep):
+            path = path.strip('"')
+            exe_file = os.path.join(path, program)
+            if is_exe(exe_file):
+                return exe_file
+    return None
+
+def time_prepender(filename):
+    now = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
+    with open(filename, mode = 'r+U') as f:
+        content = f.read()
+        f.seek(0, 0)
+        f.write('Log created at ' + now + '\n \n' + content)
+    return None
+
+def check_source_code_extension(source_file, software):
+    extensions = {"stata": ".do",
+                  "r"    : ".r", 
+                  "lyx"  : ".lyx"}
+    ext = extensions[software]
+    source_file = str.lower(source_file)
+    if not source_file.endswith(ext):
+        try:
+            raise ValueError()
+        except ValueError:
+            print('*** Error: ' + 'First argument in `source`, ' + source_file + ', must be a ' + ext + ' file')    
+    return None
+
+
+
+

@@ -1,0 +1,13 @@
+Import('env')
+
+# Add command line option for Stata flavor. Syntax:  `scons --sf=StataMP`
+AddOption('--sf', 
+          type    = 'string',
+          nargs   = 1,
+          dest    = 'flavor_input',
+          action  = 'store',
+          help    = 'Provide Stata flavour among "StataMP", "StataSE", or "Stata"',
+          default = None)
+env.Append(user_flavor = GetOption('flavor_input'))
+
+Export('env')
