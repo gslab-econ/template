@@ -44,13 +44,14 @@ from datetime import datetime
 from sys import platform
 from gslab_fill.tablefill import tablefill
 
-def start_log(log = "sconstruct.log"):
+def start_log(log = 'sconstruct.log'):
     if is_unix():
-        sys.stdout = os.popen("tee %s" % log, "w")
-    elif platform == "win32":
-        sys.stdout = open(log, "w")
+        sys.stdout = os.popen('tee %s' % log, 'w')
+    elif platform == 'win32':
+        sys.stdout = open(log, 'w')
+    now = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
+    sys.stdout.write( now + '\n')
     sys.stderr = sys.stdout 
-    time_prepender(log)
     return None
 
 def build_tables(target, source, env):
@@ -95,48 +96,57 @@ def build_stata(target, source, env):
     target_dir   = os.path.dirname(target_file)
     check_source_code_extension(source_file, 'stata')
 
-    # List of flavors to be tried, dependent on input
-    user_flavor  = env["user_flavor"]  
-    flavors      = ["Stata-MP", "Stata-SE", "Stata"]
-    if user_flavor is not None:
-        flavors  = [user_flavor]
-
     log_file = target_dir + '/sconscript.log'
     silent_remove(log_file)
     loc_log  = os.path.basename(source_file).replace('.do','.log')
 
-    for flavor in flavors:
-        try: 
-             if is_in_path(flavor):
-                if is_unix():
+    user_flavor  = env['user_flavor']  
+    if user_flavor is not None:
+        if is_unix():
+            command = stata_command_unix(user_flavor)
+        elif platform == 'win32':
+            command = stata_command_win(user_flavor)
+    else:
+        flavors = ['stata-mp', 'stata-se', 'stata']
+        if is_unix():
+            for flavor in flavors:
+                if is_in_path(flavor):
                     command = stata_command_unix(flavor)
-                elif platform == "win32":
-                    command = stata_command_win(flavor)
-                subprocess.check_output(command % source_file, shell = True)
-                break
-        except subprocess.CalledProcessError:
-            continue
+                    break
+        elif platform == 'win32':
+            if os.environ['STATAEXE'] is not None:
+                command = stata_command_win("\%STATAEXE\%")
+            else:
+                if is_64_windows():
+                    flavors = [f + '-64' for f in flavors]
+                flavors = [(f.replace('-', '') + '.exe') for f in flavors]
+                for flavor in flavors:
+                    if is_in_path(flavor):
+                        command = stata_command_win(flavor)
+                        break
+    try:
+        subprocess.check_output(command % source_file, shell = True)
+    except subprocess.CalledProcessError:
+        print('*** Error: Cannot find Stata executable.')
 
     shutil.move(loc_log, log_file)
     time_prepender(log_file)
     return None
 
 def stata_command_unix(flavor):
-    options = {"darwin": "-e",
-               "linux" : "-b",
-               "linux2": "-b"}
+    options = {'darwin': '-e',
+               'linux' : '-b',
+               'linux2': '-b'}
     option  = options[platform]
-    command  =  str.lower(flavor) + " " + option + " %s "
+    command = flavor + ' ' + option + ' %s '
     return command
 
 def stata_command_win(flavor):
-    if is_64_windows():
-        flavor = flavor + "-64"
-    command  = flavor + ".exe " + "/e" + " %s "
+    command  = flavor + ' /e' + ' %s '
     return command
 
 def is_unix():
-    unix = ["darwin", "linux", "linux2"]
+    unix = ['darwin', 'linux', 'linux2']
     return platform in unix
 
 def is_64_windows():
@@ -158,8 +168,8 @@ def is_in_path(program):
         if is_exe(program):
             return program
     else:
-        for path in os.environ["PATH"].split(os.pathsep):
-            path = path.strip('"')
+        for path in os.environ['PATH'].split(os.pathsep):
+            path = path.strip("'")
             exe_file = os.path.join(path, program)
             if is_exe(exe_file):
                 return exe_file
@@ -174,9 +184,9 @@ def time_prepender(filename):
     return None
 
 def check_source_code_extension(source_file, software):
-    extensions = {"stata": ".do",
-                  "r"    : ".r", 
-                  "lyx"  : ".lyx"}
+    extensions = {'stata': '.do',
+                  'r'    : '.r', 
+                  'lyx'  : '.lyx'}
     ext = extensions[software]
     source_file = str.lower(source_file)
     if not source_file.endswith(ext):
