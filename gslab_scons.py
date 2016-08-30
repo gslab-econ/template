@@ -117,7 +117,7 @@ def build_stata(target, source, env):
             if os.environ['STATAEXE'] is not None:
                 command = stata_command_win("\%STATAEXE\%")
             else:
-                flavors = [(f.replace('-', '') + '.exe' for f in flavors]
+                flavors = [(f.replace('-', '') + '.exe') for f in flavors]
                 if is_64_windows():
                     flavors = [f.replace('.exe', '-64.exe') for f in flavors]
                 for flavor in flavors:
