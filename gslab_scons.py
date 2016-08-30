@@ -162,19 +162,18 @@ def remove_if_exist(filename):
 
 def is_in_path(program):
     # General helper function to check if `program` exist in the path env
-    def is_exe(file_path):
-        return os.path.isfile(file_path) and os.access(file_path, os.X_OK)
-    file_path, file_name = os.path.split(program)
-    if file_path:
-        if is_exe(program):
-            return program
+    if is_exe(program):
+        return program
     else:
         for path in os.environ['PATH'].split(os.pathsep):
             path = path.strip("'")
-            exe_file = os.path.join(path, program)
-            if is_exe(exe_file):
-                return exe_file
+            exe = os.path.join(path, program)
+            if is_exe(exe):
+                return exe
     return None
+
+def is_exe(file_path):
+    return os.path.isfile(file_path) and os.access(file_path, os.X_OK)
 
 def time_prepender(filename):
     now = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
@@ -196,3 +195,5 @@ def check_source_code_extension(source_file, software):
         except ValueError:
             print('*** Error: ' + 'First argument in `source`, ' + source_file + ', must be a ' + ext + ' file')    
     return None
+
+    
