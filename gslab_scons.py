@@ -114,9 +114,10 @@ def build_stata(target, source, env):
                     command = stata_command_unix(flavor)
                     break
         elif platform == 'win32':
-            if os.environ['STATAEXE'] is not None:
-                command = stata_command_win("\%STATAEXE\%")
-            else:
+            try:
+                key_exist = os.environ['STATAEXE'] is not None
+                command = stata_command_win("%%STATAEXE%%")
+            except KeyError:
                 flavors = [(f.replace('-', '') + '.exe') for f in flavors]
                 if is_64_windows():
                     flavors = [f.replace('.exe', '-64.exe') for f in flavors]
@@ -142,7 +143,7 @@ def stata_command_unix(flavor):
     return command
 
 def stata_command_win(flavor):
-    command  = flavor + ' /e' + ' %s '
+    command  = flavor + ' /e do' + ' %s '
     return command
 
 def is_unix():
@@ -195,7 +196,3 @@ def check_source_code_extension(source_file, software):
         except ValueError:
             print('*** Error: ' + 'First argument in `source`, ' + source_file + ', must be a ' + ext + ' file')    
     return None
-
-
-
-
