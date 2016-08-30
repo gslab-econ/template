@@ -21,3 +21,5 @@ SConscript('source/data/SConscript')
 SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
+
+print(gslab_scons.current_time())
