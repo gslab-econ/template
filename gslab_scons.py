@@ -68,7 +68,7 @@ def build_lyx(target, source, env):
     newpdf      = source_file.replace('.lyx','.pdf')
     
     log_file    = target_dir + '/sconscript.log'
-    silent_remove(log_file)
+    remove_if_exist(log_file)
     
     os.system('lyx -e pdf2 %s > %s' % (source_file, log_file))
     
@@ -83,7 +83,7 @@ def build_r(target, source, env):
     check_source_code_extension(source_file, 'r')
 
     log_file    = target_dir + '/sconscript.log'
-    silent_remove(log_file)
+    remove_if_exist(log_file)
 
     os.system('R CMD BATCH --no-save %s %s' % (source_file, log_file))
     
@@ -97,7 +97,7 @@ def build_stata(target, source, env):
     check_source_code_extension(source_file, 'stata')
 
     log_file = target_dir + '/sconscript.log'
-    silent_remove(log_file)
+    remove_if_exist(log_file)
     loc_log  = os.path.basename(source_file).replace('.do','.log')
 
     user_flavor  = env['user_flavor']  
@@ -116,7 +116,7 @@ def build_stata(target, source, env):
         elif platform == 'win32':
             try:
                 key_exist = os.environ['STATAEXE'] is not None
-                command = stata_command_win("%%STATAEXE%%")
+                command   = stata_command_win("%%STATAEXE%%")
             except KeyError:
                 flavors = [(f.replace('-', '') + '.exe') for f in flavors]
                 if is_64_windows():
@@ -153,7 +153,7 @@ def is_unix():
 def is_64_windows():
     return 'PROGRAMFILES(X86)' in os.environ
 
-def silent_remove(filename):
+def remove_if_exist(filename):
     try:
         os.remove(filename)
     except OSError:
@@ -162,10 +162,10 @@ def silent_remove(filename):
 
 def is_in_path(program):
     # General helper function to check if `program` exist in the path env
-    def is_exe(fpath):
-        return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
-    fpath, fname = os.path.split(program)
-    if fpath:
+    def is_exe(file_path):
+        return os.path.isfile(file_path) and os.access(file_path, os.X_OK)
+    file_path, file_name = os.path.split(program)
+    if file_path:
         if is_exe(program):
             return program
     else:
