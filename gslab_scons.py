@@ -49,9 +49,8 @@ def start_log(log = 'sconstruct.log'):
         sys.stdout = os.popen('tee %s' % log, 'w')
     elif platform == 'win32':
         sys.stdout = open(log, 'w')
-    now = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
-    sys.stdout.write( now + '\n')
     sys.stderr = sys.stdout 
+    sys.stdout.write(current_time() + '\n')
     return None
 
 def build_tables(target, source, env):
@@ -61,22 +60,25 @@ def build_tables(target, source, env):
     return None
 
 def build_lyx(target, source, env):
+    start_time  = current_time()
     source_file = str(source[0])
     target_file = str(target[0])
     target_dir  = os.path.dirname(target_file)
     check_source_code_extension(source_file, 'lyx')
     newpdf      = source_file.replace('.lyx','.pdf')
-    
+  
     log_file    = target_dir + '/sconscript.log'
     remove_if_exist(log_file)
     
     os.system('lyx -e pdf2 %s > %s' % (source_file, log_file))
     
     shutil.move(newpdf, target_file)
-    time_prepender(log_file)
+    end_time    = current_time()
+    log_timestamp(start_time, end_time, log_file)
     return None
 
 def build_r(target, source, env):
+    start_time  = current_time()
     source_file = str(source[0])
     target_file = str(target[0])
     target_dir  = os.path.dirname(target_file)
@@ -86,11 +88,13 @@ def build_r(target, source, env):
     remove_if_exist(log_file)
 
     os.system('R CMD BATCH --no-save %s %s' % (source_file, log_file))
-    
-    time_prepender(log_file)
+
+    end_time   =  current_time()    
+    log_timestamp(start_time, end_time, log_file)
     return None
 
 def build_stata(target, source, env):
+    start_time =  current_time()
     source_file  = str(source[0])
     target_file  = str(target[0])
     target_dir   = os.path.dirname(target_file)
@@ -131,7 +135,8 @@ def build_stata(target, source, env):
         print('*** Error: Cannot find Stata executable.')
 
     shutil.move(loc_log, log_file)
-    time_prepender(log_file)
+    end_time = current_time()
+    log_timestamp(start_time, end_time, log_file)
     return None
 
 def stata_command_unix(flavor):
@@ -175,12 +180,12 @@ def is_in_path(program):
 def is_exe(file_path):
     return os.path.isfile(file_path) and os.access(file_path, os.X_OK)
 
-def time_prepender(filename):
-    now = datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')
+def log_timestamp(start_time, end_time, filename):
     with open(filename, mode = 'r+U') as f:
         content = f.read()
         f.seek(0, 0)
-        f.write('Log created at ' + now + '\n \n' + content)
+        f.write('Log created:    ' + start_time + '\n' + 
+                'Log completed:  ' + end_time   + '\n \n' + content)
     return None
 
 def check_source_code_extension(source_file, software):
@@ -196,4 +201,5 @@ def check_source_code_extension(source_file, software):
             print('*** Error: ' + 'First argument in `source`, ' + source_file + ', must be a ' + ext + ' file')    
     return None
 
-    
+def current_time():
+    return datetime.strftime(datetime.now(), '%Y-%m-%d %H:%M:%S')    
