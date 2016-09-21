@@ -37,7 +37,7 @@ Individual scripts can be run directly within Stata and R if they are run in ord
 #### Cache and release protocol
 
 We observe the following instructions when working with repositories based on the large template (henceforth "large repositories").
-- Add the GSLab `cache` and `release` folders from your "Shared with me" folder to your "My Drive" folder on the [Google Drive website](https://www.google.com/drive/).
+- Add the GSLab `cache` and `release` folders from your "Shared with me" folder to your "My Drive" folder on the [Google Drive website](https://www.google.com/drive/). You'll only need to do this once.
 - When beginning a new large repository, manually add directories with the same name as the repository to the these shared GSLab `cache` and `release` folders.  The `release` folder is only necessary if the repository's releases will be stored on Google Drive instead of GitHub.
 - After cloning a large repository, run scons in *cache* mode: `scons mode=cache`.
 - Run scons in *develop* mode as you modify code and make intermediate commits to the issue branch: `scons mode=develop`, or just `scons`.
