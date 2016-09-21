@@ -34,22 +34,7 @@ Using the repository template
 
 Individual scripts can be run directly within Stata and R if they are run in order.
 
-
-#### "Cache and release" protocol:
-
-- Manually create the relevant cache and release Google Drive folders and share them, assigning ownership as appropriate. If these folders have already created and shared, ensure that you place them within your "My Drive" folder. This all can be done on [Google Drive's website](https://www.google.com/drive/).
-	- The release drive folder is only necessary if releases will be stored on Google Drive instead of GitHub.
-- Clone the repo.
-- Run scons in *cache* mode. `scons mode=cache`.
-- Modify code and run scons in *develop* mode as you make intermediate commits to the issue branch. `scons mode=develop` or just `scons`
-- Before submitting a pull request and before merging to master, run scons in cache mode with [force caching](http://scons.org/doc/2.0.1/HTML/scons-user/x4276.html) turned on before committing: `scons mode=cache --cache-force`.
-- Merge with master.
-- Create a release by runing scons in *release* mode: `scons mode=release version=issue###`. Note that no code changes should be made at this point - this `scons` run should __only__ push files to Drive or create a tag in GitHub
-- If need to create a release that pushes to Google Drive, run scons in *release and drive* mode: `scons drive mode=release version=issue###`.
-
-The `release` folder should only store files that will be versioned in GitHub and are intended to be used outside of the directory. `DriveReleaseFiles` should only call files from within `build`, so no extra installation step is necessary.
-
-
+For information on the cache and release protocol for repositories following the organisation of the large template, visit (this page)[https://github.com/gslab-econ/admin/wiki/Repository-Organization] of the RA manual.
 
 #### More information about scons:
   *  [Data analysis with SCons](http://zacharytessler.com/2015/03/05/data-workflows-with-scons/)
