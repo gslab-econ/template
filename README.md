@@ -38,10 +38,10 @@ Individual scripts can be run directly within Stata and R if they are run in ord
 
 We observe the following instructions when working with repositories based on the large template (henceforth "large repositories").
 - Add the GSLab `cache` and `release` folders from your "Shared with me" folder to your "My Drive" folder on the [Google Drive website](https://www.google.com/drive/). You'll only need to do this once.
-- When beginning a new large repository, manually add directories with the same name as the repository to the these shared GSLab `cache` and `release` folders.  The `release` folder is only necessary if the repository's releases will be stored on Google Drive instead of GitHub.
+- When beginning a new large repository, manually add directories with the same name as the repository to the the shared GSLab `cache` and `release` folders.  The `release` folder is only necessary if the repository's releases will be stored on Google Drive.
 - After cloning a large repository, run scons in *cache* mode: `scons mode=cache`.
 - Run scons in *develop* mode as you modify code and make intermediate commits to the issue branch: `scons mode=develop`, or just `scons`.
-- Before submitting a pull request and before merging to master, run scons in cache mode with [force caching](http://scons.org/doc/2.0.1/HTML/scons-user/x4276.html) before committing: `scons mode=cache --cache-force`. After running this command, you can merge with master.
+- Before submitting a pull request and merging to master, run scons in cache mode with [force caching](http://scons.org/doc/2.0.1/HTML/scons-user/x4276.html) before committing: `scons mode=cache --cache-force`.
 - Create a release by runing scons in *release* mode: `scons mode=release version=issue###`. Note that no code changes should be made at this point - this `scons` run should __only__ push files to Drive or create a tag in GitHub
 - To create a release that pushes to Google Drive, run scons in *release and drive* mode: `scons drive mode=release version=issue###`.
 
