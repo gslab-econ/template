@@ -14,7 +14,8 @@ Using the repository template
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `lyx`
  - [git-lfs](https://git-lfs.github.com/)
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
- - Google Drive Desktop App Installed for using the remote sync for cache. Need to manually create the cache directory in google drive.
+ - Google Drive Desktop App
+     - After installing Google Drive, ensure that there is a directory entitled "Google Drive" in your home folder. This is required for using the remote sync for cache.
 
  Installing the some of the applications above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the PATH variable for you.
  
@@ -36,8 +37,8 @@ Individual scripts can be run directly within Stata and R if they are run in ord
 
 #### "Cache and release" protocol:
 
-- Manually create relevant 'cache' and 'release' google drive folder and share them. Assign ownership as appropriate. (If already created and shared, make sure to place them within your "My Drive" folder). 
-	- The 'release' drive folder is only necessary if the releases will be stored on drive instead of GitHub.
+- Manually create the relevant 'cache' and 'release' Google Drive folders and share them, assigning ownership as appropriate. If these folders have already created and shared, ensure that you place them within your "My Drive" folder. This all can be done on [Google Drive's website](https://www.google.com/drive/).
+	- The 'release' drive folder is only necessary if the releases will be stored on Google Drive instead of GitHub.
 - Clone repo
 - Run scons in 'cache' mode. `scons mode=cache`.
 - Modify code and run scons in 'develop' mode as you make intermediate commits to the issue branch. `scons mode=develop` or just `scons`
