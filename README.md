@@ -34,7 +34,7 @@ Using the repository template
 
 Individual scripts can be run directly within Stata and R if they are run in order.
 
-For information on the cache and release protocol for repositories following the organisation of the large template, visit [this page](https://github.com/gslab-econ/admin/wiki/Repository-Organization) of the RA manual.
+For information on the cache and release protocol for repositories based on the large template, visit [this page](https://github.com/gslab-econ/admin/wiki/Repository-Organization) of the RA manual.
 
 #### More information about scons:
   *  [Data analysis with SCons](http://zacharytessler.com/2015/03/05/data-workflows-with-scons/)
