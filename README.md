@@ -37,15 +37,15 @@ Individual scripts can be run directly within Stata and R if they are run in ord
 
 #### "Cache and release" protocol:
 
-- Manually create the relevant 'cache' and 'release' Google Drive folders and share them, assigning ownership as appropriate. If these folders have already created and shared, ensure that you place them within your "My Drive" folder. This all can be done on [Google Drive's website](https://www.google.com/drive/).
-	- The 'release' drive folder is only necessary if the releases will be stored on Google Drive instead of GitHub.
-- Clone repo
-- Run scons in 'cache' mode. `scons mode=cache`.
-- Modify code and run scons in 'develop' mode as you make intermediate commits to the issue branch. `scons mode=develop` or just `scons`
-- Before submitting a pull request and before merging to master, run scons in 'cache' mode with [force caching](http://scons.org/doc/2.0.1/HTML/scons-user/x4276.html) turned on before committing. `scons mode=cache --cache-force`
-- Merge with master
-- Create a release by runing scons in 'release' mode (Note that no code changes should be made at this point. This `scons` run should __only__ push files to Drive or create a tag in GitHub). `scons mode=release version=issue###`
-- If need to create a release that pushes to google drive, run scons in 'release'+drive mode. `scons drive mode=release version=issue###`
+- Manually create the relevant cache and release Google Drive folders and share them, assigning ownership as appropriate. If these folders have already created and shared, ensure that you place them within your "My Drive" folder. This all can be done on [Google Drive's website](https://www.google.com/drive/).
+	- The release drive folder is only necessary if releases will be stored on Google Drive instead of GitHub.
+- Clone the repo.
+- Run scons in *cache* mode. `scons mode=cache`.
+- Modify code and run scons in *develop* mode as you make intermediate commits to the issue branch. `scons mode=develop` or just `scons`
+- Before submitting a pull request and before merging to master, run scons in cache mode with [force caching](http://scons.org/doc/2.0.1/HTML/scons-user/x4276.html) turned on before committing: `scons mode=cache --cache-force`.
+- Merge with master.
+- Create a release by runing scons in *release* mode: `scons mode=release version=issue###`. Note that no code changes should be made at this point - this `scons` run should __only__ push files to Drive or create a tag in GitHub
+- If need to create a release that pushes to Google Drive, run scons in *release and drive* mode: `scons drive mode=release version=issue###`.
 
 The `release` folder should only store files that will be versioned in GitHub and are intended to be used outside of the directory. `DriveReleaseFiles` should only call files from within `build`, so no extra installation step is necessary.
 
