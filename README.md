@@ -34,7 +34,7 @@ Using the repository template
 
 Individual scripts can be run directly within Stata and R if they are run in order.
 
-### Cache and release protocol
+#### Cache and release protocol
 
 Visit [this page](https://github.com/gslab-econ/admin/wiki/Repository-Organization) of the RA manual.
 
