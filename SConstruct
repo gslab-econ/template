@@ -31,10 +31,10 @@ if mode in ['cache', 'release']:
 	CacheDir(local_cache)
 
 if mode == 'release':
-	# Installs files appropirate locations in release mode
+	# Installs files in appropriate locations for release mode
 	local_release = '/Users/%s/Google Drive/release/large_template/' % USER
 	local_release = local_release + vers + '/'
 	DriveReleaseFiles = ['#build/data/data.txt']
-	gslab_scons.Release(env, vers, DriveReleaseFiles, local_release)
+	gslab_scons.Release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
 
 

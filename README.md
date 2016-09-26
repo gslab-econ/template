@@ -16,6 +16,7 @@ Using the repository template
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
  - Google Drive Desktop App
      - After installing Google Drive, ensure that there is a directory entitled "Google Drive" in your home folder. This is required for using the remote sync for cache.
+ - A GitHub [token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) is required to create a 'release' per our protocol below.
 
  Installing the some of the applications above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the PATH variable for you.
  
