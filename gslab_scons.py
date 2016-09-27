@@ -23,7 +23,7 @@ def check_lfs():
     try:
         output = subprocess.check_output("git lfs install", shell = True)
     except:
-        sys.exit("ERROR: Git LFS is not installed. Please install.")
+        sys.exit("ERROR: Git LFS 1.2 or later is not installed. Please install.")
 
 def build_tables(target, source, env):
     tablefill(input    = ' '.join(env.GetBuildPath(env['INPUTS'])), 

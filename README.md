@@ -14,7 +14,7 @@ Using the repository template
     - Installed via `pip install gslab_tools` if [pip](https://pip.pypa.io/en/stable/) is available. 
  - [Lyx](https://www.lyx.org/)
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `lyx`
- - [git-lfs](https://git-lfs.github.com/)
+ - [git-lfs](https://git-lfs.github.com/): Requires version 1.2 or later
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
  Installing the some of the applications above is easiest with [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the PATH variable for you.
