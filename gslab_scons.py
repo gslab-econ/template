@@ -23,23 +23,25 @@ def start_log(mode, vers, log = "sconstruct.log"):
 
   return None
 
-def Release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-econ', repo = 'template', target_commitish = 'master'):
+def Release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-econ', \
+            repo = 'template', target_commitish = 'master'):
     token         = getpass.getpass("Enter github token and then press enter: ") 
     tag_name      = vers
     releases_path = 'https://%s:@api.github.com/repos/%s/%s/releases' % (token, org, repo)
-    s             = requests.session()
+    session       = requests.session()
 
     ## Create release
-    payload = {'tag_name':tag_name, 'target_commitish':target_commitish, 'name':tag_name, 'body':'', 'draft':'FALSE', 'prerelease':'FALSE'}
-    j = json.dumps(payload)
-    j = re.sub('"FALSE"', 'false', j)
-    s.post(releases_path, data = j)
+    payload = {'tag_name':tag_name, 'target_commitish':target_commitish, \
+        'name':tag_name, 'body':'', 'draft':'FALSE', 'prerelease':'FALSE'}
+    json_dump = json.dumps(payload)
+    json_dump = re.sub('"FALSE"', 'false', json_dump)
+    session.post(releases_path, data = json_dump)
 
     ## Delay
     time.sleep(1)
 
     ## Get release ID
-    json_releases  = s.get(releases_path)
+    json_releases  = session.get(releases_path)
     json_output    = json_releases.content
     json_split     = json_output.split(',')
     tag_name_index = json_split.index('"tag_name":"%s"' % tag_name)
@@ -49,23 +51,24 @@ def Release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-
     if DriveReleaseFiles != '':
         env.Install(local_release, DriveReleaseFiles)
         env.Alias('drive', local_release)
-        A = DriveReleaseFiles
-        for i in range(len(A)):
-            a    = A[i]
-            a    = a.split('/')
-            A[i] = 'Google Drive: cache/%s/%s/%s' % (repo, vers, a[len(a) - 1])
+        DrivePath = DriveReleaseFiles
+        for i in range(len(DrivePath)):
+            path         = DrivePath[i]
+            path         = path.split('/')
+            DrivePath[i] = 'release/%s/%s/%s' % (repo, vers, path[len(path) - 1])
         with open('gdrive_assets.txt', 'w') as f:
-            f.write('\n'.join(A))
+            f.write('\n'.join(['Google Drive:'] + DrivePath))
         uploadAsset(token, org, repo, release_id, 'gdrive_assets.txt')
         os.system('rm gdrive_assets.txt')
 
 def uploadAsset(token, org, repo, release_id, file_name, content_type = 'text/markdown'):
-    s = requests.session()
+    session = requests.session()
     files = {'file' : open(file_name, 'rb')}
     header = {'Authorization':'token %s' % token, 'Content-Type': content_type}
-    upload_path = 'https://uploads.github.com/repos/%s/%s/releases/%s/assets?name=%s' % (org, repo, release_id, file_name)
+    upload_path = 'https://uploads.github.com/repos/%s/%s/releases/%s/assets?name=%s' % \
+                (org, repo, release_id, file_name)
 
-    r = s.post(upload_path, files = files, headers = header)
+    r = session.post(upload_path, files = files, headers = header)
     return r.content
 
 def build_tables(target, source, env):
