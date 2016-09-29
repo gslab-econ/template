@@ -46,7 +46,19 @@ def Release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-
     json_split     = json_output.split(',')
     tag_name_index = json_split.index('"tag_name":"%s"' % tag_name)
     release_id     = json_split[tag_name_index - 1].split(':')[1]
-    
+
+    ## Get root directory name on drive
+    path = local_release.split('/')
+    ind = 0
+    i = 0
+    while ind == 0:
+        if re.search('release', path[i]):
+            ind = 1
+            i = i + 1
+        else:
+            i = i + 1
+    dir_name = path[i]
+
     ## Release Drive
     if DriveReleaseFiles != '':
         env.Install(local_release, DriveReleaseFiles)
@@ -55,7 +67,7 @@ def Release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-
         for i in range(len(DrivePath)):
             path         = DrivePath[i]
             path         = path.split('/')
-            DrivePath[i] = 'release/%s/%s/%s' % (repo, vers, path[len(path) - 1])
+            DrivePath[i] = 'release/%s/%s/%s' % (dir_name, vers, path[len(path) - 1])
         with open('gdrive_assets.txt', 'w') as f:
             f.write('\n'.join(['Google Drive:'] + DrivePath))
         uploadAsset(token, org, repo, release_id, 'gdrive_assets.txt')
