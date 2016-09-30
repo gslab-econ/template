@@ -36,7 +36,7 @@ if mode == 'release':
 	local_release = '/Users/%s/Google Drive/release/large_template/' % USER
 	local_release = local_release + vers + '/'
 	DriveReleaseFiles = ['#build/data/data.txt']
-	gslab_scons.Release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
+	gslab_scons.release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
 	## Specifies default targets to build
 	Default('.', local_release)
 
