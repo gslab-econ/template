@@ -23,7 +23,7 @@ def start_log(mode, vers, log = "sconstruct.log"):
 
   return None
 
-def Release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-econ', \
+def release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-econ', \
             repo = 'template', target_commitish = 'master'):
     token         = getpass.getpass("Enter github token and then press enter: ") 
     tag_name      = vers
@@ -70,10 +70,10 @@ def Release(env, vers, DriveReleaseFiles = '', local_release = '', org = 'gslab-
             DrivePath[i] = 'release/%s/%s/%s' % (dir_name, vers, path[len(path) - 1])
         with open('gdrive_assets.txt', 'w') as f:
             f.write('\n'.join(['Google Drive:'] + DrivePath))
-        uploadAsset(token, org, repo, release_id, 'gdrive_assets.txt')
+        upload_asset(token, org, repo, release_id, 'gdrive_assets.txt')
         os.system('rm gdrive_assets.txt')
 
-def uploadAsset(token, org, repo, release_id, file_name, content_type = 'text/markdown'):
+def upload_asset(token, org, repo, release_id, file_name, content_type = 'text/markdown'):
     session = requests.session()
     files = {'file' : open(file_name, 'rb')}
     header = {'Authorization':'token %s' % token, 'Content-Type': content_type}
