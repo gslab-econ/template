@@ -2,6 +2,8 @@ import os
 import sys
 import gslab_scons
 
+
+
 gslab_scons.start_log()
 
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
@@ -9,17 +11,15 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                   BUILDERS = { 'Tablefill' : Builder(action = gslab_scons.build_tables),
                                'Lyx'       : Builder(action = gslab_scons.build_lyx),
                                'R'         : Builder(action = gslab_scons.build_r),
-                               'Stata'     : Builder(action = gslab_scons.build_stata)})
+                               'Stata'     : Builder(action = gslab_scons.build_stata)},
+                  user_flavor = ARGUMENTS.get('sf', 'StataMP'))
 
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
 Export('env')
-
-SConscript('options')
 
 SConscript('source/data/SConscript') 
 SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
 
-print(gslab_scons.current_time())

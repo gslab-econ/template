@@ -25,7 +25,6 @@ def start_log(log = 'sconstruct.log'):
     elif platform == 'win32':
         sys.stdout = open(log, 'w')
     sys.stderr = sys.stdout 
-    sys.stdout.write(current_time() + '\n')
     return None
 
 def build_tables(target, source, env):
@@ -65,7 +64,7 @@ def build_r(target, source, env):
     return None
 
 def build_stata(target, source, env):
-    ''' User can specify flavour by typing `scons --sf=StataMP` 
+    ''' User can specify flavour by typing `scons sf=StataMP` 
        (default: Scons will try to find each flavour). 
     '''
     start_time =  current_time()
