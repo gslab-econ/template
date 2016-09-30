@@ -1,5 +1,5 @@
-Log created:    2016-09-29 19:39:21
-Log completed:  2016-09-29 19:39:23
+Log created:    2016-09-30 13:55:54
+Log completed:  2016-09-30 13:55:57
  
 
   ___  ____  ____  ____  ____ (R)
@@ -7,12 +7,12 @@ Log completed:  2016-09-29 19:39:23
 ___/   /   /___/   /   /___/   14.1   Copyright 1985-2015 StataCorp LP
   Statistics/Data Analysis            StataCorp
                                       4905 Lakeway Drive
-     Special Edition                  College Station, Texas 77845 USA
+     MP - Parallel Edition            College Station, Texas 77845 USA
                                       800-STATA-PC        http://www.stata.com
                                       979-696-4600        stata@stata.com
                                       979-696-4601 (fax)
 
-Unlimited-user Stata network license expires 21 Jul 2017:
+Unlimited-user 4-core Stata network license expires 21 Jul 2017:
        Serial number:  501409012939
          Licensed to:  Quan Le
                        Stanford University
@@ -20,7 +20,8 @@ Unlimited-user Stata network license expires 21 Jul 2017:
 Notes:
       1.  Stata is running in batch mode.
       2.  Unicode is supported; see help unicode_advice.
-      3.  Maximum number of variables is set to 5000; see help set_maxvar.
+      3.  More than 2 billion observations are allowed; see help obs_advice.
+      4.  Maximum number of variables is set to 5000; see help set_maxvar.
 
 . do "source/analysis/analysis.do" 
 
