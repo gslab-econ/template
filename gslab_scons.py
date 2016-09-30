@@ -19,10 +19,10 @@ def start_log(log = "sconstruct.log"):
 
 def check_lfs():
     try:
-        output = subprocess.check_output("git lfs install", shell = True)
+        output = subprocess.check_output("git-lfs install", shell = True)
     except:
         try:
-            output = subprocess.check_output("git lfs init", shell = True) # init is deprecated version of install
+            output = subprocess.check_output("git-lfs init", shell = True) # init is deprecated version of install
         except:
             sys.exit('''ERROR: Either Git LFS is not installed or your Git LFS settings need to be updated. 
                   Please install Git LFS or run 'git lfs install --force' if prompted above.''')
