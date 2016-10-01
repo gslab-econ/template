@@ -1,9 +1,7 @@
 Import('*')
 
-env.Command(
-	target = '#output/talk/slides.pdf',
-	source = ['#source/talk/slides.lyx',
-		  '#output/analysis/plot.eps'],
-	action = '''lyx -e pdf2 source/talk/slides.lyx > output/talk/sconscript.log && \
-				mv source/talk/slides.pdf output/talk/slides.pdf'''
-	)
+target = '#output/talk/slides.pdf'
+source = ['#source/talk/slides.lyx',
+		  '#output/analysis/plot.eps']
+
+env.Lyx(target, source)

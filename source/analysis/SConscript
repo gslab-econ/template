@@ -1,10 +1,6 @@
 Import('*')
 
-env.Command(
-	target = '#output/analysis/plot.eps', 
-	source = ['#output/data/data.txt', 'analysis.do'],
-	action = '''statamp -e source/analysis/analysis.do && \
-				mv analysis.log output/analysis/sconscript.log'''
-	)
-
-	
+target = '#output/analysis/plot.eps'       
+source = ['#source/analysis/analysis.do', 
+          '#output/data/data.txt']        
+env.Stata(target, source)

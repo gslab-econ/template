@@ -1,0 +1,32 @@
+Log created:    2016-09-30 17:05:26
+Log completed:  2016-09-30 17:05:26
+ 
+
+R version 3.3.0 (2016-05-03) -- "Supposedly Educational"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> main <- function(){
++     x    <- seq(-10, 10, 0.1)
++     write.table(x, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = FALSE) 
++ }
+> 
+> main()
+> 
+> proc.time()
+   user  system elapsed 
+  0.097   0.024   0.210 
