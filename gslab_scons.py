@@ -20,12 +20,24 @@ from sys import platform
 from gslab_fill.tablefill import tablefill
 
 def start_log(log = 'sconstruct.log'):
+    check_lfs()
     if is_unix():
         sys.stdout = os.popen('tee %s' % log, 'w')
     elif platform == 'win32':
         sys.stdout = open(log, 'w')
     sys.stderr = sys.stdout 
     return None
+
+def check_lfs():
+    try:
+        output = subprocess.check_output("git-lfs install", shell = True)
+    except:
+        try:
+            output = subprocess.check_output("git-lfs init", shell = True) # init is deprecated version of install
+        except:
+            sys.exit('''ERROR: Either Git LFS is not installed or your Git LFS settings need to be updated. 
+                  Please install Git LFS or run 'git lfs install --force' if prompted above.''')
+
 
 def build_tables(target, source, env):
     tablefill(input    = ' '.join(env.GetBuildPath(env['INPUTS'])), 
