@@ -6,7 +6,7 @@ Using the repository template
 #### Pre-requisites:
  - Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
  - [Stata](http://www.stata.com/statamp/)
-    - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `stata-mp` (or `stata-se` or `stata`, depends on the flavor installed). User can specify Stata flavor by typing `scons --sf=StataSE` for example.
+    - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `stata-mp` (or `stata-se` or `stata`, depends on the flavor installed). User can specify Stata flavor by typing `scons sf=StataSE` for example.
  - [R](https://www.r-project.org/)
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `R`
  - [scons](http://scons.org/) 
