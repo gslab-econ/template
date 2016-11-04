@@ -1,20 +1,33 @@
 # Preliminaries
 import os
 import sys
-import gslab_scons
+import gslab_scons.build as build
+import gslab_scons.log as log
+import gslab_scons.release as release
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
 
-gslab_scons.start_log(mode, vers) # Sets up logs and checks mode/version
+
+# Sets up logs and checks mode/version
+if not (mode in ['develop', 'cache', 'release']):
+	print("Error: %s is not a defined mode" % mode)
+	sys.exit()
+
+if mode == 'release' and vers == '':
+	print("Error: Version must be defined in release mode")
+	sys.exit()
+
+log.start_log() 
 
 
 # Defines environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
-				 IMPLICIT_COMMAND_DEPENDENCIES = 0,
-				 BUILDERS = { 'Tablefill' : Builder(action = gslab_scons.build_tables),
-                  			  'Lyx'       : Builder(action = gslab_scons.build_lyx),
-                  			  'R'         : Builder(action = gslab_scons.build_r),
-                  			  'Stata'     : Builder(action = gslab_scons.build_stata)})
+                  IMPLICIT_COMMAND_DEPENDENCIES = 0,
+                  BUILDERS = { 'Tablefill' : Builder(action = build.build_tables),
+                               'Lyx'       : Builder(action = build.build_lyx),
+                               'R'         : Builder(action = build.build_r),
+                               'Stata'     : Builder(action = build.build_stata)},
+                  user_flavor = ARGUMENTS.get('sf', 'StataMP'))
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
 Export('env')
@@ -36,7 +49,7 @@ if mode == 'release':
 	local_release = '/Users/%s/Google Drive/release/large_template/' % USER
 	local_release = local_release + vers + '/'
 	DriveReleaseFiles = ['#build/data/data.txt']
-	gslab_scons.release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
+	release.release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
 	## Specifies default targets to build
 	Default('.', local_release)
 
