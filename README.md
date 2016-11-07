@@ -10,7 +10,7 @@ Using the repository template
  - [R](https://www.r-project.org/)
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `R`
  - [scons](http://scons.org/) 
- - [gslab_tools](https://pypi.python.org/pypi/GSLab_Tools)
+ - [gslab_tools](https://pypi.python.org/pypi/GSLab_Tools) version 1.0.7 or later
     - Installed via `pip install gslab_tools` if [pip](https://pip.pypa.io/en/stable/) is available. 
  - [Lyx](https://www.lyx.org/)
     - Executable should also be added to the `PATH` environment variable so it is callable from the command line with `lyx`
