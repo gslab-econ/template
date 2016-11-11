@@ -24,9 +24,9 @@ log.start_log()
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = { 'Tablefill' : Builder(action = build.build_tables),
-                               'Lyx'       : Builder(action = build.build_lyx),
-                               'R'         : Builder(action = build.build_r),
-                               'Stata'     : Builder(action = build.build_stata)},
+                               'BuildLyx'       : Builder(action = build.build_lyx),
+                               'BuildR'         : Builder(action = build.build_r),
+                               'BuildStata'     : Builder(action = build.build_stata)},
                   user_flavor = ARGUMENTS.get('sf', 'StataMP'))
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
@@ -34,6 +34,9 @@ Export('env')
 
 # Run sub-trees
 SConscript('source/data/SConscript') 
+SConscript('source/analysis/SConscript')
+SConscript('source/paper/SConscript') 
+SConscript('source/talk/SConscript') 
 
 # Additional mode options
 if mode in ['cache', 'release']:

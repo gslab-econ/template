@@ -1,10 +1,6 @@
 Import('*')
-import os
 
-env.Command(
-	target = '#build/data/data.txt',  
-	source = 'build.R',
-	action = 'Rscript source/data/build.R > build/data/sconscript.log'
-	)
-
+target = '#build/data/data.txt'
+source = 'build.R'
+env.BuildR(target, source)
 env.Install('#release', '#build/data/data.txt')

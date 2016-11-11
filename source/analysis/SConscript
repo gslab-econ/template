@@ -1,0 +1,6 @@
+Import('*')
+
+target = '#output/analysis/plot.eps',
+source = ['#source/analysis/analysis.do',
+          '#build/data/data.txt'],
+env.BuildStata(target, source)
