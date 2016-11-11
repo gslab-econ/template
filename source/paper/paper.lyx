@@ -331,40 +331,17 @@ leftskip=0em
 \end_inset
 
 
-\begin_inset Separator latexpar
+\begin_inset CommandInset include
+LatexCommand include
+filename "/Users/chuanyu/Desktop/template/source/figures/figure.lyx"
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Figure Title
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../../output/analysis/plot.eps
-
-\end_inset
-
-
-\end_layout
-
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -376,68 +353,6 @@ Appendix
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:appendix"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-figurename}{Appendix Figure}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{figure}{0}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Figure Title
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../../output/analysis/plot.eps
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
