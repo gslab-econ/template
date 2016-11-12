@@ -1,6 +1,7 @@
 Import('*')
 
-target = '#output/analysis/plot.eps',
-source = ['#source/analysis/analysis.do',
+target = ['#output/analysis/plot.eps',
+          '#output/analysis/table.txt']
+source = ['#source/analysis/analysis.py',
           '#build/data/data.txt'],
-env.BuildStata(target, source)
+env.BuildPython(target, source)

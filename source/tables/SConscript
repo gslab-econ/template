@@ -1,0 +1,6 @@
+Import('*')
+
+target = '#output/tables/table.lyx'
+source = ['#source/tables/table.lyx',
+          '#output/analysis/table.txt']
+env.Tablefill(target, source)

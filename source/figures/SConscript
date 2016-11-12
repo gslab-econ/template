@@ -1,6 +1,0 @@
-Import('*')
-
-target = '#output/talk/slides.pdf'
-source = ['#source/talk/slides.lyx',
-          '#output/analysis/plot.eps']
-env.BuildLyx(target, source)

@@ -331,9 +331,22 @@ leftskip=0em
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "/Users/chuanyu/Desktop/template/source/figures/figure.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "/Users/chuanyu/Desktop/template/output/tables/table.lyx"
 
 \end_inset
 

@@ -6,16 +6,42 @@
 \origin unavailable
 \textclass article
 \begin_preamble
+\usepackage{amsthm}
+\usepackage{bm}
 \usepackage{setspace}
-\usepackage[labelfont=bf]{caption}
+\usepackage{sectsty}
+
+\usepackage{datetime}
+\usepackage{pdflscape}
+\usepackage[english]{babel}
+\usepackage{times}
+\usepackage[small]{caption}
+\usepackage[bottom,hang,flushmargin]{footmisc}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\logit}{logit}
+\DeclareMathOperator{\I}{I}
+
+\sectionfont{\noindent\normalfont\large\bf}
+\subsectionfont{\noindent\normalfont\normalsize\bf}
+\subsubsectionfont{\noindent\normalfont\it}
+
+\pdfminorversion=4
 \end_preamble
-\options leqno
+\options hyperfootnotes=false
 \use_default_options false
+\begin_modules
+theorems-ams
+\end_modules
 \maintain_unincluded_children false
 \language english
-\language_package default
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -32,24 +58,24 @@
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize 11
+\paperfontsize 12
 \spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_package amsmath 0
-\use_package amssymb 0
+\use_package amsmath 2
+\use_package amssymb 2
 \use_package cancel 0
-\use_package esint 0
-\use_package mathdots 1
+\use_package esint 1
+\use_package mathdots 0
 \use_package mathtools 0
-\use_package mhchem 1
+\use_package mhchem 0
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -81,41 +107,16 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
+\begin_layout Title
+\noindent
 
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Figure Title
+\series bold
+Title
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../../output/analysis/plot.eps
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Note: Figure notes
-\end_layout
-
-\end_inset
-
-
+\begin_layout Author
+\noindent
+Notes
 \end_layout
 
 \end_body

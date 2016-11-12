@@ -23,10 +23,11 @@ log.start_log()
 # Defines environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
-                  BUILDERS = { 'Tablefill' : Builder(action = build.build_tables),
-                               'BuildLyx'       : Builder(action = build.build_lyx),
-                               'BuildR'         : Builder(action = build.build_r),
-                               'BuildStata'     : Builder(action = build.build_stata)},
+                  BUILDERS = { 'Tablefill'   : Builder(action = build.build_tables),
+                               'BuildLyx'    : Builder(action = build.build_lyx),
+                               'BuildR'      : Builder(action = build.build_r),
+                               'BuildStata'  : Builder(action = build.build_stata),
+                               'BuildPython' : Builder(action = build.build_python)},
                   user_flavor = ARGUMENTS.get('sf', 'StataMP'))
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
@@ -35,6 +36,7 @@ Export('env')
 # Run sub-trees
 SConscript('source/data/SConscript') 
 SConscript('source/analysis/SConscript')
+SConscript('source/tables/SConscript') 
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
 

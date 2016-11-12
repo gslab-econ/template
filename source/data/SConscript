@@ -1,6 +1,6 @@
 Import('*')
 
 target = '#build/data/data.txt'
-source = 'build.R'
+source = '#source/data/build.R'
 env.BuildR(target, source)
 env.Install('#release', '#build/data/data.txt')

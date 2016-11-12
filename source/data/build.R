@@ -1,2 +1,5 @@
-x <- seq(-13, 100, 0.1)
-write.table(x, "build/data/data.txt", sep = "|", row.names = FALSE, col.names = FALSE)
+set.seed(1)
+group <- sample(0:1, 1000, replace = T)
+count <- sample(1:10, 1000, replace = T)
+data = data.frame(group, count)
+write.table(data, "build/data/data.txt", sep = "|", row.names = FALSE, col.names = TRUE, quote = FALSE)
