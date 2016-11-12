@@ -11,7 +11,7 @@ Using the repository template
     - Executable should be added to the `PATH` environment variable so it is callable from the command line with `Rscript`
  - [Lyx](https://www.lyx.org/)
     - Executable should be added to the `PATH` environment variable so it is callable from the command line with `lyx`
- - [scons](http://scons.org/) 2.4.0 or later
+ - [scons](http://scons.org/) version 2.4.0 or later
     - SCons can also be installed with [pip](https://pip.pypa.io/en/stable/) using `pip install --egg scons`
     - More information about Scons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons)
  - [git-lfs](https://git-lfs.github.com/)
@@ -29,7 +29,7 @@ E.g., `brew install scons`.
     - `scons output/data` will re-build the `output/data` folder if it is out of sync, without rebuilding other files.
  - A single target file:
     - `scons output/paper/paper.pdf` will re-run only the code needed to update `output/paper/paper.pdf` without rebuilding other files.
-- Individual scripts can be run directly within Stata and R if they are run in order.
+ - Individual scripts can be run directly within Stata and R if they are run in order.
 
 #### Copy the template:
 In order to use this repository template for your own purposes, see the [wiki](https://github.com/gslab-econ/template/wiki) for instructions.
