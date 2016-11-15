@@ -103,6 +103,7 @@ Figure Title
 \align center
 \begin_inset Graphics
 	filename ../../output/analysis/plot.eps
+	scale 70
 
 \end_inset
 
