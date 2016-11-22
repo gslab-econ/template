@@ -1,1043 +1,580 @@
-%!PS-Adobe-3.0 EPSF-3.0
-%%Title: output/analysis/plot.eps
-%%Creator: matplotlib version 1.5.1, http://matplotlib.org/
-%%CreationDate: Tue Nov 15 09:37:40 2016
-%%Orientation: portrait
-%%BoundingBox: 18 180 594 612
-%%EndComments
-%%BeginProlog
-/mpldict 8 dict def
-mpldict begin
-/m { moveto } bind def
-/l { lineto } bind def
-/r { rlineto } bind def
-/c { curveto } bind def
-/cl { closepath } bind def
-/box {
-m
-1 index 0 r
-0 exch r
-neg 0 r
-cl
-} bind def
-/clipbox {
-box
-clip
-newpath
-} bind def
-%!PS-Adobe-3.0 Resource-Font
-%%Title: Bitstream Vera Sans
-%%Copyright: Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
-%%Creator: Converted from TrueType to type 3 by PPR
-25 dict begin
-/_d{bind def}bind def
-/_m{moveto}_d
-/_l{lineto}_d
-/_cl{closepath eofill}_d
-/_c{curveto}_d
-/_sc{7 -1 roll{setcachedevice}{pop pop pop pop pop pop}ifelse}_d
-/_e{exec}_d
-/FontName /BitstreamVeraSans-Roman def
-/PaintType 0 def
-/FontMatrix[.001 0 0 .001 0 0]def
-/FontBBox[-183 -236 1287 928]def
-/FontType 3 def
-/Encoding [ /zero /one /two /four /six /eight ] def
-/FontInfo 10 dict dup begin
-/FamilyName (Bitstream Vera Sans) def
-/FullName (Bitstream Vera Sans) def
-/Notice (Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is a trademark of Bitstream, Inc.) def
-/Weight (Roman) def
-/Version (Release 1.10) def
-/ItalicAngle 0.0 def
-/isFixedPitch false def
-/UnderlinePosition -213 def
-/UnderlineThickness 143 def
-end readonly def
-/CharStrings 6 dict dup begin
-/zero{636 0 66 -13 570 742 _sc
-318 664 _m
-267 664 229 639 203 589 _c
-177 539 165 464 165 364 _c
-165 264 177 189 203 139 _c
-229 89 267 64 318 64 _c
-369 64 407 89 433 139 _c
-458 189 471 264 471 364 _c
-471 464 458 539 433 589 _c
-407 639 369 664 318 664 _c
-318 742 _m
-399 742 461 709 505 645 _c
-548 580 570 486 570 364 _c
-570 241 548 147 505 83 _c
-461 19 399 -13 318 -13 _c
-236 -13 173 19 130 83 _c
-87 147 66 241 66 364 _c
-66 486 87 580 130 645 _c
-173 709 236 742 318 742 _c
-_cl}_d
-/one{636 0 110 0 544 729 _sc
-124 83 _m
-285 83 _l
-285 639 _l
-110 604 _l
-110 694 _l
-284 729 _l
-383 729 _l
-383 83 _l
-544 83 _l
-544 0 _l
-124 0 _l
-124 83 _l
-_cl}_d
-/two{{636 0 73 0 536 742 _sc
-192 83 _m
-536 83 _l
-536 0 _l
-73 0 _l
-73 83 _l
-110 121 161 173 226 239 _c
-290 304 331 346 348 365 _c
-380 400 402 430 414 455 _c
-426 479 433 504 433 528 _c
-433 566 419 598 392 622 _c
-365 646 330 659 286 659 _c
-255 659 222 653 188 643 _c
-154 632 117 616 78 594 _c
-78 694 _l
-118 710 155 722 189 730 _c
-223 738 255 742 284 742 _c
-}_e{359 742 419 723 464 685 _c
-509 647 532 597 532 534 _c
-532 504 526 475 515 449 _c
-504 422 484 390 454 354 _c
-446 344 420 317 376 272 _c
-332 227 271 164 192 83 _c
-_cl}_e}_d
-/four{636 0 49 0 580 729 _sc
-378 643 _m
-129 254 _l
-378 254 _l
-378 643 _l
-352 729 _m
-476 729 _l
-476 254 _l
-580 254 _l
-580 172 _l
-476 172 _l
-476 0 _l
-378 0 _l
-378 172 _l
-49 172 _l
-49 267 _l
-352 729 _l
-_cl}_d
-/six{{636 0 70 -13 573 742 _sc
-330 404 _m
-286 404 251 388 225 358 _c
-199 328 186 286 186 234 _c
-186 181 199 139 225 109 _c
-251 79 286 64 330 64 _c
-374 64 409 79 435 109 _c
-461 139 474 181 474 234 _c
-474 286 461 328 435 358 _c
-409 388 374 404 330 404 _c
-526 713 _m
-526 623 _l
-501 635 476 644 451 650 _c
-425 656 400 659 376 659 _c
-310 659 260 637 226 593 _c
-}_e{192 549 172 482 168 394 _c
-187 422 211 444 240 459 _c
-269 474 301 482 336 482 _c
-409 482 467 459 509 415 _c
-551 371 573 310 573 234 _c
-573 159 550 99 506 54 _c
-462 9 403 -13 330 -13 _c
-246 -13 181 19 137 83 _c
-92 147 70 241 70 364 _c
-70 479 97 571 152 639 _c
-206 707 280 742 372 742 _c
-396 742 421 739 447 735 _c
-472 730 498 723 526 713 _c
-_cl}_e}_d
-/eight{{636 0 68 -13 568 742 _sc
-318 346 _m
-271 346 234 333 207 308 _c
-180 283 167 249 167 205 _c
-167 161 180 126 207 101 _c
-234 76 271 64 318 64 _c
-364 64 401 76 428 102 _c
-455 127 469 161 469 205 _c
-469 249 455 283 429 308 _c
-402 333 365 346 318 346 _c
-219 388 _m
-177 398 144 418 120 447 _c
-96 476 85 511 85 553 _c
-85 611 105 657 147 691 _c
-188 725 245 742 318 742 _c
-}_e{390 742 447 725 489 691 _c
-530 657 551 611 551 553 _c
-551 511 539 476 515 447 _c
-491 418 459 398 417 388 _c
-464 377 501 355 528 323 _c
-554 291 568 251 568 205 _c
-568 134 546 80 503 43 _c
-459 5 398 -13 318 -13 _c
-237 -13 175 5 132 43 _c
-89 80 68 134 68 205 _c
-68 251 81 291 108 323 _c
-134 355 171 377 219 388 _c
-183 544 _m
-183 506 194 476 218 455 _c
-}_e{242 434 275 424 318 424 _c
-360 424 393 434 417 455 _c
-441 476 453 506 453 544 _c
-453 582 441 611 417 632 _c
-393 653 360 664 318 664 _c
-275 664 242 653 218 632 _c
-194 611 183 582 183 544 _c
-_cl}_e}_d
-end readonly def
-
-/BuildGlyph
- {exch begin
- CharStrings exch
- 2 copy known not{pop /.notdef}if
- true 3 1 roll get exec
- end}_d
-
-/BuildChar {
- 1 index /Encoding get exch get
- 1 index /BuildGlyph get exec
-}_d
-
-FontName currentdict end definefont pop
-end
-%%EndProlog
-mpldict begin
-18 180 translate
-576 432 0 0 clipbox
-100000 setmiterlimit
-gsave
-0 0 m
-576 0 l
-576 432 l
-0 432 l
-cl
-1.000 setgray
-fill
-grestore
-gsave
-72 43.2 m
-518.4 43.2 l
-518.4 388.8 l
-72 388.8 l
-cl
-1.000 setgray
-fill
-grestore
-1.000 setlinewidth
-0 setlinejoin
-0 setlinecap
-[] 0 setdash
-0.000 setgray
-gsave
-446.4 345.6 72 43.2 clipbox
-109.2 43.2 m
-142.68 43.2 l
-142.68 371.52 l
-109.2 371.52 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-142.68 43.2 m
-176.16 43.2 l
-176.16 371.52 l
-142.68 371.52 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-176.16 43.2 m
-209.64 43.2 l
-209.64 299.52 l
-176.16 299.52 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-209.64 43.2 m
-243.12 43.2 l
-243.12 345.6 l
-209.64 345.6 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-243.12 43.2 m
-276.6 43.2 l
-276.6 322.56 l
-243.12 322.56 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-276.6 43.2 m
-310.08 43.2 l
-310.08 308.16 l
-276.6 308.16 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-310.08 43.2 m
-343.56 43.2 l
-343.56 296.64 l
-310.08 296.64 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-343.56 43.2 m
-377.04 43.2 l
-377.04 305.28 l
-343.56 305.28 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-377.04 43.2 m
-410.52 43.2 l
-410.52 354.24 l
-377.04 354.24 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-gsave
-446.4 345.6 72 43.2 clipbox
-410.52 43.2 m
-444 43.2 l
-444 336.96 l
-410.52 336.96 l
-cl
-gsave
-0.000 0.000 1.000 setrgbcolor
-fill
-grestore
-stroke
-grestore
-2 setlinecap
-gsave
-72 388.8 m
-518.4 388.8 l
-stroke
-grestore
-gsave
-518.4 43.2 m
-518.4 388.8 l
-stroke
-grestore
-gsave
-72 43.2 m
-518.4 43.2 l
-stroke
-grestore
-gsave
-72 43.2 m
-72 388.8 l
-stroke
-grestore
-0.500 setlinewidth
-1 setlinejoin
-0 setlinecap
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 -4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 388.8 o
-grestore
-/BitstreamVeraSans-Roman findfont
-12.000 scalefont
-setfont
-gsave
-68.179688 30.075000 translate
-0.000000 rotate
-0.000000 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-146.4 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 -4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-146.4 388.8 o
-grestore
-gsave
-142.579687 30.075000 translate
-0.000000 rotate
-0.000000 0.000000 m /two glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-220.8 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 -4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-220.8 388.8 o
-grestore
-gsave
-216.979687 30.075000 translate
-0.000000 rotate
-0.000000 0.000000 m /four glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-295.2 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 -4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-295.2 388.8 o
-grestore
-gsave
-291.379687 30.075000 translate
-0.000000 rotate
-0.000000 0.000000 m /six glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-369.6 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 -4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-369.6 388.8 o
-grestore
-gsave
-365.779687 30.075000 translate
-0.000000 rotate
-0.000000 0.000000 m /eight glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-444 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 -4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-444 388.8 o
-grestore
-gsave
-436.359375 30.075000 translate
-0.000000 rotate
-0.000000 0.000000 m /one glyphshow
-7.634766 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-0 -4 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 388.8 o
-grestore
-gsave
-510.759375 30.075000 translate
-0.000000 rotate
-0.000000 0.000000 m /one glyphshow
-7.634766 0.000000 m /two glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 43.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 43.2 o
-grestore
-gsave
-60.359375 39.887500 translate
-0.000000 rotate
-0.000000 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 100.8 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 100.8 o
-grestore
-gsave
-52.718750 97.487500 translate
-0.000000 rotate
-0.000000 0.000000 m /two glyphshow
-7.634766 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 158.4 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 158.4 o
-grestore
-gsave
-52.718750 155.087500 translate
-0.000000 rotate
-0.000000 0.000000 m /four glyphshow
-7.634766 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 216 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 216 o
-grestore
-gsave
-52.718750 212.687500 translate
-0.000000 rotate
-0.000000 0.000000 m /six glyphshow
-7.634766 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 273.6 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 273.6 o
-grestore
-gsave
-52.718750 270.287500 translate
-0.000000 rotate
-0.000000 0.000000 m /eight glyphshow
-7.634766 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 331.2 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 331.2 o
-grestore
-gsave
-45.078125 327.887500 translate
-0.000000 rotate
-0.000000 0.000000 m /one glyphshow
-7.634766 0.000000 m /zero glyphshow
-15.269531 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
-4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-72 388.8 o
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.5 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--4 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-518.4 388.8 o
-grestore
-gsave
-45.078125 385.487500 translate
-0.000000 rotate
-0.000000 0.000000 m /one glyphshow
-7.634766 0.000000 m /two glyphshow
-15.269531 0.000000 m /zero glyphshow
-grestore
-
-end
-showpage
+%!PS-Adobe-2.0 EPSF-2.0
+%% This is a Stata generated postscript file
+%%BoundingBox: 0 0 396 288
+%%HiResBoundingBox: 0.000 0.000 396.000 288.000
+%%DocumentNeededResources: font Helvetica
+/xratio 0.012375 def
+/yratio 0.012375 def
+/Sbgfill {
+	/y1 exch def
+	/x1 exch def
+	/y0 exch def
+	/x0 exch def
+	x0 y0 moveto
+	x0 y1 lineto x1 y1 lineto x1 y0 lineto x0 y0 lineto
+	fill
+} def
+/Spt {
+	yratio mul
+	/yp exch def
+	xratio mul
+	/xp exch def
+	Slrgb setrgbcolor
+	xp yp .5 0 360 arc fill
+} def
+/Sln {
+	yratio mul
+	/y1p exch def
+	xratio mul
+	/x1p exch def
+	yratio mul
+	/y0p exch def
+	xratio mul
+	/x0p exch def
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	x0p y0p M x1p y1p lineto S
+} def
+/Scrv {
+	yratio mul
+	/y3p exch def
+	xratio mul
+	/x3p exch def
+	yratio mul
+	/y2p exch def
+	xratio mul
+	/x2p exch def
+	yratio mul
+	/y1p exch def
+	xratio mul
+	/x1p exch def
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	x1p y1p x2p y2p x3p y3p curveto
+	stroke
+} def
+/Stxtl {
+	/sp exch def
+	yratio mul
+	/sizep exch def
+	dup
+	/anglep exch def
+	0 exch sub
+	/angle2p exch def
+	yratio mul
+	/y0p exch def
+	xratio mul
+	/x0p exch def
+	Strgb setrgbcolor
+	x0p y0p M anglep rotate sizep fntsize sp show stroke angle2p rotate
+} def
+/Stxtc {
+	/sp exch def
+	yratio mul
+	/sizep exch def
+	dup
+	/anglep exch def
+	0 exch sub
+	/angle2p exch def
+	yratio mul
+	/y0p exch def
+	xratio mul
+	/x0p exch def
+	Strgb setrgbcolor
+	x0p y0p M anglep rotate sizep fntsize sp stringwidth exch -2 div exch rm sp show stroke angle2p rotate
+} def
+/Stxtr {
+	/sp exch def
+	yratio mul
+	/sizep exch def
+	dup
+	/anglep exch def
+	0 exch sub
+	/angle2p exch def
+	yratio mul
+	/y0p exch def
+	xratio mul
+	/x0p exch def
+	Strgb setrgbcolor
+	x0p y0p M anglep rotate sizep fntsize sp stringwidth 1 index -1 mul exch rm pop sp show stroke angle2p rotate
+} def
+/Srect {
+	/sfill exch def
+	yratio mul
+	/y1 exch def
+	xratio mul
+	/x1 exch def
+	yratio mul
+	/y0 exch def
+	xratio mul
+	/x0 exch def
+	newpath x0 y0 moveto x0 y1 lineto x1 y1 lineto x1 y0 lineto x0 y0 lineto closepath
+	sfill 1 eq {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	stroke
+} def
+/Sellipse {
+	/sfill exch def
+	yratio mul
+	/yrad exch def
+	xratio mul
+	/xrad exch def
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	/savematrix matrix currentmatrix def
+	x y translate
+	xrad yrad scale
+	0 0 1 0 360 arc
+	savematrix setmatrix
+	sfill 1 eq {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	stroke
+} def
+/Stri {
+	/sfill exch def
+	xratio mul
+	/r exch def
+	yratio mul
+	/y0 exch def
+	xratio mul
+	/x0 exch def
+	/xcen x0 def
+	y0 r add
+	/ytop exch def
+	r 2 div
+	y0 exch sub
+	/ybot exch def
+	r 3 sqrt 2 div mul dup
+	xcen exch sub
+	/xleft exch def
+	xcen add
+	/xright exch def
+	newpath xcen ytop moveto xright ybot lineto xleft ybot lineto xcen ytop lineto closepath
+	sfill 1 eq {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	stroke
+} def
+/Soldtri {
+	/sfill exch def
+	xratio mul
+	/r exch def
+	yratio mul
+	/y0 exch def
+	xratio mul
+	/x0 exch def
+	x0 r sub
+	/x1 exch def
+	y0 r sub
+	/y1 exch def
+	x0 r add
+	/x2 exch def
+	y0 r sub
+	/y2 exch def
+	/x3 x0 def
+	y0 r add
+	/y3 exch def
+	newpath x1 y1 moveto x2 y2 lineto x3 y3 lineto x1 y1 lineto closepath
+	sfill 1 eq {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	stroke
+} def
+/Sdia {
+	/sfill exch def
+	xratio mul
+	/r exch def
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	x r sub
+	/x0 exch def
+	/y0 y def
+	/x1 x def
+	y r sub
+	/y1 exch def
+	x r add
+	/x2 exch def
+	/y2 y def
+	/x3 x def
+	y r add
+	/y3 exch def
+	newpath x0 y0 moveto x1 y1 lineto x2 y2 lineto x3 y3 lineto x0 y0 lineto closepath
+	sfill 1 eq {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	stroke
+} def
+/Scc {
+	/sfill exch def
+	xratio mul
+	/r0 exch def
+	yratio mul
+	/y0 exch def
+	xratio mul
+	/x0 exch def
+	x0 y0 r0 0 360 arc closepath
+	sfill 1 eq {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	stroke
+} def
+/Spie {
+	/sfill exch def
+	/a1 exch def
+	/a0 exch def
+	xratio mul
+	/r exch def
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	newpath x y moveto x y r a0 a1 arc closepath
+	sfill 1 eq {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	stroke
+} def
+/Splu {
+	xratio mul
+	/r exch def
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	x r sub
+	/x0 exch def
+	x r add
+	/x1 exch def
+	x0 y M x1 y L
+	y r sub
+	/y0 exch def
+	y r add
+	/y1 exch def
+	x y0 M x y1 L
+} def
+/Scro {
+	xratio mul
+	/r exch def
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	x r sub
+	/x0 exch def
+	y r sub
+	/y0 exch def
+	x r add
+	/x1 exch def
+	y r add
+	/y1 exch def
+	x0 y0 M x1 y1 L
+	x r add
+	/x0 exch def
+	y r sub
+	/y0 exch def
+	x r sub
+	/x1 exch def
+	y r add
+	/y1 exch def
+	x0 y0 M x1 y1 L
+} def
+/Sm {
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	x y M
+} def
+/Sl {
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	x y L
+} def
+/SPl {
+	yratio mul
+	/y exch def
+	xratio mul
+	/x exch def
+	x y PL
+} def
+/Lcs {
+	currentlinecap
+	1 setlinecap
+} def
+/Lcr {
+	setlinecap
+} def
+/Sbp {
+	newpath
+} def
+/Sep {
+	/sfill exch def
+	closepath
+	sfill 1 eq  {
+		Ssrgb setrgbcolor
+		gsave
+		fill
+		grestore
+	} if
+	Slw setlinewidth
+	Slrgb setrgbcolor
+	Lcs
+	stroke
+	Lcr
+} def
+/cp {currentpoint} def 
+/M {moveto} def 
+/rm {rmoveto} def 
+/S {stroke} def 
+/L {Slw setlinewidth Slrgb setrgbcolor lineto Lcs S Lcr} def 
+/PL {Slw setlinewidth Slrgb setrgbcolor lineto} def 
+/MF-Helvetica {
+  /newfontname exch def
+  /fontname exch def
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+  fontdict {
+  exch dup /FID eq {pop pop} {exch newfont 3 1 roll put} ifelse
+  } forall
+  newfont /FontName newfontname put
+  newfont /Encoding ISOLatin1Encoding put
+  newfontname newfont definefont pop
+} def
+/Helvetica /Helvetica-0 MF-Helvetica
+/Slw 0.120 def
+1.000 1.000 1.000 setrgbcolor
+0 0 396.000 288.000 Sbgfill
+/Slrgb {1.000 1.000 1.000} def
+/Strgb {1.000 1.000 1.000} def
+/Ssrgb {1.000 1.000 1.000} def
+/Slw 0.576 def
+0 0 31999 23272 1 Srect
+/Slrgb {0.000 0.000 0.000} def
+3157 3157 31184 22457 0 Srect
+/Strgb {0.000 0.000 0.000} def
+/Ssrgb {0.502 0.502 0.502} def
+/Slw 0.864 def
+5645 3157 6962 20292 1 Srect
+8280 3157 9597 20292 1 Srect
+10914 3157 12231 16534 1 Srect
+13548 3157 14866 18939 1 Srect
+16183 3157 17500 17737 1 Srect
+18817 3157 20134 16985 1 Srect
+21452 3157 22769 16384 1 Srect
+24086 3157 25403 16835 1 Srect
+26720 3157 28038 19390 1 Srect
+29355 3157 30672 18488 1 Srect
+/Slw 0.576 def
+3157 3157 3157 22457 Sln
+3157 3157 2834 3157 Sln
+2430 3157 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(0) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 90.000 cos mul sub 3 1 roll 90.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+90.000 808
+(0) Stxtl
+(0) stringwidth pop xratio div
+dup 4 3 roll exch 90.000 cos mul add 3 1 roll 90.000 sin mul add 2 copy
+pop pop pop pop
+3157 6915 2834 6915 Sln
+2430 6915 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(.05) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 90.000 cos mul sub 3 1 roll 90.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+90.000 808
+(.05) Stxtl
+(.05) stringwidth pop xratio div
+dup 4 3 roll exch 90.000 cos mul add 3 1 roll 90.000 sin mul add 2 copy
+pop pop pop pop
+3157 10672 2834 10672 Sln
+2430 10672 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(.1) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 90.000 cos mul sub 3 1 roll 90.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+90.000 808
+(.1) Stxtl
+(.1) stringwidth pop xratio div
+dup 4 3 roll exch 90.000 cos mul add 3 1 roll 90.000 sin mul add 2 copy
+pop pop pop pop
+3157 14430 2834 14430 Sln
+2430 14430 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(.15) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 90.000 cos mul sub 3 1 roll 90.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+90.000 808
+(.15) Stxtl
+(.15) stringwidth pop xratio div
+dup 4 3 roll exch 90.000 cos mul add 3 1 roll 90.000 sin mul add 2 copy
+pop pop pop pop
+3157 18187 2834 18187 Sln
+2430 18187 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(.2) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 90.000 cos mul sub 3 1 roll 90.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+90.000 808
+(.2) Stxtl
+(.2) stringwidth pop xratio div
+dup 4 3 roll exch 90.000 cos mul add 3 1 roll 90.000 sin mul add 2 copy
+pop pop pop pop
+3157 21945 2834 21945 Sln
+2430 21945 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(.25) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 90.000 cos mul sub 3 1 roll 90.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+90.000 808
+(.25) Stxtl
+(.25) stringwidth pop xratio div
+dup 4 3 roll exch 90.000 cos mul add 3 1 roll 90.000 sin mul add 2 copy
+pop pop pop pop
+1541 12807 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(Density) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 90.000 cos mul sub 3 1 roll 90.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+90.000 808
+(Density) Stxtl
+(Density) stringwidth pop xratio div
+dup 4 3 roll exch 90.000 cos mul add 3 1 roll 90.000 sin mul add 2 copy
+pop pop pop pop
+3157 3157 31184 3157 Sln
+3669 3157 3669 2834 Sln
+3669 2108 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(0) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 0.000 cos mul sub 3 1 roll 0.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+0.000 808
+(0) Stxtl
+(0) stringwidth pop xratio div
+dup 4 3 roll exch 0.000 cos mul add 3 1 roll 0.000 sin mul add 2 copy
+pop pop pop pop
+8938 3157 8938 2834 Sln
+8938 2108 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(2) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 0.000 cos mul sub 3 1 roll 0.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+0.000 808
+(2) Stxtl
+(2) stringwidth pop xratio div
+dup 4 3 roll exch 0.000 cos mul add 3 1 roll 0.000 sin mul add 2 copy
+pop pop pop pop
+14207 3157 14207 2834 Sln
+14207 2108 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(4) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 0.000 cos mul sub 3 1 roll 0.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+0.000 808
+(4) Stxtl
+(4) stringwidth pop xratio div
+dup 4 3 roll exch 0.000 cos mul add 3 1 roll 0.000 sin mul add 2 copy
+pop pop pop pop
+19476 3157 19476 2834 Sln
+19476 2108 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(6) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 0.000 cos mul sub 3 1 roll 0.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+0.000 808
+(6) Stxtl
+(6) stringwidth pop xratio div
+dup 4 3 roll exch 0.000 cos mul add 3 1 roll 0.000 sin mul add 2 copy
+pop pop pop pop
+24745 3157 24745 2834 Sln
+24745 2108 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(8) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 0.000 cos mul sub 3 1 roll 0.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+0.000 808
+(8) Stxtl
+(8) stringwidth pop xratio div
+dup 4 3 roll exch 0.000 cos mul add 3 1 roll 0.000 sin mul add 2 copy
+pop pop pop pop
+30013 3157 30013 2834 Sln
+30013 2108 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(10) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 0.000 cos mul sub 3 1 roll 0.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+0.000 808
+(10) Stxtl
+(10) stringwidth pop xratio div
+dup 4 3 roll exch 0.000 cos mul add 3 1 roll 0.000 sin mul add 2 copy
+pop pop pop pop
+17171 1219 0
+/Helvetica-0 findfont 808 yratio mul scalefont setfont
+(count) stringwidth pop add
+2 div xratio div
+dup 4 3 roll exch 0.000 cos mul sub 3 1 roll 0.000 sin mul sub 2 copy
+/fntsize {/Helvetica-0 findfont exch scalefont setfont } def
+0.000 808
+(count) Stxtl
+(count) stringwidth pop xratio div
+dup 4 3 roll exch 0.000 cos mul add 3 1 roll 0.000 sin mul add 2 copy
+pop pop pop pop
+S showpage
+%%EOF

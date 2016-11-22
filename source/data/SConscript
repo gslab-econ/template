@@ -1,4 +1,4 @@
-Import('*')
+Import('env')
 
 env.BuildR(target = ['#build/data/data.txt'],
            source = ['#source/data/build.R'])

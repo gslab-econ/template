@@ -1,4 +1,4 @@
-Import('*')
+Import('env')
 
 env.BuildLyx(target = '#output/talk/slides.pdf', 
              source = ['#source/talk/slides.lyx',

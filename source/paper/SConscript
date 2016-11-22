@@ -1,4 +1,4 @@
-Import('*')
+Import('env')
 
 env.BuildLyx(target = ['#output/paper/paper.pdf'],
              source = ['#source/paper/paper.lyx',

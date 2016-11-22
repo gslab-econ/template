@@ -1,3 +1,65 @@
-Log created:    2016-11-15 09:37:38
-Log completed:  2016-11-15 09:37:41
+Log created:    2016-11-21 16:02:34
+Log completed:  2016-11-21 16:02:35
  
+
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LP
+  Statistics/Data Analysis            StataCorp
+                                      4905 Lakeway Drive
+     MP - Parallel Edition            College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+8-user 4-core Stata network perpetual license:
+       Serial number:  501406225577
+         Licensed to:  Andres Shahidinejad
+                       GSLab
+
+Notes:
+      1.  Stata is running in batch mode.
+      2.  Unicode is supported; see help unicode_advice.
+      3.  More than 2 billion observations are allowed; see help obs_advice.
+      4.  Maximum number of variables is set to 5000; see help set_maxvar.
+
+
+running /Applications/Stata/profile.do ...
+
+. do "source/analysis/analysis.do" 
+
+. version 14
+
+. set more off
+
+. preliminaries
+
+. adopath ++ "~/Library/Application Support/Stata/ado/personal/"
+  [1]              "~/Library/Application Support/Stata/ado/personal/"
+  [2]              "../external/lib/third_party/stata_tools"
+  [3]  (BASE)      "/Applications/Stata/ado/base/"
+  [4]  (SITE)      "/Applications/Stata/ado/site/"
+  [5]              "."
+  [6]  (OLDPLACE)  "~/ado/"
+
+. 
+. program main
+  1.     import delimited "build/data/data.txt", delimiters("|") varnames(1) clear
+  2.     hist count, discrete width(0.5)
+  3.     graph export "output/analysis/plot.eps", replace
+  4.     collapse (sum) count, by(group)
+  5.     mkmat group count, matrix("result")
+  6.     matrix_to_txt, matrix(result) saving("output/analysis/table.txt") title("<tab:table>") replace
+  7. end
+
+. 
+. * EXECUTE
+. main
+(2 vars, 1,000 obs)
+(start=1, width=.5)
+(note: file output/analysis/plot.eps not found)
+(file output/analysis/plot.eps written in EPS format)
+(note: file output/analysis/table.txt not found)
+
+. 
+end of do-file

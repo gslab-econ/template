@@ -1,7 +1,6 @@
 # Preliminaries
 import os
 import sys
-import SCons.Scanner.LaTeX as LatexScanner
 import gslab_scons.build as build
 import gslab_scons.log as log
 import gslab_scons.release as release
@@ -26,8 +25,7 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                               'BuildLyx'    : Builder(action = build.build_lyx),
                               'BuildR'      : Builder(action = build.build_r),
                               'BuildStata'  : Builder(action = build.build_stata),
-                              'BuildPython' : Builder(action = build.build_python),
-                              'Scanner'     : Builder(action = LatexScanner.LaTeXScanner())},
+                              'BuildPython' : Builder(action = build.build_python)},
                   user_flavor = ARGUMENTS.get('sf', 'StataMP'))
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed

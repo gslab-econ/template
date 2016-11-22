@@ -9,11 +9,13 @@ Using the repository template
  - [Lyx](https://www.lyx.org/)
     - For the above four, executables need to added to `path` environment variable. So they are callable from the command line with `python`, `statamp`, `Rscript`, and `lyx`.
  - [SCons](http://scons.org/) version 2.4.0 or later
-    - SCons can also be installed via [pip](https://pip.pypa.io/en/stable/) using `pip install --egg scons`
-    - More information about Scons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons)
+    - SCons can also be installed via [pip](https://pip.pypa.io/en/stable/) using `pip install --egg scons`.
+    - More information about Scons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
  - [git-lfs](https://git-lfs.github.com/)
  - [gslab_tools](https://pypi.python.org/pypi/GSLab_Tools) version 1.1.1 or later
-    - Installed via [pip](https://pip.pypa.io/en/stable/) using `pip install gslab_tools`. 
+    - Installed via [pip](https://pip.pypa.io/en/stable/) using `pip install gslab_tools`.
+ - [gslab_stata tools](https://github.com/gslab-econ/gslab_stata)
+    - Installed according to [computer-build-sheet](https://github.com/gslab-econ/admin/blob/cd4ddcf91cbd724a0ac444adf18bdba797457e3c/computer-build-sheet/package_build.sh).
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
 The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.

@@ -1,4 +1,4 @@
-Import('*')
+Import('env')
 
 env.Tablefill(target = ['#output/tables/table.lyx'],
               source = ['#source/tables/table.lyx',
