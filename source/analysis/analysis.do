@@ -1,7 +1,7 @@
 version 14
 set more off
 preliminaries
-adopath ++ "~/Library/Application Support/Stata/ado/personal/"
+cap adopath + PERSONAL
 
 program main
     import delimited "build/data/data.txt", delimiters("|") varnames(1) clear

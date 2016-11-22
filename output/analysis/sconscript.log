@@ -1,5 +1,5 @@
-Log created:    2016-11-21 16:02:34
-Log completed:  2016-11-21 16:02:35
+Log created:    2016-11-21 16:22:38
+Log completed:  2016-11-21 16:22:39
  
 
   ___  ____  ____  ____  ____ (R)
@@ -34,13 +34,7 @@ running /Applications/Stata/profile.do ...
 
 . preliminaries
 
-. adopath ++ "~/Library/Application Support/Stata/ado/personal/"
-  [1]              "~/Library/Application Support/Stata/ado/personal/"
-  [2]              "../external/lib/third_party/stata_tools"
-  [3]  (BASE)      "/Applications/Stata/ado/base/"
-  [4]  (SITE)      "/Applications/Stata/ado/site/"
-  [5]              "."
-  [6]  (OLDPLACE)  "~/ado/"
+. cap adopath + PERSONAL
 
 . 
 . program main
