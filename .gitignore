@@ -16,3 +16,5 @@
 *.toc
 *.out
 *.svn
+*.ipynb
+*.ipynb_checkpoints
