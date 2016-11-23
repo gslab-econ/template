@@ -1,4 +1,0 @@
-name: large_template
-repository: template
-organization: gslab-econ
-release files: 'build/data/data.txt'
