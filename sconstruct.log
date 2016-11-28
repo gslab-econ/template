@@ -1,5 +1,4 @@
 scons: done reading SConscript files.
 scons: Building targets ...
-Install file: "build/data/data.txt" as "release/data.txt"
-Install file: "source/data/mango.jpg" as "release/mango.jpg"
+scons: `.' is up to date.
 scons: done building targets.

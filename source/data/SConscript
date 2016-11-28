@@ -8,4 +8,3 @@ env.Command(
 	)
 
 env.Install('#release', '#build/data/data.txt')
-env.Install('#release', '#source/data/mango.jpg')
