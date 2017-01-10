@@ -1,10 +1,9 @@
 import os
 import sys
-import gslab_scons
+import gslab_scons.build as build
+import gslab_scons.log as log
 
-
-
-gslab_scons.start_log()
+log.start_log()
 
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
