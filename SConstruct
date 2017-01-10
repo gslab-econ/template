@@ -12,7 +12,7 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                                'Lyx'       : Builder(action = build.build_lyx),
                                'R'         : Builder(action = build.build_r),
                                'Stata'     : Builder(action = build.build_stata)},
-                  user_flavor = ARGUMENTS.get('sf', 'StataMP'))
+                  user_flavor = ARGUMENTS.get('sf', None))
 
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
