@@ -1,5 +1,5 @@
-Log created:    2016-09-30 17:05:26
-Log completed:  2016-09-30 17:05:26
+Log created:    2017-01-09 16:04:53
+Log completed:  2017-01-09 16:05:08
  
 
 R version 3.3.0 (2016-05-03) -- "Supposedly Educational"
@@ -29,4 +29,4 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
-  0.097   0.024   0.210 
+  0.126   0.042  10.154 
