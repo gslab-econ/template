@@ -1,8 +1,8 @@
-Log created:    2016-11-04 16:18:56
-Log completed:  2016-11-04 16:18:56
+Log created:    2017-01-09 19:30:56
+Log completed:  2017-01-09 19:30:56
  
 
-R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
 Copyright (C) 2016 The R Foundation for Statistical Computing
 Platform: x86_64-apple-darwin13.4.0 (64-bit)
 
@@ -29,4 +29,4 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
-  0.118   0.031   0.453 
+  0.143   0.042   0.354 
