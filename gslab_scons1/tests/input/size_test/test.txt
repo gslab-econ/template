@@ -1,0 +1,3 @@
+This is a file written to ensure that 
+the create_size_dictionary() function
+works properly.

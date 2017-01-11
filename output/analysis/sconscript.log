@@ -1,5 +1,5 @@
-Log created:    2017-01-11 11:50:17
-Log completed:  2017-01-11 11:50:19
+Log created:    2017-01-11 11:57:56
+Log completed:  2017-01-11 11:57:58
  
 
   ___  ____  ____  ____  ____ (R)
@@ -26,18 +26,21 @@ Notes:
 
 running /Applications/Stata/profile.do ...
 
-. do "source/analysis/analysis.do" 
-
-. program main
-  1.         import delimited "output/data/data_1.txt", delimiter("|") varnames(nonames) clear
-  2.         rename v1 obs_value
-  3.         gen obs_number = _n
-  4.         graph twoway line obs_value obs_number
-  5.         graph export "output/analysis/plot.eps"
-  6. end
+. do "source/analysis/analysis.do" 1 
 
 . 
-. main    
+. 
+. program main
+  1.         syntax, iter(string)
+  2.         import delimited "output/data/data_`iter'.txt", delimiter("|") varnames(nonames) clear
+  3.         rename v1 obs_value
+  4.         gen obs_number = _n
+  5.         graph twoway line obs_value obs_number
+  6.         graph export "output/analysis/plot.eps"
+  7. end
+
+. 
+. main, iter(`1')
 (1 var, 201 obs)
 (file output/analysis/plot.eps written in EPS format)
 
