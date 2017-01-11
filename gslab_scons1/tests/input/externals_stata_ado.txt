@@ -1,3 +1,0 @@
-rev	dir	file	outdir	outfile	notes
-23061	%svn%/lib/stata/gslab_misc/	*	./lib/stata/gslab_misc/	""""
-23061	%svn%/lib/third_party/stata_tools/	*	./lib/third_party/stata_tools/	""""
