@@ -1,8 +1,11 @@
 
 import os
+import re
 import sys
+import time
 import gslab_scons.builders as build
 import gslab_scons.log as log
+from gslab_scons.misc import state_of_repo
 
 log.start_log()
 
@@ -21,4 +24,11 @@ Export('env')
 SConscript('source/data/SConscript') 
 SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
-SConscript('source/talk/SConscript') 
+SConscript('source/talk/SConscript')
+
+
+# Print the state of the repo at end of SCons run
+finish_command = Command( 'state_of_repo', [], state_of_repo ) # From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
+Depends(finish_command, BUILD_TARGETS)
+if 'state_of_repo' not in BUILD_TARGETS: 
+	BUILD_TARGETS.append('state_of_repo')
