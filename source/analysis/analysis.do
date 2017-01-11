@@ -1,5 +1,5 @@
 program main
-	import delimited "output/data/data.txt", delimiter("|") varnames(nonames) clear
+	import delimited "output/data/data_1.txt", delimiter("|") varnames(nonames) clear
 	rename v1 obs_value
 	gen obs_number = _n
 	graph twoway line obs_value obs_number

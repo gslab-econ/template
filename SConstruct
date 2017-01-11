@@ -1,8 +1,8 @@
 
 import os
 import sys
-import gslab_scons.builders as build
-import gslab_scons.log as log
+import gslab_scons1.builders as build
+import gslab_scons1.log as log
 
 log.start_log()
 

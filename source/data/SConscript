@@ -1,8 +1,6 @@
 Import('*')
 
-target = '#output/data/data.txt'
 source = 'build.R'
-env.R(target, source)
-
-
-	
+for i in range(1, 3):
+	target = '#output/data/data_%s.txt' % i
+	env.R(target, source, CL_ARG=str(i)) # Demonstrates using command line arguments
