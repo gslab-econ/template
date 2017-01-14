@@ -1,10 +1,10 @@
-Log created:    2017-01-09 19:30:56
-Log completed:  2017-01-09 19:30:58
+Log created:    2017-01-14 14:59:01
+Log completed:  2017-01-14 14:59:01
  
 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LP
+___/   /   /___/   /   /___/   14.1   Copyright 1985-2015 StataCorp LP
   Statistics/Data Analysis            StataCorp
                                       4905 Lakeway Drive
      MP - Parallel Edition            College Station, Texas 77845 USA
@@ -26,12 +26,12 @@ Notes:
 . do "source/analysis/analysis.do" 
 
 . program main
-  1.         import delimited "output/data/data.txt", delimiter("|") varnames(n
-> onames) clear
-  2.         rename v1 obs_value
-  3.         gen obs_number = _n
-  4.         graph twoway line obs_value obs_number
-  5.         graph export "output/analysis/plot.eps"
+  1.     import delimited "output/data/data.txt", delimiter("|") varnames(nonam
+> es) clear
+  2.     rename v1 obs_value
+  3.     gen obs_number = _n
+  4.     graph twoway line obs_value obs_number
+  5.     graph export "output/analysis/plot.eps"
   6. end
 
 . 

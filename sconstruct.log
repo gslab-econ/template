@@ -1,4 +1,49 @@
 scons: done reading SConscript files.
 scons: Building targets ...
 scons: `.' is up to date.
++-.
+  +-SConstruct
+  +-output
+  | +-output/analysis
+  | | +-output/analysis/plot.eps
+  | |   +-source/analysis/analysis.do
+  | |   +-output/data/data.txt
+  | |     +-source/data/build.R
+  | +-output/data
+  | | +-output/data/data.txt
+  | |   +-source/data/build.R
+  | +-output/paper
+  | | +-output/paper/online_appendix.pdf
+  | | | +-source/paper/online_appendix.lyx
+  | | | +-output/analysis/plot.eps
+  | | |   +-source/analysis/analysis.do
+  | | |   +-output/data/data.txt
+  | | |     +-source/data/build.R
+  | | +-output/paper/paper.pdf
+  | |   +-source/paper/paper.lyx
+  | |   +-output/analysis/plot.eps
+  | |     +-source/analysis/analysis.do
+  | |     +-output/data/data.txt
+  | |       +-source/data/build.R
+  | +-output/talk
+  |   +-output/talk/slides.pdf
+  |     +-source/talk/slides.lyx
+  |     +-output/analysis/plot.eps
+  |       +-source/analysis/analysis.do
+  |       +-output/data/data.txt
+  |         +-source/data/build.R
+  +-source
+    +-source/analysis
+    | +-source/analysis/SConscript
+    | +-source/analysis/analysis.do
+    +-source/data
+    | +-source/data/SConscript
+    | +-source/data/build.R
+    +-source/paper
+    | +-source/paper/SConscript
+    | +-source/paper/online_appendix.lyx
+    | +-source/paper/paper.lyx
+    +-source/talk
+      +-source/talk/SConscript
+      +-source/talk/slides.lyx
 scons: done building targets.

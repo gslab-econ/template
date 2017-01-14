@@ -1,7 +1,7 @@
 Import('*')
 
 target = '#output/talk/slides.pdf'
-source = ['#source/talk/slides.lyx',
-		  '#output/analysis/plot.eps']
-
+source = '#source/talk/slides.lyx'
+assets = '#output/analysis/plot.eps'
+env.Depends(target, assets)
 env.Lyx(target, source)
