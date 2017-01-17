@@ -1,0 +1,31 @@
+Log created:    2017-01-17 10:03:47
+Log completed:  2017-01-17 10:03:47
+ 
+
+R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> set.seed(1)
+> group <- sample(0:1, 1000, replace = T)
+> count <- sample(1:10, 1000, replace = T)
+> data = data.frame(group, count)
+> write.table(data, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = TRUE, quote = FALSE)
+> 
+> proc.time()
+   user  system elapsed 
+  0.113   0.024   0.128 

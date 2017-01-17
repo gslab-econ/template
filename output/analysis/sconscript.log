@@ -1,5 +1,5 @@
-Log created:    2016-11-21 16:22:38
-Log completed:  2016-11-21 16:22:39
+Log created:    2017-01-17 10:07:11
+Log completed:  2017-01-17 10:07:12
  
 
   ___  ____  ____  ____  ____ (R)
@@ -38,7 +38,7 @@ running /Applications/Stata/profile.do ...
 
 . 
 . program main
-  1.     import delimited "build/data/data.txt", delimiters("|") varnames(1) clear
+  1.     import delimited "output/data/data.txt", delimiters("|") varnames(1) clear
   2.     hist count, discrete width(0.5)
   3.     graph export "output/analysis/plot.eps", replace
   4.     collapse (sum) count, by(group)

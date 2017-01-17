@@ -1,7 +1,7 @@
 # Preliminaries
 import os
 import sys
-import gslab_scons.build as build
+import gslab_scons as builders
 import gslab_scons.log as log
 import gslab_scons.release as release
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
@@ -21,11 +21,11 @@ log.start_log()
 # Defines environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
-                  BUILDERS = {'Tablefill'   : Builder(action = build.build_tables),
-                              'BuildLyx'    : Builder(action = build.build_lyx),
-                              'BuildR'      : Builder(action = build.build_r),
-                              'BuildStata'  : Builder(action = build.build_stata),
-                              'BuildPython' : Builder(action = build.build_python)},
+                  BUILDERS = {'Tablefill'   : Builder(action = builders.build_tables),
+                              'BuildLyx'    : Builder(action = builders.build_lyx),
+                              'BuildR'      : Builder(action = builders.build_r),
+                              'BuildStata'  : Builder(action = builders.build_stata),
+                              'BuildPython' : Builder(action = builders.build_python)},
                   user_flavor = ARGUMENTS.get('sf', 'StataMP'))
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed

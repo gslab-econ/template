@@ -4,7 +4,7 @@ preliminaries
 cap adopath + PERSONAL
 
 program main
-    import delimited "build/data/data.txt", delimiters("|") varnames(1) clear
+    import delimited "output/data/data.txt", delimiters("|") varnames(1) clear
     hist count, discrete width(0.5)
     graph export "output/analysis/plot.eps", replace
     collapse (sum) count, by(group)
