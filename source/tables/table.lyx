@@ -110,7 +110,7 @@ name "tab:table"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="2">
+<lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -119,7 +119,7 @@ name "tab:table"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Group
+
 \end_layout
 
 \end_inset
@@ -139,7 +139,47 @@ Count
 \begin_inset Text
 
 \begin_layout Plain Layout
-#0#
+Mean
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#2#
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+#2#
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Min
 \end_layout
 
 \end_inset
@@ -159,7 +199,7 @@ Count
 \begin_inset Text
 
 \begin_layout Plain Layout
-#0#
+Max
 \end_layout
 
 \end_inset

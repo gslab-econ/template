@@ -14,8 +14,6 @@ Using the repository template
  - [git-lfs](https://git-lfs.github.com/)
  - [gslab_tools](https://pypi.python.org/pypi/GSLab_Tools) version 1.1.1 or later
     - Installed via [pip](https://pip.pypa.io/en/stable/) using `pip install gslab_tools`.
- - [gslab_stata tools](https://github.com/gslab-econ/gslab_stata)
-    - Installed according to [computer-build-sheet](https://github.com/gslab-econ/admin/blob/cd4ddcf91cbd724a0ac444adf18bdba797457e3c/computer-build-sheet/package_build.sh).
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
 The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.

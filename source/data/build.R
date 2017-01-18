@@ -1,5 +1,3 @@
 set.seed(1)
-group <- sample(0:1, 1000, replace = T)
-count <- sample(1:10, 1000, replace = T)
-data = data.frame(group, count)
-write.table(data, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = TRUE, quote = FALSE)
+x <- sample(1:10, 1000, replace = T)
+write.table(x, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = TRUE, quote = FALSE)

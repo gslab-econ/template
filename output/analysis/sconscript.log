@@ -1,5 +1,5 @@
-Log created:    2017-01-17 17:37:45
-Log completed:  2017-01-17 17:37:47
+Log created:    2017-01-18 14:14:32
+Log completed:  2017-01-18 14:14:33
  
 
   ___  ____  ____  ____  ____ (R)
@@ -30,29 +30,34 @@ running /Applications/Stata/profile.do ...
 
 . version 14
 
+. clear all
+
 . set more off
-
-. preliminaries
-
-. cap adopath + PERSONAL
 
 . 
 . program main
   1.     import delimited "output/data/data.txt", delimiters("|") varnames(1) clear
-  2.     hist count, discrete width(0.5)
+  2.     hist x, discrete width(0.5)
   3.     graph export "output/analysis/plot.eps", replace
-  4.     collapse (sum) count, by(group)
-  5.     mkmat group count, matrix("result")
-  6.     matrix_to_txt, matrix(result) saving("output/analysis/table.txt") title("<tab:table>") replace
-  7. end
+  4. 
+.     sum x
+  5.     file open  outfile using "output/analysis/table.txt", write replace
+  6.     file write outfile "<tab:table>" _n
+  7.     file write outfile (r(mean)) _n (r(sd)) _n (r(max)) _n (r(min))
+  8.     file close outfile
+  9. end
 
 . 
 . * EXECUTE
 . main
-(2 vars, 1,000 obs)
+(1 var, 1,000 obs)
 (start=1, width=.5)
 (note: file output/analysis/plot.eps not found)
 (file output/analysis/plot.eps written in EPS format)
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+           x |      1,000       5.492    2.877536          1         10
 (note: file output/analysis/table.txt not found)
 
 . 
