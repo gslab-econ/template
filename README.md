@@ -4,10 +4,10 @@ Using the repository template
 #### Pre-requisites:
 
  - Mac OS or Linux OS
- - [Python 2.X](https://www.python.org) (add to `path`)
- - [Stata MP](http://www.stata.com/statamp/) (add to `path`)
- - [R](https://www.r-project.org/) (add to `path`)
- - [Lyx](https://www.lyx.org/) (add to `path`)
+ - [Python 2.X](https://www.python.org) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
+ - [Stata MP](http://www.stata.com/statamp/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable))
+ - [R](https://www.r-project.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable))
+ - [Lyx](https://www.lyx.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable))
  - [SCons](http://scons.org/) (Note that version 2.4.0 or later is best if using the [cache](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)).
     - SCons can also be installed via [pip](https://pip.pypa.io/en/stable/) using `pip install --egg scons`.
     - More information about Scons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
