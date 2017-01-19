@@ -3,7 +3,7 @@ Using the repository template
 
 #### Pre-requisites:
 
- - Mac OS or Linux OS
+ - Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
  - [Python 2.X](https://www.python.org) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
  - [Stata MP](http://www.stata.com/statamp/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
  - [R](https://www.r-project.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))

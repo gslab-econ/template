@@ -50,5 +50,3 @@ if mode == 'release':
     release.release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
     ## Specifies default targets to build
     Default('.', local_release)
-
-
