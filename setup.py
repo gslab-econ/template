@@ -44,10 +44,10 @@ def check_r():
 
 def check_lyx():
     try:
-       subprocess.call(['lyx', '--export', 'pdf', 'source/paper/paper.lyx'])
+       subprocess.call(['lyx', '--export', 'pdf', 'source/talk/slides.lyx'])
     except OSError:
-        print('Lyx is not installed, or excecutable is not added to path')
-    os.system('rm source/paper/paper.pdf')
+        print('Lyx is not installed, or excecutable is not added to path, or GSLab-modified Metropolis beamer theme is not added')
+    os.system('rm source/talk/slides.pdf')
 
 def check_scons():
     try:

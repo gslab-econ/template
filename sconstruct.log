@@ -1,5 +1,4 @@
 scons: done reading SConscript files.
 scons: Building targets ...
-Install file: "build/paper/paper.pdf" as "release/paper.pdf"
-Install file: "build/talk/slides.pdf" as "release/slides.pdf"
+scons: `.' is up to date.
 scons: done building targets.
