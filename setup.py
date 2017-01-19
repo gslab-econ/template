@@ -30,6 +30,17 @@ def check_python():
     if sys.version_info[0] != 2:
         raise PrerequisiteError('Not the right version of python')
 
+def check_gslab_tools():
+    try:
+        import gslab_scons
+        import gslab_make
+        import gslab_fill
+    except:
+        raise PrerequisiteError('Missing gslab_tools')
+
+    if pkg_resources.get_distribution('gslab_tools').version < '1.1.1':
+        raise PrerequisiteError('Wrong version of gslab_tools')
+
 def check_stata(sf):
     import gslab_scons.misc as misc
     if sf is not None:
@@ -73,17 +84,6 @@ def check_metropolis():
         pass
     else:
         raise PrerequisiteError('Metropolis beamer not found at /usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab')
-
-def check_gslab_tools():
-    try:
-        import gslab_scons
-        import gslab_make
-        import gslab_fill
-    except:
-        raise PrerequisiteError('Missing gslab_tools')
-
-    if pkg_resources.get_distribution('gslab_tools').version < '1.1.1':
-        raise PrerequisiteError('Wrong version of gslab_tools')
 
 def check_gitlfs():
     from gslab_scons.misc import check_lfs

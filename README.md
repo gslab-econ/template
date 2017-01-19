@@ -9,11 +9,10 @@ Using the repository template
  - [R](https://www.r-project.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
  - [Lyx](https://www.lyx.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
  - [SCons](http://scons.org/) (Note that version 2.4.0 or later is best if using the [cache](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)).
-    - More information about Scons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
+    - More information about SCons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
  - [git-lfs](https://git-lfs.github.com/)
- - [gslab_tools](https://pypi.python.org/pypi/GSLab_Tools) version 1.1.1 or later
-    - Installed via [pip](https://pip.pypa.io/en/stable/) using `pip install gslab_tools`.
-- [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
+ - [gslab_tools](https://github.com/gslab-econ/gslab_python) version 1.1.1 or later
+ - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
 The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
 
