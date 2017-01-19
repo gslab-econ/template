@@ -336,7 +336,7 @@ leftskip=0em
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "/Users/chuanyu/Desktop/template/source/figures/figure.lyx"
+filename "../figures/figure.lyx"
 
 \end_inset
 
@@ -346,7 +346,7 @@ filename "/Users/chuanyu/Desktop/template/source/figures/figure.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "/Users/chuanyu/Desktop/template/output/tables/table.lyx"
+filename "../../build/tables/table.lyx"
 
 \end_inset
 

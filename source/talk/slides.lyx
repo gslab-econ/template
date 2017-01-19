@@ -243,7 +243,7 @@ Figure
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename ../../output/analysis/plot.eps
+	filename ../../build/analysis/plot.eps
 	scale 50
 
 \end_inset

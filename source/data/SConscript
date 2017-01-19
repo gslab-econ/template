@@ -1,5 +1,4 @@
 Import('env')
 
-env.BuildR(target = ['#output/data/data.txt'],
+env.BuildR(target = ['#build/data/data.txt'],
            source = ['#source/data/build.R'])
-env.Install('#release', '#output/data/data.txt')

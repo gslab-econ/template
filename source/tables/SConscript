@@ -1,5 +1,5 @@
 Import('env')
 
-env.Tablefill(target = ['#output/tables/table.lyx'],
+env.Tablefill(target = ['#build/tables/table.lyx'],
               source = ['#source/tables/table.lyx',
-                        '#output/analysis/table.txt'])
+                        '#build/analysis/table.txt'])
