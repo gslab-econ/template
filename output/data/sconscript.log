@@ -1,6 +1,6 @@
 
-*** Builder log created:    2017-01-19 10:51:02
-*** Builder log completed:  2017-01-19 10:51:02
+*** Builder log created:    2017-01-19 11:02:37
+*** Builder log completed:  2017-01-19 11:02:37
  
 
 R version 3.3.0 (2016-05-03) -- "Supposedly Educational"
@@ -32,4 +32,4 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
-  0.107   0.022   0.134 
+  0.105   0.022   0.133 

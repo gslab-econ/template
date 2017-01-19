@@ -4,7 +4,9 @@ import sys
 import gslab_scons.builders as build
 import gslab_scons.log as log
 
-log.start_log()
+mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
+vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
+log.start_log(mode, vers)
 
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
