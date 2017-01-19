@@ -2,6 +2,7 @@ Using the repository template
 =============================
 
 #### Pre-requisites:
+
  - Mac OS or Linux OS
  - [Python 2.X](https://www.python.org)
  - [Stata MP](http://www.stata.com/statamp/)
@@ -14,9 +15,10 @@ Using the repository template
  - [git-lfs](https://git-lfs.github.com/)
  - [gslab_tools](https://pypi.python.org/pypi/GSLab_Tools) version 1.1.1 or later
     - Installed via [pip](https://pip.pypa.io/en/stable/) using `pip install gslab_tools`.
- - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
 The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
+
+Make sure you have installed `python` and executable is added to `path`. Type `python setup.py` in the command line at the root of the repo to check if all pre-requisites are satisfied.
 
 #### To run:
  - The entire directory:
