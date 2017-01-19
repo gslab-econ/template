@@ -4,11 +4,10 @@ Using the repository template
 #### Pre-requisites:
 
  - Mac OS or Linux OS
- - [Python 2.X](https://www.python.org)
- - [Stata MP](http://www.stata.com/statamp/)
- - [R](https://www.r-project.org/)
- - [Lyx](https://www.lyx.org/)
-    - For the above four, executables need to added to `path` environment variable. So they are callable from the command line with `python`, `statamp`, `Rscript`, and `lyx`.
+ - [Python 2.X](https://www.python.org) (add to `path`)
+ - [Stata MP](http://www.stata.com/statamp/) (add to `path`)
+ - [R](https://www.r-project.org/) (add to `path`)
+ - [Lyx](https://www.lyx.org/) (add to `path`)
  - [SCons](http://scons.org/) (Note that version 2.4.0 or later is best if using the [cache](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)).
     - SCons can also be installed via [pip](https://pip.pypa.io/en/stable/) using `pip install --egg scons`.
     - More information about Scons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
@@ -18,8 +17,6 @@ Using the repository template
 - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
 The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
-
-Make sure you have installed `python` and executable is added to `path`. Type `python setup.py` in the command line at the root of the repo to check if all pre-requisites are satisfied.
 
 #### To run:
  - The entire directory:
