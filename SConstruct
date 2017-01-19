@@ -7,9 +7,10 @@ import gslab_scons.release as release
 from setup import setup_test
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
+sf   = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
 
 # Test for proper prerequisites and setup
-setup_test(mode, vers)
+setup_test(mode, vers, sf)
 
 log.start_log() 
 
@@ -21,7 +22,7 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                               'BuildR'      : Builder(action = builders.build_r),
                               'BuildStata'  : Builder(action = builders.build_stata),
                               'BuildPython' : Builder(action = builders.build_python)},
-                  user_flavor = ARGUMENTS.get('sf', 'StataMP'))
+                  user_flavor = sf)
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
 Export('env')
