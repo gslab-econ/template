@@ -46,12 +46,12 @@ def check_lyx():
     try:
        subprocess.call(['lyx', '--export', 'pdf', 'source/paper/paper.lyx'])
     except OSError:
-        print('Lyx is not installed, or excecutable is not added to path, or ')
+        print('Lyx is not installed, or excecutable is not added to path')
     os.system('rm source/paper/paper.pdf')
 
 def check_scons():
     try:
-        subprocess.call(['scons'])
+        subprocess.call(['scons', '--version'])
     except:
         raise PrerequisiteError('SCons is not installed')
 
