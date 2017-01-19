@@ -21,9 +21,9 @@ The easiest way to install all the applications above is to use [Homebrew](http:
  - The entire directory:
     - In the root directory, type `scons` in the command line. This should run everything that is flagged as being modified or with dependencies that have been modified.
  - A single directory of targets:
-    - `scons output/data` will re-build the `output/data` folder if it is out of sync, without rebuilding other files.
+    - `scons build/data` will re-build the `build/data` folder if it is out of sync, without rebuilding other files.
  - A single target file:
-    - `scons output/paper/paper.pdf` will re-run only the code needed to update `output/paper/paper.pdf` without rebuilding other files.
+    - `scons build/paper/paper.pdf` will re-run only the code needed to update `build/paper/paper.pdf` without rebuilding other files.
 
 #### Copy the template:
 In order to create a new repository using this template, either
