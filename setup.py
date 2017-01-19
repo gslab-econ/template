@@ -3,7 +3,7 @@ import os
 import subprocess
 import pkg_resources
 
-def main():
+def setup_test(mode, vers):
     check_os()
     check_python()
     check_stata()
@@ -13,7 +13,14 @@ def main():
     check_gslab_tools()
     check_gitlfs()
 
-    print "\n\nCongratulations! You have satisfied all pre-requisites!"
+    # Sets up logs and checks mode/version
+    if not (mode in ['develop', 'cache', 'release']):
+        print("Error: %s is not a defined mode" % mode)
+        sys.exit()
+
+    if mode == 'release' and vers == '':
+        print("Error: Version must be defined in release mode")
+        sys.exit()
 
 class PrerequisiteError(Exception):
     pass
@@ -72,4 +79,4 @@ def check_gitlfs():
     except:
         raise PrerequisiteError('Git-lfs is not installed')
 
-main()
+

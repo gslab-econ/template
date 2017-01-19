@@ -4,17 +4,12 @@ import sys
 import gslab_scons as builders
 import gslab_scons.log as log
 import gslab_scons.release as release
+from setup import setup_test
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
 
-# Sets up logs and checks mode/version
-if not (mode in ['develop', 'cache', 'release']):
-    print("Error: %s is not a defined mode" % mode)
-    sys.exit()
-
-if mode == 'release' and vers == '':
-    print("Error: Version must be defined in release mode")
-    sys.exit()
+# Test for proper prerequisites and setup
+setup_test(mode, vers)
 
 log.start_log() 
 

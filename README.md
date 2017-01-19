@@ -9,7 +9,7 @@ Using the repository template
  - [R](https://www.r-project.org/)
  - [Lyx](https://www.lyx.org/)
     - For the above four, executables need to added to `path` environment variable. So they are callable from the command line with `python`, `statamp`, `Rscript`, and `lyx`.
- - [SCons](http://scons.org/) version 2.4.0 or later is best if using the cache.
+ - [SCons](http://scons.org/) (Note that version 2.4.0 or later is best if using the [cache](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)).
     - SCons can also be installed via [pip](https://pip.pypa.io/en/stable/) using `pip install --egg scons`.
     - More information about Scons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
  - [git-lfs](https://git-lfs.github.com/)

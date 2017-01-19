@@ -4,4 +4,4 @@ env.BuildLyx(target = '#build/talk/slides.pdf',
              source = ['#source/talk/slides.lyx',
                        '#build/analysis/plot.eps'])
 
-env.Install('#release', '#build/talk/slides.pdf')
+env.Install('#release', '#build/talk/')

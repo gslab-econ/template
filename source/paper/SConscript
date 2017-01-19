@@ -14,4 +14,4 @@ env.BuildLyx(target = ['#build/paper/text.pdf'],
 env.BuildLyx(target = ['#build/paper/ondeck.pdf'], 
              source = ['#source/paper/ondeck.lyx'])
 
-env.Install('#release', '#build/paper/paper.pdf')
+env.Install('#release', '#build/paper/')
