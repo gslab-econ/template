@@ -67,12 +67,12 @@ def check_stata(sf):
 
 def check_r():
     from gslab_scons.misc import is_in_path
-    if is_in_path('R.exe') or is_in_path('R') is None:
+    if is_in_path('R.exe') is None and is_in_path('R') is None:
         raise PrerequisiteError('R is not installed or excecutable is not added to path')
 
 def check_lyx():
     from gslab_scons.misc import is_in_path
-    if is_in_path('lyx.exe') or is_in_path('lyx') is None:
+    if is_in_path('lyx.exe') is None and is_in_path('lyx') is None:
         raise PrerequisiteError('Lyx is not installed, or excecutable is not added to path, or GSLab-modified Metropolis beamer theme is not added')
 
 def check_metropolis():
