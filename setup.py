@@ -3,6 +3,7 @@ import os
 import subprocess
 import pkg_resources
 from sys import platform
+import warnings
 
 def setup_test(mode, vers, sf):
     check_python()
@@ -76,10 +77,13 @@ def check_lyx():
         raise PrerequisiteError('Lyx is not installed, or excecutable is not added to path, or GSLab-modified Metropolis beamer theme is not added')
 
 def check_metropolis():
-    if os.path.isfile('/usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab/beamerthememetropolis_gslab.sty'):
-        pass
+    if platform == 'win32':
+        warnings.warn('It has not been tested whether Metropolis beamer is installed or not. Please make sure it has been installed before running the repo.')
     else:
-        raise PrerequisiteError('Metropolis beamer not found at /usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab')
+        if os.path.isfile('/usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab/beamerthememetropolis_gslab.sty'):
+            pass
+        else:
+            raise PrerequisiteError('Metropolis beamer not found at /usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab')
 
 def check_gitlfs():
     from gslab_scons.misc import check_lfs
