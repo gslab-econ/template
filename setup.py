@@ -4,7 +4,6 @@ import subprocess
 import pkg_resources
 
 def setup_test(mode, vers, sf):
-    check_os()
     check_python()
     check_gslab_tools()
     check_stata(sf)
@@ -21,10 +20,6 @@ def setup_test(mode, vers, sf):
     if mode == 'release' and vers == '':
         print("Error: Version must be defined in release mode")
         sys.exit()
-
-def check_os():
-    if sys.platform not in ['darwin', 'linux', 'linux2']:
-        raise PrerequisiteError('Not the right operating system')
 
 def check_python():
     if sys.version_info[0] != 2:
