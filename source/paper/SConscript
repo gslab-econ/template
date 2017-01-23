@@ -1,11 +1,17 @@
-Import('*')
+Import('env')
 
-target = '#output/paper/paper.pdf'
-source = ['#source/paper/paper.lyx',
-          '#output/analysis/plot.eps']
-env.Lyx(target, source)
+env.BuildLyx(target = ['#build/paper/paper.pdf'],
+             source = ['#source/paper/paper.lyx',
+                       '#build/analysis/plot.eps',
+                       '#build/tables/table.lyx'])
 
-target = '#output/paper/online_appendix.pdf'
-source = ['#source/paper/online_appendix.lyx',
-		  '#output/analysis/plot.eps']
-env.Lyx(target, source)
+env.BuildLyx(target = ['#build/paper/online_appendix.pdf'], 
+             source = ['#source/paper/online_appendix.lyx'])
+
+env.BuildLyx(target = ['#build/paper/text.pdf'],
+             source = ['#source/paper/text.lyx'])
+
+env.BuildLyx(target = ['#build/paper/ondeck.pdf'], 
+             source = ['#source/paper/ondeck.lyx'])
+
+env.Install('#release', '#build/paper/')
