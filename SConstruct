@@ -1,16 +1,18 @@
 # Preliminaries
 import os
 import sys
-import gslab_scons as builders
-import gslab_scons.log as log
-import gslab_scons.release as release
-from setup import setup_test
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
 sf   = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
 
 # Test for proper prerequisites and setup
+from setup import setup_test
 setup_test(mode, vers, sf)
+
+# Import gslab_scons after sucessfully passing setup
+import gslab_scons as builders
+import gslab_scons.log as log
+import gslab_scons.release as release
 
 log.start_log() 
 
