@@ -74,7 +74,7 @@ def check_r():
 def check_lyx():
     from gslab_scons.misc import is_in_path
     if is_in_path('lyx.exe') is None and is_in_path('lyx') is None:
-        raise PrerequisiteError('Lyx is not installed, or excecutable is not added to path, or GSLab-modified Metropolis beamer theme is not added')
+        raise PrerequisiteError('Lyx is not installed or excecutable is not added to path')
 
 def check_metropolis():
     if platform == 'win32':
