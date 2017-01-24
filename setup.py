@@ -8,7 +8,7 @@ import warnings
 def setup_test(mode, vers, sf):
     check_python()
     check_gslab_tools()
-    check_stata(sf)
+#    check_stata(sf)
     check_r()
     check_lyx()
     check_metropolis()

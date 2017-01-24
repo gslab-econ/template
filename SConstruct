@@ -14,18 +14,7 @@ setup_test(mode, vers, sf)
 import gslab_scons as builders
 import gslab_scons.log as log
 import gslab_scons.release as release
-
-lyx_re =re.compile(r'filename\s(\S+\.lyx)', re.M)
-eps_re =re.compile(r'filename\s(\S+\.eps)', re.M)
-
-def lyx_scan(node, env, path):
-    contents = node.get_contents()  
-    lyx_source = [source.replace('"', '') for source in lyx_re.findall(contents)]
-    eps_source = [source.replace('"', '') for source in eps_re.findall(contents)]
-    return lyx_source + eps_source
-
-lyxScanner = Scanner(lyx_scan, recursive = True)
-SourceFileScanner.add_scanner('.lyx', lyxScanner)
+from gslab_scons.misc import lyx_scan
 
 log.start_log() 
 
@@ -40,6 +29,9 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                   user_flavor = sf)
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
+env.EXTENSIONS = ['.eps', '.txt.', '.lyx']
+SourceFileScanner.add_scanner('.lyx', Scanner(lyx_scan, recursive = True))
+
 Export('env')
 
 # Run sub-trees
