@@ -1,10 +1,17 @@
-Log created:    2017-01-23 13:17:45
-Log completed:  2017-01-23 13:17:46
+Log created:    2017-01-24 09:52:44
+Log completed:  2017-01-24 09:52:45
  
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(./text.tex
+(./paper.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 

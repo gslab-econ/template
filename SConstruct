@@ -1,6 +1,7 @@
 # Preliminaries
 import os
 import sys
+import re
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
 sf   = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
@@ -13,6 +14,18 @@ setup_test(mode, vers, sf)
 import gslab_scons as builders
 import gslab_scons.log as log
 import gslab_scons.release as release
+
+lyx_re =re.compile(r'filename\s(\S+\.lyx)', re.M)
+eps_re =re.compile(r'filename\s(\S+\.eps)', re.M)
+
+def lyx_scan(node, env, path):
+    contents = node.get_contents()  
+    lyx_source = [source.replace('"', '') for source in lyx_re.findall(contents)]
+    eps_source = [source.replace('"', '') for source in eps_re.findall(contents)]
+    return lyx_source + eps_source
+
+lyxScanner = Scanner(lyx_scan, recursive = True)
+SourceFileScanner.add_scanner('.lyx', lyxScanner)
 
 log.start_log() 
 
