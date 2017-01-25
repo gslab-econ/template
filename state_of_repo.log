@@ -8,16 +8,15 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 0572ba6a78bbb0a8038a82607cdeb74da987a7e8
+commit 5803883429a42ed20e68b70acc0ddbe5ea7b409d
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Wed Jan 25 09:50:56 2017 -0800
+Date:   Wed Jan 25 09:59:22 2017 -0800
 
-    test
+    tests
 
 
 Files changed since last commit:
 
-.sconsign.dblite
 release/paper/ondeck.pdf
 release/paper/online_appendix.pdf
 release/paper/paper.pdf
@@ -40,7 +39,7 @@ state_of_repo.log
    modified on: 25 Jan 2017 09:53:34
    size of file: 2563
 ./sconstruct.log:
-   modified on: 25 Jan 2017 09:58:38
+   modified on: 25 Jan 2017 09:59:42
    size of file: 0
 ./setup.py:
    modified on: 25 Jan 2017 08:44:14
@@ -49,67 +48,67 @@ state_of_repo.log
    modified on: 25 Jan 2017 08:45:11
    size of file: 4304
 ./state_of_repo.log:
-   modified on: 25 Jan 2017 09:58:38
-   size of file: 639
+   modified on: 25 Jan 2017 09:59:48
+   size of file: 623
 ./build/analysis/plot.eps:
-   modified on: 25 Jan 2017 09:54:52
+   modified on: 25 Jan 2017 09:59:43
    size of file: 12268
 ./build/analysis/sconscript.log:
-   modified on: 25 Jan 2017 09:54:52
+   modified on: 25 Jan 2017 09:59:43
    size of file: 2049
 ./build/analysis/table.txt:
-   modified on: 25 Jan 2017 09:54:52
+   modified on: 25 Jan 2017 09:59:43
    size of file: 32
 ./build/data/data.txt:
-   modified on: 25 Jan 2017 09:54:51
+   modified on: 25 Jan 2017 09:59:43
    size of file: 2112
 ./build/data/sconscript.log:
-   modified on: 25 Jan 2017 09:54:51
+   modified on: 25 Jan 2017 09:59:43
    size of file: 1000
 ./build/paper/ondeck.pdf:
-   modified on: 25 Jan 2017 09:54:52
+   modified on: 25 Jan 2017 09:59:44
    size of file: 18662
 ./build/paper/online_appendix.pdf:
-   modified on: 25 Jan 2017 09:54:53
+   modified on: 25 Jan 2017 09:59:45
    size of file: 45652
 ./build/paper/paper.pdf:
-   modified on: 25 Jan 2017 09:54:54
+   modified on: 25 Jan 2017 09:59:46
    size of file: 58195
 ./build/paper/sconscript.log:
-   modified on: 25 Jan 2017 09:54:55
+   modified on: 25 Jan 2017 09:59:47
    size of file: 317
 ./build/paper/text.pdf:
-   modified on: 25 Jan 2017 09:54:55
+   modified on: 25 Jan 2017 09:59:47
    size of file: 18662
 ./build/tables/table.lyx:
-   modified on: 25 Jan 2017 09:54:53
+   modified on: 25 Jan 2017 09:59:45
    size of file: 4430
 ./build/talk/sconscript.log:
-   modified on: 25 Jan 2017 09:54:57
+   modified on: 25 Jan 2017 09:59:48
    size of file: 564
 ./build/talk/slides.pdf:
-   modified on: 25 Jan 2017 09:54:57
+   modified on: 25 Jan 2017 09:59:48
    size of file: 28810
 ./release/paper/ondeck.pdf:
-   modified on: 25 Jan 2017 09:54:52
+   modified on: 25 Jan 2017 09:59:44
    size of file: 18662
 ./release/paper/online_appendix.pdf:
-   modified on: 25 Jan 2017 09:54:53
+   modified on: 25 Jan 2017 09:59:45
    size of file: 45652
 ./release/paper/paper.pdf:
-   modified on: 25 Jan 2017 09:54:54
+   modified on: 25 Jan 2017 09:59:46
    size of file: 58195
 ./release/paper/sconscript.log:
-   modified on: 25 Jan 2017 09:54:55
+   modified on: 25 Jan 2017 09:59:47
    size of file: 317
 ./release/paper/text.pdf:
-   modified on: 25 Jan 2017 09:54:55
+   modified on: 25 Jan 2017 09:59:47
    size of file: 18662
 ./release/talk/sconscript.log:
-   modified on: 25 Jan 2017 09:54:57
+   modified on: 25 Jan 2017 09:59:48
    size of file: 564
 ./release/talk/slides.pdf:
-   modified on: 25 Jan 2017 09:54:57
+   modified on: 25 Jan 2017 09:59:48
    size of file: 28810
 ./source/analysis/analysis.do:
    modified on: 25 Jan 2017 08:44:14
@@ -174,10 +173,10 @@ state_of_repo: d41d8cd98f00b204e9800998ecf8427e 0 0
         build:
         release:
         5be5881bd1629fd3028fe06462f8120b [state_of_repo(target, source, env)]
-state_of_repo.log: 20cafb4d7deec02234960e6d382e48dc 1485367096 8326
+state_of_repo.log: 886b3a28ddea4f1df2b93655f7762132 1485367118 8330
         build:
         release:
-        a75e77b59b7ca9fee86cc85ff0f3ae47 [state_of_repo(target, source, env)]
+        c251b7c199824d47f50587aaacfcaf2e [state_of_repo(target, source, env)]
 === build/analysis:
 plot.eps: d853477deea7bdbdb284f21992011b15 1485366892 12268
         source/analysis/analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
