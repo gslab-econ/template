@@ -13,7 +13,7 @@ def setup_test(mode, vers, sf, cache = ''):
     check_lyx()
     check_metropolis()
     check_gitlfs()
-    if cache != '':
+    if mode in ['cache', 'release']:
         check_cache(cache)
 
     # Sets up logs and checks mode/version
