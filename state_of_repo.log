@@ -8,15 +8,17 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 581c119116cc54350f1187cd337394d8cdc7d6e4
+commit 6bbd35571c3e6f939b550b17be7b83cc446dbd0a
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Wed Jan 25 10:00:13 2017 -0800
+Date:   Wed Jan 25 10:02:37 2017 -0800
 
-    Rebuild after clearing build/release, no code changes
+    Removes SCONSIGN printing
 
 
 Files changed since last commit:
 
+.sconsign.dblite
+SConstruct
 sconstruct.log
 state_of_repo.log
 
@@ -29,10 +31,10 @@ state_of_repo.log
    modified on: 25 Jan 2017 08:44:14
    size of file: 3289
 ./SConstruct:
-   modified on: 25 Jan 2017 09:53:34
-   size of file: 2563
+   modified on: 25 Jan 2017 10:05:06
+   size of file: 2595
 ./sconstruct.log:
-   modified on: 25 Jan 2017 10:02:21
+   modified on: 25 Jan 2017 10:05:17
    size of file: 0
 ./setup.py:
    modified on: 25 Jan 2017 08:44:14
@@ -41,11 +43,8 @@ state_of_repo.log
    modified on: 25 Jan 2017 08:45:11
    size of file: 4304
 ./state_of_repo.log:
-   modified on: 25 Jan 2017 10:02:22
+   modified on: 25 Jan 2017 10:05:17
    size of file: 484
-./test.log:
-   modified on: 25 Jan 2017 10:01:01
-   size of file: 3946
 ./build/analysis/plot.eps:
    modified on: 25 Jan 2017 09:59:43
    size of file: 12268
