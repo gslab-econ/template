@@ -5,7 +5,7 @@ import pkg_resources
 from sys import platform
 import warnings
 
-def setup_test(mode, vers, sf):
+def setup_test(mode, vers, sf, cache = ''):
     check_python()
     check_gslab_tools()
     check_stata(sf)
@@ -13,6 +13,8 @@ def setup_test(mode, vers, sf):
     check_lyx()
     check_metropolis()
     check_gitlfs()
+    if cache != '':
+        check_cache(cache)
 
     # Sets up logs and checks mode/version
     if not (mode in ['develop', 'cache', 'release']):
@@ -88,6 +90,10 @@ def check_metropolis():
 def check_gitlfs():
     from gslab_scons.misc import check_lfs
     check_lfs()
+
+def check_cache(cache):
+    if not os.path.isdir(cache):
+        raise PrerequisiteError("Cache directory (%s) is not created. Please manually create before running." % cache)
 
 class PrerequisiteError(Exception):
     pass

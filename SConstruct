@@ -2,13 +2,14 @@
 import os
 import sys
 import re
-mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
-vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
-sf   = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
+mode  = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
+vers  = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
+sf    = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
+cache = '/Users/%s/Google Drive/cache/large_template' % os.environ['USER']
 
 # Test for proper prerequisites and setup
 from setup import setup_test
-setup_test(mode, vers, sf)
+setup_test(mode, vers, sf, cache)
 
 # Import gslab_scons after sucessfully passing setup
 import gslab_scons as builders
@@ -44,14 +45,12 @@ SConscript('source/talk/SConscript')
 # Additional mode options
 if mode in ['cache', 'release']:
     # Defines cache in cache mode
-    USER        = os.environ['USER']
-    local_cache = '/Users/%s/Google Drive/cache/large_template' % USER
-    os.system('mkdir -p "%s"' % local_cache)
-    CacheDir(local_cache)
+    os.system('mkdir -p "%s"' % cache)
+    CacheDir(cache)
 
 if mode == 'release':
     # Installs files in appropriate locations for release mode
-    local_release = '/Users/%s/Google Drive/release/large_template/' % USER
+    local_release = '/Users/%s/Google Drive/release/large_template/' % os.environ['USER']
     local_release = local_release + vers + '/'
     DriveReleaseFiles = ['#build/data/data.txt']
     release.release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
