@@ -307,3 +307,262 @@ build_lyx(["output/paper/online_appendix.pdf"], ["source/paper/online_appendix.l
 build_lyx(["output/paper/paper.pdf"], ["source/paper/paper.lyx"])
 build_lyx(["output/talk/slides.pdf"], ["source/talk/slides.lyx"])
 scons: done building targets.
+
+*** New build: 2017-01-20 14:12:25 ***
+^^^ New build: 2017-01-20 14:12:25 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: `output' is up to date.
+scons: done building targets.
+
+*** New build: 2017-01-20 14:12:41 ***
+^^^ New build: 2017-01-20 14:12:41 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: Nothing to be done for `source/data/SConscript'.
+scons: done building targets.
+
+*** New build: 2017-01-20 14:13:17 ***
+^^^ New build: 2017-01-20 14:13:17 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: `.' is up to date.
+scons: done building targets.
+
+*** New build: 2017-01-20 14:13:24 ***
+^^^ New build: 2017-01-20 14:13:24 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: Nothing to be done for `source/data/SConscript'.
+scons: done building targets.
+
+*** New build: 2017-01-20 14:13:31 ***
+^^^ New build: 2017-01-20 14:13:31 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: Nothing to be done for `source/data/SConscript'.
+scons: done building targets.
+
+*** New build: 2017-01-20 14:34:37 ***
+*** Builder log created:    2017-01-20 14:34:37
+*** Builder log completed:  2017-01-20 14:34:38
+ 
+
+R version 3.3.0 (2016-05-03) -- "Supposedly Educational"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> main <- function(){
++     x    <- seq(-10, 10, 0.1)
++     write.table(x, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = FALSE) 
++ }
+> 
+> main()
+> 
+> proc.time()
+   user  system elapsed 
+  0.117   0.033   0.523 
+
+^^^ New build: 2017-01-20 14:34:37 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+build_r(["output/data/data.txt"], ["source/data/build.R"])
+scons: done building targets.
+
+*** New build: 2017-01-24 15:58:06 ***
+*** Builder log created:    2017-01-24 15:58:07
+*** Builder log completed:  2017-01-24 15:58:08
+ 
+
+R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> main <- function(){
++     x    <- seq(-10, 10, 0.1)
++     write.table(x, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = FALSE) 
++ }
+> 
+> main()
+> 
+> proc.time()
+   user  system elapsed 
+  0.118   0.038   0.648 
+
+^^^ New build: 2017-01-24 15:58:06 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+build_r(["output/data/data.txt"], ["source/data/build.R"])
+scons: done building targets.
+
+*** New build: 2017-01-24 15:58:25 ***
+*** Builder log created:    2017-01-24 15:58:25
+*** Builder log completed:  2017-01-24 15:58:26
+ 
+
+R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> main <- function(){
++     x    <- seq(-10, 10, 0.1)
++     write.table(x, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = FALSE) 
++ }
+> 
+> main()
+> 
+> proc.time()
+   user  system elapsed 
+  0.111   0.024   0.143 
+
+*** Builder log created:    2017-01-24 15:58:26
+*** Builder log completed:  2017-01-24 15:58:31
+ 
+
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LP
+  Statistics/Data Analysis            StataCorp
+                                      4905 Lakeway Drive
+     MP - Parallel Edition            College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+Unlimited-user 4-core Stata network license expires 21 Jul 2017:
+       Serial number:  501409012939
+         Licensed to:  Quan Le
+                       Stanford University
+
+Notes:
+      1.  Stata is running in batch mode.
+      2.  Unicode is supported; see help unicode_advice.
+      3.  More than 2 billion observations are allowed; see help obs_advice.
+      4.  Maximum number of variables is set to 5000; see help set_maxvar.
+
+. do "source/analysis/analysis.do" 
+
+. program main
+  1.     import delimited "output/data/data.txt", delimiter("|") varnames(nonam
+> es) clear
+  2.     rename v1 obs_value
+  3.     gen obs_number = _n
+  4.     graph twoway line obs_value obs_number
+  5.     graph export "output/analysis/plot.eps"
+  6. end
+
+. 
+. main    
+(1 var, 201 obs)
+(file output/analysis/plot.eps written in EPS format)
+
+. 
+end of do-file
+
+*** Builder log created:    2017-01-24 15:58:31
+*** Builder log completed:  2017-01-24 15:58:36
+ 
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./online_appendix.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./online_appendix.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+
+*** Builder log created:    2017-01-24 15:58:36
+*** Builder log completed:  2017-01-24 15:58:38
+ 
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+
+*** Builder log created:    2017-01-24 15:58:38
+*** Builder log completed:  2017-01-24 15:58:41
+ 
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+
+^^^ New build: 2017-01-24 15:58:25 ^^^
+scons: done reading SConscript files.
+scons: Building targets ...
+build_r(["output/data/data.txt"], ["source/data/build.R"])
+build_stata(["output/analysis/plot.eps"], ["source/analysis/analysis.do"])
+build_lyx(["output/paper/online_appendix.pdf"], ["source/paper/online_appendix.lyx"])
+build_lyx(["output/paper/paper.pdf"], ["source/paper/paper.lyx"])
+build_lyx(["output/talk/slides.pdf"], ["source/talk/slides.lyx"])
+scons: done building targets.
