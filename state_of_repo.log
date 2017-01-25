@@ -8,22 +8,15 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 5803883429a42ed20e68b70acc0ddbe5ea7b409d
+commit 581c119116cc54350f1187cd337394d8cdc7d6e4
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Wed Jan 25 09:59:22 2017 -0800
+Date:   Wed Jan 25 10:00:13 2017 -0800
 
-    tests
+    Rebuild after clearing build/release, no code changes
 
 
 Files changed since last commit:
 
-release/paper/ondeck.pdf
-release/paper/online_appendix.pdf
-release/paper/paper.pdf
-release/paper/sconscript.log
-release/paper/text.pdf
-release/talk/sconscript.log
-release/talk/slides.pdf
 sconstruct.log
 state_of_repo.log
 
@@ -39,7 +32,7 @@ state_of_repo.log
    modified on: 25 Jan 2017 09:53:34
    size of file: 2563
 ./sconstruct.log:
-   modified on: 25 Jan 2017 09:59:42
+   modified on: 25 Jan 2017 10:02:21
    size of file: 0
 ./setup.py:
    modified on: 25 Jan 2017 08:44:14
@@ -48,8 +41,11 @@ state_of_repo.log
    modified on: 25 Jan 2017 08:45:11
    size of file: 4304
 ./state_of_repo.log:
-   modified on: 25 Jan 2017 09:59:48
-   size of file: 623
+   modified on: 25 Jan 2017 10:02:22
+   size of file: 484
+./test.log:
+   modified on: 25 Jan 2017 10:01:01
+   size of file: 3946
 ./build/analysis/plot.eps:
    modified on: 25 Jan 2017 09:59:43
    size of file: 12268
@@ -158,85 +154,3 @@ state_of_repo.log
 ./source/talk/slides.lyx:
    modified on: 25 Jan 2017 08:44:14
    size of file: 4712
-
-===================================
-
- SCONSIGN 
-
-===================================
-
-=== .:
-SConstruct: None 1485363604 2531
-clean: None 0 0
-scons-time: None 0 0
-state_of_repo: d41d8cd98f00b204e9800998ecf8427e 0 0
-        build:
-        release:
-        5be5881bd1629fd3028fe06462f8120b [state_of_repo(target, source, env)]
-state_of_repo.log: 886b3a28ddea4f1df2b93655f7762132 1485367118 8330
-        build:
-        release:
-        c251b7c199824d47f50587aaacfcaf2e [state_of_repo(target, source, env)]
-=== build/analysis:
-plot.eps: d853477deea7bdbdb284f21992011b15 1485366892 12268
-        source/analysis/analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
-        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485366891 2112
-        5b6570ef94ed493f7efc2b2cac3481e3 [build_stata(target, source, env)]
-table.txt: 01e8332dce294790d35044107a05c4ac 1485366892 32
-        source/analysis/analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
-        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485366891 2112
-        5b6570ef94ed493f7efc2b2cac3481e3 [build_stata(target, source, env)]
-=== build/data:
-data.txt: 3164dd8f47d73534acf85cc7987e658f 1485366891 2112
-        source/data/build.R: 006191b28af462e0be44bd689c80b089 1485362654 150
-        d30c500bde1a7a42e65e8a2fc6eebf80 [build_r(target, source, env)]
-=== build/paper:
-ondeck.pdf: 425803eb4cb721954f63a2948a32b710 1485366892 18662
-        source/paper/ondeck.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
-        8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-online_appendix.pdf: ba64c83492659bde328edbc13495e9ce 1485366893 45652
-        source/paper/online_appendix.lyx: 1cdbbb868c859098e2ffecbd92c74b0c 1485362654 3610
-        8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-paper.pdf: b50e422ca2d7e77562a6c85afa0cd71c 1485366894 58195
-        source/paper/paper.lyx: 90dff7d04cd40a6d6397aadd36a1c240 1485362654 5236
-        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485366892 12268
-        build/tables/table.lyx: 984f810f854306cecfc83e1c89026d4f 1485366893 4430
-        8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-text.pdf: cc0d0a170f77611cb5b219f367dd5050 1485366895 18662
-        source/paper/text.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
-        8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-=== build/tables:
-table.lyx: 984f810f854306cecfc83e1c89026d4f 1485366893 4430
-        source/tables/table.lyx: 83f473f668a4f342fa77cc7a8652c784 1485362654 4082
-        build/analysis/table.txt: 01e8332dce294790d35044107a05c4ac 1485366892 32
-        63e94adb855f0bf6d97f5bdc3a755c32 [build_tables(target, source, env)]
-=== build/talk:
-slides.pdf: a480430cffa0a0e429a4149a0108b6fb 1485366897 28810
-        source/talk/slides.lyx: 2d0be40b7b0aa5fe4b2f737d4c683aa0 1485362654 4712
-        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485366892 12268
-        8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-=== release:
-paper: 1485366895 238
-        build/paper:
-        ff4aa6264a977911e62be3ee7aa08501 [installFunc(target, source, env)]
-talk: 1485366897 136
-        build/talk:
-        ff4aa6264a977911e62be3ee7aa08501 [installFunc(target, source, env)]
-=== source/analysis:
-SConscript: None 1485362654 229
-analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
-=== source/data:
-SConscript: None 1485362654 106
-build.R: 006191b28af462e0be44bd689c80b089 1485362654 150
-=== source/paper:
-SConscript: None 1485362654 587
-ondeck.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
-online_appendix.lyx: 1cdbbb868c859098e2ffecbd92c74b0c 1485362654 3610
-paper.lyx: 90dff7d04cd40a6d6397aadd36a1c240 1485362654 5236
-text.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
-=== source/tables:
-SConscript: None 1485362654 172
-table.lyx: 83f473f668a4f342fa77cc7a8652c784 1485362654 4082
-=== source/talk:
-SConscript: None 1485362654 207
-slides.lyx: 2d0be40b7b0aa5fe4b2f737d4c683aa0 1485362654 4712
