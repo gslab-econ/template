@@ -56,7 +56,7 @@ if mode == 'release':
     Default('.', local_release)
 
 # Print the state of the repo at end of SCons run
-finish_command = Command( 'state_of_repo', [], state_of_repo ) # From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
+finish_command = Command( 'state_of_repo.log', [], state_of_repo ) # From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
 Depends(finish_command, BUILD_TARGETS)
-if 'state_of_repo' not in BUILD_TARGETS: 
-  BUILD_TARGETS.append('state_of_repo')
+if 'state_of_repo.log' not in BUILD_TARGETS: 
+  BUILD_TARGETS.append('state_of_repo.log')
