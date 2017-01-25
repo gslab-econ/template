@@ -5,7 +5,7 @@ mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
 sf   = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
 
-# Test for proper prerequisites and setup
+# Test for proper prerequisites and setupd
 from setup import setup_test
 setup_test(mode, vers, sf)
 
