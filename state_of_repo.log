@@ -5,7 +5,7 @@
    modified on: 25 Jan 2017 09:01:22
    size of file: 2550
 ./sconstruct.log:
-   modified on: 25 Jan 2017 09:02:03
+   modified on: 25 Jan 2017 09:20:18
    size of file: 0
 ./setup.py:
    modified on: 25 Jan 2017 08:44:14
@@ -14,67 +14,67 @@
    modified on: 25 Jan 2017 08:45:11
    size of file: 4304
 ./state_of_repo.log:
-   modified on: 25 Jan 2017 09:02:09
+   modified on: 25 Jan 2017 09:20:27
    size of file: 0
 ./build/analysis/plot.eps:
-   modified on: 25 Jan 2017 09:02:04
+   modified on: 25 Jan 2017 09:20:21
    size of file: 12268
 ./build/analysis/sconscript.log:
-   modified on: 25 Jan 2017 09:02:04
+   modified on: 25 Jan 2017 09:20:21
    size of file: 2049
 ./build/analysis/table.txt:
-   modified on: 25 Jan 2017 09:02:04
+   modified on: 25 Jan 2017 09:20:21
    size of file: 32
 ./build/data/data.txt:
-   modified on: 25 Jan 2017 09:02:03
+   modified on: 25 Jan 2017 09:20:20
    size of file: 2112
 ./build/data/sconscript.log:
-   modified on: 25 Jan 2017 09:02:03
+   modified on: 25 Jan 2017 09:20:20
    size of file: 1000
 ./build/paper/ondeck.pdf:
-   modified on: 25 Jan 2017 09:02:05
+   modified on: 25 Jan 2017 09:20:22
    size of file: 18662
 ./build/paper/online_appendix.pdf:
-   modified on: 25 Jan 2017 09:02:06
+   modified on: 25 Jan 2017 09:20:23
    size of file: 45652
 ./build/paper/paper.pdf:
-   modified on: 25 Jan 2017 09:02:07
+   modified on: 25 Jan 2017 09:20:24
    size of file: 58195
 ./build/paper/sconscript.log:
-   modified on: 25 Jan 2017 09:02:07
+   modified on: 25 Jan 2017 09:20:25
    size of file: 317
 ./build/paper/text.pdf:
-   modified on: 25 Jan 2017 09:02:07
+   modified on: 25 Jan 2017 09:20:25
    size of file: 18662
 ./build/tables/table.lyx:
-   modified on: 25 Jan 2017 09:02:06
+   modified on: 25 Jan 2017 09:20:23
    size of file: 4430
 ./build/talk/sconscript.log:
-   modified on: 25 Jan 2017 09:02:09
+   modified on: 25 Jan 2017 09:20:27
    size of file: 564
 ./build/talk/slides.pdf:
-   modified on: 25 Jan 2017 09:02:09
+   modified on: 25 Jan 2017 09:20:27
    size of file: 28810
 ./release/paper/ondeck.pdf:
-   modified on: 25 Jan 2017 09:02:05
+   modified on: 25 Jan 2017 09:20:22
    size of file: 18662
 ./release/paper/online_appendix.pdf:
-   modified on: 25 Jan 2017 09:02:06
+   modified on: 25 Jan 2017 09:20:23
    size of file: 45652
 ./release/paper/paper.pdf:
-   modified on: 25 Jan 2017 09:02:07
+   modified on: 25 Jan 2017 09:20:24
    size of file: 58195
 ./release/paper/sconscript.log:
-   modified on: 25 Jan 2017 09:02:07
+   modified on: 25 Jan 2017 09:20:25
    size of file: 317
 ./release/paper/text.pdf:
-   modified on: 25 Jan 2017 09:02:07
+   modified on: 25 Jan 2017 09:20:25
    size of file: 18662
 ./release/talk/sconscript.log:
-   modified on: 25 Jan 2017 09:02:09
+   modified on: 25 Jan 2017 09:20:27
    size of file: 564
 ./release/talk/slides.pdf:
-   modified on: 25 Jan 2017 09:02:09
+   modified on: 25 Jan 2017 09:20:27
    size of file: 28810
 ./source/analysis/analysis.do:
    modified on: 25 Jan 2017 08:44:14
@@ -131,54 +131,55 @@
 ====================================== .:
 SConstruct: None 1485363604 2531
 clean: None 0 0
+scons-time: None 0 0
 state_of_repo: d41d8cd98f00b204e9800998ecf8427e 0 0
         build:
         release:
         e5e34489c8149f1f656bb3cc575361a2 [state_of_repo(target, source, env)]
 state_of_repo.log: fceed7f84f5891acb9b45f9656f7a9fc 1485363588 3164
 === build/analysis:
-plot.eps: d853477deea7bdbdb284f21992011b15 1485363613 12268
+plot.eps: d853477deea7bdbdb284f21992011b15 1485363724 12268
         source/analysis/analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
-        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363612 2112
+        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363723 2112
         5b6570ef94ed493f7efc2b2cac3481e3 [build_stata(target, source, env)]
-table.txt: 01e8332dce294790d35044107a05c4ac 1485363613 32
+table.txt: 01e8332dce294790d35044107a05c4ac 1485363724 32
         source/analysis/analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
-        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363612 2112
+        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363723 2112
         5b6570ef94ed493f7efc2b2cac3481e3 [build_stata(target, source, env)]
 === build/data:
-data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363612 2112
+data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363723 2112
         source/data/build.R: 006191b28af462e0be44bd689c80b089 1485362654 150
         d30c500bde1a7a42e65e8a2fc6eebf80 [build_r(target, source, env)]
 === build/paper:
-ondeck.pdf: 7e5e26a53c3c088e254aa09655aa1037 1485363613 18662
+ondeck.pdf: 5a9a747b70c48438f6ab49af29e8ef0f 1485363725 18662
         source/paper/ondeck.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-online_appendix.pdf: d035272155ebc3fdb833dc9f5b9a2753 1485363614 45652
+online_appendix.pdf: ba18f522a7e8067f294f9083a378ff6d 1485363726 45652
         source/paper/online_appendix.lyx: 1cdbbb868c859098e2ffecbd92c74b0c 1485362654 3610
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-paper.pdf: 7a3f88df2092a8d7f9d96e90b115a420 1485363616 58195
+paper.pdf: 3ea8c1ef60aeaf796763ca14898896b6 1485363727 58195
         source/paper/paper.lyx: 90dff7d04cd40a6d6397aadd36a1c240 1485362654 5236
-        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485363613 12268
-        build/tables/table.lyx: 984f810f854306cecfc83e1c89026d4f 1485363614 4430
+        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485363724 12268
+        build/tables/table.lyx: 984f810f854306cecfc83e1c89026d4f 1485363726 4430
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-text.pdf: 74f4dcbcd4248e3c96cf22a51bd52232 1485363616 18662
+text.pdf: 9039bcf1ca5ce733ab08729f11d7f560 1485363727 18662
         source/paper/text.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
 === build/tables:
-table.lyx: 984f810f854306cecfc83e1c89026d4f 1485363614 4430
+table.lyx: 984f810f854306cecfc83e1c89026d4f 1485363726 4430
         source/tables/table.lyx: 83f473f668a4f342fa77cc7a8652c784 1485362654 4082
-        build/analysis/table.txt: 01e8332dce294790d35044107a05c4ac 1485363613 32
+        build/analysis/table.txt: 01e8332dce294790d35044107a05c4ac 1485363724 32
         63e94adb855f0bf6d97f5bdc3a755c32 [build_tables(target, source, env)]
 === build/talk:
-slides.pdf: 1cc556f20d5cc816ce124e7bc98ae300 1485363618 28810
+slides.pdf: f4aba315aa6d0ae438ee7aea6fe414db 1485363729 28810
         source/talk/slides.lyx: 2d0be40b7b0aa5fe4b2f737d4c683aa0 1485362654 4712
-        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485363613 12268
+        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485363724 12268
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
 === release:
-paper: 1485363616 238
+paper: 1485363727 238
         build/paper:
         ff4aa6264a977911e62be3ee7aa08501 [installFunc(target, source, env)]
-talk: 1485363618 136
+talk: 1485363729 136
         build/talk:
         ff4aa6264a977911e62be3ee7aa08501 [installFunc(target, source, env)]
 === source/analysis:
