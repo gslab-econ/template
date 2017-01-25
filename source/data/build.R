@@ -1,6 +1,3 @@
-main <- function(){
-    x    <- seq(-10, 10, 0.1)
-    write.table(x, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = FALSE) 
-}
-
-main()
+set.seed(1)
+x <- sample(1:10, 1000, replace = T)
+write.table(x, "build/data/data.txt", sep = "|", row.names = FALSE, col.names = TRUE, quote = FALSE)

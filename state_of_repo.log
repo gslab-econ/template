@@ -1,78 +1,132 @@
 ./README.md:
-   modified on: 21 Nov 2016 13:15:35
-   size of file: 2393
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 3289
 ./SConstruct:
-   modified on: 11 Jan 2017 13:08:18
-   size of file: 2166
+   modified on: 25 Jan 2017 08:46:07
+   size of file: 2518
 ./sconstruct.log:
-   modified on: 11 Jan 2017 13:08:21
+   modified on: 25 Jan 2017 08:48:18
    size of file: 0
+./setup.py:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 3296
+./setup.pyc:
+   modified on: 25 Jan 2017 08:45:11
+   size of file: 4304
 ./state_of_repo.log:
-   modified on: 11 Jan 2017 13:08:22
+   modified on: 25 Jan 2017 08:48:18
    size of file: 0
-./output/.DS_Store:
-   modified on: 11 Jan 2017 11:52:09
-   size of file: 6148
-./output/analysis/plot.eps:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 17707
-./output/analysis/sconscript.log:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 1465
-./output/data/.DS_Store:
-   modified on: 11 Jan 2017 11:48:24
-   size of file: 6148
-./output/data/data.txt:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 1033
-./output/data/sconscript.log:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 1009
-./output/paper/online_appendix.pdf:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 51676
-./output/paper/paper.pdf:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 58457
-./output/paper/sconscript.log:
-   modified on: 11 Jan 2017 12:47:00
+./build/analysis/plot.eps:
+   modified on: 24 Jan 2017 18:38:19
+   size of file: 12829
+./build/analysis/sconscript.log:
+   modified on: 24 Jan 2017 18:38:19
+   size of file: 2051
+./build/analysis/table.txt:
+   modified on: 24 Jan 2017 18:38:19
+   size of file: 30
+./build/data/data_1.txt:
+   modified on: 24 Jan 2017 18:38:16
+   size of file: 1035
+./build/data/data_2.txt:
+   modified on: 24 Jan 2017 18:38:19
+   size of file: 1035
+./build/data/sconscript.log:
+   modified on: 24 Jan 2017 18:38:19
+   size of file: 1086
+./build/paper/ondeck.pdf:
+   modified on: 24 Jan 2017 18:35:40
+   size of file: 18611
+./build/paper/online_appendix.pdf:
+   modified on: 24 Jan 2017 18:35:41
+   size of file: 45652
+./build/paper/paper.pdf:
+   modified on: 24 Jan 2017 18:38:25
+   size of file: 58291
+./build/paper/sconscript.log:
+   modified on: 24 Jan 2017 18:38:25
    size of file: 562
-./output/talk/sconscript.log:
-   modified on: 11 Jan 2017 12:47:00
+./build/paper/text.pdf:
+   modified on: 24 Jan 2017 18:35:43
+   size of file: 18611
+./build/tables/table.lyx:
+   modified on: 24 Jan 2017 18:38:19
+   size of file: 4432
+./build/talk/sconscript.log:
+   modified on: 24 Jan 2017 18:38:27
    size of file: 564
-./output/talk/slides.pdf:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 30994
-./source/.DS_Store:
-   modified on: 11 Jan 2017 12:47:37
-   size of file: 6148
+./build/talk/slides.pdf:
+   modified on: 24 Jan 2017 18:38:27
+   size of file: 28987
+./release/paper/ondeck.pdf:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 18692
+./release/paper/online_appendix.pdf:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 45652
+./release/paper/paper.pdf:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 58192
+./release/paper/sconscript.log:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 317
+./release/paper/text.pdf:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 18692
+./release/talk/sconscript.log:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 564
+./release/talk/slides.pdf:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 28811
 ./source/analysis/analysis.do:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 228
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 443
 ./source/analysis/SConscript:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 168
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 229
 ./source/data/build.R:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 152
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 150
 ./source/data/SConscript:
-   modified on: 11 Jan 2017 12:47:00
-   size of file: 91
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 106
+./source/figures/figure.lyx:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 2224
+./source/paper/ondeck.lyx:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 2522
 ./source/paper/online_appendix.lyx:
-   modified on: 07 Nov 2016 09:52:08
-   size of file: 4162
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 3610
 ./source/paper/paper.lyx:
-   modified on: 07 Nov 2016 09:52:08
-   size of file: 5989
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 5236
 ./source/paper/SConscript:
-   modified on: 07 Nov 2016 09:52:08
-   size of file: 298
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 587
+./source/paper/text.lyx:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 2522
+./source/raw/README.md:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 101
+./source/tables/SConscript:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 172
+./source/tables/table.lyx:
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 4082
+./source/tables/table.lyx~:
+   modified on: 24 Jan 2017 18:18:13
+   size of file: 4083
 ./source/talk/SConscript:
-   modified on: 07 Nov 2016 09:52:08
-   size of file: 143
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 207
 ./source/talk/slides.lyx:
-   modified on: 07 Nov 2016 09:52:08
-   size of file: 4713
+   modified on: 25 Jan 2017 08:44:14
+   size of file: 4712
 ===================================
 
  SCONSIGN 
@@ -81,7 +135,9 @@
 SConstruct: None 1484018810 866
 finish: None 0 0
 print_stat: d41d8cd98f00b204e9800998ecf8427e 0 0
-        ab30be173dae0abad18dd72b9ce78d3f [print_stat(target, source, env)]
+        c153bc1d6be126c1d415f7a335e81e91 [print_stat(target, source, env)]
+state_of_repo: d41d8cd98f00b204e9800998ecf8427e 0 0
+        c153bc1d6be126c1d415f7a335e81e91 [state_of_repo(target, source, env)]
 === output/analysis:
 plot.eps: 4b40894ff5831956dfbe4e2acb1ea71d 1484019058 17707
         source/analysis/analysis.do: 8c3f960d7e2eb1295400618bfec17faf 1484018652 228

@@ -1,8 +1,4 @@
-Import('*')
+Import('env')
 
-target = '#output/data/data.txt'
-source = 'build.R'
-env.R(target, source)
-
-
-	
+env.BuildR(target = ['#build/data/data.txt'],
+           source = ['#source/data/build.R'])

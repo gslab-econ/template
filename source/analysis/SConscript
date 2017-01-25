@@ -1,6 +1,6 @@
-Import('*')
+Import('env')
 
-target = '#output/analysis/plot.eps'       
-source = ['#source/analysis/analysis.do', 
-          '#output/data/data.txt']        
-env.Stata(target, source)
+env.BuildStata(target = ['#build/analysis/plot.eps',
+                         '#build/analysis/table.txt'],
+               source = ['#source/analysis/analysis.do',
+                         '#build/data/data.txt'])
