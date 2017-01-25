@@ -3,7 +3,7 @@ clear all
 set more off
 
 program main
-    import delimited "build/data/data_1.txt", delimiters("|") varnames(1) clear
+    import delimited "build/data/data.txt", delimiters("|") varnames(1) clear
     hist x, discrete width(0.5)
     graph export "build/analysis/plot.eps", replace
 

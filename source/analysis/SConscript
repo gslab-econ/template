@@ -3,4 +3,4 @@ Import('env')
 env.BuildStata(target = ['#build/analysis/plot.eps',
                          '#build/analysis/table.txt'],
                source = ['#source/analysis/analysis.do',
-                         '#build/data/data_1.txt'])
+                         '#build/data/data.txt'])

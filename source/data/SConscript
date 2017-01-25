@@ -2,7 +2,7 @@ Import('env')
 
 
 source = 'build.R'
-for i in range(1, 3):
-	target = ['#build/data/data_%s.txt' % i]
-	env.BuildR(target, source, CL_ARG=str(i)) # Demonstrates using command line arguments
+target_name = 'data'
+target = ['#build/data/%s.txt' % target_name]
+env.BuildR(target, source, CL_ARG=target_name) # Demonstrates using command line arguments
 
