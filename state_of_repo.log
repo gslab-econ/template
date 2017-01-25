@@ -2,10 +2,10 @@
    modified on: 25 Jan 2017 08:44:14
    size of file: 3289
 ./SConstruct:
-   modified on: 25 Jan 2017 08:46:07
-   size of file: 2518
+   modified on: 25 Jan 2017 09:01:22
+   size of file: 2550
 ./sconstruct.log:
-   modified on: 25 Jan 2017 08:48:18
+   modified on: 25 Jan 2017 09:02:03
    size of file: 0
 ./setup.py:
    modified on: 25 Jan 2017 08:44:14
@@ -14,71 +14,68 @@
    modified on: 25 Jan 2017 08:45:11
    size of file: 4304
 ./state_of_repo.log:
-   modified on: 25 Jan 2017 08:48:18
+   modified on: 25 Jan 2017 09:02:09
    size of file: 0
 ./build/analysis/plot.eps:
-   modified on: 24 Jan 2017 18:38:19
-   size of file: 12829
+   modified on: 25 Jan 2017 09:02:04
+   size of file: 12268
 ./build/analysis/sconscript.log:
-   modified on: 24 Jan 2017 18:38:19
-   size of file: 2051
+   modified on: 25 Jan 2017 09:02:04
+   size of file: 2049
 ./build/analysis/table.txt:
-   modified on: 24 Jan 2017 18:38:19
-   size of file: 30
-./build/data/data_1.txt:
-   modified on: 24 Jan 2017 18:38:16
-   size of file: 1035
-./build/data/data_2.txt:
-   modified on: 24 Jan 2017 18:38:19
-   size of file: 1035
+   modified on: 25 Jan 2017 09:02:04
+   size of file: 32
+./build/data/data.txt:
+   modified on: 25 Jan 2017 09:02:03
+   size of file: 2112
 ./build/data/sconscript.log:
-   modified on: 24 Jan 2017 18:38:19
-   size of file: 1086
+   modified on: 25 Jan 2017 09:02:03
+   size of file: 1000
 ./build/paper/ondeck.pdf:
-   modified on: 24 Jan 2017 18:35:40
-   size of file: 18611
+   modified on: 25 Jan 2017 09:02:05
+   size of file: 18662
 ./build/paper/online_appendix.pdf:
-   modified on: 24 Jan 2017 18:35:41
+   modified on: 25 Jan 2017 09:02:06
    size of file: 45652
 ./build/paper/paper.pdf:
-   modified on: 24 Jan 2017 18:38:25
-   size of file: 58291
+   modified on: 25 Jan 2017 09:02:07
+   size of file: 58195
 ./build/paper/sconscript.log:
-   modified on: 24 Jan 2017 18:38:25
-   size of file: 562
+   modified on: 25 Jan 2017 09:02:07
+   size of file: 317
 ./build/paper/text.pdf:
-   modified on: 24 Jan 2017 18:35:43
-   size of file: 18611
+   modified on: 25 Jan 2017 09:02:07
+   size of file: 18662
 ./build/tables/table.lyx:
-   modified on: 24 Jan 2017 18:38:19
-   size of file: 4432
+   modified on: 25 Jan 2017 09:02:06
+   size of file: 4430
 ./build/talk/sconscript.log:
-   modified on: 24 Jan 2017 18:38:27
+   modified on: 25 Jan 2017 09:02:09
    size of file: 564
 ./build/talk/slides.pdf:
-   modified on: 24 Jan 2017 18:38:27
-   size of file: 28987
+   modified on: 25 Jan 2017 09:02:09
+   size of file: 28810
 ./release/paper/ondeck.pdf:
-   modified on: 25 Jan 2017 08:44:14
-   size of file: 18692
+   modified on: 25 Jan 2017 09:02:05
+   size of file: 18662
 ./release/paper/online_appendix.pdf:
-   modified on: 25 Jan 2017 08:44:14
+   modified on: 25 Jan 2017 09:02:06
    size of file: 45652
 ./release/paper/paper.pdf:
-   modified on: 25 Jan 2017 08:44:14
-   size of file: 58192
+   modified on: 25 Jan 2017 09:02:07
+   size of file: 58195
 ./release/paper/sconscript.log:
-   modified on: 25 Jan 2017 08:44:14
+   modified on: 25 Jan 2017 09:02:07
    size of file: 317
 ./release/paper/text.pdf:
-   modified on: 25 Jan 2017 08:44:14
-   size of file: 18692
+   modified on: 25 Jan 2017 09:02:07
+   size of file: 18662
 ./release/talk/sconscript.log:
-   modified on: 25 Jan 2017 08:44:14
+   modified on: 25 Jan 2017 09:02:09
    size of file: 564
 ./release/talk/slides.pdf:
-   modified on: 25 Jan 2017 08:44:14
-   size of file: 28811
+   modified on: 25 Jan 2017 09:02:09
+   size of file: 28810
 ./source/analysis/analysis.do:
    modified on: 25 Jan 2017 08:44:14
    size of file: 443
@@ -132,45 +129,73 @@
  SCONSIGN 
 
 ====================================== .:
-SConstruct: None 1484018810 866
-finish: None 0 0
-print_stat: d41d8cd98f00b204e9800998ecf8427e 0 0
-        c153bc1d6be126c1d415f7a335e81e91 [print_stat(target, source, env)]
+SConstruct: None 1485363604 2531
+clean: None 0 0
 state_of_repo: d41d8cd98f00b204e9800998ecf8427e 0 0
-        c153bc1d6be126c1d415f7a335e81e91 [state_of_repo(target, source, env)]
-=== output/analysis:
-plot.eps: 4b40894ff5831956dfbe4e2acb1ea71d 1484019058 17707
-        source/analysis/analysis.do: 8c3f960d7e2eb1295400618bfec17faf 1484018652 228
-        output/data/data.txt: 188c055f5595ff43f460085c50d62867 1484019056 1033
+        build:
+        release:
+        e5e34489c8149f1f656bb3cc575361a2 [state_of_repo(target, source, env)]
+state_of_repo.log: fceed7f84f5891acb9b45f9656f7a9fc 1485363588 3164
+=== build/analysis:
+plot.eps: d853477deea7bdbdb284f21992011b15 1485363613 12268
+        source/analysis/analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
+        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363612 2112
         5b6570ef94ed493f7efc2b2cac3481e3 [build_stata(target, source, env)]
-=== output/data:
-data.txt: 188c055f5595ff43f460085c50d62867 1484019056 1033
-        source/data/build.R: 6faafcc16d0a496d05a0d136adcbf187 1484018652 152
+table.txt: 01e8332dce294790d35044107a05c4ac 1485363613 32
+        source/analysis/analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
+        build/data/data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363612 2112
+        5b6570ef94ed493f7efc2b2cac3481e3 [build_stata(target, source, env)]
+=== build/data:
+data.txt: 3164dd8f47d73534acf85cc7987e658f 1485363612 2112
+        source/data/build.R: 006191b28af462e0be44bd689c80b089 1485362654 150
         d30c500bde1a7a42e65e8a2fc6eebf80 [build_r(target, source, env)]
-=== output/paper:
-online_appendix.pdf: f77c79a110464da1106351c84b8ed3d2 1484019060 51676
-        source/paper/online_appendix.lyx: 3a079e327493e2f326827e251cf957ea 1484018652 4162
-        output/analysis/plot.eps: 4b40894ff5831956dfbe4e2acb1ea71d 1484019058 17707
+=== build/paper:
+ondeck.pdf: 7e5e26a53c3c088e254aa09655aa1037 1485363613 18662
+        source/paper/ondeck.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-paper.pdf: 87f6122f2d141f9f433019a01a6d0959 1484019061 58457
-        source/paper/paper.lyx: 8eefe058494b1eec64cbbd06a8f8ee23 1484018652 5989
-        output/analysis/plot.eps: 4b40894ff5831956dfbe4e2acb1ea71d 1484019058 17707
+online_appendix.pdf: d035272155ebc3fdb833dc9f5b9a2753 1485363614 45652
+        source/paper/online_appendix.lyx: 1cdbbb868c859098e2ffecbd92c74b0c 1485362654 3610
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
-=== output/talk:
-slides.pdf: 2eae98ff7d9a5a9120f9b0ebc862d4a8 1484019063 30994
-        source/talk/slides.lyx: e9971fe21b5d0fe7d4ac22d8c77bfe7c 1484018652 4713
-        output/analysis/plot.eps: 4b40894ff5831956dfbe4e2acb1ea71d 1484019058 17707
+paper.pdf: 7a3f88df2092a8d7f9d96e90b115a420 1485363616 58195
+        source/paper/paper.lyx: 90dff7d04cd40a6d6397aadd36a1c240 1485362654 5236
+        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485363613 12268
+        build/tables/table.lyx: 984f810f854306cecfc83e1c89026d4f 1485363614 4430
         8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
+text.pdf: 74f4dcbcd4248e3c96cf22a51bd52232 1485363616 18662
+        source/paper/text.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
+        8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
+=== build/tables:
+table.lyx: 984f810f854306cecfc83e1c89026d4f 1485363614 4430
+        source/tables/table.lyx: 83f473f668a4f342fa77cc7a8652c784 1485362654 4082
+        build/analysis/table.txt: 01e8332dce294790d35044107a05c4ac 1485363613 32
+        63e94adb855f0bf6d97f5bdc3a755c32 [build_tables(target, source, env)]
+=== build/talk:
+slides.pdf: 1cc556f20d5cc816ce124e7bc98ae300 1485363618 28810
+        source/talk/slides.lyx: 2d0be40b7b0aa5fe4b2f737d4c683aa0 1485362654 4712
+        build/analysis/plot.eps: d853477deea7bdbdb284f21992011b15 1485363613 12268
+        8f75a035d6f18aeeb17eae259a6552d5 [build_lyx(target, source, env)]
+=== release:
+paper: 1485363616 238
+        build/paper:
+        ff4aa6264a977911e62be3ee7aa08501 [installFunc(target, source, env)]
+talk: 1485363618 136
+        build/talk:
+        ff4aa6264a977911e62be3ee7aa08501 [installFunc(target, source, env)]
 === source/analysis:
-SConscript: None 1484018652 168
-analysis.do: 8c3f960d7e2eb1295400618bfec17faf 1484018652 228
+SConscript: None 1485362654 229
+analysis.do: 58545b7689caf370ace713b45b2f50bb 1485362654 443
 === source/data:
-SConscript: None 1484018652 91
-build.R: 6faafcc16d0a496d05a0d136adcbf187 1484018652 152
+SConscript: None 1485362654 106
+build.R: 006191b28af462e0be44bd689c80b089 1485362654 150
 === source/paper:
-SConscript: None 1484018652 298
-online_appendix.lyx: 3a079e327493e2f326827e251cf957ea 1484018652 4162
-paper.lyx: 8eefe058494b1eec64cbbd06a8f8ee23 1484018652 5989
+SConscript: None 1485362654 587
+ondeck.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
+online_appendix.lyx: 1cdbbb868c859098e2ffecbd92c74b0c 1485362654 3610
+paper.lyx: 90dff7d04cd40a6d6397aadd36a1c240 1485362654 5236
+text.lyx: 5712f90b9e80369e38c807ba5e239f30 1485362654 2522
+=== source/tables:
+SConscript: None 1485362654 172
+table.lyx: 83f473f668a4f342fa77cc7a8652c784 1485362654 4082
 === source/talk:
-SConscript: None 1484018652 143
-slides.lyx: e9971fe21b5d0fe7d4ac22d8c77bfe7c 1484018652 4713
+SConscript: None 1485362654 207
+slides.lyx: 2d0be40b7b0aa5fe4b2f737d4c683aa0 1485362654 4712

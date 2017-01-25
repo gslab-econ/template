@@ -36,6 +36,7 @@ SConscript('source/analysis/SConscript')
 SConscript('source/tables/SConscript') 
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
+Default('./build', './release')
 
 # Additional mode options
 if mode in ['cache', 'release']:
