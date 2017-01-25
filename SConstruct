@@ -29,7 +29,7 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                   user_flavor = sf)
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
-env.EXTENSIONS = ['.eps', '.txt.', '.lyx']
+env.EXTENSIONS = ['.eps', '.pdf', '.lyx'] # Extensions to be used when scanning for source files in BuildLyx.
 SourceFileScanner.add_scanner('.lyx', Scanner(lyx_scan, recursive = True))
 
 Export('env')
