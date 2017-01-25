@@ -7,15 +7,16 @@
 \textclass article
 \begin_preamble
 \usepackage{amsthm}
+\usepackage{bm}
 \usepackage{setspace}
 \usepackage{sectsty}
-\usepackage{anysize}
+
 \usepackage{datetime}
 \usepackage{pdflscape}
+\usepackage[english]{babel}
 \usepackage{times}
 \usepackage[small]{caption}
 \usepackage[bottom,hang,flushmargin]{footmisc}
-
 
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Var}{Var}
@@ -24,18 +25,24 @@
 \DeclareMathOperator{\E}{E}
 \DeclareMathOperator{\logit}{logit}
 \DeclareMathOperator{\I}{I}
+
+\sectionfont{\noindent\normalfont\large\bf}
+\subsectionfont{\noindent\normalfont\normalsize\bf}
+\subsubsectionfont{\noindent\normalfont\it}
+
+\pdfminorversion=4
 \end_preamble
-\use_default_options true
+\options hyperfootnotes=false
+\use_default_options false
 \begin_modules
 theorems-ams
-hanging
 \end_modules
 \maintain_unincluded_children false
 \language english
-\language_package default
+\language_package none
 \inputencoding auto
 \fontencoding default
-\font_roman "default" "default"
+\font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -52,7 +59,7 @@ hanging
 \index_command default
 \float_placement H
 \paperfontsize 12
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry true
@@ -66,9 +73,9 @@ hanging
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -104,131 +111,12 @@ hanging
 \noindent
 
 \series bold
-\size largest
-Online Appendix: 
-\size default
-
-\begin_inset Newline newline
-\end_inset
-
-
-\size largest
 Title
 \end_layout
 
 \begin_layout Author
 \noindent
-Author 1,
-\series bold
- 
-\series default
-\shape italic
-Affiliation 1
-\series bold
-\shape default
-
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-E-mail:
-\begin_inset space \space{}
-\end_inset
-
-author1@affiliation1.edu, author2@affiliation2.edu.
- Acknowledgements here.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\series default
-Author 2, 
-\shape italic
-Affiliation 2
-\end_layout
-
-\begin_layout Date
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-monthname
-\backslash
- 
-\backslash
-number
-\backslash
-year
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList table
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList figure
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{table}{0}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-tablename}{Online Appendix Table}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{figure}{0}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-figurename}{Online Appendix Figure}
-\end_layout
-
-\end_inset
-
-
+Notes
 \end_layout
 
 \end_body

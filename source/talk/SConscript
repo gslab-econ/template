@@ -1,7 +1,7 @@
-Import('*')
+Import('env')
 
-target = '#output/talk/slides.pdf'
-source = ['#source/talk/slides.lyx',
-		  '#output/analysis/plot.eps']
+env.BuildLyx(target = '#build/talk/slides.pdf', 
+             source = ['#source/talk/slides.lyx',
+                       '#build/analysis/plot.eps'])
 
-env.Lyx(target, source)
+env.Install('#release', '#build/talk/')

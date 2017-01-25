@@ -1,7 +1,4 @@
 scons: done reading SConscript files.
 scons: Building targets ...
-build_stata(["output/analysis/plot.eps"], ["source/analysis/analysis.do", "output/data/data_1.txt"])
-build_lyx(["output/paper/online_appendix.pdf"], ["source/paper/online_appendix.lyx", "output/analysis/plot.eps"])
-build_lyx(["output/paper/paper.pdf"], ["source/paper/paper.lyx", "output/analysis/plot.eps"])
-build_lyx(["output/talk/slides.pdf"], ["source/talk/slides.lyx", "output/analysis/plot.eps"])
+scons: `.' is up to date.
 scons: done building targets.
