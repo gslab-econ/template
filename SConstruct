@@ -1,6 +1,7 @@
 # Preliminaries
 import os
 import sys
+import re
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
 sf   = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
@@ -13,7 +14,8 @@ setup_test(mode, vers, sf)
 import gslab_scons as builders
 import gslab_scons.log as log
 import gslab_scons.release as release
-from gslab_scons.misc import state_of_repo
+from gslab_scons.misc import state_of_repo, lyx_scan
+
 
 log.start_log() 
 
@@ -28,6 +30,9 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                   user_flavor = sf)
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
+env.EXTENSIONS = ['.eps', '.pdf', '.lyx'] # Extensions to be used when scanning for source files in BuildLyx.
+SourceFileScanner.add_scanner('.lyx', Scanner(lyx_scan, recursive = True))
+
 Export('env')
 
 # Run sub-trees
