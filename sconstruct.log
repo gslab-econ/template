@@ -1,4 +1,10 @@
 scons: done reading SConscript files.
 scons: Building targets ...
-scons: `.' is up to date.
+build_r(["build/data/data.txt"], ["source/data/build.R"])
+build_tables(["build/tables/table.lyx"], ["source/tables/table.lyx", "build/analysis/table.txt"])
+source/tables/table.lyx filled successfully by tablefill
+build_lyx(["build/paper/paper.pdf"], ["source/paper/paper.lyx", "build/analysis/plot.eps", "build/tables/table.lyx"])
+build_lyx(["build/talk/slides.pdf"], ["source/talk/slides.lyx", "build/analysis/plot.eps"])
+Install directory: "build/paper" as "release/paper"
+Install directory: "build/talk" as "release/talk"
 scons: done building targets.

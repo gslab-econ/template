@@ -1,5 +1,4 @@
 args = commandArgs(TRUE)
-print(args)
 main <- function(i){
     x    <- seq(-10, 10, 0.1)
     write.table(x, sprintf("build/data/%s.txt", i), sep = "|", 
