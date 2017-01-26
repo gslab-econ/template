@@ -3,34 +3,27 @@ as it can be edited after state_of_repo.log finishes running
 
 ===================================
 
- GIT STATUS 
+ GIT STATUS
 
 ===================================
 Last commit:
 
-commit 3668e7fe653f49b6eb63a46b73ed9d15a7e70801
+commit c42305241a80b3fb00f2dd014137b69d86a2bc9c
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Wed Jan 25 13:04:49 2017 -0800
+Date:   Wed Jan 25 17:25:51 2017 -0800
 
-    Fix typo:
-    g
+    gslab-python#34 Updates to allow user arg
 
 
 Files changed since last commit:
 
-.sconsign.dblite
-SConstruct
-release/paper/ondeck.pdf
-release/paper/online_appendix.pdf
-release/paper/paper.pdf
-release/paper/sconscript.log
-release/paper/text.pdf
 sconstruct.log
+setup.py
 state_of_repo.log
 
 ===================================
 
- FILE STATUS 
+ FILE STATUS
 
 ===================================
 ./README.md:
@@ -40,17 +33,17 @@ state_of_repo.log
    modified on: 25 Jan 2017 17:25:27
    size of file: 2605
 ./sconstruct.log:
-   modified on: 25 Jan 2017 17:25:29
+   modified on: 26 Jan 2017 09:59:59
    size of file: 0
 ./setup.py:
-   modified on: 25 Jan 2017 17:22:12
+   modified on: 26 Jan 2017 09:59:18
    size of file: 3296
 ./setup.pyc:
-   modified on: 25 Jan 2017 17:24:42
+   modified on: 26 Jan 2017 09:59:25
    size of file: 4304
 ./state_of_repo.log:
-   modified on: 25 Jan 2017 17:25:30
-   size of file: 609
+   modified on: 26 Jan 2017 09:59:59
+   size of file: 480
 ./build/analysis/plot.eps:
    modified on: 25 Jan 2017 17:24:44
    size of file: 12268
