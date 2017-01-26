@@ -15,6 +15,7 @@ import gslab_scons
 # Start log
 gslab_scons.start_log() 
 
+
 # Defines environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
@@ -37,7 +38,15 @@ SConscript('source/analysis/SConscript')
 SConscript('source/tables/SConscript') 
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
+Default('./build', './release')
 
 # Additional mode options
 if mode == 'cache':
     CacheDir(cache_dir)
+
+# Print the state of the repo at end of SCons run
+finish_command = Command( 'state_of_repo.log', [], gslab_scons.misc.state_of_repo, MAXIT=10) # From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
+Depends(finish_command, BUILD_TARGETS)
+env.AlwaysBuild(finish_command)
+if 'state_of_repo.log' not in BUILD_TARGETS: 
+    BUILD_TARGETS.append('state_of_repo.log')

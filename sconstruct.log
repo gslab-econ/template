@@ -11,4 +11,5 @@ build_lyx(["build/paper/text.pdf"], ["source/paper/text.lyx"])
 build_lyx(["build/talk/slides.pdf"], ["source/talk/slides.lyx"])
 Install directory: "build/paper" as "release/paper"
 Install directory: "build/talk" as "release/talk"
+state_of_repo(["state_of_repo.log"], [])
 scons: done building targets.
