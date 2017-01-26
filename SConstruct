@@ -2,10 +2,10 @@
 import os
 import sys
 import re
-mode    = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
-vers    = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
-sf      = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
-cache_dir   = '/Users/%s/Google Drive/cache/large_template'    % os.environ['USER']
+mode      = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
+vers      = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
+sf        = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
+cache_dir = '/Users/%s/Google Drive/cache/large_template'    % os.environ['USER']
 
 # Test for proper prerequisites and setup; import gslab_scons after passing setup
 from setup import setup_test
