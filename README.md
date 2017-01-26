@@ -24,6 +24,8 @@ The easiest way to install all the applications above is to use [Homebrew](http:
  - A single target file:
     - `scons build/paper/paper.pdf` will re-run only the code needed to update `build/paper/paper.pdf` without rebuilding other files.
 
+See [here](https://github.com/gslab-econ/gslab_python/tree/master/gslab_scons) for directions on making a 'release'.
+
 #### Copy the template:
 In order to create a new repository using this template, either
 - Fork this repository

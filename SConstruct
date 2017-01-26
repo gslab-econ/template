@@ -2,36 +2,33 @@
 import os
 import sys
 import re
-mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
-vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
-sf   = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
+mode      = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
+vers      = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
+sf        = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
+cache_dir = '/Users/%s/Google Drive/cache/large_template'    % os.environ['USER']
 
-# Test for proper prerequisites and setup
+# Test for proper prerequisites and setup; import gslab_scons after passing setup
 from setup import setup_test
-setup_test(mode, vers, sf)
+setup_test(mode, vers, sf, cache_dir)
+import gslab_scons 
 
-# Import gslab_scons after sucessfully passing setup
-import gslab_scons as builders
-import gslab_scons.log as log
-import gslab_scons.release as release
-from gslab_scons.misc import state_of_repo, lyx_scan
+# Start log
+gslab_scons.start_log() 
 
-
-log.start_log() 
 
 # Defines environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
-                  BUILDERS = {'Tablefill'   : Builder(action = builders.build_tables),
-                              'BuildLyx'    : Builder(action = builders.build_lyx),
-                              'BuildR'      : Builder(action = builders.build_r),
-                              'BuildStata'  : Builder(action = builders.build_stata),
-                              'BuildPython' : Builder(action = builders.build_python)},
+                  BUILDERS = {'Tablefill'   : Builder(action = gslab_scons.build_tables),
+                              'BuildLyx'    : Builder(action = gslab_scons.build_lyx),
+                              'BuildR'      : Builder(action = gslab_scons.build_r),
+                              'BuildStata'  : Builder(action = gslab_scons.build_stata),
+                              'BuildPython' : Builder(action = gslab_scons.build_python)},
                   user_flavor = sf)
 
 env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
 env.EXTENSIONS = ['.eps', '.pdf', '.lyx'] # Extensions to be used when scanning for source files in BuildLyx.
-SourceFileScanner.add_scanner('.lyx', Scanner(lyx_scan, recursive = True))
+SourceFileScanner.add_scanner('.lyx', Scanner(gslab_scons.misc.lyx_scan, recursive = True))
 
 Export('env')
 
@@ -44,24 +41,11 @@ SConscript('source/talk/SConscript')
 Default('./build', './release')
 
 # Additional mode options
-if mode in ['cache', 'release']:
-    # Defines cache in cache mode
-    USER        = os.environ['USER']
-    local_cache = '/Users/%s/Google Drive/cache/large_template' % USER
-    os.system('mkdir -p "%s"' % local_cache)
-    CacheDir(local_cache)
-
-if mode == 'release':
-    # Installs files in appropriate locations for release mode
-    local_release = '/Users/%s/Google Drive/release/large_template/' % USER
-    local_release = local_release + vers + '/'
-    DriveReleaseFiles = ['#build/data/data.txt']
-    release.release(env, vers, DriveReleaseFiles, local_release, org = 'gslab-econ', repo = 'template')
-    ## Specifies default targets to build
-    Default('.', local_release)
+if mode == 'cache':
+    CacheDir(cache_dir)
 
 # Print the state of the repo at end of SCons run
-finish_command = Command( 'state_of_repo.log', [], state_of_repo, MAXIT=10) # From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
+finish_command = Command( 'state_of_repo.log', [], gslab_scons.misc.state_of_repo, MAXIT=10) # From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
 Depends(finish_command, BUILD_TARGETS)
 env.AlwaysBuild(finish_command)
 if 'state_of_repo.log' not in BUILD_TARGETS: 
