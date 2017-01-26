@@ -35,7 +35,7 @@ def check_gslab_tools():
     except:
         raise PrerequisiteError('Missing gslab_tools')
 
-    if pkg_resources.get_distribution('gslab_tools').version < '1.1.1':
+    if pkg_resources.get_distribution('gslab_tools').version < '3.0.3':
         raise PrerequisiteError('Wrong version of gslab_tools')
 
 def check_stata(sf):

@@ -1,9 +1,7 @@
 Import('env')
 
 env.BuildLyx(target = ['#build/paper/paper.pdf'],
-             source = ['#source/paper/paper.lyx',
-                       '#build/analysis/plot.eps',
-                       '#build/tables/table.lyx'])
+             source = ['#source/paper/paper.lyx'])
 
 env.BuildLyx(target = ['#build/paper/online_appendix.pdf'], 
              source = ['#source/paper/online_appendix.lyx'])

@@ -1,0 +1,166 @@
+WARNING: Information about .sconsign.dblite may be misleading 
+as it can be edited after state_of_repo.log finishes running
+
+===================================
+
+ GIT STATUS
+
+===================================
+Last commit:
+
+commit d77478824cf2d14d6d9e34aa3a0a36d7fd69eebe
+Author: Levi Boxell <leviboxell@gmail.com>
+Date:   Thu Jan 26 11:21:13 2017 -0800
+
+    gslab_python#26 Removes print statement
+
+
+Files changed since last commit:
+
+.sconsign.dblite
+release/paper/ondeck.pdf
+release/paper/ondeck.pdf
+release/paper/online_appendix.pdf
+release/paper/online_appendix.pdf
+release/paper/paper.pdf
+release/paper/paper.pdf
+release/paper/sconscript.log
+release/paper/sconscript.log
+release/paper/text.pdf
+release/paper/text.pdf
+release/talk/sconscript.log
+release/talk/sconscript.log
+release/talk/slides.pdf
+release/talk/slides.pdf
+sconstruct.log
+sconstruct.log
+state_of_repo.log
+
+===================================
+
+ FILE STATUS
+
+===================================
+./README.md:
+   modified on: 26 Jan 2017 11:25:16
+   size of file: 3289
+./SConstruct:
+   modified on: 26 Jan 2017 11:25:16
+   size of file: 2812
+./sconstruct.log:
+   modified on: 26 Jan 2017 11:25:51
+   size of file: 0
+./setup.py:
+   modified on: 26 Jan 2017 11:25:16
+   size of file: 3296
+./setup.pyc:
+   modified on: 26 Jan 2017 11:25:50
+   size of file: 4304
+./state_of_repo.log:
+   modified on: 26 Jan 2017 11:25:58
+   size of file: 875
+./build/analysis/plot.eps:
+   modified on: 26 Jan 2017 11:24:10
+   size of file: 12829
+./build/analysis/sconscript.log:
+   modified on: 26 Jan 2017 11:24:10
+   size of file: 2049
+./build/analysis/table.txt:
+   modified on: 26 Jan 2017 11:24:10
+   size of file: 30
+./build/data/data.txt:
+   modified on: 26 Jan 2017 11:24:07
+   size of file: 1035
+./build/data/sconscript.log:
+   modified on: 26 Jan 2017 11:24:07
+   size of file: 1078
+./build/paper/ondeck.pdf:
+   modified on: 26 Jan 2017 11:24:12
+   size of file: 18645
+./build/paper/online_appendix.pdf:
+   modified on: 26 Jan 2017 11:24:14
+   size of file: 45652
+./build/paper/paper.pdf:
+   modified on: 26 Jan 2017 11:25:55
+   size of file: 58290
+./build/paper/sconscript.log:
+   modified on: 26 Jan 2017 11:25:55
+   size of file: 562
+./build/paper/text.pdf:
+   modified on: 26 Jan 2017 11:24:45
+   size of file: 18645
+./build/tables/table.lyx:
+   modified on: 26 Jan 2017 11:25:52
+   size of file: 4432
+./build/talk/sconscript.log:
+   modified on: 26 Jan 2017 11:25:58
+   size of file: 564
+./build/talk/slides.pdf:
+   modified on: 26 Jan 2017 11:25:58
+   size of file: 28986
+./release/paper/ondeck.pdf:
+   modified on: 26 Jan 2017 11:24:12
+   size of file: 18645
+./release/paper/online_appendix.pdf:
+   modified on: 26 Jan 2017 11:24:14
+   size of file: 45652
+./release/paper/paper.pdf:
+   modified on: 26 Jan 2017 11:25:55
+   size of file: 58290
+./release/paper/sconscript.log:
+   modified on: 26 Jan 2017 11:25:55
+   size of file: 562
+./release/paper/text.pdf:
+   modified on: 26 Jan 2017 11:24:45
+   size of file: 18645
+./release/talk/sconscript.log:
+   modified on: 26 Jan 2017 11:25:58
+   size of file: 564
+./release/talk/slides.pdf:
+   modified on: 26 Jan 2017 11:25:58
+   size of file: 28986
+./source/analysis/analysis.do:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 443
+./source/analysis/SConscript:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 230
+./source/data/build.R:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 218
+./source/data/SConscript:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 194
+./source/figures/figure.lyx:
+   modified on: 26 Jan 2017 11:25:16
+   size of file: 2223
+./source/paper/ondeck.lyx:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 2522
+./source/paper/online_appendix.lyx:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 3610
+./source/paper/paper.lyx:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 5236
+./source/paper/SConscript:
+   modified on: 26 Jan 2017 11:25:16
+   size of file: 486
+./source/paper/text.lyx:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 2522
+./source/raw/README.md:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 101
+./source/tables/SConscript:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 172
+./source/tables/table.lyx:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 4082
+./source/talk/SConscript:
+   modified on: 26 Jan 2017 11:25:16
+   size of file: 156
+./source/talk/slides.lyx:
+   modified on: 26 Jan 2017 11:23:54
+   size of file: 4712
