@@ -8,32 +8,18 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit d77478824cf2d14d6d9e34aa3a0a36d7fd69eebe
+commit a56cf683aec56bc6563271d1e014afd96b5a20fb
+Merge: d774788 c6ea2e5
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Thu Jan 26 11:21:13 2017 -0800
+Date:   Thu Jan 26 11:26:17 2017 -0800
 
-    gslab_python#26 Removes print statement
+    #28 Merges master
 
 
 Files changed since last commit:
 
-.sconsign.dblite
-release/paper/ondeck.pdf
-release/paper/ondeck.pdf
-release/paper/online_appendix.pdf
-release/paper/online_appendix.pdf
-release/paper/paper.pdf
-release/paper/paper.pdf
-release/paper/sconscript.log
-release/paper/sconscript.log
-release/paper/text.pdf
-release/paper/text.pdf
-release/talk/sconscript.log
-release/talk/sconscript.log
-release/talk/slides.pdf
-release/talk/slides.pdf
 sconstruct.log
-sconstruct.log
+source/data/build.R
 state_of_repo.log
 
 ===================================
@@ -48,7 +34,7 @@ state_of_repo.log
    modified on: 26 Jan 2017 11:25:16
    size of file: 2812
 ./sconstruct.log:
-   modified on: 26 Jan 2017 11:25:51
+   modified on: 26 Jan 2017 12:01:40
    size of file: 0
 ./setup.py:
    modified on: 26 Jan 2017 11:25:16
@@ -57,8 +43,8 @@ state_of_repo.log
    modified on: 26 Jan 2017 11:25:50
    size of file: 4304
 ./state_of_repo.log:
-   modified on: 26 Jan 2017 11:25:58
-   size of file: 875
+   modified on: 26 Jan 2017 12:01:42
+   size of file: 490
 ./build/analysis/plot.eps:
    modified on: 26 Jan 2017 11:24:10
    size of file: 12829
@@ -69,11 +55,11 @@ state_of_repo.log
    modified on: 26 Jan 2017 11:24:10
    size of file: 30
 ./build/data/data.txt:
-   modified on: 26 Jan 2017 11:24:07
+   modified on: 26 Jan 2017 12:01:41
    size of file: 1035
 ./build/data/sconscript.log:
-   modified on: 26 Jan 2017 11:24:07
-   size of file: 1078
+   modified on: 26 Jan 2017 12:01:41
+   size of file: 1089
 ./build/paper/ondeck.pdf:
    modified on: 26 Jan 2017 11:24:12
    size of file: 18645
@@ -126,8 +112,8 @@ state_of_repo.log
    modified on: 26 Jan 2017 11:23:54
    size of file: 230
 ./source/data/build.R:
-   modified on: 26 Jan 2017 11:23:54
-   size of file: 218
+   modified on: 26 Jan 2017 12:01:12
+   size of file: 229
 ./source/data/SConscript:
    modified on: 26 Jan 2017 11:23:54
    size of file: 194
