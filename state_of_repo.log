@@ -8,22 +8,19 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit a1f48744529ce68206739c174fef192ac5b0e855
+commit 8ab24d133d640077dee04edf258e7e7d59f3564d
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Sat Jan 28 11:50:46 2017 -0800
+Date:   Sat Jan 28 11:59:07 2017 -0800
 
-    gslab_python#29 Switches to PATHS
+    gslab_python#29 Updates formatting
 
 
 Files changed since last commit:
 
+.gitignore
+README.md
 SConstruct
 sconstruct.log
-source/analysis/SConscript
-source/data/SConscript
-source/paper/SConscript
-source/tables/SConscript
-source/talk/SConscript
 state_of_repo.log
 
 ===================================
@@ -35,13 +32,13 @@ state_of_repo.log
    modified on: 28 Jan 2017 11:33:14
    size of file: 324
 ./README.md:
-   modified on: 28 Jan 2017 11:50:21
-   size of file: 3665
+   modified on: 28 Jan 2017 12:11:50
+   size of file: 3902
 ./SConstruct:
-   modified on: 28 Jan 2017 11:58:37
-   size of file: 2309
+   modified on: 28 Jan 2017 12:09:22
+   size of file: 2343
 ./sconstruct.log:
-   modified on: 28 Jan 2017 11:58:40
+   modified on: 28 Jan 2017 12:11:56
    size of file: 0
 ./setup.py:
    modified on: 28 Jan 2017 10:53:05
@@ -50,8 +47,11 @@ state_of_repo.log
    modified on: 28 Jan 2017 11:25:58
    size of file: 4670
 ./state_of_repo.log:
-   modified on: 28 Jan 2017 11:58:41
-   size of file: 596
+   modified on: 28 Jan 2017 12:11:58
+   size of file: 496
+./user-config.yaml:
+   modified on: 28 Jan 2017 12:11:47
+   size of file: 75
 ./build/analysis/plot.eps:
    modified on: 28 Jan 2017 11:48:58
    size of file: 12829
