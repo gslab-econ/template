@@ -8,26 +8,22 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 397579ae9003678c0a9ee5bd785fa26e985cd2c8
+commit a1f48744529ce68206739c174fef192ac5b0e855
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Sat Jan 28 11:27:14 2017 -0800
+Date:   Sat Jan 28 11:50:46 2017 -0800
 
-    Preliminary paths implementation
+    gslab_python#29 Switches to PATHS
 
 
 Files changed since last commit:
 
-.sconsign.dblite
-constants.yaml
-release/paper/ondeck.pdf
-release/paper/online_appendix.pdf
-release/paper/paper.pdf
-release/paper/sconscript.log
-release/paper/text.pdf
-release/talk/sconscript.log
-release/talk/slides.pdf
+SConstruct
 sconstruct.log
-source/analysis/analysis.do
+source/analysis/SConscript
+source/data/SConscript
+source/paper/SConscript
+source/tables/SConscript
+source/talk/SConscript
 state_of_repo.log
 
 ===================================
@@ -39,13 +35,13 @@ state_of_repo.log
    modified on: 28 Jan 2017 11:33:14
    size of file: 324
 ./README.md:
-   modified on: 28 Jan 2017 10:55:19
-   size of file: 3545
+   modified on: 28 Jan 2017 11:50:21
+   size of file: 3665
 ./SConstruct:
-   modified on: 28 Jan 2017 10:53:05
-   size of file: 2206
+   modified on: 28 Jan 2017 11:58:37
+   size of file: 2309
 ./sconstruct.log:
-   modified on: 28 Jan 2017 11:49:44
+   modified on: 28 Jan 2017 11:58:40
    size of file: 0
 ./setup.py:
    modified on: 28 Jan 2017 10:53:05
@@ -54,8 +50,8 @@ state_of_repo.log
    modified on: 28 Jan 2017 11:25:58
    size of file: 4670
 ./state_of_repo.log:
-   modified on: 28 Jan 2017 11:49:45
-   size of file: 709
+   modified on: 28 Jan 2017 11:58:41
+   size of file: 596
 ./build/analysis/plot.eps:
    modified on: 28 Jan 2017 11:48:58
    size of file: 12829
@@ -120,14 +116,14 @@ state_of_repo.log
    modified on: 28 Jan 2017 11:48:31
    size of file: 584
 ./source/analysis/SConscript:
-   modified on: 28 Jan 2017 11:20:28
-   size of file: 383
+   modified on: 28 Jan 2017 11:57:20
+   size of file: 338
 ./source/data/build.R:
    modified on: 28 Jan 2017 11:08:43
    size of file: 298
 ./source/data/SConscript:
-   modified on: 28 Jan 2017 11:26:16
-   size of file: 344
+   modified on: 28 Jan 2017 11:56:21
+   size of file: 292
 ./source/figures/figure.lyx:
    modified on: 26 Jan 2017 11:25:16
    size of file: 2223
@@ -141,8 +137,8 @@ state_of_repo.log
    modified on: 26 Jan 2017 11:23:54
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 28 Jan 2017 11:19:55
-   size of file: 611
+   modified on: 28 Jan 2017 11:56:48
+   size of file: 559
 ./source/paper/text.lyx:
    modified on: 26 Jan 2017 11:23:54
    size of file: 2522
@@ -150,14 +146,14 @@ state_of_repo.log
    modified on: 28 Jan 2017 11:20:49
    size of file: 102
 ./source/tables/SConscript:
-   modified on: 28 Jan 2017 11:22:29
-   size of file: 289
+   modified on: 28 Jan 2017 11:57:52
+   size of file: 244
 ./source/tables/table.lyx:
    modified on: 26 Jan 2017 11:23:54
    size of file: 4082
 ./source/talk/SConscript:
-   modified on: 28 Jan 2017 11:25:36
-   size of file: 274
+   modified on: 28 Jan 2017 11:58:21
+   size of file: 229
 ./source/talk/slides.lyx:
    modified on: 26 Jan 2017 11:23:54
    size of file: 4712

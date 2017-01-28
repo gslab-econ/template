@@ -1,8 +1,7 @@
 Import('env')
-import yaml
-PATHS  = yaml.load(open("../../constants.yaml", 'rU'))
-build  = PATHS['build']['paper']
-source = PATHS['source']['paper']
+
+build  = env['PATHS']['build']['paper']
+source = env['PATHS']['source']['paper']
 
 env.BuildLyx(target = ['#%s/paper.pdf' % build],
              source = ['#%s/paper.lyx' % source])

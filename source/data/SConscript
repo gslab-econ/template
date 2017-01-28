@@ -1,9 +1,7 @@
 Import('env')
-import yaml
-PATHS = yaml.load(open("../../constants.yaml", 'rU'))
 
-source           = '#%s/build.R' % PATHS['source']['data']
+source           = '#%s/build.R' % env['PATHS']['source']['data']
 target_file_name = 'data'
-target           = ['#%s/%s.txt' % (PATHS['build']['data'], target_file_name)]
+target           = ['#%s/%s.txt' % (env['PATHS']['build']['data'], target_file_name)]
 
 env.BuildR(target, source, CL_ARG = target_file_name) # Demonstrates using command line arguments

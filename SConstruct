@@ -2,6 +2,8 @@
 import os
 import sys
 import re
+import yaml
+
 mode      = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers      = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
 sf        = ARGUMENTS.get('sf', None) # Gets user supplied stata or defaults to None
@@ -30,6 +32,10 @@ env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
 env.EXTENSIONS = ['.eps', '.pdf', '.lyx'] # Extensions to be used when scanning for source files in BuildLyx.
 SourceFileScanner.add_scanner('.lyx', Scanner(gslab_scons.misc.lyx_scan, recursive = True))
 
+# Load paths
+env['PATHS'] = yaml.load(open("constants.yaml", 'rU'))
+
+# Export environment
 Export('env')
 
 # Run sub-trees
