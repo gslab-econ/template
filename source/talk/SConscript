@@ -1,6 +1,8 @@
 Import('env')
+import yaml
+PATHS = yaml.load(open("../../constants.yaml", 'rU'))
 
-env.BuildLyx(target = '#build/talk/slides.pdf', 
-             source = ['#source/talk/slides.lyx'])
+env.BuildLyx(target = '#%s/slides.pdf'  % PATHS['build']['talk'], 
+             source = ['#%s/slides.lyx' % PATHS['source']['talk']])
 
-env.Install('#release', '#build/talk/')
+env.Install('#release', '#%s/' % PATHS['build']['talk'])

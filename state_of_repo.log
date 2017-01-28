@@ -8,35 +8,30 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 71bcba40c140375aa1199562e9f64771e1070b0d
-Merge: f87e56b c6ea2e5
+commit 006b0e50b4586fdacab19282ade8f9def8c1e0f8
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Thu Jan 26 11:10:51 2017 -0800
+Date:   Thu Jan 26 12:18:39 2017 -0800
 
-    #33 Merges master
+    Pull request for #33: Prevents duplicate cache (#34)
+    
+    * #33 Adds cache check
+    
+    * #33 Edits cache logic
+    
+    * #33 Edits for PR
 
 
 Files changed since last commit:
 
-.sconsign.dblite
-SConstruct
-release/paper/ondeck.pdf
-release/paper/ondeck.pdf
-release/paper/online_appendix.pdf
-release/paper/online_appendix.pdf
-release/paper/paper.pdf
-release/paper/paper.pdf
-release/paper/sconscript.log
-release/paper/sconscript.log
-release/paper/text.pdf
-release/paper/text.pdf
-release/talk/sconscript.log
-release/talk/sconscript.log
-release/talk/slides.pdf
-release/talk/slides.pdf
+README.md
 sconstruct.log
-sconstruct.log
-state_of_repo.log
+source/analysis/SConscript
+source/data/SConscript
+source/data/build.R
+source/paper/SConscript
+source/raw/README.md
+source/tables/SConscript
+source/talk/SConscript
 state_of_repo.log
 
 ===================================
@@ -44,24 +39,27 @@ state_of_repo.log
  FILE STATUS
 
 ===================================
+./constants.yaml:
+   modified on: 28 Jan 2017 11:07:50
+   size of file: 356
 ./README.md:
-   modified on: 26 Jan 2017 11:25:16
-   size of file: 3289
+   modified on: 28 Jan 2017 10:55:19
+   size of file: 3545
 ./SConstruct:
-   modified on: 26 Jan 2017 12:08:02
+   modified on: 28 Jan 2017 10:53:05
    size of file: 2206
 ./sconstruct.log:
-   modified on: 26 Jan 2017 12:11:58
+   modified on: 28 Jan 2017 11:26:19
    size of file: 0
 ./setup.py:
-   modified on: 26 Jan 2017 12:07:21
+   modified on: 28 Jan 2017 10:53:05
    size of file: 3549
 ./setup.pyc:
-   modified on: 26 Jan 2017 12:11:57
+   modified on: 28 Jan 2017 11:25:58
    size of file: 4670
 ./state_of_repo.log:
-   modified on: 26 Jan 2017 12:12:15
-   size of file: 905
+   modified on: 28 Jan 2017 11:26:21
+   size of file: 748
 ./build/analysis/plot.eps:
    modified on: 26 Jan 2017 12:12:03
    size of file: 12829
@@ -72,11 +70,11 @@ state_of_repo.log
    modified on: 26 Jan 2017 12:12:03
    size of file: 30
 ./build/data/data.txt:
-   modified on: 26 Jan 2017 12:11:59
+   modified on: 28 Jan 2017 11:26:19
    size of file: 1035
 ./build/data/sconscript.log:
-   modified on: 26 Jan 2017 12:11:59
-   size of file: 1089
+   modified on: 28 Jan 2017 11:26:20
+   size of file: 1164
 ./build/paper/ondeck.pdf:
    modified on: 26 Jan 2017 11:24:12
    size of file: 18645
@@ -108,32 +106,32 @@ state_of_repo.log
    modified on: 26 Jan 2017 11:24:14
    size of file: 45652
 ./release/paper/paper.pdf:
-   modified on: 26 Jan 2017 12:12:11
+   modified on: 28 Jan 2017 10:53:05
    size of file: 58290
 ./release/paper/sconscript.log:
-   modified on: 26 Jan 2017 12:12:11
+   modified on: 28 Jan 2017 10:53:05
    size of file: 562
 ./release/paper/text.pdf:
    modified on: 26 Jan 2017 11:24:45
    size of file: 18645
 ./release/talk/sconscript.log:
-   modified on: 26 Jan 2017 12:12:15
+   modified on: 28 Jan 2017 10:53:05
    size of file: 564
 ./release/talk/slides.pdf:
-   modified on: 26 Jan 2017 12:12:15
+   modified on: 28 Jan 2017 10:53:05
    size of file: 28986
 ./source/analysis/analysis.do:
    modified on: 26 Jan 2017 11:23:54
    size of file: 443
 ./source/analysis/SConscript:
-   modified on: 26 Jan 2017 12:09:29
-   size of file: 230
+   modified on: 28 Jan 2017 11:20:28
+   size of file: 383
 ./source/data/build.R:
-   modified on: 26 Jan 2017 12:09:29
-   size of file: 229
+   modified on: 28 Jan 2017 11:08:43
+   size of file: 298
 ./source/data/SConscript:
-   modified on: 26 Jan 2017 12:09:29
-   size of file: 194
+   modified on: 28 Jan 2017 11:26:16
+   size of file: 344
 ./source/figures/figure.lyx:
    modified on: 26 Jan 2017 11:25:16
    size of file: 2223
@@ -147,23 +145,23 @@ state_of_repo.log
    modified on: 26 Jan 2017 11:23:54
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 26 Jan 2017 11:25:16
-   size of file: 486
+   modified on: 28 Jan 2017 11:19:55
+   size of file: 611
 ./source/paper/text.lyx:
    modified on: 26 Jan 2017 11:23:54
    size of file: 2522
 ./source/raw/README.md:
-   modified on: 26 Jan 2017 11:23:54
-   size of file: 101
+   modified on: 28 Jan 2017 11:20:49
+   size of file: 102
 ./source/tables/SConscript:
-   modified on: 26 Jan 2017 11:23:54
-   size of file: 172
+   modified on: 28 Jan 2017 11:22:29
+   size of file: 289
 ./source/tables/table.lyx:
    modified on: 26 Jan 2017 11:23:54
    size of file: 4082
 ./source/talk/SConscript:
-   modified on: 26 Jan 2017 11:25:16
-   size of file: 156
+   modified on: 28 Jan 2017 11:25:36
+   size of file: 274
 ./source/talk/slides.lyx:
    modified on: 26 Jan 2017 11:23:54
    size of file: 4712

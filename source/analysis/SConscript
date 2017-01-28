@@ -1,6 +1,10 @@
 Import('env')
+import yaml
+PATHS  = yaml.load(open("../../constants.yaml", 'rU'))
+build  = PATHS['build']['analysis']
+source = PATHS['source']['analysis']
 
-env.BuildStata(target = ['#build/analysis/plot.eps',
-                         '#build/analysis/table.txt'],
-               source = ['#source/analysis/analysis.do',
-                         '#build/data/data.txt'])
+env.BuildStata(target = ['#%s/plot.eps'    % build,
+                         '#%s/table.txt'   % build],
+               source = ['#%s/analysis.do' % source,
+                         '#%s/data.txt'    % PATHS['build']['data']])

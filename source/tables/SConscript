@@ -1,5 +1,7 @@
 Import('env')
+import yaml
+PATHS = yaml.load(open("../../constants.yaml", 'rU'))
 
-env.Tablefill(target = ['#build/tables/table.lyx'],
-              source = ['#source/tables/table.lyx',
-                        '#build/analysis/table.txt'])
+env.Tablefill(target = ['#%s/table.lyx' % PATHS['build']['tables']],
+              source = ['#%s/table.lyx' % PATHS['source']['tables'],
+                        '#%s/table.txt' % PATHS['build']['analysis']])
