@@ -7,6 +7,7 @@ Using the repository template
  - [Python 2.X](https://www.python.org) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
  	- Python module: [PyYAML](http://pyyaml.org/wiki/PyYAML)
  - [Stata MP](http://www.stata.com/statamp/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
+    - Stata ado file: [yaml](https://github.com/sergiocorreia/stata-misc/tree/75a8b251bec02ba590c862cc395c4b95077d8a95)
  - [R](https://www.r-project.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
     - R package: [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf)
  - [Lyx](https://www.lyx.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))

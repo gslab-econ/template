@@ -1,19 +1,17 @@
----
 # Build Directories
 build:
-    analysis: build/analysis
-    data: build/data
-    paper: build/paper
-    tables: build/tables
-    talk: build/talk
+  analysis: build/analysis
+  data: build/data
+  paper: build/paper
+  tables: build/tables
+  talk: build/talk
 
 # Source Directories
 source:
-    analysis: source/analysis
-    data: source/data
-    figures: source/figures
-    paper: source/paper
-    raw: source/raw
-    tables: source/tables
-    talk: source/talk
-...
+  analysis: source/analysis
+  data: source/data
+  figures: source/figures
+  paper: source/paper
+  raw: source/raw
+  tables: source/tables
+  talk: source/talk
