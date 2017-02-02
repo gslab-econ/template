@@ -2,23 +2,15 @@
 import os
 import sys
 import re
-import yaml
 
-user_configs = yaml.load(open("user-config.yaml", 'rU'))
-
-mode      = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
-vers      = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
-sf        = ARGUMENTS.get('sf', user_configs['stata_flavor']) # Gets user supplied stata from command line or yaml
-cache_dir = user_configs['cache']
-
-# Test for proper prerequisites and setup; import gslab_scons after passing setup
+# Test for proper prerequisites and setup
 from setup import setup_test
-setup_test(mode, vers, sf, cache_dir)
+[user_configs, mode, sf, cache_dir] = setup_test(ARGUMENTS)
 import gslab_scons 
+import yaml
 
 # Start log
 gslab_scons.start_log() 
-
 
 # Defines environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 

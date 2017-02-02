@@ -8,19 +8,19 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 8ab24d133d640077dee04edf258e7e7d59f3564d
+commit 20fe96d7a870b43ad9408b888842d2ce5d50dd00
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Sat Jan 28 11:59:07 2017 -0800
+Date:   Sat Jan 28 12:16:48 2017 -0800
 
-    gslab_python#29 Updates formatting
+    gslab_python#29 small edit
 
 
 Files changed since last commit:
 
-.gitignore
-README.md
+.sconsign.dblite
 SConstruct
 sconstruct.log
+setup.py
 state_of_repo.log
 
 ===================================
@@ -35,20 +35,23 @@ state_of_repo.log
    modified on: 28 Jan 2017 12:11:50
    size of file: 3902
 ./SConstruct:
-   modified on: 28 Jan 2017 12:09:22
-   size of file: 2343
+   modified on: 02 Feb 2017 10:20:23
+   size of file: 1962
 ./sconstruct.log:
-   modified on: 28 Jan 2017 12:11:56
+   modified on: 02 Feb 2017 10:42:38
    size of file: 0
 ./setup.py:
-   modified on: 28 Jan 2017 10:53:05
-   size of file: 3549
+   modified on: 02 Feb 2017 10:42:35
+   size of file: 4667
 ./setup.pyc:
-   modified on: 28 Jan 2017 11:25:58
-   size of file: 4670
+   modified on: 02 Feb 2017 10:42:38
+   size of file: 5529
+./stata.log:
+   modified on: 02 Feb 2017 10:35:04
+   size of file: 1079
 ./state_of_repo.log:
-   modified on: 28 Jan 2017 12:11:58
-   size of file: 496
+   modified on: 02 Feb 2017 10:42:39
+   size of file: 493
 ./user-config.yaml:
    modified on: 28 Jan 2017 12:11:47
    size of file: 75
