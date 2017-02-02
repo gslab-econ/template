@@ -54,6 +54,45 @@ def check_python_packages():
     if pkg_resources.get_distribution('gslab_tools').version < '3.0.3':
         raise PrerequisiteError('Wrong version of gslab_tools')
 
+
+def check_r():
+    from gslab_scons.misc import is_in_path
+    if is_in_path('R.exe') is None and is_in_path('R') is None:
+        raise PrerequisiteError('R is not installed or excecutable is not added to path')
+    check_r_packages()
+
+def check_r_packages():
+    for pkg in ["yaml"]:
+        subprocess.check_output('R -q -e "library(%s)"' % pkg, shell = True) # http://stackoverflow.com/questions/6701230/call-r-function-in-linux-command-line and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
+
+def check_lyx():
+    from gslab_scons.misc import is_in_path
+    if is_in_path('lyx.exe') is None and is_in_path('lyx') is None:
+        raise PrerequisiteError('Lyx is not installed or excecutable is not added to path')
+
+def check_metropolis():
+    if platform == 'win32':
+        warnings.warn('It has not been tested whether Metropolis beamer is installed or not. Please make sure it has been installed before running the repo.')
+    else:
+        if os.path.isfile('/usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab/beamerthememetropolis_gslab.sty'):
+            pass
+        else:
+            raise PrerequisiteError('Metropolis beamer not found at /usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab')
+
+def check_gitlfs():
+    from gslab_scons.misc import check_lfs
+    check_lfs()
+
+def check_yamls():
+    if not os.path.isfile("constants.yaml"):
+        raise PrerequisiteError("constants.yaml file does not exist. Please create it.")
+    if not os.path.isfile("user-config.yaml"):
+        raise PrerequisiteError("user-config.yaml file does not exist. Please create it.")
+
+def check_cache(cache):
+    if not os.path.isdir(cache):
+        raise PrerequisiteError("Cache directory (%s) is not created. Please manually create before running." % cache)
+
 def check_stata(sf):
     import gslab_scons.misc as misc
     command = ''
@@ -90,44 +129,6 @@ def check_stata_packages(command):
         if re.search('command %s not found' % pkg, log):
             raise PrerequisiteError('Stata package %s is not installed' % pkg)
         os.remove('stata.log')
-
-def check_r():
-    from gslab_scons.misc import is_in_path
-    if is_in_path('R.exe') is None and is_in_path('R') is None:
-        raise PrerequisiteError('R is not installed or excecutable is not added to path')
-    check_r_packages()
-
-def check_r_packages():
-    for pkg in ["yaml"]:
-        subprocess.check_output('R -q -e "library(%s)"' % pkg, shell = True) # http://stackoverflow.com/questions/6701230/call-r-function-in-linux-command-line and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
-
-def check_lyx():
-    from gslab_scons.misc import is_in_path
-    if is_in_path('lyx.exe') is None and is_in_path('lyx') is None:
-        raise PrerequisiteError('Lyx is not installed or excecutable is not added to path')
-
-def check_metropolis():
-    if platform == 'win32':
-        warnings.warn('It has not been tested whether Metropolis beamer is installed or not. Please make sure it has been installed before running the repo.')
-    else:
-        if os.path.isfile('/usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab/beamerthememetropolis_gslab.sty'):
-            pass
-        else:
-            raise PrerequisiteError('Metropolis beamer not found at /usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab')
-
-def check_gitlfs():
-    from gslab_scons.misc import check_lfs
-    check_lfs()
-
-def check_cache(cache):
-    if not os.path.isdir(cache):
-        raise PrerequisiteError("Cache directory (%s) is not created. Please manually create before running." % cache)
-
-def check_yamls():
-    if not os.path.isfile("constants.yaml"):
-        raise PrerequisiteError("constants.yaml file does not exist. Please create it.")
-    if not os.path.isfile("user-config.yaml"):
-        raise PrerequisiteError("user-config.yaml file does not exist. Please create it.")
 
 class PrerequisiteError(Exception):
     pass
