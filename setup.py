@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 import subprocess
 import pkg_resources
 from sys import platform
@@ -82,9 +83,13 @@ def check_stata(sf):
     check_stata_packages(command)
 
 def check_stata_packages(command):
-    pass
-    #for pkg in ['yaml', 'AKG']:
-    #    os.system(command % '"which %s"' % pkg) # http://www.stata.com/statalist/archive/2009-12/msg00493.html
+    for pkg in ['yaml']:
+        subprocess.check_output(command % '"which %s"' % pkg, shell = True) # http://www.stata.com/statalist/archive/2009-12/msg00493.html and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
+        with open('stata.log', 'rU') as f:
+            log = f.read()
+        if re.search('command %s not found' % pkg, log):
+            raise PrerequisiteError('Stata package %s is not installed' % pkg)
+        os.remove('stata.log')
 
 def check_r():
     from gslab_scons.misc import is_in_path
@@ -93,12 +98,8 @@ def check_r():
     check_r_packages()
 
 def check_r_packages():
-    pass
-    #for pkg in ["yaml", 'SOEMME']:
-        #try:
-    #    os.system('R -q -e "library(%s)"' % pkg) # http://stackoverflow.com/questions/6701230/call-r-function-in-linux-command-line
-        #except:
-         #   raise PrerequisiteError("R package %s is not installed." % pkg)
+    for pkg in ["yaml"]:
+        subprocess.check_output('R -q -e "library(%s)"' % pkg, shell = True) # http://stackoverflow.com/questions/6701230/call-r-function-in-linux-command-line and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
 
 def check_lyx():
     from gslab_scons.misc import is_in_path
