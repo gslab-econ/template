@@ -8,15 +8,16 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit e8dd869d8dbbf68acf0ca600fda313eb6a70e950
+commit 1cec9b841235cc764900acde71b3d2baef810b81
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Thu Feb 2 11:00:52 2017 -0800
+Date:   Thu Feb 2 11:03:31 2017 -0800
 
-    #29 Updates pakage checking
+    #29 Reorganizes setup.py
 
 
 Files changed since last commit:
 
+.sconsign.dblite
 sconstruct.log
 setup.py
 state_of_repo.log
@@ -36,17 +37,17 @@ state_of_repo.log
    modified on: 02 Feb 2017 10:20:23
    size of file: 1962
 ./sconstruct.log:
-   modified on: 02 Feb 2017 11:03:22
+   modified on: 03 Feb 2017 08:27:44
    size of file: 0
 ./setup.py:
-   modified on: 02 Feb 2017 11:03:17
-   size of file: 5076
+   modified on: 03 Feb 2017 08:27:41
+   size of file: 5114
 ./setup.pyc:
-   modified on: 02 Feb 2017 11:03:21
-   size of file: 5998
+   modified on: 03 Feb 2017 08:27:43
+   size of file: 6041
 ./state_of_repo.log:
-   modified on: 02 Feb 2017 11:03:22
-   size of file: 465
+   modified on: 03 Feb 2017 08:27:44
+   size of file: 479
 ./user-config.yaml:
    modified on: 28 Jan 2017 12:11:47
    size of file: 75
