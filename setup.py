@@ -3,7 +3,6 @@ import os
 import re
 import subprocess
 import pkg_resources
-from sys import platform
 import warnings
 
 def setup_test(ARGUMENTS):
@@ -54,7 +53,6 @@ def check_python_packages():
     if pkg_resources.get_distribution('gslab_tools').version < '3.0.3':
         raise PrerequisiteError('Wrong version of gslab_tools')
 
-
 def check_r():
     from gslab_scons.misc import is_in_path
     if is_in_path('R.exe') is None and is_in_path('R') is None:
@@ -71,27 +69,30 @@ def check_lyx():
         raise PrerequisiteError('Lyx is not installed or excecutable is not added to path')
 
 def check_metropolis():
-    if platform == 'win32':
-        warnings.warn('It has not been tested whether Metropolis beamer is installed or not. Please make sure it has been installed before running the repo.')
+    if sys.platform == 'win32':
+        warnings.warn('It has not been tested whether Metropolis beamer is installed or not.' + \
+            'Please make sure it has been installed before running the repo.')
     else:
-        if os.path.isfile('/usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab/beamerthememetropolis_gslab.sty'):
+        metropolis_path = '/usr/local/texlive/texmf-local/tex/latex/' + \
+                          'beamer/themes/gslab/beamerthememetropolis_gslab.sty'
+        if os.path.isfile(metropolis_path):
             pass
         else:
-            raise PrerequisiteError('Metropolis beamer not found at /usr/local/texlive/texmf-local/tex/latex/beamer/themes/gslab')
+            raise PrerequisiteError('Metropolis beamer not found at %s' % metropolis_path)
 
 def check_gitlfs():
     from gslab_scons.misc import check_lfs
     check_lfs()
 
 def check_yamls():
-    if not os.path.isfile("constants.yaml"):
-        raise PrerequisiteError("constants.yaml file does not exist. Please create it.")
-    if not os.path.isfile("user-config.yaml"):
-        raise PrerequisiteError("user-config.yaml file does not exist. Please create it.")
+    for f in ["constants.yaml", "user-config.yaml"]:
+        if not os.path.isfile(f):
+            raise PrerequisiteError("%s file does not exist. Please create it." % f)
 
 def check_cache(cache):
     if not os.path.isdir(cache):
-        raise PrerequisiteError("Cache directory (%s) is not created. Please manually create before running." % cache)
+        raise PrerequisiteError("Cache directory (%s) is not created." + \
+                                "Please manually create before running." % cache)
 
 def check_stata(sf):
     import gslab_scons.misc as misc
@@ -104,7 +105,7 @@ def check_stata(sf):
             if misc.is_in_path(flavor):
                 command = misc.stata_command_unix(flavor)
                 break
-    elif platform == 'win32':
+    elif sys.platform == 'win32':
         try:
             key_exist = os.environ['STATAEXE'] is not None
             command   = misc.stata_command_win("%%STATAEXE%%")

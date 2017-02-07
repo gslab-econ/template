@@ -1,7 +1,5 @@
 # Preliminaries
 import os
-import sys
-import re
 
 # Test for proper prerequisites and setup
 from setup import setup_test
