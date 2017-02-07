@@ -8,16 +8,16 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit ce975a32c76c8b74a816d75cbfcaa916ad918245
+commit b6382091044b5ac8b72ef58d7a22611066a0753c
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Fri Feb 3 08:28:02 2017 -0800
+Date:   Mon Feb 6 17:00:14 2017 -0800
 
-    #35 Fixes stata package check for windows
+    #29 More PR comments
 
 
 Files changed since last commit:
 
-SConstruct
+.sconsign.dblite
 release/paper/ondeck.pdf
 release/paper/online_appendix.pdf
 release/paper/paper.pdf
@@ -26,7 +26,7 @@ release/paper/text.pdf
 release/talk/sconscript.log
 release/talk/slides.pdf
 sconstruct.log
-setup.py
+source/tables/SConscript
 state_of_repo.log
 
 ===================================
@@ -44,7 +44,7 @@ state_of_repo.log
    modified on: 06 Feb 2017 16:52:43
    size of file: 1941
 ./sconstruct.log:
-   modified on: 06 Feb 2017 16:59:42
+   modified on: 06 Feb 2017 17:13:50
    size of file: 0
 ./setup.py:
    modified on: 06 Feb 2017 16:59:37
@@ -53,19 +53,19 @@ state_of_repo.log
    modified on: 06 Feb 2017 16:59:40
    size of file: 5954
 ./state_of_repo.log:
-   modified on: 06 Feb 2017 17:00:01
-   size of file: 677
+   modified on: 06 Feb 2017 17:13:57
+   size of file: 678
 ./user-config.yaml:
    modified on: 28 Jan 2017 12:11:47
    size of file: 75
 ./build/analysis/plot.eps:
-   modified on: 06 Feb 2017 16:59:46
+   modified on: 06 Feb 2017 17:13:52
    size of file: 12829
 ./build/analysis/sconscript.log:
-   modified on: 06 Feb 2017 16:59:46
+   modified on: 06 Feb 2017 17:13:52
    size of file: 2211
 ./build/analysis/table.txt:
-   modified on: 06 Feb 2017 16:59:46
+   modified on: 06 Feb 2017 17:13:52
    size of file: 30
 ./build/data/data.txt:
    modified on: 06 Feb 2017 16:59:44
@@ -86,22 +86,22 @@ state_of_repo.log
    modified on: 04 Feb 2017 16:28:00
    size of file: 45828
 ./build/paper/paper.pdf:
-   modified on: 06 Feb 2017 16:59:57
-   size of file: 58175
+   modified on: 06 Feb 2017 17:13:54
+   size of file: 58176
 ./build/paper/sconscript.log:
-   modified on: 06 Feb 2017 16:59:57
+   modified on: 06 Feb 2017 17:13:54
    size of file: 562
 ./build/paper/text.pdf:
    modified on: 04 Feb 2017 16:28:04
    size of file: 18640
 ./build/tables/table.lyx:
-   modified on: 04 Feb 2017 16:41:05
+   modified on: 06 Feb 2017 17:13:52
    size of file: 4432
 ./build/talk/sconscript.log:
-   modified on: 06 Feb 2017 17:00:01
+   modified on: 06 Feb 2017 17:13:57
    size of file: 564
 ./build/talk/slides.pdf:
-   modified on: 06 Feb 2017 17:00:01
+   modified on: 06 Feb 2017 17:13:57
    size of file: 28971
 ./release/paper/ondeck.pdf:
    modified on: 04 Feb 2017 16:27:59
@@ -110,22 +110,22 @@ state_of_repo.log
    modified on: 04 Feb 2017 16:28:00
    size of file: 45828
 ./release/paper/paper.pdf:
-   modified on: 06 Feb 2017 16:59:57
-   size of file: 58175
+   modified on: 06 Feb 2017 17:13:54
+   size of file: 58176
 ./release/paper/sconscript.log:
-   modified on: 06 Feb 2017 16:59:57
+   modified on: 06 Feb 2017 17:13:54
    size of file: 562
 ./release/paper/text.pdf:
    modified on: 04 Feb 2017 16:28:04
    size of file: 18640
 ./release/talk/sconscript.log:
-   modified on: 06 Feb 2017 17:00:01
+   modified on: 06 Feb 2017 17:13:57
    size of file: 564
 ./release/talk/slides.pdf:
-   modified on: 06 Feb 2017 17:00:01
+   modified on: 06 Feb 2017 17:13:57
    size of file: 28971
 ./source/analysis/analysis.do:
-   modified on: 06 Feb 2017 16:51:50
+   modified on: 06 Feb 2017 17:13:35
    size of file: 584
 ./source/analysis/SConscript:
    modified on: 06 Feb 2017 16:51:50
@@ -158,8 +158,8 @@ state_of_repo.log
    modified on: 28 Jan 2017 11:20:49
    size of file: 102
 ./source/tables/SConscript:
-   modified on: 28 Jan 2017 11:57:52
-   size of file: 244
+   modified on: 06 Feb 2017 17:13:47
+   size of file: 245
 ./source/tables/table.lyx:
    modified on: 26 Jan 2017 11:23:54
    size of file: 4082
