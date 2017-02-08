@@ -1,15 +1,18 @@
 Import('env')
 
-env.BuildLyx(target = ['#build/paper/paper.pdf'],
-             source = ['#source/paper/paper.lyx'])
+build  = env['PATHS']['build']['paper']
+source = env['PATHS']['source']['paper']
 
-env.BuildLyx(target = ['#build/paper/online_appendix.pdf'], 
-             source = ['#source/paper/online_appendix.lyx'])
+env.BuildLyx(target = ['#%s/paper.pdf' % build],
+             source = ['#%s/paper.lyx' % source])
 
-env.BuildLyx(target = ['#build/paper/text.pdf'],
-             source = ['#source/paper/text.lyx'])
+env.BuildLyx(target = ['#%s/online_appendix.pdf' % build], 
+             source = ['#%s/online_appendix.lyx' % source])
 
-env.BuildLyx(target = ['#build/paper/ondeck.pdf'], 
-             source = ['#source/paper/ondeck.lyx'])
+env.BuildLyx(target = ['#%s/text.pdf' % build],
+             source = ['#%s/text.lyx' % source])
 
-env.Install('#release', '#build/paper/')
+env.BuildLyx(target = ['#%s/ondeck.pdf' % build], 
+             source = ['#%s/ondeck.lyx' % source])
+
+env.Install('#release', '#%s/' % build)

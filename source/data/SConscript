@@ -1,8 +1,7 @@
 Import('env')
 
+source           = '#%s/build.R' % env['PATHS']['source']['data']
+target_file_name = 'data'
+target           = ['#%s/%s.txt' % (env['PATHS']['build']['data'], target_file_name)]
 
-source = 'build.R'
-target_name = 'data'
-target = ['#build/data/%s.txt' % target_name]
-env.BuildR(target, source, CL_ARG=target_name) # Demonstrates using command line arguments
-
+env.BuildR(target, source, CL_ARG = target_file_name) # Demonstrates using command line arguments
