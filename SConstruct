@@ -3,6 +3,7 @@ import os
 import sys
 import gslab_scons.builders as build
 import gslab_scons.log as log
+import atexit
 
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
@@ -24,3 +25,9 @@ SConscript('source/data/SConscript')
 SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
+
+# end_log_command = Command ('finish', [], )
+# Depends(end_log_command, BUILD_TARGETS)
+# Default(end_log_command)
+
+atexit.register(log.end_log)
