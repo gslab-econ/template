@@ -1,5 +1,5 @@
-*** Builder log created: {2017-02-11 19:40:06} 
-*** Builder log completed: {2017-02-11 19:40:09} 
+*** Builder log created: {2017-02-17 13:44:08} 
+*** Builder log completed: {2017-02-17 13:44:08} 
  
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -22,11 +22,13 @@ Notes:
       3.  More than 2 billion observations are allowed; see help obs_advice.
       4.  Maximum number of variables is set to 5000; see help set_maxvar.
 
+
+running /Applications/Stata/profile.do ...
+
 . do "source/analysis/analysis.do" 
 
 . program main
-  1.     import delimited "output/data/data.txt", delimiter("|") varnames(nonam
-> es) clear
+  1.     import delimited "output/data/data.txt", delimiter("|") varnames(nonames) clear
   2.     rename v1 obs_value
   3.     gen obs_number = _n
   4.     graph twoway line obs_value obs_number

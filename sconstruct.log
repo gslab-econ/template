@@ -1,24 +1,37 @@
-*** New build: {2017-02-11 19:40:50} ***
+*** New build: {2017-02-17 13:56:46} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-build_lyx(["output/paper/online_appendix.pdf"], ["source/paper/online_appendix.lyx"])
-build_lyx(["output/paper/paper.pdf"], ["source/paper/paper.lyx"])
+build_r(["output/data/data.txt"], ["source/data/build.R"])
 scons: done building targets.
-*** Build completed: {2017-02-11 19:40:56} ***
-*** Builder log created: {2017-02-11 19:40:53} 
-*** Builder log completed: {2017-02-11 19:40:56} 
- This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
- restricted \write18 enabled.
-entering extended mode
-(./paper.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+*** Build completed: {2017-02-17 13:56:47} ***
+*** Builder log created: {2017-02-17 13:56:46} 
+*** Builder log completed: {2017-02-17 13:56:47} 
+ 
+R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
 
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
- restricted \write18 enabled.
-entering extended mode
-(./paper.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
 
+  Natural language support but running in an English locale
 
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> main <- function(){
++     x    <- seq(-10, 10, 0.1)
++     write.table(x, "output/data/data.txt", sep = "|", row.names = FALSE, col.names = FALSE) 
++ }
+> 
+> main()
+> 
+> proc.time()
+   user  system elapsed 
+  0.113   0.026   0.162 

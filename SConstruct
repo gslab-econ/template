@@ -26,8 +26,4 @@ SConscript('source/analysis/SConscript')
 SConscript('source/paper/SConscript') 
 SConscript('source/talk/SConscript') 
 
-# end_log_command = Command ('finish', [], )
-# Depends(end_log_command, BUILD_TARGETS)
-# Default(end_log_command)
-
 atexit.register(log.end_log)
