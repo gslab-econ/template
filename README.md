@@ -14,7 +14,7 @@ Using the repository template
  - [SCons](http://scons.org/) (Note that version 2.4.0 or later is best if using the [cache](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)).
     - More information about SCons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
  - [git-lfs](https://git-lfs.github.com/)
- - [gslab_tools](https://github.com/gslab-econ/gslab_python) version 3.0.3 or later
+ - [gslab_tools](https://github.com/gslab-econ/gslab_python) version 4.0.0 or later
  - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
 
 The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
