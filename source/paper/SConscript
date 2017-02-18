@@ -1,14 +1,18 @@
-Import('*')
+Import('env')
 
-target = '#output/paper/paper.pdf'
-source = '#source/paper/paper.lyx'
-assets = '#output/analysis/plot.eps'
-env.Depends(target, assets)
-env.Lyx(target, source)
+build  = env['PATHS']['build']['paper']
+source = env['PATHS']['source']['paper']
 
+env.BuildLyx(target = ['#%s/paper.pdf' % build],
+             source = ['#%s/paper.lyx' % source])
 
-target = '#output/paper/online_appendix.pdf'
-source = '#source/paper/online_appendix.lyx'
-assets = '#output/analysis/plot.eps'
-env.Depends(target, assets)
-env.Lyx(target, source)
+env.BuildLyx(target = ['#%s/online_appendix.pdf' % build], 
+             source = ['#%s/online_appendix.lyx' % source])
+
+env.BuildLyx(target = ['#%s/text.pdf' % build],
+             source = ['#%s/text.lyx' % source])
+
+env.BuildLyx(target = ['#%s/ondeck.pdf' % build], 
+             source = ['#%s/ondeck.lyx' % source])
+
+env.Install('#release', '#%s/' % build)

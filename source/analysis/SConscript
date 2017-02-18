@@ -1,7 +1,9 @@
-Import('*')
+Import('env')
 
-target = '#output/analysis/plot.eps'       
-source = '#source/analysis/analysis.do'
-assets = '#output/data/data.txt'
-env.Depends(target, assets)
-env.Stata(target, source)
+build  = env['PATHS']['build']['analysis']
+source = env['PATHS']['source']['analysis']
+
+env.BuildStata(target = ['#%s/plot.eps'    % build,
+                         '#%s/table.txt'   % build],
+               source = ['#%s/analysis.do' % source,
+                         '#%s/data.txt'    % env['PATHS']['build']['data']])
