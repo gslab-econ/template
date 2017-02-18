@@ -1,9 +1,5 @@
 # Preliminaries
 import os
-import sys
-import gslab_scons.builders as build
-import gslab_scons.log as log
-import atexit
 
 # Test for proper prerequisites and setup
 from setup import setup_test
@@ -12,9 +8,7 @@ import gslab_scons
 import yaml
 
 # Start log
-mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
-vers = ARGUMENTS.get('version', '') # Gets release version; defaults to ''
-log.start_log(mode, vers)
+gslab_scons.start_log() 
 
 # Defines environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
@@ -54,5 +48,3 @@ Depends(finish_command, BUILD_TARGETS)
 env.AlwaysBuild(finish_command)
 if 'state_of_repo.log' not in BUILD_TARGETS: 
     BUILD_TARGETS.append('state_of_repo.log')
-
-atexit.register(log.end_log)
