@@ -8,36 +8,22 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 2a36fac9cc9c21f2272fd5696b684c6a64320143
-Author: Quan Le <lequan@stanford.edu>
-Date:   Fri Feb 17 16:30:18 2017 -0800
+commit 78d1d6af916dfca61bab21bb1e590437d552f05a
+Author: Quan <lequan@stanford.edu>
+Date:   Sat Feb 25 13:07:53 2017 -0800
 
-    gslab-python/#28 restructure
+    Delete online_appendix.pdf
 
 
 Files changed since last commit:
 
 .sconsign.dblite
-.sconsign.dblite
-SConstruct
-output/analysis/plot.eps
-output/analysis/sconscript.log
-output/data/sconscript.log
-output/paper/online_appendix.pdf
-output/paper/paper.pdf
-output/paper/sconscript.log
-output/paper/sconscript.log
-output/talk/sconscript.log
-output/talk/slides.pdf
 release/paper/ondeck.pdf
 release/paper/online_appendix.pdf
 release/paper/paper.pdf
-release/paper/sconscript.log
 release/paper/text.pdf
-release/talk/sconscript.log
 release/talk/slides.pdf
 sconstruct.log
-source/paper/SConscript
 state_of_repo.log
 
 ===================================
@@ -49,13 +35,13 @@ state_of_repo.log
    modified on: 17 Feb 2017 17:01:41
    size of file: 324
 ./README.md:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 25 Feb 2017 13:04:15
    size of file: 3902
 ./SConstruct:
-   modified on: 17 Feb 2017 17:04:43
+   modified on: 25 Feb 2017 13:04:15
    size of file: 2167
 ./sconstruct.log:
-   modified on: 17 Feb 2017 17:06:14
+   modified on: 25 Feb 2017 13:08:37
    size of file: 41
 ./setup.py:
    modified on: 17 Feb 2017 17:01:41
@@ -64,8 +50,8 @@ state_of_repo.log
    modified on: 17 Feb 2017 17:03:34
    size of file: 5810
 ./state_of_repo.log:
-   modified on: 17 Feb 2017 17:06:14
-   size of file: 954
+   modified on: 25 Feb 2017 13:08:38
+   size of file: 595
 ./user-config.yaml:
    modified on: 17 Feb 2017 17:04:03
    size of file: 70
@@ -109,43 +95,40 @@ state_of_repo.log
    modified on: 17 Feb 2017 17:06:03
    size of file: 28962
 ./output/analysis/plot.eps:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 25 Feb 2017 13:04:15
    size of file: 16992
 ./output/analysis/sconscript.log:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 25 Feb 2017 13:04:15
    size of file: 1512
 ./output/data/sconscript.log:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 25 Feb 2017 13:04:15
    size of file: 1034
-./output/paper/online_appendix.pdf:
-   modified on: 17 Feb 2017 17:01:41
-   size of file: 130
 ./output/paper/paper.pdf:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 25 Feb 2017 13:04:15
    size of file: 130
 ./output/talk/slides.pdf:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 25 Feb 2017 13:04:15
    size of file: 130
 ./release/paper/ondeck.pdf:
-   modified on: 17 Feb 2017 17:05:59
+   modified on: 25 Feb 2017 13:08:23
    size of file: 18517
 ./release/paper/online_appendix.pdf:
-   modified on: 17 Feb 2017 17:06:00
+   modified on: 25 Feb 2017 13:08:23
    size of file: 45828
 ./release/paper/paper.pdf:
-   modified on: 17 Feb 2017 17:06:01
+   modified on: 25 Feb 2017 13:08:23
    size of file: 58164
 ./release/paper/sconscript.log:
-   modified on: 17 Feb 2017 17:06:01
+   modified on: 25 Feb 2017 13:04:15
    size of file: 342
 ./release/paper/text.pdf:
-   modified on: 17 Feb 2017 17:06:01
+   modified on: 25 Feb 2017 13:08:23
    size of file: 18517
 ./release/talk/sconscript.log:
-   modified on: 17 Feb 2017 17:06:03
+   modified on: 25 Feb 2017 13:04:15
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 17 Feb 2017 17:06:03
+   modified on: 25 Feb 2017 13:08:23
    size of file: 28962
 ./source/analysis/analysis.do:
    modified on: 17 Feb 2017 17:02:04
@@ -172,7 +155,7 @@ state_of_repo.log
    modified on: 17 Feb 2017 17:01:41
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 17 Feb 2017 17:05:50
+   modified on: 25 Feb 2017 13:04:15
    size of file: 558
 ./source/paper/text.lyx:
    modified on: 17 Feb 2017 17:01:41
