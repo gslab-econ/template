@@ -44,7 +44,7 @@ In order to create a new repository using this template, either
 	- Windows 10 minimal working example (note the quotation marks)
     ```
     stata_flavor: "%STATAEXE%"
-    cache: C:\Users\Levi Boxell\ Google Drive\cache\template
+    cache: C:\Users\Levi Boxell\Google Drive\cache\template
     ```
 #### License
 
