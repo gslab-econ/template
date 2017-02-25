@@ -108,9 +108,14 @@ def check_stata(sf):
     check_stata_packages(command)
 
 def check_stata_packages(command):
-    command = command.split("%s")[0]
+    import gslab_scons.misc as misc
+    if misc.is_unix():
+        command = command.split("%s")[0]
+    elif sys.platform == "win32":
+        command = command.split("do")[0]
+        
     for pkg in ['yaml']:
-        subprocess.check_output(command + '"which %s"' % pkg , shell = True) # http://www.stata.com/statalist/archive/2009-12/msg00493.html and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
+        subprocess.check_output(command + "which %s" % pkg , shell = True) # http://www.stata.com/statalist/archive/2009-12/msg00493.html and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
         with open('stata.log', 'rU') as f:
             log = f.read()
         if re.search('command %s not found' % pkg, log):

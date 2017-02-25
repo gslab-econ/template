@@ -8,13 +8,11 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit d3d2ca9deda6ecb2683c4492483d7f1f752ce47b
+commit 09feaf9ff8235dce4ca33ff4f0aa74bb135ae69a
 Author: Quan Le <lequan@stanford.edu>
-Date:   Sat Feb 25 13:10:57 2017 -0800
+Date:   Sat Feb 25 13:47:55 2017 -0800
 
-    delete output folder, rerun after delete
-    
-    debugging git-lfs issue
+    gslab_python/#57 refactor check_stata()
 
 
 Files changed since last commit:
@@ -39,17 +37,20 @@ state_of_repo.log
    modified on: 25 Feb 2017 13:04:15
    size of file: 2167
 ./sconstruct.log:
-   modified on: 25 Feb 2017 13:43:56
+   modified on: 25 Feb 2017 14:18:44
    size of file: 41
 ./setup.py:
-   modified on: 25 Feb 2017 13:43:53
-   size of file: 4460
+   modified on: 25 Feb 2017 14:14:37
+   size of file: 4605
 ./setup.pyc:
-   modified on: 25 Feb 2017 13:43:55
-   size of file: 5295
+   modified on: 25 Feb 2017 14:18:43
+   size of file: 5422
 ./state_of_repo.log:
-   modified on: 25 Feb 2017 13:43:56
-   size of file: 524
+   modified on: 25 Feb 2017 14:18:44
+   size of file: 490
+./Untitled.ipynb:
+   modified on: 25 Feb 2017 14:13:46
+   size of file: 1155
 ./user-config.yaml:
    modified on: 17 Feb 2017 17:04:03
    size of file: 70
