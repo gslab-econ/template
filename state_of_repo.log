@@ -8,21 +8,23 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 78d1d6af916dfca61bab21bb1e590437d552f05a
-Author: Quan <lequan@stanford.edu>
-Date:   Sat Feb 25 13:07:53 2017 -0800
+commit c4f7bce0dd80457dfe274170a7832f6ddbc3ef97
+Author: Quan Le <lequan@stanford.edu>
+Date:   Sat Feb 25 13:09:02 2017 -0800
 
-    Delete online_appendix.pdf
+    re-run after delete
+    
+    debugging git-lfs issue on Windows
 
 
 Files changed since last commit:
 
 .sconsign.dblite
-release/paper/ondeck.pdf
-release/paper/online_appendix.pdf
-release/paper/paper.pdf
-release/paper/text.pdf
-release/talk/slides.pdf
+output/analysis/plot.eps
+output/analysis/sconscript.log
+output/data/sconscript.log
+output/paper/paper.pdf
+output/talk/slides.pdf
 sconstruct.log
 state_of_repo.log
 
@@ -41,7 +43,7 @@ state_of_repo.log
    modified on: 25 Feb 2017 13:04:15
    size of file: 2167
 ./sconstruct.log:
-   modified on: 25 Feb 2017 13:08:37
+   modified on: 25 Feb 2017 13:10:22
    size of file: 41
 ./setup.py:
    modified on: 17 Feb 2017 17:01:41
@@ -50,8 +52,8 @@ state_of_repo.log
    modified on: 17 Feb 2017 17:03:34
    size of file: 5810
 ./state_of_repo.log:
-   modified on: 25 Feb 2017 13:08:38
-   size of file: 595
+   modified on: 25 Feb 2017 13:10:23
+   size of file: 634
 ./user-config.yaml:
    modified on: 17 Feb 2017 17:04:03
    size of file: 70
@@ -94,21 +96,6 @@ state_of_repo.log
 ./build/talk/slides.pdf:
    modified on: 17 Feb 2017 17:06:03
    size of file: 28962
-./output/analysis/plot.eps:
-   modified on: 25 Feb 2017 13:04:15
-   size of file: 16992
-./output/analysis/sconscript.log:
-   modified on: 25 Feb 2017 13:04:15
-   size of file: 1512
-./output/data/sconscript.log:
-   modified on: 25 Feb 2017 13:04:15
-   size of file: 1034
-./output/paper/paper.pdf:
-   modified on: 25 Feb 2017 13:04:15
-   size of file: 130
-./output/talk/slides.pdf:
-   modified on: 25 Feb 2017 13:04:15
-   size of file: 130
 ./release/paper/ondeck.pdf:
    modified on: 25 Feb 2017 13:08:23
    size of file: 18517
