@@ -96,30 +96,15 @@ def check_cache(cache):
 
 def check_stata(sf):
     import gslab_scons.misc as misc
-    command = ''
-    flavors = ['stata-mp', 'stata-se', 'stata']
-    if sf is not None:
-        flavors = [sf] + flavors
-    if misc.is_unix():
-        for flavor in flavors:
-            if misc.is_in_path(flavor):
-                command = misc.stata_command_unix(flavor)
-                break
-    elif sys.platform == 'win32':
-        try:
-            key_exist = os.environ['STATAEXE'] is not None
-            command   = misc.stata_command_win("%%STATAEXE%%")
-        except KeyError:
-            flavors = [(f.replace('-', '') + '.exe') for f in flavors]
-            if misc.is_64_windows():
-                flavors = [f.replace('.exe', '-64.exe') for f in flavors]
-            for flavor in flavors:
-                if misc.is_in_path(flavor):
-                    command = misc.stata_command_win(flavor)
-                    break        
-    if command == '':
-        raise PrerequisiteError('Stata is not installed or excecutable is not added to path')
 
+    # Fake scons-like env dict for misc.get_stata_executable(env)
+    fake_env = {'user_flavor': sf} 
+    stata_exec = misc.get_stata_executable(fake_env)
+    
+    if stata_exec is None:
+        raise PrerequisiteError('Stata is not installed or executable is not added to path')
+    
+    command = misc.get_stata_command(stata_exec)
     check_stata_packages(command)
 
 def check_stata_packages(command):
