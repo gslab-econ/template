@@ -17,7 +17,9 @@ def setup_test(ARGUMENTS):
     import yaml
     user_configs = yaml.load(open("user-config.yaml", 'rU'))
     mode         = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
-    sf           = ARGUMENTS.get('sf', user_configs['stata_flavor']) # Gets user supplied stata from command line or yaml
+    # Gets user supplied stata from command line or yaml
+    sf_configs   = user_configs.get('stata_flavor', None) 
+    sf           = ARGUMENTS.get('sf', sf_configs) 
     cache_dir    = user_configs['cache']
     if mode in ['cache', 'release']:
         check_cache(cache)
@@ -113,7 +115,7 @@ def check_stata_packages(command):
         command = command.split("%s")[0]
     elif sys.platform == "win32":
         command = command.split("do")[0]
-        
+
     for pkg in ['yaml']:
         subprocess.check_output(command + "which %s" % pkg , shell = True) # http://www.stata.com/statalist/archive/2009-12/msg00493.html and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
         with open('stata.log', 'rU') as f:
