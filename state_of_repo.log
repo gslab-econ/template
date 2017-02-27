@@ -8,24 +8,18 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit c4f7bce0dd80457dfe274170a7832f6ddbc3ef97
+commit c06dde365e5c960a035799d378551bd36f11786f
 Author: Quan Le <lequan@stanford.edu>
-Date:   Sat Feb 25 13:09:02 2017 -0800
+Date:   Sat Feb 25 14:19:16 2017 -0800
 
-    re-run after delete
-    
-    debugging git-lfs issue on Windows
+    #57 split commands in check_stata_packages()
 
 
 Files changed since last commit:
 
 .sconsign.dblite
-output/analysis/plot.eps
-output/analysis/sconscript.log
-output/data/sconscript.log
-output/paper/paper.pdf
-output/talk/slides.pdf
 sconstruct.log
+setup.py
 state_of_repo.log
 
 ===================================
@@ -43,20 +37,23 @@ state_of_repo.log
    modified on: 25 Feb 2017 13:04:15
    size of file: 2167
 ./sconstruct.log:
-   modified on: 25 Feb 2017 13:10:22
+   modified on: 25 Feb 2017 14:33:35
    size of file: 41
 ./setup.py:
-   modified on: 17 Feb 2017 17:01:41
-   size of file: 5087
+   modified on: 25 Feb 2017 14:32:45
+   size of file: 4643
 ./setup.pyc:
-   modified on: 17 Feb 2017 17:03:34
-   size of file: 5810
+   modified on: 25 Feb 2017 14:32:48
+   size of file: 5458
 ./state_of_repo.log:
-   modified on: 25 Feb 2017 13:10:23
-   size of file: 634
+   modified on: 25 Feb 2017 14:33:35
+   size of file: 495
+./Untitled.ipynb:
+   modified on: 25 Feb 2017 14:13:46
+   size of file: 1155
 ./user-config.yaml:
-   modified on: 17 Feb 2017 17:04:03
-   size of file: 70
+   modified on: 25 Feb 2017 14:33:33
+   size of file: 48
 ./build/analysis/plot.eps:
    modified on: 17 Feb 2017 17:05:58
    size of file: 12829
