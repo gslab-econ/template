@@ -19,7 +19,7 @@ Using the repository template
      - R package: [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf)
 
 
-The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
+The easiest way to install some of the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
 
 #### To run:
  - The entire directory:
