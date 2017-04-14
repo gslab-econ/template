@@ -5,19 +5,21 @@ Using the repository template
 
  - Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
  - [Python 2.X](https://www.python.org) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
- 	- Python module: [PyYAML](http://pyyaml.org/wiki/PyYAML)
  - [Stata MP](http://www.stata.com/statamp/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
-    - Stata ado file: [yaml](https://github.com/sergiocorreia/stata-misc/tree/75a8b251bec02ba590c862cc395c4b95077d8a95)
  - [R](https://www.r-project.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
-    - R package: [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf)
  - [Lyx](https://www.lyx.org/) (add to [PATH](https://en.wikipedia.org/wiki/PATH_(variable)))
  - [SCons](http://scons.org/) (Note that version 2.4.0 or later is best if using the [cache](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)).
     - More information about SCons can be found [here](https://github.com/gslab-econ/ra-manual/wiki/SCons).
  - [git-lfs](https://git-lfs.github.com/)
  - [gslab_tools](https://github.com/gslab-econ/gslab_python) version 3.0.3 or later
- - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/gslab_latex)
+ - [GSLab-modified Metropolis beamer theme](https://github.com/gslab-econ/mtheme)
+ - [YAML](http://yaml.org/)-related packages/modules:
+     - Stata ado file: [yaml](https://github.com/sergiocorreia/stata-misc/tree/75a8b251bec02ba590c862cc395c4b95077d8a95)
+     - Python module: [PyYAML](http://pyyaml.org/wiki/PyYAML)
+     - R package: [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf)
 
-The easiest way to install all the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
+
+The easiest way to install some of the applications above is to use [Homebrew](http://brew.sh/) on Mac OS and [Linuxbrew](http://linuxbrew.sh/) on Linux, as they will set up the `PATH` variable for you, e.g., `brew install scons`.
 
 #### To run:
  - The entire directory:
@@ -36,7 +38,7 @@ In order to create a new repository using this template, either
 	- Fork this repository
 	- Create an empty repository in GitHub and clone it locally. Copy the contents of this template into the empty repository. Make sure to exclude the `.git` folder, but include the `.gitattributes` and `.gitignore` files. Re-run the entire directory using `Scons`. Commit and push to the new repository.
 - Setup a `user-config.yaml` in the root of the directory (note that this file should not be versioned):
-    - MacOS minimal working example
+    - MacOS or Linux minimal working example
     ```
     stata_flavor: statamp
     cache: /Users/leviboxell/Google Drive/cache/template
