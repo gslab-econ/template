@@ -17,3 +17,4 @@ user-config.yaml
 *.toc
 *.out
 *.svn
+.sconsign.dblite
