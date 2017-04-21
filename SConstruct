@@ -1,13 +1,15 @@
 # Preliminaries
 import os
+import sys
+sys.dont_write_bytecode = True # http://stackoverflow.com/questions/154443/how-to-avoid-pyc-files
 
 # Test for proper prerequisites and setup
-from setup import setup_test
-[user_configs, mode, sf, cache_dir] = setup_test(ARGUMENTS)
+from configuration_test import configuration_test
+[mode, sf, cache_dir] = configuration_test(ARGUMENTS)
 import gslab_scons 
+import gslab_scons.log as log
 import yaml
 import atexit
-import gslab_scons.log as log
 
 # Start log
 mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
