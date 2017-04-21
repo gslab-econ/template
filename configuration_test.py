@@ -97,7 +97,10 @@ def check_gslab_metropolis():
 
 def check_gitlfs():
     from gslab_scons.misc import check_lfs
-    check_lfs()
+    try:
+        check_lfs()
+    except:
+        raise PrerequisiteError("Please ensure git-lfs is installed.")
 
 def check_yamls():
     for f in ["constants.yaml"]:
