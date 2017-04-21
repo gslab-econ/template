@@ -62,6 +62,7 @@ Depends(debrief, BUILD_TARGETS)
 env.AlwaysBuild(debrief)
 if 'state_of_repo.log' not in BUILD_TARGETS: 
     BUILD_TARGETS.append('state_of_repo.log')
+NoCache('state_of_repo.log')
 
 atexit.register(log.end_log)
 

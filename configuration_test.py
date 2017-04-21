@@ -34,49 +34,18 @@ def configuration_test(ARGUMENTS):
     if not (mode in ['develop', 'cache']):
         raise PrerequisiteError("Error: %s is not a defined mode" % mode)
     
-    # Restores default traceback
-    sys.tracebacklimit = 1000 
-
-    # Returns arguments
+    # Get return list
     if mode == 'cache':
         cache_dir    = os.path.expanduser(load_yaml_value("user-config.yaml", "cache"))
         check_cache(cache_dir)
-        return [mode, sf, cache_dir]
+        return_list = [mode, sf, cache_dir]
     else:
-        return [mode, sf, None]
+        return_list = [mode, sf, None]
 
-def load_yaml_value(path, key):
-    import yaml
+    # Restore default tracebacklimit and return values
+    sys.tracebacklimit = 0
+    return return_list
 
-    if key == "stata_executable":
-        prompt = "Enter %s value or None to search for defaults: "
-    else:
-        prompt = "Enter %s value: "
-
-    # Check if file exists and is not corrupted. 
-    # If so, load yaml contents.
-    yaml_contents = None
-    if os.path.isfile(path):
-        try:
-            yaml_contents = yaml.load(open(path, 'rU'))
-        except yaml.scanner.ScannerError:
-            message  = "%s is a corrupted yaml file. Delete file and recreate? (y/n) "
-            response = str(raw_input(message % path))
-            if response.lower() == 'y':
-                os.remove(path)
-                yaml_contents = None
-            else:
-                raise PrerequisiteError("%s is a corrupted yaml file. Please fix." % path)
-
-    # If key exists, return value.
-    # Otherwise, add key-value to file.
-    try:
-        return yaml_contents[key]
-    except:
-        with open(path, 'ab') as f:        
-            val = str(raw_input(prompt % key))
-            f.write('\n%s: %s\n' % (key, val))
-        return val
 
 def check_python():
     if sys.version_info[0] != 2:
@@ -137,7 +106,7 @@ def check_yamls():
 
 def check_cache(cache):
     if not os.path.isdir(cache):
-        raise PrerequisiteError("Cache directory: (%s) \n\t\t  is not created. " % cache + \
+        raise PrerequisiteError("Cache directory: (%s) \n\t\t   is not created. " % cache + \
                                 "Please manually create before running." )
 
 def check_stata(ARGUMENTS):
@@ -157,6 +126,42 @@ def check_stata(ARGUMENTS):
     command = misc.get_stata_command(stata_exec)
     check_stata_packages(command)
     return sf
+
+def load_yaml_value(path, key):
+    import yaml
+
+    if key == "stata_executable":
+        prompt = "Enter %s value or None to search for defaults: "
+    else:
+        prompt = "Enter %s value: "
+
+    # Check if file exists and is not corrupted. 
+    # If so, load yaml contents.
+    yaml_contents = None
+    if os.path.isfile(path):
+        try:
+            yaml_contents = yaml.load(open(path, 'rU'))
+        except yaml.scanner.ScannerError:
+            message  = "%s is a corrupted yaml file. Delete file and recreate? (y/n) "
+            response = str(raw_input(message % path))
+            if response.lower() == 'y':
+                os.remove(path)
+                yaml_contents = None
+            else:
+                raise PrerequisiteError("%s is a corrupted yaml file. Please fix." % path)
+
+    # If key exists, return value.
+    # Otherwise, add key-value to file.
+    try:
+        return yaml_contents[key]
+    except:
+        with open(path, 'ab') as f:        
+            val = str(raw_input(prompt % key))
+            if val.lower() == "none":
+                val = None
+            else:
+                f.write('\n%s: %s\n' % (key, val))
+        return val
 
 def check_stata_packages(command):
     import gslab_scons.misc as misc
