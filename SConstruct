@@ -39,7 +39,6 @@ env['PATHS'] = yaml.load(open("constants.yaml", 'rU'))
 Export('env')
 
 # Run sub-trees
-SConscript('source/data/SConscript') 
 SConscript('source/analysis/SConscript')
 SConscript('source/tables/SConscript') 
 SConscript('source/paper/SConscript') 

@@ -8,24 +8,17 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 5a75232083a1428f292f57fabcb7766eb611df21
-Author: Michael Sullivan <m.r.sullivan@stanford.edu>
-Date:   Wed Apr 19 15:32:49 2017 -0700
+commit 8a3015693532c395b15de9cd21bcd281559bf5c4
+Author: Levi Boxell <leviboxell@gmail.com>
+Date:   Fri Apr 21 12:45:03 2017 -0700
 
-    Pull request for gslab-econ/gslab_python#59: Size warnings (#42)
-    
-    * gslab-econ/gslab_python#59: Added size warnings to template
-    
-    * #42: Added .sconsign.dblite to .gitignore
-    
-    * #42: removed .sconsign.dblit
-    
-    * #42: ran directory after deleting .sconsign.dblite
+    #43 Preliminary edits
 
 
 Files changed since last commit:
 
 SConstruct
+constants.yaml
 release/paper/ondeck.pdf
 release/paper/online_appendix.pdf
 release/paper/paper.pdf
@@ -34,7 +27,11 @@ release/paper/text.pdf
 release/talk/sconscript.log
 release/talk/slides.pdf
 sconstruct.log
-setup.py
+source/analysis/SConscript
+source/analysis/analysis.do
+source/data/SConscript
+source/data/build.R
+source/figures/figure.lyx
 source/talk/slides.lyx
 state_of_repo.log
 
@@ -44,105 +41,90 @@ state_of_repo.log
 
 ===================================
 ./configuration_test.py:
-   modified on: 21 Apr 2017 10:22:08
-   size of file: 5189
-./configuration_test.pyc:
-   modified on: 21 Apr 2017 10:22:10
-   size of file: 5898
+   modified on: 21 Apr 2017 12:44:41
+   size of file: 6359
 ./constants.yaml:
-   modified on: 27 Feb 2017 15:24:31
-   size of file: 324
+   modified on: 21 Apr 2017 13:23:40
+   size of file: 285
 ./README.md:
    modified on: 11 Apr 2017 15:33:38
    size of file: 3902
 ./SConstruct:
-   modified on: 21 Apr 2017 10:22:17
-   size of file: 2454
+   modified on: 21 Apr 2017 13:23:47
+   size of file: 2511
 ./sconstruct.log:
-   modified on: 21 Apr 2017 10:22:19
+   modified on: 21 Apr 2017 13:33:17
    size of file: 41
-./setup.pyc:
-   modified on: 18 Apr 2017 09:42:21
-   size of file: 5641
 ./state_of_repo.log:
-   modified on: 21 Apr 2017 10:22:20
-   size of file: 960
+   modified on: 21 Apr 2017 13:33:17
+   size of file: 811
 ./user-config.yaml:
-   modified on: 21 Apr 2017 10:19:28
-   size of file: 75
-./build/analysis/plot.eps:
-   modified on: 21 Apr 2017 09:50:43
-   size of file: 12829
+   modified on: 21 Apr 2017 12:44:15
+   size of file: 65
+./build/analysis/plot.pdf:
+   modified on: 21 Apr 2017 13:33:10
+   size of file: 12516
 ./build/analysis/sconscript.log:
-   modified on: 21 Apr 2017 09:50:43
-   size of file: 2236
+   modified on: 21 Apr 2017 13:33:10
+   size of file: 2169
 ./build/analysis/table.txt:
-   modified on: 21 Apr 2017 09:50:43
-   size of file: 30
-./build/data/data.txt:
-   modified on: 21 Apr 2017 09:50:35
-   size of file: 1035
-./build/data/sconscript.log:
-   modified on: 21 Apr 2017 09:50:35
-   size of file: 1189
+   modified on: 21 Apr 2017 13:33:10
+   size of file: 31
 ./build/paper/ondeck.pdf:
-   modified on: 21 Apr 2017 09:50:44
+   modified on: 21 Apr 2017 13:20:24
    size of file: 18127
 ./build/paper/online_appendix.pdf:
-   modified on: 21 Apr 2017 09:50:45
+   modified on: 21 Apr 2017 13:20:25
    size of file: 45561
 ./build/paper/paper.pdf:
-   modified on: 21 Apr 2017 09:50:48
-   size of file: 57984
+   modified on: 21 Apr 2017 13:33:11
+   size of file: 66445
 ./build/paper/sconscript.log:
-   modified on: 21 Apr 2017 09:50:48
-   size of file: 342
+   modified on: 21 Apr 2017 13:33:11
+   size of file: 587
 ./build/paper/text.pdf:
-   modified on: 21 Apr 2017 09:50:48
+   modified on: 21 Apr 2017 13:22:49
    size of file: 18127
 ./build/tables/table.lyx:
-   modified on: 21 Apr 2017 09:50:45
-   size of file: 4432
+   modified on: 21 Apr 2017 13:29:24
+   size of file: 4431
 ./build/talk/sconscript.log:
-   modified on: 21 Apr 2017 09:50:50
+   modified on: 21 Apr 2017 13:33:13
    size of file: 589
 ./build/talk/slides.pdf:
-   modified on: 21 Apr 2017 09:50:50
-   size of file: 28960
+   modified on: 21 Apr 2017 13:33:13
+   size of file: 37392
 ./release/paper/ondeck.pdf:
-   modified on: 21 Apr 2017 09:50:44
+   modified on: 21 Apr 2017 13:20:24
    size of file: 18127
 ./release/paper/online_appendix.pdf:
-   modified on: 21 Apr 2017 09:50:45
+   modified on: 21 Apr 2017 13:20:25
    size of file: 45561
 ./release/paper/paper.pdf:
-   modified on: 21 Apr 2017 09:50:48
-   size of file: 57984
+   modified on: 21 Apr 2017 13:33:11
+   size of file: 66445
 ./release/paper/sconscript.log:
-   modified on: 21 Apr 2017 09:50:48
-   size of file: 342
+   modified on: 21 Apr 2017 13:33:11
+   size of file: 587
 ./release/paper/text.pdf:
-   modified on: 21 Apr 2017 09:50:48
+   modified on: 21 Apr 2017 13:22:49
    size of file: 18127
 ./release/talk/sconscript.log:
-   modified on: 21 Apr 2017 09:50:50
+   modified on: 21 Apr 2017 13:33:13
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 21 Apr 2017 09:50:50
-   size of file: 28960
+   modified on: 21 Apr 2017 13:33:13
+   size of file: 37392
 ./source/analysis/analysis.do:
-   modified on: 11 Apr 2017 15:33:34
-   size of file: 584
+   modified on: 21 Apr 2017 13:29:57
+   size of file: 510
 ./source/analysis/SConscript:
-   modified on: 11 Apr 2017 15:33:34
-   size of file: 338
-./source/data/build.R:
-   modified on: 18 Apr 2017 09:41:23
-   size of file: 298
-./source/data/SConscript:
-   modified on: 13 Apr 2017 12:44:36
-   size of file: 292
+   modified on: 21 Apr 2017 13:33:05
+   size of file: 262
 ./source/figures/figure.lyx:
+   modified on: 21 Apr 2017 13:30:19
+   size of file: 2223
+./source/figures/figure.lyx~:
    modified on: 27 Feb 2017 15:24:31
    size of file: 2223
 ./source/paper/ondeck.lyx:
@@ -173,8 +155,8 @@ state_of_repo.log
    modified on: 27 Feb 2017 15:24:31
    size of file: 229
 ./source/talk/slides.lyx:
-   modified on: 21 Apr 2017 09:50:01
+   modified on: 21 Apr 2017 13:30:28
    size of file: 4706
 ./source/talk/slides.lyx~:
-   modified on: 27 Feb 2017 15:24:31
-   size of file: 4712
+   modified on: 21 Apr 2017 09:50:01
+   size of file: 4706
