@@ -8,15 +8,16 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 1f3d90953c5291820028b8bccaa538beea03680c
+commit b004f88dd6e179285b602bc98de523666075bdcd
 Author: Levi Boxell <leviboxell@gmail.com>
-Date:   Fri Apr 21 13:51:33 2017 -0700
+Date:   Fri Apr 21 14:03:19 2017 -0700
 
-    #43 Further edits
+    #43 Small edits
 
 
 Files changed since last commit:
 
+SConstruct
 configuration_test.py
 sconstruct.log
 state_of_repo.log
@@ -27,8 +28,8 @@ state_of_repo.log
 
 ===================================
 ./configuration_test.py:
-   modified on: 21 Apr 2017 13:56:49
-   size of file: 6597
+   modified on: 21 Apr 2017 16:50:12
+   size of file: 7138
 ./constants.yaml:
    modified on: 21 Apr 2017 13:38:51
    size of file: 285
@@ -36,17 +37,17 @@ state_of_repo.log
    modified on: 21 Apr 2017 13:38:51
    size of file: 3902
 ./SConstruct:
-   modified on: 21 Apr 2017 13:49:42
-   size of file: 2540
+   modified on: 21 Apr 2017 16:29:37
+   size of file: 2607
 ./sconstruct.log:
-   modified on: 21 Apr 2017 13:56:59
+   modified on: 21 Apr 2017 16:53:35
    size of file: 41
 ./state_of_repo.log:
-   modified on: 21 Apr 2017 13:56:59
-   size of file: 469
+   modified on: 21 Apr 2017 16:53:36
+   size of file: 478
 ./user-config.yaml:
-   modified on: 21 Apr 2017 13:48:04
-   size of file: 65
+   modified on: 21 Apr 2017 16:53:32
+   size of file: 62
 ./build/analysis/plot.pdf:
    modified on: 21 Apr 2017 13:40:18
    size of file: 1290

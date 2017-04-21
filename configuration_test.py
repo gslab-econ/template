@@ -9,7 +9,7 @@ import warnings
 def configuration_test(ARGUMENTS):
     # Determines whether to print traceback messages
     debug = ARGUMENTS.get('debug', False) 
-    if debug == False:
+    if not debug:
         # Hide traceback for configuration test only
         # http://stackoverflow.com/questions/27674602/hide-traceback-unless-a-debug-flag-is-set
         sys.tracebacklimit = 0 
@@ -36,8 +36,8 @@ def configuration_test(ARGUMENTS):
     
     # Get return list
     if mode == 'cache':
-        cache_dir    = os.path.expanduser(load_yaml_value("user-config.yaml", "cache"))
-        check_cache(cache_dir)
+        cache_dir   = load_yaml_value("user-config.yaml", "cache")
+        cache_dir   = check_and_expand_cache_path(cache_dir)
         return_list = [mode, sf, cache_dir]
     else:
         return_list = [mode, sf, None]
@@ -75,7 +75,9 @@ def check_r():
 
 def check_r_packages():
     for pkg in ["yaml"]:
-        subprocess.check_output('R -q -e "library(%s)"' % pkg, shell = True) # http://stackoverflow.com/questions/6701230/call-r-function-in-linux-command-line and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
+        # http://stackoverflow.com/questions/6701230/call-r-function-in-linux-command-line
+        # and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
+        subprocess.check_output('R -q -e "library(%s)"' % pkg, shell = True)
 
 def check_lyx():
     from gslab_scons.misc import is_in_path
@@ -106,10 +108,18 @@ def check_yamls():
         if not os.path.isfile(f):
             raise PrerequisiteError("%s file does not exist. Please create it." % f)
 
-def check_cache(cache):
-    if not os.path.isdir(cache):
-        raise PrerequisiteError("Cache directory: (%s) \n\t\t   is not created. " % cache + \
-                                "Please manually create before running." )
+def check_and_expand_cache_path(cache):
+    error_message = " Cache directory, '%s', is not created. " % cache + \
+                    "Please manually create before running.\n\t\t" + \
+                    "    Or fix the path in user-config.yaml.\n"
+    try:
+        cache = os.path.expanduser(cache)
+        if not os.path.isdir(cache):
+            raise PrerequisiteError(error_message)
+        return cache
+    except:
+        raise PrerequisiteError(error_message)
+
 
 def check_stata(ARGUMENTS):
     import yaml
@@ -155,14 +165,16 @@ def load_yaml_value(path, key):
     # If key exists, return value.
     # Otherwise, add key-value to file.
     try:
-        return yaml_contents[key]
+        if yaml_contents[key] == "None":
+            return None
+        else:
+            return yaml_contents[key]
     except:
         with open(path, 'ab') as f:        
             val = str(raw_input(prompt % key))
-            if val.lower() == "none":
+            if re.sub('"', '', re.sub('\'', '', val.lower())) == "none":
                 val = None
-            else:
-                f.write('\n%s: %s\n' % (key, val))
+            f.write('\n%s: %s\n' % (key, val))
         return val
 
 def check_stata_packages(command):
@@ -175,11 +187,15 @@ def check_stata_packages(command):
     try:
         for pkg in ['yaml']:
             call = (command + "which %s") % pkg
-            subprocess.check_output(call, stderr = subprocess.STDOUT, shell = True) # http://www.stata.com/statalist/archive/2009-12/msg00493.html and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
+            # http://www.stata.com/statalist/archive/2009-12/msg00493.html 
+            # and http://stackoverflow.com/questions/18962785/oserror-errno-2-no-such-file-or-directory-while-using-python-subprocess-in-dj
+            subprocess.check_output(call, stderr = subprocess.STDOUT, shell = True) 
             with open('stata.log', 'rU') as f:
                 log = f.read()
     except subprocess.CalledProcessError:
-        raise PrerequisiteError("Please confirm stata command (%s) is correct." % command)
+        raise PrerequisiteError("Stata command, '%s', failed.\n" % command.split(' ')[0] + \
+                                "\t\t   Please supply a correct stata_executable" + \
+                                " value in user_config.yaml.\n" )
 
     os.remove('stata.log')
     if re.search('command %s not found' % pkg, log):
