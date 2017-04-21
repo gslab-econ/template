@@ -46,7 +46,6 @@ def configuration_test(ARGUMENTS):
     sys.tracebacklimit = 0
     return return_list
 
-
 def check_python():
     if sys.version_info[0] != 2:
         raise PrerequisiteError('Please use python 2')
@@ -186,8 +185,5 @@ def check_stata_packages(command):
     if re.search('command %s not found' % pkg, log):
         raise PrerequisiteError('Stata package %s is not installed' % pkg)
 
-
 class PrerequisiteError(Exception):
     pass
-
-
