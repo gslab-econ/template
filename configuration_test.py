@@ -3,7 +3,6 @@ import sys
 import os
 import re
 import subprocess
-import pkg_resources
 import warnings
 from gslab_scons import configuration_tests
 from gslab_scons import _exception_classes
@@ -17,7 +16,8 @@ def configuration_test(ARGUMENTS):
         sys.tracebacklimit = 0 
 
     # Checks initial prerequisites
-    configuration_tests.check_python(packages = ["yaml", "gslab_scons", "gslab_fill"])
+    configuration_tests.check_python(gslab_python_version = '3.0.5', 
+                                     packages = ["yaml", "gslab_scons", "gslab_fill"])
     configuration_tests.check_lyx()
     configuration_tests.check_lfs()
 
@@ -28,7 +28,7 @@ def configuration_test(ARGUMENTS):
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 
     # Check stata
-    sf = configuration_tests.check_stata(ARGUMENTS, packages = ["yaml"])
+    sf = configuration_tests.check_stata(["yaml"])
 
     # Checks mode/version
     if not (mode in ['develop', 'cache']):
@@ -44,7 +44,7 @@ def configuration_test(ARGUMENTS):
 
     # Restore default tracebacklimit and return values
     sys.tracebacklimit = 0
-    
+
     return return_list
 
 
