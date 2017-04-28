@@ -22,7 +22,7 @@ def configuration_test(ARGUMENTS):
     configuration_tests.check_lfs()
 
     # Uncomment if using
-    # check_r(packages = ["yaml"]) 
+    # configuration_tests.check_r(packages = ["yaml", "Hmisc"]) 
 
     # Loads arguments and configurations
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
