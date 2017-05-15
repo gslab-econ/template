@@ -4,10 +4,10 @@ import os
 import re
 import subprocess
 import warnings
-from gslab_scons import configuration_tests
+from gslab_scons import configuration_tests as config
 from gslab_scons import _exception_classes
 
-def configuration_test(ARGUMENTS):
+def configuration_test(ARGUMENTS, gslab_python_version):
     # Determines whether to print traceback messages
     debug = ARGUMENTS.get('debug', False) 
     if not debug:
@@ -16,28 +16,29 @@ def configuration_test(ARGUMENTS):
         sys.tracebacklimit = 0 
 
     # Checks initial prerequisites
-    configuration_tests.check_python(gslab_python_version = '3.0.5', 
-                                     packages = ["yaml", "gslab_scons", "gslab_fill"])
-    configuration_tests.check_lyx()
-    configuration_tests.check_lfs()
+    config.check_python(gslab_python_version = gslab_python_version, 
+                        packages = ["yaml", "gslab_scons", "gslab_fill"])
+    config.check_lyx()
+    config.check_lfs()
 
     # Uncomment if using
-    # configuration_tests.check_r(packages = ["yaml"]) 
+    # config.check_r(packages = ["yaml"]) 
 
     # Loads arguments and configurations
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 
     # Check stata
-    sf = configuration_tests.check_stata(["yaml"])
+    sf = config.check_stata(["yaml"])
 
     # Checks mode/version
     if not (mode in ['develop', 'cache']):
-        raise _exception_classes.PrerequisiteError("Error: %s is not a defined mode" % mode)
+        message = "Error: %s is not a defined mode" % mode
+        raise _exception_classes.PrerequisiteError(message)
     
     # Get return list
     if mode == 'cache':
-        cache_dir   = configuration_tests.load_yaml_value("user-config.yaml", "cache")
-        cache_dir   = configuration_tests.check_and_expand_cache_path(cache_dir)
+        cache_dir   = config.load_yaml_value("user-config.yaml", "cache")
+        cache_dir   = config.check_and_expand_cache_path(cache_dir)
         return_list = [mode, sf, cache_dir]
     else:
         return_list = [mode, sf, None]
