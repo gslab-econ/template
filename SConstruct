@@ -6,7 +6,7 @@ sys.dont_write_bytecode = True # Don't write .pyc files
 # Test for proper prerequisites and setup
 from configuration_test import configuration_test
 [mode, sf, cache_dir] = configuration_test(ARGUMENTS, 
-                                           gslab_python_version = '3.0.5')
+                                           gslab_python_version = '4.0.0')
 import gslab_scons as gs
 import gslab_scons.log as log
 import yaml
