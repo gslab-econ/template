@@ -4,7 +4,6 @@ import os
 import re
 import subprocess
 import warnings
-from gslab_scons import configuration_tests as config
 from gslab_scons import _exception_classes
 
 def configuration_test(ARGUMENTS, gslab_python_version):
@@ -16,19 +15,23 @@ def configuration_test(ARGUMENTS, gslab_python_version):
         sys.tracebacklimit = 0 
 
     # Checks initial prerequisites
+    try:
+        from gslab_scons import configuration_tests as config
+    except ImportError:
+        message = 'Your gslab_tools Python modules installation is outdated'
+        raise Exception(message)
+
     config.check_python(gslab_python_version = gslab_python_version, 
                         packages = ["yaml", "gslab_scons", "gslab_fill"])
     config.check_lyx()
     config.check_lfs()
+    stata_flavor = config.check_stata(["yaml"])
 
     # Uncomment if using
     # config.check_r(packages = ["yaml"]) 
 
     # Loads arguments and configurations
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
-
-    # Check stata
-    sf = config.check_stata(["yaml"])
 
     # Checks mode/version
     if not (mode in ['develop', 'cache']):
@@ -39,13 +42,11 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     if mode == 'cache':
         cache_dir   = config.load_yaml_value("user-config.yaml", "cache")
         cache_dir   = config.check_and_expand_cache_path(cache_dir)
-        return_list = [mode, sf, cache_dir]
+        return_list = [mode, stata_flavor, cache_dir]
     else:
-        return_list = [mode, sf, None]
+        return_list = [mode, stata_flavor, None]
 
     # Restore default tracebacklimit and return values
     sys.tracebacklimit = 0
 
     return return_list
-
-
