@@ -1,8 +1,7 @@
-*** New build: {2017-04-18 13:29:22} ***
+*** New build: {2017-05-25 15:00:56} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-build_r(["build/data/data.txt"], ["source/data/build.R"])
-build_stata(["build/analysis/plot.eps", "build/analysis/table.txt"], ["source/analysis/analysis.do", "build/data/data.txt"])
+build_stata(["build/analysis/plot.pdf", "build/analysis/table.txt"], ["source/analysis/analysis.do"])
 build_lyx(["build/paper/ondeck.pdf"], ["source/paper/ondeck.lyx"])
 build_lyx(["build/paper/online_appendix.pdf"], ["source/paper/online_appendix.lyx"])
 build_tables(["build/tables/table.lyx"], ["source/tables/table.lyx", "build/analysis/table.txt"])
@@ -14,9 +13,9 @@ Install directory: "build/paper" as "release/paper"
 Install directory: "build/talk" as "release/talk"
 scons_debrief(["state_of_repo.log"], [])
 scons: done building targets.
-*** Build completed: {2017-04-18 13:29:29} ***
-*** Builder log created: {2017-04-18 13:29:27} 
-*** Builder log completed: {2017-04-18 13:29:29} 
+*** Build completed: {2017-05-25 15:01:05} ***
+*** Builder log created: {2017-05-25 15:01:02} 
+*** Builder log completed: {2017-05-25 15:01:05} 
  This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -31,8 +30,8 @@ entering extended mode
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
-*** Builder log created: {2017-04-18 13:29:27} 
-*** Builder log completed: {2017-04-18 13:29:29} 
+*** Builder log created: {2017-05-25 15:01:02} 
+*** Builder log completed: {2017-05-25 15:01:05} 
  This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -47,8 +46,8 @@ entering extended mode
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
-*** Builder log created: {2017-04-18 13:29:27} 
-*** Builder log completed: {2017-04-18 13:29:27} 
+*** Builder log created: {2017-05-25 15:01:01} 
+*** Builder log completed: {2017-05-25 15:01:01} 
  This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -56,8 +55,8 @@ entering extended mode
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
-*** Builder log created: {2017-04-18 13:29:27} 
-*** Builder log completed: {2017-04-18 13:29:27} 
+*** Builder log created: {2017-05-25 15:01:01} 
+*** Builder log completed: {2017-05-25 15:01:01} 
  This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -65,8 +64,8 @@ entering extended mode
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 
-*** Builder log created: {2017-04-18 13:29:23} 
-*** Builder log completed: {2017-04-18 13:29:24} 
+*** Builder log created: {2017-05-25 15:00:57} 
+*** Builder log completed: {2017-05-25 15:00:58} 
  
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -101,15 +100,14 @@ running /Applications/Stata/profile.do ...
 . set more off
 
 . 
-. 
 . program main
   1.     yaml read YAML using constants.yaml
-  2.     yaml local build_data=YAML.build.data
-  3.     yaml local build_analysis=YAML.build.analysis
-  4. 
-.     import delimited "`build_data'/data.txt", delimiters("|") varnames(1) clear
+  2.     yaml local build_analysis=YAML.build.analysis
+  3. 
+.     set obs 20
+  4.     egen x = fill(1 2 3 4 5 6 7 8)
   5.     hist x, discrete width(0.5)
-  6.     graph export "`build_analysis'/plot.eps", replace
+  6.     graph export "`build_analysis'/plot.pdf", replace
   7. 
 .     sum x
   8.     file open  outfile using "`build_analysis'/table.txt", write replace
@@ -119,54 +117,16 @@ running /Applications/Stata/profile.do ...
  12. end
 
 . 
-. 
 . * EXECUTE
 . main
-(1 var, 201 obs)
-(start=-10, width=.5)
-(note: file build/analysis/plot.eps not found)
-(file build/analysis/plot.eps written in EPS format)
+number of observations (_N) was 0, now 20
+(start=1, width=.5)
+(file build/analysis/plot.pdf written in PDF format)
 
     Variable |        Obs        Mean    Std. Dev.       Min        Max
 -------------+---------------------------------------------------------
-           x |        201           0    5.816786        -10         10
+           x |         20        10.5     5.91608          1         20
 (note: file build/analysis/table.txt not found)
 
 . 
 end of do-file
-*** Builder log created: {2017-04-18 13:29:23} 
-*** Builder log completed: {2017-04-18 13:29:23} 
- 
-R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
-Copyright (C) 2016 The R Foundation for Statistical Computing
-Platform: x86_64-apple-darwin16.1.0 (64-bit)
-
-R is free software and comes with ABSOLUTELY NO WARRANTY.
-You are welcome to redistribute it under certain conditions.
-Type 'license()' or 'licence()' for distribution details.
-
-  Natural language support but running in an English locale
-
-R is a collaborative project with many contributors.
-Type 'contributors()' for more information and
-'citation()' on how to cite R or R packages in publications.
-
-Type 'demo()' for some demos, 'help()' for on-line help, or
-'help.start()' for an HTML browser interface to help.
-Type 'q()' to quit R.
-
-> library(yaml)
-> PATHS <- yaml.load_file('constants.yaml')
-> args  <- commandArgs(TRUE)
-> 
-> main <- function(i){
-+     x    <- seq(-10, 10, 0.1)
-+     write.table(x, sprintf("%s/%s.txt", PATHS$build$data, i), sep = "|", 
-+                    row.names = FALSE, col.names = TRUE, quote = FALSE) 
-+ }
-> 
-> main(args[1])
-> 
-> proc.time()
-   user  system elapsed 
-  0.108   0.020   0.142 

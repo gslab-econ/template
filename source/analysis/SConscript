@@ -3,7 +3,6 @@ Import('env')
 build  = env['PATHS']['build']['analysis']
 source = env['PATHS']['source']['analysis']
 
-env.BuildStata(target = ['#%s/plot.eps'    % build,
+env.BuildStata(target = ['#%s/plot.pdf'    % build,
                          '#%s/table.txt'   % build],
-               source = ['#%s/analysis.do' % source,
-                         '#%s/data.txt'    % env['PATHS']['build']['data']])
+               source = ['#%s/analysis.do' % source])
