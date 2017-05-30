@@ -37,7 +37,7 @@ In order to create a new repository using this template, either
 	- Create an empty repository in GitHub and clone it locally. Copy the contents of this template into the empty repository. Make sure to exclude the `.git` folder, but include the `.gitattributes` and `.gitignore` files. Re-run the entire directory using `Scons`. Commit and push to the new repository.
 - Setup a `user-config.yaml` in the root of the directory with at least the following (note that this file should not be versioned):
 ```
-stata_flavor: statamp
+stata_executable: statamp
 cache: /Users/leviboxell/Google Drive/cache/template
 
 ```
