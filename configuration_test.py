@@ -25,7 +25,7 @@ def configuration_test(ARGUMENTS, gslab_python_version):
                         packages = ["yaml", "gslab_scons", "gslab_fill"])
     config.check_lyx()
     config.check_lfs()
-    stata_flavor = config.check_stata(["yaml"])
+    stata_executable = config.check_stata(["yaml"])
 
     # Uncomment if using
     # config.check_r(packages = ["yaml"]) 
@@ -42,9 +42,9 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     if mode == 'cache':
         cache_dir   = config.load_yaml_value("user-config.yaml", "cache")
         cache_dir   = config.check_and_expand_cache_path(cache_dir)
-        return_list = [mode, stata_flavor, cache_dir]
+        return_list = [mode, stata_executable, cache_dir]
     else:
-        return_list = [mode, stata_flavor, None]
+        return_list = [mode, stata_executable, None]
 
     # Restore default tracebacklimit and return values
     sys.tracebacklimit = 0

@@ -5,8 +5,8 @@ sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Test for proper prerequisites and setup
 from configuration_test import configuration_test
-[mode, sf, cache_dir] = configuration_test(ARGUMENTS, 
-                                           gslab_python_version = '4.0.0')
+[mode, stata_executable, cache_dir] = configuration_test(ARGUMENTS, 
+                                                     gslab_python_version = '4.0.0')
 import gslab_scons as gs
 import gslab_scons.log as log
 import yaml
@@ -24,7 +24,7 @@ env = Environment(ENV = {'PATH' : os.environ['PATH']},
                               'BuildLyx':    Builder(action = gs.build_lyx),
                               'BuildStata':  Builder(action = gs.build_stata),
                               'BuildPython': Builder(action = gs.build_python)},
-                  user_flavor = sf)
+                  stata_executable = stata_executable)
 
 # Only computes hash if time-stamp changed
 env.Decider('MD5-timestamp') 
