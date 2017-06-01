@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GSLab Template
 
 The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use SCons and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.   
@@ -59,7 +60,7 @@ Each user is allowed to have different local specifications: We don't put any re
 There's no "default" for `user-config.yaml` because it depends on system specifications and user preferences. Two things we do recommend keeping in `user-config.yaml` are the name of your Stata executable—which we'll prompt you to enter if necessary—and the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)—if you have one. A Mac example where Example_User is running a factory-fresh StataMP and has local access to a directory named cache/template on Dropbox would be 
 
 ```YAML
-stata_exec: statamp # StataMP-64.exe on Windows
+stata_executable: statamp
 cache: /Users/Example_User/Dropbox/cache/template
 ```
 
