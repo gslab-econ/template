@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # GSLab Template
 
 The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use SCons and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.   
