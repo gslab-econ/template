@@ -5,7 +5,7 @@ The GSLab Template is a minimal working demonstration of the tools and organizat
 ## Prerequisites
 
 You'll need the following to run the template. [Homebrew](https://brew.sh/) for Mac and [Linuxbrew](http://linuxbrew.sh/) for Linux make this easier.   
-* Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. Most users will have these one of these as standard.
+* Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. Most users will have one of these as standard.
 * [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
     * [gslab_python](https://github.com/gslab-econ/gslab_python) version 4.0.0.
     * [PyYAML](http://pyyaml.org/wiki/PyYAML) a python module for parsing YAML files. 
@@ -26,7 +26,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     git clone https://github.com/gslab-econ/template.git
     cd template
     ```
-2. You're ready to go. We'll prompt you to enter any information necessary and store it in `user-config.yaml` as your scripts run. 
+2. You're ready to go. We'll prompt you to enter any necessary information and store it in `user-config.yaml` as your scripts run. 
     * To build everything that has been modified or with dependencies in the repository that have been modified.
         ```
         scons
@@ -56,13 +56,14 @@ Each user is allowed to have different local specifications: We don't put any re
 
 ##### What do I put in `user-config.yaml`?
 
-There's no "default" for `user-config.yaml` because it depends on system specifications and user preferences. Two things we do recommend keeping in `user-config.yaml` are the name of your Stata executable—which we'll prompt you to enter if necessary—and the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)—if you have one. An example where Example_User is running a factory-fresh StataMP and has local access to a directory named cache/template on Dropbox would be 
+There's no "default" for `user-config.yaml` because it depends on system specifications and user preferences. Two things we do recommend keeping in `user-config.yaml` are the name of your Stata executable—which we'll prompt you to enter if necessary—and the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)—if you have one. A Mac example where Example_User is running a factory-fresh StataMP and has local access to a directory named cache/template on Dropbox would be 
+
 ```YAML
 stata_exec: statamp # StataMP-64.exe on Windows
 cache: /Users/Example_User/Dropbox/cache/template
 ```
 
-##### Can I only use other software for data analysis?
+##### Can I use other software for data analysis?
 
 Yup, we have custom builders for Python and R, and you can use them with the same syntax as the Stata builder. If you're using R, make sure it's been added to your PATH and that you have a YAML-parsing package, such as [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf). 
 
