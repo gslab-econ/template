@@ -1,14 +1,14 @@
-# GSLab Template
+# GSLab Template 
 
 The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use SCons and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.   
 
 ## Prerequisites
 
 You'll need the following to run the template. [Homebrew](https://brew.sh/) for Mac and [Linuxbrew](http://linuxbrew.sh/) for Linux make this easier.   
-* Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. Most users will have one of these as standard.
+* Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
 * [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
     * [gslab_python](https://github.com/gslab-econ/gslab_python) version 4.0.0.
-    * [PyYAML](http://pyyaml.org/wiki/PyYAML) a python module for parsing YAML files. 
+    * [PyYAML](http://pyyaml.org/wiki/PyYAML) a Python module for parsing YAML files. 
 * [SCons](http://scons.org/pages/download.html) version 2.4 or later.
 * [git](https://git-scm.com/downloads) for version control.
     * [git-lfs](https://git-lfs.github.com/) for versioning large files. 
@@ -67,9 +67,9 @@ cache: /Users/Example_User/Dropbox/cache/template
 
 Yup, we have custom builders for Python and R, and you can use them with the same syntax as the Stata builder. If you're using R, make sure it's been added to your PATH and that you have a YAML-parsing package, such as [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf). 
 
-##### Can I write my paper in LaTeX?
+##### Can I write my paper in LaTeX instead of LyX?
 
-We don't have a custom builder for latex. You can still write in it, but you will have to use [SCons's native builder](http://www.scons.org/doc/0.96.91/HTML/scons-user/a5334.html).
+We don't have a custom builder for LaTeX. You can still write in it, but you will have to use [SCons's native builder](http://www.scons.org/doc/0.96.91/HTML/scons-user/a5334.html).
 
 ##### Can I release to GitHub?
 
