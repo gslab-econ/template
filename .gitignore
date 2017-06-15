@@ -18,3 +18,4 @@ user-config.yaml
 *.out
 *.svn
 .sconsign.dblite
+*.lyx.emergency
