@@ -1,9 +1,8 @@
-*** New build: {2017-07-10 18:10:58} ***
+*** New build: {2017-07-10 18:16:36} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-scons: `build' is up to date.
-scons: `release' is up to date.
+scons: `.' is up to date.
 scons: done building targets.
-*** Build completed: {2017-07-10 18:10:58} ***
+*** Build completed: {2017-07-10 18:16:36} ***
  
  

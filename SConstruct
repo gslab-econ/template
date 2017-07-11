@@ -31,7 +31,6 @@ env.Decider('MD5-timestamp')
 # Extensions to be used when scanning for source files in BuildLyx.
 env.EXTENSIONS = ['.eps', '.pdf', '.lyx']
 SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True))
-
 # Load paths
 env['PATHS'] = yaml.load(open("constants.yaml", 'rU'))
 
@@ -49,22 +48,12 @@ Default('./build', './release')
 if mode == 'cache':
     CacheDir(cache_dir)
 
-# Print the state of the repo and issue size warnings at end of SCons run
-# From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
-debrief = Command('state_of_repo.log', [], gs.misc.scons_debrief, 
-                  MAXIT = 10,
-                  # Folders to look in for large versioned files
-                  look_in = 'release;source',
-                  # Soft limits on file sizes
-                  file_MB_limit = 2,
-                  total_MB_limit = 500)
-Depends(debrief, BUILD_TARGETS)
-env.AlwaysBuild(debrief)
-if 'state_of_repo.log' not in BUILD_TARGETS: 
-    BUILD_TARGETS.append('state_of_repo.log')
-
-# Prevent the state-of-the-repo log from being pulled from cache
-# rather than recreated as a part of each SCons run.
 NoCache('state_of_repo.log')
-
+debrief_env = {'MAXIT' : 10,
+               # Folders to look in for large versioned files
+               'look_in' : 'release;source',
+               # Soft limits on file sizes
+               'file_MB_limit' : 2,
+               'total_MB_limit' : 500}
 atexit.register(log.end_log)
+atexit.register(gs.misc.scons_debrief, target = 'state_of_repo.log', env = debrief_env)
