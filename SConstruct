@@ -46,9 +46,8 @@ Default('./build', './release')
 
 # Additional mode options
 if mode == 'cache':
-    CacheDir(cache_dir)
+    (cache_dir)
 
-NoCache('state_of_repo.log')
 debrief_env = {'MAXIT' : 10,
                # Folders to look in for large versioned files
                'look_in' : 'release;source',
