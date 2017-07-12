@@ -41,8 +41,8 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     
     # Get return list
     if mode == 'cache':
-        cache_dir   = misc.load_yaml_value("user-config.yaml", "cache")
-        cache_dir   = config.check_and_expand_cache_path(cache_dir)
+        cache_dir   = misc.load_yaml_value("user-config.yaml", "cache_directory")
+        cache_dir   = misc.check_and_expand_path(cache_dir)
         return_list = [mode, stata_executable, cache_dir]
     else:
         return_list = [mode, stata_executable, None]

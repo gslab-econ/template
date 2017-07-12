@@ -60,12 +60,13 @@ There's no "default" for `user-config.yaml` because it depends on system specifi
 
 ```YAML
 stata_executable: statamp
-cache: /Users/Example_User/Dropbox/cache/template
+cache_directory: /Users/Example_User/Dropbox/cache/template
+release_directory: /Users/Example_User/Dropbox/release/
 ```
 
 ##### Can I use other software for data analysis?
 
-Yup, we have custom builders for Python and R, and you can use them with the same syntax as the Stata builder. If you're using R, make sure it's been added to your PATH and that you have a YAML-parsing package, such as [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf). 
+Yes. We have custom builders for Python and R. You can also use them with the same syntax as the Stata builder. If you're using R, make sure it's been added to your PATH and that you have a YAML-parsing package, such as [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf). 
 
 ##### Can I write my paper in LaTeX instead of LyX?
 
