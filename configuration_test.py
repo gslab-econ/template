@@ -8,13 +8,6 @@ from gslab_scons import _exception_classes
 from gslab_scons import misc
 
 def configuration_test(ARGUMENTS, gslab_python_version):
-    # Determines whether to print traceback messages
-    debug = ARGUMENTS.get('debug', False) 
-    if not debug:
-        # Hide traceback for configuration test only
-        # http://stackoverflow.com/questions/27674602/hide-traceback-unless-a-debug-flag-is-set
-        sys.tracebacklimit = 0 
-
     # Checks initial prerequisites
     try:
         from gslab_scons import configuration_tests as config
@@ -46,8 +39,5 @@ def configuration_test(ARGUMENTS, gslab_python_version):
         return_list = [mode, stata_executable, cache_dir]
     else:
         return_list = [mode, stata_executable, None]
-
-    # Restore default tracebacklimit and return values
-    sys.tracebacklimit = 0
 
     return return_list

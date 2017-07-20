@@ -1,8 +1,15 @@
-*** New build: {2017-07-10 18:16:36} ***
+*** New build: {2017-07-20 14:12:47} ***
+
+scons: warning: No version of Visual Studio compiler found - C/C++ compilers most likely not set correctly
+File "C:\Users\quanle\template\SConstruct", line 27, in <module>
+
+scons: warning: No version of Visual Studio compiler found - C/C++ compilers most likely not set correctly
+File "C:\Users\quanle\template\SConstruct", line 38, in <module>
 scons: done reading SConscript files.
 scons: Building targets ...
-scons: `.' is up to date.
+scons: `build' is up to date.
+scons: `release' is up to date.
 scons: done building targets.
-*** Build completed: {2017-07-10 18:16:36} ***
+*** Build completed: {2017-07-20 14:12:47} ***
  
  
