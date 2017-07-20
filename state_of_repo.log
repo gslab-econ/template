@@ -8,11 +8,11 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 6c0fa383ced72c03be38473d5bf36279c52e2458
+commit 3b4255de093a00cc66e273237a670e1da5d0184e
 Author: Quan Le <lequan@stanford.edu>
-Date:   Wed Jul 12 16:42:47 2017 -0700
+Date:   Thu Jul 20 14:14:34 2017 -0700
 
-    #68 movecheck_and_expand_path to misc, add  to cache and release names
+    #50 remove debug flags
 
 
 Files changed since last commit:
@@ -27,8 +27,8 @@ state_of_repo.log
 
 ===================================
 .\configuration_test.py:
-   modified on: 20 Jul 2017 14:12:44
-   size of file: 1456
+   modified on: 20 Jul 2017 14:30:09
+   size of file: 1848
 .\constants.yaml:
    modified on: 12 Jul 2017 11:41:20
    size of file: 300
@@ -39,14 +39,14 @@ state_of_repo.log
    modified on: 20 Jul 2017 14:09:56
    size of file: 2161
 .\sconstruct.log:
-   modified on: 20 Jul 2017 14:12:47
+   modified on: 20 Jul 2017 14:31:06
    size of file: 546
 .\setup.pyc:
    modified on: 20 Apr 2017 13:32:19
    size of file: 5525
 .\state_of_repo.log:
-   modified on: 20 Jul 2017 14:12:47
-   size of file: 517
+   modified on: 20 Jul 2017 14:31:06
+   size of file: 469
 .\user-config.yaml:
    modified on: 20 Jul 2017 13:18:54
    size of file: 77
