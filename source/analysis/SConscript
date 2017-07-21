@@ -3,6 +3,12 @@ Import('env')
 build  = env['PATHS']['build']['analysis']
 source = env['PATHS']['source']['analysis']
 
-env.BuildStata(target = ['#%s/plot.pdf'    % build,
-                         '#%s/table.txt'   % build],
-               source = ['#%s/analysis.do' % source])
+env.BuildStata(target  = ['#%s/plot.pdf'    % build,
+                         '#%s/table.txt'    % build],
+               source  = ['#%s/analysis.do' % source],
+               log_ext = "analysis_do")
+
+env.BuildPython(target  = ['#%s/output.txt'  % build],
+               source  = ['#%s/analysis.py' % source],
+               log_ext = "analysis_py")
+
