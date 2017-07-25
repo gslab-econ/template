@@ -68,9 +68,19 @@ release_directory: /Users/Example_User/Dropbox/release/
 
 Yes. We have custom builders for Python and R. You can also use them with the same syntax as the Stata builder. If you're using R, make sure it's been added to your PATH and that you have a YAML-parsing package, such as [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf). 
 
+##### Can I pass "command line style" arguments to a script?
+
+You bet. All of our custom builders accept "command line style" arguments with the same method. Enumerate the arguments in a list and pass them to the builder through the `CL_ARG` keyword argument, exactly the same way you specify sources and targets. We'll format this list, and `scons` will pass its contents to the script at runtime. You can reference these arguments when writing a script using the standard practice for its language.
+
+##### How is the build process logged?
+
+Each of our custom builders produces a log of its process in the same directory as the first of its targets. Each log is named `sconscript.log` by default, and you can insert custom text between `sconscript` and `.log` by passing it as a string through the builder's `log_ext` keyword argument. It's similar to the way that you specify sources and targets, except that the `log_ext` argument must be a string. It can be important to specify the `log_ext` argument for builders that produce logs in the same directory. The default naming convention allows builders to overwrite one another's logs, so you'll only have a log of the last process to finish. 
+
+After all the steps in the build are completed, we'll comb through the directory and look for for any files named `sconscript*.log`. These logs will be concatenated—with the earliest completed ones first and all logs with errors on top. We'll store this concatenated log at the root of the repository in `sconstruct.log`. 
+
 ##### Can I write my paper in LaTeX instead of LyX?
 
-We don't have a custom builder for LaTeX. You can still write in it, but you will have to use [SCons's native builder](http://www.scons.org/doc/0.96.91/HTML/scons-user/a5334.html).
+We don't have a custom builder for LaTeX. You can still write in it, but you will have to use [SCons's native builder](http://www.scons.org/doc/0.96.91/HTML/scons-user/a5334.html). You can still use our custom table builder to fill LaTeX tables. 
 
 ##### Can I release to GitHub?
 
