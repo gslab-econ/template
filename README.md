@@ -86,7 +86,7 @@ We don't have a custom builder for LaTeX. You can still write in it, but you wil
 
 Yes, see [here](https://github.com/gslab-econ/gslab_python/tree/master/gslab_scons) for directions on making a release.
 
-## License
+#### License
 
 The MIT License (MIT)
 
