@@ -66,13 +66,13 @@ release_directory: /Users/Example_User/Dropbox/release/
 
 ##### How do I handle data external to my repository?
 
-We are agnostic about how you incorporate external data into the template. There's no custom builder for these assets, by design. We expect data storage and transfer protocols to differ—with good reason—across projects and labs, and we try to keep the template flexible enough for any use. That said, we do have some suggestions:
+We are agnostic about how you incorporate external data into the template. There's no custom builder for these assets, by design. Our suggestions:
 
-* When a large dataset is stored locally, `user-config.yaml` can include an entry specifying the user-specific path to that dataset. The key of the entry should be constant across users and documented in the top-level readme of the repository. Scripts can access the path to the dataset by parsing `user-config.yaml` and referencing the key. 
+* When a large dataset is stored locally, `user-config.yaml` can include an entry specifying the user-specific path to that dataset. The key of the entry should be constant across users and documented in the top-level readme of the repository.
 
 * When a large dataset is stored externally, there are a few options. 
     * The top-level readme can specify manual download and storage instructions. This is simple, easy to customize, and unlikely to cause errors during a SCons build. It does, however, require each user to successfully download the same dataset, perhaps in an unstructured manner. 
-    * The download can be incorporated into the SCons build by either specifying the download steps directly as standard SCons commands or including the download steps in scripts executed by our custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to fail. This can be irksome—since the build may often fail—or dangerous—as repeated builds with identical code may produce different output. 
+    * The download can be incorporated into the SCons build. We either execute a program to transfer data (e.g., `rsync` or `rclone`) directly in a standard SCons command or from within a script executed by one of our custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to failure.
     * Regardless of the download method, the path to the dataset should be added to `constant.yaml` and `.gitignore` if it is stored within the repository and to `user-config.yaml` if it is stored elsewhere. 
 
 ##### Can I use other software for data analysis?
@@ -85,7 +85,7 @@ You bet. All of our custom builders accept "command line style" arguments with t
 
 ##### How is the build process logged?
 
-Each of our custom builders produces a log of its process in the same directory as the first of its targets. Each log is named `sconscript.log` by default, and you can insert custom text between `sconscript` and `.log` by passing it as a string through the builder's `log_ext` keyword argument. It's similar to the way that you specify sources and targets, except that the `log_ext` argument must be a string. It can be important to specify the `log_ext` argument for builders that produce logs in the same directory. The default naming convention leads builders to overwrite one another's logs, so you'll only have a log of the last process to finish. 
+Each of our custom builders produces a log of its process in the same directory as the first of its targets. Each log is named `sconscript.log` by default, and you can insert custom text between `sconscript` and `.log` by passing it as a string through the builder's `log_ext` keyword argument. It's similar to the way that you specify sources and targets, except that the `log_ext` argument must be a string. You should specify the `log_ext` argument for builders that produce logs in the same directory, otherwise the default `sconscript.log` will be overwritten by each builder.
 
 After all the steps in the build are completed, we'll comb through the directory and look for for any files named `sconscript*.log`. These logs will be concatenated—with the earliest completed ones first and all logs with errors on top. We'll store this concatenated log at the root of the repository in `sconstruct.log`. 
 
@@ -95,7 +95,9 @@ We don't have a custom builder for LaTeX. You can still write in it, but you wil
 
 ##### Can I release my repository?
 
-Yes, our [custom tool](https://github.com/gslab-econ/gslab_python/tree/master/gslab_scons) allows you to release a repository to GitHub and a local destination specified in `user-config.yaml`. Local releases can be transfered to a remote manually (e.g., using rsync or rclone) or automatically by specifying a local destination that's synced to a remote (e.g., standard Dropbox behavior). Every file intended for release should be added to the `release` directory. Files intended for local release only should be added to `.gitignore`. Our tool will transfer everything in `release` to the local destination and create a [GitHub release](https://help.github.com/articles/creating-releases/) with all the versioned files—those not added to `.gitignore`—in `release`. 
+Yes, our [custom tool](https://github.com/gslab-econ/gslab_python/tree/master/gslab_scons) allows you to release to GitHub and a local destination specified in `user-config.yaml`. A new release can be transfered to a remote manually (e.g., using `rsync` or `rclone`) or automatically by specifying a local destination that's synced to a remote (e.g., a Dropbox directory). 
+
+Every file intended for release should be added to the `release` directory. Files not intended for release to GitHub should be added to `.gitignore`. Our tool will transfer everything in `release` to the local destination and create a [GitHub release](https://help.github.com/articles/creating-releases/) with all the versioned files—those not added to `.gitignore`—in `release`. 
 
 #### License
 
