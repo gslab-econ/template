@@ -1,29 +1,36 @@
 # Preliminaries
 import os
+import sys
+sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Test for proper prerequisites and setup
-from setup import setup_test
-[user_configs, mode, sf, cache_dir] = setup_test(ARGUMENTS)
-import gslab_scons 
+from configuration_test import configuration_test
+[mode, stata_executable, cache_dir] = configuration_test(ARGUMENTS, 
+                                                     gslab_python_version = '4.0.0')
+import gslab_scons as gs
+import gslab_scons.log as log
 import yaml
+import atexit
 
-# Start log
-gslab_scons.start_log() 
+# Start log after getting mode and release version
+mode = ARGUMENTS.get('mode', 'develop') 
+vers = ARGUMENTS.get('version', '') 
+log.start_log(mode, vers)
 
-# Defines environment
+# Define the SCons environment
 env = Environment(ENV = {'PATH' : os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
-                  BUILDERS = {'Tablefill'   : Builder(action = gslab_scons.build_tables),
-                              'BuildLyx'    : Builder(action = gslab_scons.build_lyx),
-                              'BuildR'      : Builder(action = gslab_scons.build_r),
-                              'BuildStata'  : Builder(action = gslab_scons.build_stata),
-                              'BuildPython' : Builder(action = gslab_scons.build_python)},
-                  user_flavor = sf)
+                  BUILDERS = {'Tablefill':   Builder(action = gs.build_tables),
+                              'BuildLyx':    Builder(action = gs.build_lyx),
+                              'BuildStata':  Builder(action = gs.build_stata),
+                              'BuildPython': Builder(action = gs.build_python)},
+                  stata_executable = stata_executable)
 
-env.Decider('MD5-timestamp') # Only computes hash if time-stamp changed
-env.EXTENSIONS = ['.eps', '.pdf', '.lyx'] # Extensions to be used when scanning for source files in BuildLyx.
-SourceFileScanner.add_scanner('.lyx', Scanner(gslab_scons.misc.lyx_scan, recursive = True))
-
+# Only computes hash if time-stamp changed
+env.Decider('MD5-timestamp') 
+# Extensions to be used when scanning for source files in BuildLyx.
+env.EXTENSIONS = ['.eps', '.pdf', '.lyx']
+SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True))
 # Load paths
 env['PATHS'] = yaml.load(open("constants.yaml", 'rU'))
 
@@ -31,7 +38,6 @@ env['PATHS'] = yaml.load(open("constants.yaml", 'rU'))
 Export('env')
 
 # Run sub-trees
-SConscript('source/data/SConscript') 
 SConscript('source/analysis/SConscript')
 SConscript('source/tables/SConscript') 
 SConscript('source/paper/SConscript') 
@@ -42,9 +48,11 @@ Default('./build', './release')
 if mode == 'cache':
     CacheDir(cache_dir)
 
-# Print the state of the repo at end of SCons run
-finish_command = Command( 'state_of_repo.log', [], gslab_scons.misc.state_of_repo, MAXIT=10) # From http://stackoverflow.com/questions/8901296/how-do-i-run-some-code-after-every-build-in-scons
-Depends(finish_command, BUILD_TARGETS)
-env.AlwaysBuild(finish_command)
-if 'state_of_repo.log' not in BUILD_TARGETS: 
-    BUILD_TARGETS.append('state_of_repo.log')
+debrief_env = {'MAXIT' : 10,
+               # Folders to look in for large versioned files
+               'look_in' : 'release;source',
+               # Soft limits on file sizes
+               'file_MB_limit' : 2,
+               'total_MB_limit' : 500}
+atexit.register(log.end_log)
+atexit.register(gs.misc.scons_debrief, target = 'state_of_repo.log', env = debrief_env)

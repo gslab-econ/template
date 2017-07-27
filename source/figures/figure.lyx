@@ -102,7 +102,7 @@ Figure Title
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../../build/analysis/plot.eps
+	filename ../../build/analysis/plot.pdf
 	scale 70
 
 \end_inset
