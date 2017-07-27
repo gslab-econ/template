@@ -59,7 +59,7 @@ Each user is allowed to have different local specifications: We don't put any re
 There's no "default" for `user-config.yaml` because it depends on system specifications and user preferences. Three things we do recommend keeping in `user-config.yaml` are the name of your Stata executable, the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html), and the location of a release directory. These fields don't have to be specified if you're not using them, and we'll prompt you for their values at runtime if you've forgotten to specify them and they're necessary. A Mac example where Example_User is running a factory-fresh StataMP and has local access to a directories named cache/template and release on Dropbox would be 
 
 ```YAML
-stata_executable: StataMP
+stata_executable: statamp
 cache_directory: /Users/Example_User/Dropbox/cache/template
 release_directory: /Users/Example_User/Dropbox/release/
 ```
