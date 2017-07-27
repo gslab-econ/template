@@ -46,7 +46,7 @@ Default('./build', './release')
 
 # Additional mode options
 if mode == 'cache':
-    (cache_dir)
+    CacheDir(cache_dir)
 
 debrief_env = {'MAXIT' : 10,
                # Folders to look in for large versioned files
