@@ -44,7 +44,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 
 If you want to create a repository with the same structure as this template you can fork it. If you want a repository without any of our git history, follow these instructions. 
 * Create an empty repository in GitHub and clone it. 
-* Copy the contents of this template into the empty repository. Make sure to exclude the `.git` folder, but include the `.gitattributes` and `.gitignore` files. 
+* Copy the contents of this template into the empty repository. Make sure to exclude the `.git` folder, but include the [`.gitattributes`](https://git-scm.com/docs/gitattributes) and [`.gitignore`](https://git-scm.com/docs/gitignore) files. 
 * Create a `user-config.yaml` file and run `scons`. 
 * Commit the changes and push to the new repository.
 
@@ -56,13 +56,24 @@ Each user is allowed to have different local specifications: We don't put any re
 
 ##### What do I put in `user-config.yaml`?
 
-There's no "default" for `user-config.yaml` because it depends on system specifications and user preferences. Two things we do recommend keeping in `user-config.yaml` are the name of your Stata executable—which we'll prompt you to enter if necessary—and the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html)—if you have one. A Mac example where Example_User is running a factory-fresh StataMP and has local access to a directory named cache/template on Dropbox would be 
+There's no "default" for `user-config.yaml` because it depends on system specifications and user preferences. Three things we do recommend keeping in `user-config.yaml` are the name of your Stata executable, the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html), and the location of a release directory. These fields don't have to be specified if you're not using them, and we'll prompt you for their values at runtime if you've forgotten to specify them and they're necessary. A Mac example where Example_User is running a factory-fresh StataMP and has local access to a directories named cache/template and release on Dropbox would be 
 
 ```YAML
 stata_executable: statamp
 cache_directory: /Users/Example_User/Dropbox/cache/template
 release_directory: /Users/Example_User/Dropbox/release/
 ```
+
+##### How do I handle data external to my repository?
+
+We are agnostic about how you incorporate external data into the template. There's no custom builder for these assets, by design. Our suggestions:
+
+* When a large dataset is stored locally, `user-config.yaml` can include an entry specifying the user-specific path to that dataset. The key of the entry should be constant across users and documented in the top-level readme of the repository.
+
+* When a large dataset is stored externally, there are a few options. 
+    * The top-level readme can specify manual download and storage instructions. This is simple, easy to customize, and unlikely to cause errors during a SCons build. It does, however, require each user to successfully download the same dataset, perhaps in an unstructured manner. 
+    * The download can be incorporated into the SCons build. We either execute a program to transfer data (e.g., `rsync` or `rclone`) directly in a standard SCons command or from within a script executed by one of our custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to failure.
+    * Regardless of the download method, the path to the dataset should be added to `constant.yaml` and `.gitignore` if it is stored within the repository and to `user-config.yaml` if it is stored elsewhere. 
 
 ##### Can I use other software for data analysis?
 
@@ -74,7 +85,7 @@ You bet. All of our custom builders accept "command line style" arguments with t
 
 ##### How is the build process logged?
 
-Each of our custom builders produces a log of its process in the same directory as the first of its targets. Each log is named `sconscript.log` by default, and you can insert custom text between `sconscript` and `.log` by passing it as a string through the builder's `log_ext` keyword argument. It's similar to the way that you specify sources and targets, except that the `log_ext` argument must be a string. It can be important to specify the `log_ext` argument for builders that produce logs in the same directory. The default naming convention allows builders to overwrite one another's logs, so you'll only have a log of the last process to finish. 
+Each of our custom builders produces a log of its process in the same directory as the first of its targets. Each log is named `sconscript.log` by default, and you can insert custom text between `sconscript` and `.log` by passing it as a string through the builder's `log_ext` keyword argument. It's similar to the way that you specify sources and targets, except that the `log_ext` argument must be a string. You should specify the `log_ext` argument for builders that produce logs in the same directory, otherwise the default `sconscript.log` will be overwritten by each builder.
 
 After all the steps in the build are completed, we'll comb through the directory and look for for any files named `sconscript*.log`. These logs will be concatenated—with the earliest completed ones first and all logs with errors on top. We'll store this concatenated log at the root of the repository in `sconstruct.log`. 
 
@@ -82,9 +93,11 @@ After all the steps in the build are completed, we'll comb through the directory
 
 We don't have a custom builder for LaTeX. You can still write in it, but you will have to use [SCons's native builder](http://www.scons.org/doc/0.96.91/HTML/scons-user/a5334.html). You can still use our custom table builder to fill LaTeX tables. 
 
-##### Can I release to GitHub?
+##### Can I release my repository?
 
-Yes, see [here](https://github.com/gslab-econ/gslab_python/tree/master/gslab_scons) for directions on making a release.
+Yes, our [custom tool](https://github.com/gslab-econ/gslab_python/tree/master/gslab_scons) allows you to release to GitHub and a local destination specified in `user-config.yaml`. A new release can be transfered to a remote manually (e.g., using `rsync` or `rclone`) or automatically by specifying a local destination that's synced to a remote (e.g., a Dropbox directory). 
+
+Every file intended for release should be added to the `release` directory. Files not intended for release to GitHub should be added to `.gitignore`. Our tool will transfer everything in `release` to the local destination and create a [GitHub release](https://help.github.com/articles/creating-releases/) with all the versioned files—those not added to `.gitignore`—in `release`. 
 
 #### License
 
