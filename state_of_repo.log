@@ -8,24 +8,188 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 0c8dff7f298a771f359a160188f4691bc00ccf59
-Merge: 6f1e5b0 27673f2
+commit eaebce91590df81dcd788c9d8eac000f68d8007e
 Author: Quan <lequan@stanford.edu>
-Date:   Tue Jul 25 14:38:00 2017 -0700
+Date:   Thu Jul 27 16:14:14 2017 -0700
 
-    Merge branch 'master' into dev_four
+    4.0.0 Release (#52)
+    
+    * Update README.md
+    
+    * gslab-python/#28 merge commit
+    
+    * Revert "gslab-python/#28 merge commit"
+    
+    This reverts commit bb30bc87d3bd3e03f9eba02a999eed7321359f02.
+    
+    * Pull request for gslab_python/#28: gslab_scons restructure (#27)
+    
+    * gslab-python/#28 separate Source and Assets in sconscript
+    
+    * #28 run with new log format
+    
+    * gslab-python/#28 update start_log()
+    
+    * gslab-python/#28 template formatting PR response
+    
+    * gslab-python/#28 rework logging
+    
+    * gslab-python/issue28_restructure respond to PR
+    
+    * gslab-python/#28 restructure
+    
+    * gslab-python/#28 restructure
+    
+    * gslab-python/#28 merge commit
+    
+    * Revert "gslab-python/#28 merge commit"
+    
+    This reverts commit f4082c16a7c220f28c836cd9d608700b642483fc.
+    
+    * Delete online_appendix.pdf
+    
+    * re-run after delete
+    
+    debugging git-lfs issue on Windows
+    
+    * delete output folder, rerun after delete
+    
+    debugging git-lfs issue
+    
+    * Pull request for gslab_python/#57: Fix stata bug in Windows (#37)
+    
+    * gslab_python/#57 refactor check_stata()
+    
+    * #57 split commands in check_stata_packages()
+    
+    * gslab_python/issue57-winstata allow stata_flavor to be empty in the yaml file
+    
+    * gslab_python/issue57-winstata fix percent sign error
+    
+    * #37 Commits git-lfs
+    
+    * Pull request for gslab-econ/gslab_python#59: Size warnings (#42)
+    
+    * gslab-econ/gslab_python#59: Added size warnings to template
+    
+    * #42: Added .sconsign.dblite to .gitignore
+    
+    * #42: removed .sconsign.dblit
+    
+    * #42: ran directory after deleting .sconsign.dblite
+    
+    * Pull request for #43: Implements 4.0 release comments (#45)
+    
+    * #43 Preliminary edits
+    
+    * #43 More edits
+    
+    * #43 Further edits
+    
+    * #43 Edits gitlfs check
+    
+    * #43 Small edits
+    
+    * #43 Implements PR comments
+    
+    * #43 Migrates configuration tests
+    
+    * #43 PR comment edits
+    
+    * #43 Implements prelim PR comments
+    
+    * #43 Fixes commented out line
+    
+    * #45: Misc. edits
+    
+    * #45: Out-of-date error message
+    
+    * #45: Edited comment on NoCache() for state of repo
+    
+    * #45: updated version number
+    
+    * #45: Changing to stata_executable
+    
+    * #45: Updated readme
+    
+    * Pull request for #44: Implement 4.0 test comments for readme (#46)
+    
+    * Update README.md
+    
+    * Update README.md
+    
+    * Update README.md
+    
+    * Update README.md
+    
+    * Pull request for #40: Add .sconsign.dblite to git ignore (#41)
+    
+    * #40 Add .sconsign.dblite to git ignore
+    
+    * #40 Delete .sconsign.dblite
+    
+    * Pull requeset for #38: Readme clarity edits (#39)
+    
+    * #38 Edits
+    
+    * #38 Fixed statement regarding homebrew
+    
+    * #38 Small edit
+    
+    * #44 update readme.
+    
+    * #46 #44 respond to PR
+    
+    * #46 #44 grammar in readme.
+    
+    * Update README.md
+    
+    * README format
+    
+    * gslab-econ/divergence#11: added .lyx.emergency to .gitignore (#47)
+    
+    * Pull request for gslab_python#68: Remove Google Drive from default in release.py (#48)
+    
+    * #68 change import of load_yaml_value from  to
+    
+    * #68 output commit for release
+    
+    * #68 another fake release
+    
+    * #68 move state_of_repo.log to atexit
+    
+    * #68 rm NoCache
+    
+    * #68 movecheck_and_expand_path to misc, add  to cache and release names
+    
+    * #50 remove debug flags
+    
+    * #50 add traceback default 1000
+    
+    * Pull request for gslab_python#77-logext: Replace <*> with <source file name> in <sconscript_*.log>  (#51)
+    
+    * gslab_python#77-logext
+    
+    * gslab_python#77 rm python example script
+    
+    * #53 add logging and cl_arg to readme (#54)
+    
+    * #52 CacheDir fix
+    
+    * Pull request #52: improve documentation in README (#57)
+    
+    * #52 improve documentation in README
+    
+    * #52 wording changes in readme for PR
+    
+    * #52 lowercase StataMP in readme
+    
+    * Update README.md
 
 
 Files changed since last commit:
 
-SConstruct
-release/paper/ondeck.pdf
-release/paper/online_appendix.pdf
-release/paper/paper.pdf
-release/paper/sconscript.log
-release/paper/text.pdf
-release/talk/sconscript.log
-release/talk/slides.pdf
+README.md
 sconstruct.log
 state_of_repo.log
 
@@ -34,132 +198,111 @@ state_of_repo.log
  FILE STATUS
 
 ===================================
-./change_log.md:
-   modified on: 05 Jul 2017 11:53:32
-   size of file: 494
 ./configuration_test.py:
-   modified on: 20 Jul 2017 19:15:31
+   modified on: 31 Jul 2017 10:28:49
    size of file: 1795
 ./constants.yaml:
-   modified on: 12 Jun 2017 09:21:15
+   modified on: 31 Jul 2017 10:28:49
    size of file: 285
 ./README.md:
-   modified on: 27 Jul 2017 13:00:44
-   size of file: 7938
+   modified on: 01 Aug 2017 15:59:13
+   size of file: 10267
 ./SConstruct:
-   modified on: 27 Jul 2017 13:01:11
+   modified on: 31 Jul 2017 10:28:49
    size of file: 2111
 ./sconstruct.log:
-   modified on: 27 Jul 2017 13:02:18
-   size of file: 841
+   modified on: 01 Aug 2017 15:59:18
+   size of file: 199
 ./setup.pyc:
-   modified on: 21 Apr 2017 19:58:07
-   size of file: 5497
+   modified on: 26 Jul 2017 15:41:23
+   size of file: 5954
 ./state_of_repo.log:
-   modified on: 27 Jul 2017 13:02:18
-   size of file: 678
-./Untitled.ipynb:
-   modified on: 24 Jul 2017 14:13:17
-   size of file: 1206
+   modified on: 01 Aug 2017 15:59:18
+   size of file: 4534
 ./user-config.yaml:
-   modified on: 27 Jul 2017 13:01:37
-   size of file: 168
+   modified on: 27 Jul 2017 12:59:06
+   size of file: 241
 ./build/analysis/plot.pdf:
-   modified on: 27 Jul 2017 13:02:06
-   size of file: 1290
-./build/analysis/sconscript_analysis_do.log:
-   modified on: 27 Jul 2017 13:02:06
-   size of file: 2133
+   modified on: 27 Jul 2017 13:00:09
+   size of file: 12593
 ./build/analysis/table.txt:
-   modified on: 27 Jul 2017 13:02:06
+   modified on: 27 Jul 2017 13:00:09
    size of file: 31
 ./build/paper/ondeck.pdf:
-   modified on: 27 Jul 2017 13:02:11
+   modified on: 27 Jul 2017 13:00:10
    size of file: 18038
 ./build/paper/online_appendix.pdf:
-   modified on: 27 Jul 2017 13:02:12
+   modified on: 27 Jul 2017 13:00:10
    size of file: 45649
 ./build/paper/paper.pdf:
-   modified on: 27 Jul 2017 13:02:13
-   size of file: 55661
-./build/paper/sconscript.log:
-   modified on: 27 Jul 2017 13:02:14
-   size of file: 342
+   modified on: 27 Jul 2017 13:00:11
+   size of file: 66827
 ./build/paper/text.pdf:
-   modified on: 27 Jul 2017 13:02:14
+   modified on: 27 Jul 2017 13:00:12
    size of file: 18038
-./build/tables/sconscript.log:
-   modified on: 27 Jul 2017 13:02:12
-   size of file: 157
 ./build/tables/table.lyx:
-   modified on: 27 Jul 2017 13:02:12
+   modified on: 27 Jul 2017 13:00:11
    size of file: 4082
-./build/talk/sconscript.log:
-   modified on: 27 Jul 2017 13:02:18
-   size of file: 589
 ./build/talk/slides.pdf:
-   modified on: 27 Jul 2017 13:02:18
-   size of file: 26982
+   modified on: 27 Jul 2017 13:00:13
+   size of file: 37575
 ./release/paper/ondeck.pdf:
-   modified on: 27 Jul 2017 13:02:11
+   modified on: 31 Jul 2017 10:28:51
    size of file: 18038
 ./release/paper/online_appendix.pdf:
-   modified on: 27 Jul 2017 13:02:12
+   modified on: 31 Jul 2017 10:28:52
    size of file: 45649
 ./release/paper/paper.pdf:
-   modified on: 27 Jul 2017 13:02:13
+   modified on: 31 Jul 2017 10:28:53
    size of file: 55661
 ./release/paper/sconscript.log:
-   modified on: 27 Jul 2017 13:02:14
+   modified on: 31 Jul 2017 10:28:53
    size of file: 342
 ./release/paper/text.pdf:
-   modified on: 27 Jul 2017 13:02:14
+   modified on: 31 Jul 2017 10:28:54
    size of file: 18038
 ./release/talk/sconscript.log:
-   modified on: 27 Jul 2017 13:02:18
+   modified on: 31 Jul 2017 10:28:54
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 27 Jul 2017 13:02:18
+   modified on: 31 Jul 2017 10:28:56
    size of file: 26982
 ./source/analysis/analysis.do:
-   modified on: 20 Jul 2017 15:28:13
+   modified on: 31 Jul 2017 10:28:56
    size of file: 510
 ./source/analysis/SConscript:
-   modified on: 27 Jul 2017 13:00:44
+   modified on: 31 Jul 2017 10:28:56
    size of file: 307
 ./source/figures/figure.lyx:
-   modified on: 12 Jun 2017 09:21:21
+   modified on: 31 Jul 2017 10:28:56
    size of file: 2223
 ./source/paper/ondeck.lyx:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 11 Jul 2017 14:07:04
    size of file: 2522
 ./source/paper/online_appendix.lyx:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 11 Jul 2017 14:07:04
    size of file: 3610
 ./source/paper/paper.lyx:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 11 Jul 2017 14:07:04
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 25 Feb 2017 13:04:15
+   modified on: 31 Jul 2017 10:28:56
    size of file: 558
 ./source/paper/text.lyx:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 11 Jul 2017 14:07:04
    size of file: 2522
 ./source/raw/README.md:
-   modified on: 17 Feb 2017 17:01:41
+   modified on: 11 Jul 2017 14:07:04
    size of file: 102
 ./source/tables/SConscript:
-   modified on: 24 Jul 2017 14:05:51
+   modified on: 11 Jul 2017 14:07:04
    size of file: 245
 ./source/tables/table.lyx:
-   modified on: 10 Jul 2017 15:56:14
+   modified on: 11 Jul 2017 14:07:04
    size of file: 4082
-./source/tables/table.tex:
-   modified on: 24 Jul 2017 13:02:00
-   size of file: 997
 ./source/talk/SConscript:
-   modified on: 17 Feb 2017 17:02:23
+   modified on: 11 Jul 2017 14:07:04
    size of file: 229
 ./source/talk/slides.lyx:
-   modified on: 12 Jun 2017 09:21:21
+   modified on: 31 Jul 2017 10:28:56
    size of file: 4706
