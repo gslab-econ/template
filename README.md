@@ -7,7 +7,7 @@ The GSLab Template is a minimal working demonstration of the tools and organizat
 You'll need the following to run the template. [Homebrew](https://brew.sh/) for Mac and [Linuxbrew](http://linuxbrew.sh/) for Linux make this easier.   
 * Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
 * [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
-    * [gslab_python](https://github.com/gslab-econ/gslab_python) version 4.0.0.
+    * [gslab_python](https://github.com/gslab-econ/gslab_python) version 4.0.0 or later.
     * [PyYAML](http://pyyaml.org/wiki/PyYAML) a Python module for parsing YAML files. 
 * [SCons](http://scons.org/pages/download.html) version 2.4 or later.
 * [git](https://git-scm.com/downloads) for version control.
