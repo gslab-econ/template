@@ -1,5 +1,6 @@
 user-config.yaml
 /build/
+/release/lg/
 *.pyc
 *.lyx~
 *.lyx#
