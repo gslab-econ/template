@@ -8,29 +8,18 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 577738efa8732b29682b7fd11eb840f644c70265
+commit 1f835ca5399a78753ce039455575f34bc1c9e6dd
 Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Mon Aug 21 12:22:48 2017 -0700
+Date:   Mon Aug 21 14:40:29 2017 -0700
 
-    #62 reorganize repo
+    #62 add provenance
 
 
 Files changed since last commit:
 
-analysis/constants.yaml
-analysis/release/analysis/plot.pdf
-analysis/release/analysis/sconscript_analysis_do.log
-analysis/sconstruct.log
-analysis/source/analysis/SConscript
-analysis/source/analysis/analysis.do
-analysis/state_of_repo.log
-paper_slides/SConstruct
-paper_slides/input/plot.pdf
-paper_slides/release/talk/sconscript.log
-paper_slides/release/talk/slides.pdf
+paper_slides/input/provenance.txt
+paper_slides/print_provenance.py
 paper_slides/sconstruct.log
-paper_slides/source/figures/figure.lyx
-paper_slides/source/talk/slides.lyx
 paper_slides/state_of_repo.log
 
 ===================================
@@ -45,17 +34,17 @@ paper_slides/state_of_repo.log
    modified on: 21 Aug 2017 11:10:12
    size of file: 246
 ./print_provenance.py:
-   modified on: 21 Aug 2017 14:38:59
-   size of file: 1158
+   modified on: 21 Aug 2017 14:47:28
+   size of file: 1509
 ./SConstruct:
    modified on: 21 Aug 2017 14:05:08
    size of file: 1845
 ./sconstruct.log:
-   modified on: 21 Aug 2017 14:39:01
+   modified on: 21 Aug 2017 14:48:01
    size of file: 199
 ./state_of_repo.log:
-   modified on: 21 Aug 2017 14:39:01
-   size of file: 913
+   modified on: 21 Aug 2017 14:48:01
+   size of file: 538
 ./build/paper/ondeck.pdf:
    modified on: 21 Aug 2017 11:10:23
    size of file: 18072
@@ -87,8 +76,8 @@ paper_slides/state_of_repo.log
    modified on: 21 Aug 2017 13:07:59
    size of file: 12183
 ./input/provenance.txt:
-   modified on: 21 Aug 2017 14:39:01
-   size of file: 289
+   modified on: 21 Aug 2017 14:48:01
+   size of file: 317
 ./input/table.txt:
    modified on: 21 Aug 2017 10:13:06
    size of file: 31
