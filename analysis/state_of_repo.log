@@ -1,0 +1,84 @@
+WARNING: Information about .sconsign.dblite may be misleading 
+as it can be edited after state_of_repo.log finishes running
+
+===================================
+
+ GIT STATUS
+
+===================================
+Last commit:
+
+commit 7229a9f8d6e4c6782aadeca0fa93973d9c5669df
+Author: Quan <lequan@stanford.edu>
+Date:   Tue Aug 1 15:59:52 2017 -0700
+
+    "v4.0.0 or later" in response to gslab_python#90
+
+
+Files changed since last commit:
+
+analysis/SConstruct
+analysis/sconstruct.log
+analysis/state_of_repo.log
+paper_slides/SConstruct
+paper_slides/configuration_test.py
+paper_slides/sconstruct.log
+paper_slides/state_of_repo.log
+paper_slides/user-config.yaml
+
+===================================
+
+ FILE STATUS
+
+===================================
+./configuration_test.py:
+   modified on: 21 Aug 2017 11:28:45
+   size of file: 1795
+./constants.yaml:
+   modified on: 21 Aug 2017 10:50:24
+   size of file: 203
+./SConstruct:
+   modified on: 21 Aug 2017 12:21:42
+   size of file: 1939
+./sconstruct.log:
+   modified on: 21 Aug 2017 12:21:55
+   size of file: 199
+./state_of_repo.log:
+   modified on: 21 Aug 2017 12:21:55
+   size of file: 655
+./user-config.yaml:
+   modified on: 21 Aug 2017 09:20:57
+   size of file: 26
+./build/analysis/plot.pdf:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 12521
+./build/analysis/sconscript_analysis_do.log:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 2156
+./build/analysis/table.txt:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 31
+./build/tables/sconscript.log:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 157
+./build/tables/table.lyx:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 4082
+./release/analysis/plot.pdf:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 12521
+./release/analysis/sconscript_analysis_do.log:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 2156
+./release/analysis/table.txt:
+   modified on: 21 Aug 2017 10:13:06
+   size of file: 31
+./source/analysis/analysis.do:
+   modified on: 21 Aug 2017 10:12:29
+   size of file: 512
+./source/analysis/SConscript:
+   modified on: 21 Aug 2017 10:51:00
+   size of file: 346
+./source/raw/README.md:
+   modified on: 21 Aug 2017 09:20:37
+   size of file: 102

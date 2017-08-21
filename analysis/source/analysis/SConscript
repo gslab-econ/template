@@ -1,0 +1,11 @@
+Import('env')
+
+build  = env['PATHS']['build']['analysis']
+source = env['PATHS']['source']['analysis']
+
+env.BuildStata(target  = ['#%s/plot.pdf'    % build,
+                          '#%s/table.txt'   % build],
+               source  = ['#%s/analysis.do' % source],
+               log_ext = "analysis_do")
+
+env.Install('#release', '#%s/' % build)

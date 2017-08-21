@@ -1,0 +1,15 @@
+# Build Directories
+build:
+  paper: build/paper
+  tables: build/tables
+  talk: build/talk
+
+# Input Directories
+input: input
+
+# Source Directories
+source:
+  figures: source/figures
+  paper: source/paper
+  tables: source/tables
+  talk: source/talk

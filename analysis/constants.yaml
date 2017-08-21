@@ -1,0 +1,11 @@
+# Build Directories
+build:
+  analysis: build/analysis
+  tables: build/tables
+
+# Source Directories
+source:
+  analysis: source/analysis
+  figures: source/figures
+  raw: source/raw
+  tables: source/tables
