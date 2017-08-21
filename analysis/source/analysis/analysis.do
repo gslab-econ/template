@@ -9,7 +9,7 @@ program main
     set obs 20
     egen x = fill(1 2 3 4 5 6 7 8)
     hist x, discrete width(0.5)
-    graph export "`build_analysis'/plot.pdf", replace
+    graph export "`build_analysis'/plot.eps", replace
 
     sum x
     file open  outfile using "`build_analysis'/table.txt", write replace

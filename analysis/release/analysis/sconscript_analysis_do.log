@@ -1,5 +1,5 @@
-*** Builder log created: {2017-08-21 10:13:04} 
-*** Builder log completed: {2017-08-21 10:13:06} 
+*** Builder log created: {2017-08-21 13:07:57} 
+*** Builder log completed: {2017-08-21 13:07:59} 
  
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -41,7 +41,7 @@ running /Applications/Stata/profile.do ...
 .     set obs 20
   4.     egen x = fill(1 2 3 4 5 6 7 8)
   5.     hist x, discrete width(0.5)
-  6.     graph export "`build_analysis'/plot.pdf", replace
+  6.     graph export "`build_analysis'/plot.eps", replace
   7. 
 .     sum x
   8.     file open  outfile using "`build_analysis'/table.txt", write replace
@@ -55,7 +55,8 @@ running /Applications/Stata/profile.do ...
 . main
 number of observations (_N) was 0, now 20
 (start=1, width=.5)
-(file /Users/chuanyu/Desktop/template/analysis/build/analysis/plot.pdf written in PDF format)
+(note: file build/analysis/plot.eps not found)
+(file build/analysis/plot.eps written in EPS format)
 
     Variable |        Obs        Mean    Std. Dev.       Min        Max
 -------------+---------------------------------------------------------

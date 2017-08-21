@@ -8,23 +8,21 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 7229a9f8d6e4c6782aadeca0fa93973d9c5669df
-Author: Quan <lequan@stanford.edu>
-Date:   Tue Aug 1 15:59:52 2017 -0700
+commit 577738efa8732b29682b7fd11eb840f644c70265
+Author: chuanyu <yuchuan2016@gmail.com>
+Date:   Mon Aug 21 12:22:48 2017 -0700
 
-    "v4.0.0 or later" in response to gslab_python#90
+    #62 reorganize repo
 
 
 Files changed since last commit:
 
-analysis/SConstruct
+analysis/constants.yaml
+analysis/release/analysis/sconscript_analysis_do.log
 analysis/sconstruct.log
+analysis/source/analysis/SConscript
+analysis/source/analysis/analysis.do
 analysis/state_of_repo.log
-paper_slides/SConstruct
-paper_slides/configuration_test.py
-paper_slides/sconstruct.log
-paper_slides/state_of_repo.log
-paper_slides/user-config.yaml
 
 ===================================
 
@@ -35,28 +33,28 @@ paper_slides/user-config.yaml
    modified on: 21 Aug 2017 11:28:45
    size of file: 1795
 ./constants.yaml:
-   modified on: 21 Aug 2017 10:50:24
-   size of file: 203
+   modified on: 21 Aug 2017 12:32:26
+   size of file: 130
 ./SConstruct:
    modified on: 21 Aug 2017 12:21:42
    size of file: 1939
 ./sconstruct.log:
-   modified on: 21 Aug 2017 12:21:55
+   modified on: 21 Aug 2017 13:08:01
    size of file: 199
 ./state_of_repo.log:
-   modified on: 21 Aug 2017 12:21:55
-   size of file: 655
+   modified on: 21 Aug 2017 13:08:01
+   size of file: 614
 ./user-config.yaml:
    modified on: 21 Aug 2017 09:20:57
    size of file: 26
-./build/analysis/plot.pdf:
-   modified on: 21 Aug 2017 10:13:06
-   size of file: 12521
+./build/analysis/plot.eps:
+   modified on: 21 Aug 2017 13:07:59
+   size of file: 12183
 ./build/analysis/sconscript_analysis_do.log:
-   modified on: 21 Aug 2017 10:13:06
-   size of file: 2156
+   modified on: 21 Aug 2017 13:07:59
+   size of file: 2162
 ./build/analysis/table.txt:
-   modified on: 21 Aug 2017 10:13:06
+   modified on: 21 Aug 2017 13:07:59
    size of file: 31
 ./build/tables/sconscript.log:
    modified on: 21 Aug 2017 10:13:06
@@ -64,20 +62,23 @@ paper_slides/user-config.yaml
 ./build/tables/table.lyx:
    modified on: 21 Aug 2017 10:13:06
    size of file: 4082
+./release/analysis/plot.eps:
+   modified on: 21 Aug 2017 13:07:59
+   size of file: 12183
 ./release/analysis/plot.pdf:
    modified on: 21 Aug 2017 10:13:06
    size of file: 12521
 ./release/analysis/sconscript_analysis_do.log:
-   modified on: 21 Aug 2017 10:13:06
-   size of file: 2156
+   modified on: 21 Aug 2017 13:07:59
+   size of file: 2162
 ./release/analysis/table.txt:
-   modified on: 21 Aug 2017 10:13:06
+   modified on: 21 Aug 2017 13:07:59
    size of file: 31
 ./source/analysis/analysis.do:
-   modified on: 21 Aug 2017 10:12:29
+   modified on: 21 Aug 2017 13:07:30
    size of file: 512
 ./source/analysis/SConscript:
-   modified on: 21 Aug 2017 10:51:00
+   modified on: 21 Aug 2017 13:07:52
    size of file: 346
 ./source/raw/README.md:
    modified on: 21 Aug 2017 09:20:37
