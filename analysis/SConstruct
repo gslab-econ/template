@@ -37,7 +37,8 @@ env['PATHS'] = yaml.load(open('constants.yaml', 'rU'))
 Export('env')
 
 # Run sub-trees
-SConscript('source/analysis/SConscript')
+SConscript('source/prepare_data/SConscript')
+SConscript('source/descriptive/SConscript')
 Default('./build', './release')
 
 # Additional mode options

@@ -8,15 +8,26 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 1f835ca5399a78753ce039455575f34bc1c9e6dd
+commit 03fafac944f12d776e14a04b7460b2db06a58aca
 Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Mon Aug 21 14:40:29 2017 -0700
+Date:   Mon Aug 21 14:48:17 2017 -0700
 
-    #62 add provenance
+    #62 allow provenance to check missing files
 
 
 Files changed since last commit:
 
+analysis/SConstruct
+analysis/constants.yaml
+analysis/release/analysis/plot.eps
+analysis/release/analysis/sconscript_analysis_do.log
+analysis/release/analysis/table.txt
+analysis/sconstruct.log
+analysis/source/analysis/SConscript
+analysis/source/analysis/analysis.do
+analysis/source/raw/README.md
+analysis/state_of_repo.log
+paper_slides/SConstruct
 paper_slides/input/provenance.txt
 paper_slides/print_provenance.py
 paper_slides/sconstruct.log
@@ -33,18 +44,15 @@ paper_slides/state_of_repo.log
 ./constants.yaml:
    modified on: 21 Aug 2017 11:10:12
    size of file: 246
-./print_provenance.py:
-   modified on: 21 Aug 2017 14:47:28
-   size of file: 1509
 ./SConstruct:
-   modified on: 21 Aug 2017 14:05:08
-   size of file: 1845
+   modified on: 22 Aug 2017 15:34:01
+   size of file: 1780
 ./sconstruct.log:
-   modified on: 21 Aug 2017 14:48:01
+   modified on: 22 Aug 2017 15:34:22
    size of file: 199
 ./state_of_repo.log:
-   modified on: 21 Aug 2017 14:48:01
-   size of file: 538
+   modified on: 22 Aug 2017 15:34:22
+   size of file: 909
 ./build/paper/ondeck.pdf:
    modified on: 21 Aug 2017 11:10:23
    size of file: 18072
@@ -73,13 +81,13 @@ paper_slides/state_of_repo.log
    modified on: 21 Aug 2017 13:09:31
    size of file: 28835
 ./input/plot.eps:
-   modified on: 21 Aug 2017 13:07:59
+   modified on: 22 Aug 2017 15:31:07
    size of file: 12183
 ./input/provenance.txt:
-   modified on: 21 Aug 2017 14:48:01
-   size of file: 317
+   modified on: 22 Aug 2017 15:33:08
+   size of file: 78
 ./input/table.txt:
-   modified on: 21 Aug 2017 10:13:06
+   modified on: 22 Aug 2017 15:31:07
    size of file: 31
 ./release/paper/ondeck.pdf:
    modified on: 21 Aug 2017 11:10:23
@@ -104,9 +112,6 @@ paper_slides/state_of_repo.log
    size of file: 28835
 ./source/figures/figure.lyx:
    modified on: 21 Aug 2017 13:08:49
-   size of file: 2214
-./source/figures/figure.lyx~:
-   modified on: 21 Aug 2017 11:01:59
    size of file: 2214
 ./source/paper/ondeck.lyx:
    modified on: 21 Aug 2017 09:20:37
@@ -134,7 +139,4 @@ paper_slides/state_of_repo.log
    size of file: 237
 ./source/talk/slides.lyx:
    modified on: 21 Aug 2017 13:09:25
-   size of file: 4697
-./source/talk/slides.lyx~:
-   modified on: 21 Aug 2017 11:09:00
    size of file: 4697

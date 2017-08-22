@@ -10,13 +10,11 @@ import gslab_scons as gs
 import gslab_scons.log as log
 import yaml
 import atexit
-from print_provenance import print_provenance
 
 # Start log after getting mode and release version
 mode = ARGUMENTS.get('mode', 'develop') 
 vers = ARGUMENTS.get('version', '') 
 log.start_log(mode, vers)
-print_provenance()
 
 # Define the SCons environment
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 

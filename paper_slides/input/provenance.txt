@@ -1,4 +1,1 @@
-Note: `Provenance.txt` is produced by `print_provenance.py`. Do not directly edit this file.
-
-`plot.eps` is copied from `../analysis/build/analysis/` and modified by commit 1f835ca at 2017-08-21 14:40:29.
-`table.txt` is copied from `../analysis/build/analysis/` and modified by commit 577738e at 2017-08-21 12:22:48.
+All files in `paper_slides/input` are manually copied from `analysis/release`.

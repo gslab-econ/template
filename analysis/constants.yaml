@@ -1,8 +1,9 @@
 # Build Directories
 build:
-  analysis: build/analysis
+  prepare_data: build/prepare_data
+  descriptive: build/descriptive
 
 # Source Directories
 source:
-  analysis: source/analysis
-  raw: source/raw
+  prepare_data: source/prepare_data
+  descriptive: source/descriptive
