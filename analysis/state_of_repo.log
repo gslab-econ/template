@@ -8,28 +8,19 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 03fafac944f12d776e14a04b7460b2db06a58aca
+commit 1e748d57d1f8ee045175556d4a97ff77e80be204
 Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Mon Aug 21 14:48:17 2017 -0700
+Date:   Tue Aug 22 15:35:33 2017 -0700
 
-    #62 allow provenance to check missing files
+    #72 response to PR and comments
 
 
 Files changed since last commit:
 
-analysis/SConstruct
-analysis/constants.yaml
-analysis/release/analysis/plot.eps
-analysis/release/analysis/sconscript_analysis_do.log
-analysis/release/analysis/table.txt
 analysis/sconstruct.log
-analysis/source/analysis/SConscript
-analysis/source/analysis/analysis.do
-analysis/source/raw/README.md
+analysis/source/prepare_data/SConscript
+analysis/source/prepare_data/simulate.do
 analysis/state_of_repo.log
-paper_slides/SConstruct
-paper_slides/input/provenance.txt
-paper_slides/print_provenance.py
 
 ===================================
 
@@ -46,11 +37,11 @@ paper_slides/print_provenance.py
    modified on: 22 Aug 2017 15:28:05
    size of file: 1987
 ./sconstruct.log:
-   modified on: 22 Aug 2017 15:34:16
+   modified on: 22 Aug 2017 15:40:03
    size of file: 199
 ./state_of_repo.log:
-   modified on: 22 Aug 2017 15:34:16
-   size of file: 850
+   modified on: 22 Aug 2017 15:40:03
+   size of file: 557
 ./user-config.yaml:
    modified on: 21 Aug 2017 09:20:57
    size of file: 26
@@ -64,11 +55,11 @@ paper_slides/print_provenance.py
    modified on: 22 Aug 2017 15:31:07
    size of file: 31
 ./build/prepare_data/data.txt:
-   modified on: 22 Aug 2017 15:25:15
+   modified on: 22 Aug 2017 15:39:52
    size of file: 53
-./build/prepare_data/sconscript_simulate.log:
-   modified on: 22 Aug 2017 15:25:15
-   size of file: 1598
+./build/prepare_data/sconscript_create_data.log:
+   modified on: 22 Aug 2017 15:39:52
+   size of file: 1601
 ./release/descriptive/plot.eps:
    modified on: 22 Aug 2017 15:31:07
    size of file: 12183
@@ -84,9 +75,9 @@ paper_slides/print_provenance.py
 ./source/descriptive/SConscript:
    modified on: 22 Aug 2017 15:30:07
    size of file: 463
-./source/prepare_data/SConscript:
-   modified on: 22 Aug 2017 15:22:22
-   size of file: 225
-./source/prepare_data/simulate.do:
+./source/prepare_data/create_data.do:
    modified on: 22 Aug 2017 15:25:10
    size of file: 271
+./source/prepare_data/SConscript:
+   modified on: 22 Aug 2017 15:38:59
+   size of file: 234
