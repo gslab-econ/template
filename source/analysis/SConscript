@@ -9,4 +9,4 @@ env.BuildStata(target  = ['#%s/plot.pdf'       % build,
                source  = ['#%s/analysis.do'    % source],
                log_ext = "analysis_do")
 
-env.Install('#release/lg', '#%s/' % build)
+env.Install('#release/lg', '#%s/lg_dataset.dta' % build)
