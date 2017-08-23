@@ -4,7 +4,6 @@ build:
   paper: build/paper
   tables: build/tables
   talk: build/talk
-  lg_data: build/lg_data
 
 # Source Directories
 source:
