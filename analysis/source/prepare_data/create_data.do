@@ -3,7 +3,7 @@ clear all
 set more off
 
 program main
-    yaml read YAML using constants.yaml
+    yaml read YAML using config_global.yaml
     yaml local build = YAML.build.prepare_data
 
     set obs 300000

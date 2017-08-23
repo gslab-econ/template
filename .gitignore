@@ -1,4 +1,5 @@
-analysis/user-config.yaml
+analysis/config_user.yaml
+paper_slides/config_user.yaml
 analysis/build/
 analysis/release/lg/
 paper_slides/build/

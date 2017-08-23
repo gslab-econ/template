@@ -5,7 +5,7 @@ sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Test for proper prerequisites and setup
 from configuration_test import configuration_test
-[mode, cache_dir] = configuration_test(ARGUMENTS, gslab_python_version = '4.0.0')
+[mode, cache_dir] = configuration_test(ARGUMENTS, gslab_python_version = '4.1.0')
 import gslab_scons as gs
 import gslab_scons.log as log
 import yaml
@@ -28,7 +28,7 @@ env.Decider('MD5-timestamp')
 env.EXTENSIONS = ['.eps', '.pdf', '.lyx']
 SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True))
 # Load paths
-env['PATHS'] = yaml.load(open('constants.yaml', 'rU'))
+env['PATHS'] = yaml.load(open('config_global.yaml', 'rU'))
 
 # Export environment
 Export('env')
@@ -49,5 +49,7 @@ debrief_env = {'MAXIT' : 10,
                # Soft limits on file sizes
                'file_MB_limit' : 2,
                'total_MB_limit' : 500}
+               
 atexit.register(log.end_log)
 atexit.register(gs.misc.scons_debrief, target = 'state_of_repo.log', env = debrief_env)
+
