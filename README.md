@@ -102,7 +102,7 @@ Every file intended for release should be added to the `release` directory. File
 
 ##### What if there are large files I need to put in `release` but cannot be versioned?
 
-For large files to be released, our protocol is to keep them in a designated subfolder named `release/lg`. By default, `release/lg` is in `.gitignore`. `release/lg` will be included in the local destination release. 
+For large files to be released, our protocol is to keep them in a designated subfolder named `release/lg`. By default, `release/lg` is in `.gitignore`. When you use our custom release tool, `release/lg` will be included in the local destination release and not pushed to GitHub.
 
 #### License
 
