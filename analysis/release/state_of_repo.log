@@ -8,20 +8,41 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit db9f853e00d877242f9e0c6767e10ab0feaffa20
+commit b63d44a661844c5dcd5aab631a4ed31a76c0bb75
 Author: Frank Yang <frank@siepr-mg-ra-imac-5.stanford.edu>
-Date:   Wed Aug 23 11:27:40 2017 -0700
+Date:   Wed Aug 23 11:37:36 2017 -0700
 
-    #93 first pass
+    #93 second pass
 
 
 Files changed since last commit:
 
-analysis/SConstruct
 analysis/release/descriptive/plot.eps
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
 analysis/release/descriptive/sconscript_descriptive.log
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
+analysis/sconstruct.log
+analysis/state_of_repo.log
+paper_slides/release/paper/ondeck.pdf
+paper_slides/release/paper/ondeck.pdf
+paper_slides/release/paper/online_appendix.pdf
+paper_slides/release/paper/online_appendix.pdf
+paper_slides/release/paper/paper.pdf
+paper_slides/release/paper/paper.pdf
+paper_slides/release/paper/sconscript.log
+paper_slides/release/paper/sconscript.log
+paper_slides/release/paper/text.pdf
+paper_slides/release/paper/text.pdf
+paper_slides/release/sconstruct.log
+paper_slides/release/state_of_repo.log
+paper_slides/release/talk/sconscript.log
+paper_slides/release/talk/sconscript.log
+paper_slides/release/talk/slides.pdf
+paper_slides/release/talk/slides.pdf
+paper_slides/sconstruct.log
+paper_slides/state_of_repo.log
 
 ===================================
 
@@ -29,65 +50,62 @@ analysis/release/state_of_repo.log
 
 ===================================
 ./config_global.yaml:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 23 Aug 2017 14:11:17
    size of file: 297
 ./config_user.yaml:
-   modified on: 23 Aug 2017 10:48:34
+   modified on: 23 Aug 2017 14:12:09
    size of file: 168
 ./config_user_template.yaml:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 23 Aug 2017 14:11:17
    size of file: 168
 ./configuration_test.py:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 23 Aug 2017 14:11:17
    size of file: 2395
 ./SConstruct:
-   modified on: 23 Aug 2017 11:34:18
+   modified on: 23 Aug 2017 14:11:17
    size of file: 1992
 ./sconstruct.log:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 431
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 500
 ./state_of_repo.log:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 608
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 1424
 ./build/descriptive/plot.eps:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 12183
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 11148
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 2211
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 2221
 ./build/descriptive/table.txt:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 31
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 39
 ./build/prepare_data/data.txt:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 53
+   modified on: 23 Aug 2017 14:13:20
+   size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 1627
-./release/sconstruct.log:
-   modified on: 23 Aug 2017 11:34:29
-   size of file: 250
-./release/state_of_repo.log:
-   modified on: 23 Aug 2017 11:34:29
-   size of file: 2477
+   modified on: 23 Aug 2017 14:13:20
+   size of file: 1634
 ./release/descriptive/plot.eps:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 12183
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 11148
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 2211
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 2221
 ./release/descriptive/table.txt:
-   modified on: 23 Aug 2017 11:34:37
-   size of file: 31
+   modified on: 23 Aug 2017 14:13:21
+   size of file: 39
+./release/lg/data.txt:
+   modified on: 23 Aug 2017 14:13:20
+   size of file: 1988897
 ./source/descriptive/descriptive.do:
-   modified on: 23 Aug 2017 10:30:45
-   size of file: 550
+   modified on: 23 Aug 2017 14:11:59
+   size of file: 540
 ./source/descriptive/SConscript:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 22 Aug 2017 20:38:54
    size of file: 463
 ./source/prepare_data/create_data.do:
-   modified on: 23 Aug 2017 10:30:45
-   size of file: 275
+   modified on: 23 Aug 2017 14:11:59
+   size of file: 279
 ./source/prepare_data/SConscript:
-   modified on: 23 Aug 2017 10:30:45
-   size of file: 234
+   modified on: 23 Aug 2017 14:11:59
+   size of file: 319

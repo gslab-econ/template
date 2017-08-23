@@ -8,27 +8,38 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit db9f853e00d877242f9e0c6767e10ab0feaffa20
+commit b63d44a661844c5dcd5aab631a4ed31a76c0bb75
 Author: Frank Yang <frank@siepr-mg-ra-imac-5.stanford.edu>
-Date:   Wed Aug 23 11:27:40 2017 -0700
+Date:   Wed Aug 23 11:37:36 2017 -0700
 
-    #93 first pass
+    #93 second pass
 
 
 Files changed since last commit:
 
-analysis/SConstruct
 analysis/release/descriptive/plot.eps
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
 analysis/release/descriptive/sconscript_descriptive.log
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
-paper_slides/SConstruct
+analysis/sconstruct.log
+analysis/state_of_repo.log
+paper_slides/release/paper/ondeck.pdf
 paper_slides/release/paper/ondeck.pdf
 paper_slides/release/paper/online_appendix.pdf
+paper_slides/release/paper/online_appendix.pdf
+paper_slides/release/paper/paper.pdf
 paper_slides/release/paper/paper.pdf
 paper_slides/release/paper/sconscript.log
+paper_slides/release/paper/sconscript.log
 paper_slides/release/paper/text.pdf
+paper_slides/release/paper/text.pdf
+paper_slides/release/sconstruct.log
+paper_slides/release/state_of_repo.log
 paper_slides/release/talk/sconscript.log
+paper_slides/release/talk/sconscript.log
+paper_slides/release/talk/slides.pdf
 paper_slides/release/talk/slides.pdf
 paper_slides/sconstruct.log
 paper_slides/state_of_repo.log
@@ -39,116 +50,119 @@ paper_slides/state_of_repo.log
 
 ===================================
 ./config_global.yaml:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 23 Aug 2017 14:11:17
    size of file: 332
 ./config_user.yaml:
-   modified on: 23 Aug 2017 11:36:09
+   modified on: 23 Aug 2017 14:12:19
    size of file: 141
 ./config_user_template.yaml:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 23 Aug 2017 14:11:17
    size of file: 141
 ./configuration_test.py:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 23 Aug 2017 14:11:17
    size of file: 2043
 ./SConstruct:
-   modified on: 23 Aug 2017 11:36:21
+   modified on: 23 Aug 2017 14:11:17
    size of file: 1801
 ./sconstruct.log:
-   modified on: 23 Aug 2017 11:36:34
+   modified on: 23 Aug 2017 14:13:42
    size of file: 730
 ./state_of_repo.log:
-   modified on: 23 Aug 2017 11:36:35
-   size of file: 969
+   modified on: 23 Aug 2017 14:13:42
+   size of file: 1424
 ./build/paper/ondeck.pdf:
-   modified on: 23 Aug 2017 11:36:28
+   modified on: 23 Aug 2017 14:13:37
    size of file: 18274
 ./build/paper/online_appendix.pdf:
-   modified on: 23 Aug 2017 11:36:30
+   modified on: 23 Aug 2017 14:13:38
    size of file: 45354
 ./build/paper/paper.pdf:
-   modified on: 23 Aug 2017 11:36:32
-   size of file: 57712
+   modified on: 23 Aug 2017 14:13:40
+   size of file: 57850
 ./build/paper/sconscript.log:
-   modified on: 23 Aug 2017 11:36:32
+   modified on: 23 Aug 2017 14:13:40
    size of file: 342
 ./build/paper/text.pdf:
-   modified on: 23 Aug 2017 11:36:32
+   modified on: 23 Aug 2017 14:13:40
    size of file: 18274
 ./build/tables/sconscript.log:
-   modified on: 23 Aug 2017 11:36:30
+   modified on: 23 Aug 2017 14:13:38
    size of file: 157
 ./build/tables/table.lyx:
-   modified on: 23 Aug 2017 11:36:30
-   size of file: 4082
+   modified on: 23 Aug 2017 14:13:38
+   size of file: 4094
 ./build/talk/sconscript.log:
-   modified on: 23 Aug 2017 11:36:34
+   modified on: 23 Aug 2017 14:13:42
    size of file: 589
 ./build/talk/slides.pdf:
-   modified on: 23 Aug 2017 11:36:34
-   size of file: 28823
+   modified on: 23 Aug 2017 14:13:42
+   size of file: 28674
 ./input/plot.eps:
-   modified on: 23 Aug 2017 10:30:45
-   size of file: 12183
+   modified on: 23 Aug 2017 14:11:59
+   size of file: 11148
 ./input/provenance.txt:
-   modified on: 23 Aug 2017 10:30:45
+   modified on: 22 Aug 2017 20:38:54
    size of file: 78
 ./input/table.txt:
-   modified on: 23 Aug 2017 10:30:45
-   size of file: 31
+   modified on: 23 Aug 2017 14:11:59
+   size of file: 39
 ./release/sconstruct.log:
-   modified on: 23 Aug 2017 11:36:09
-   size of file: 92
+   modified on: 23 Aug 2017 14:12:44
+   size of file: 250
 ./release/state_of_repo.log:
-   modified on: 23 Aug 2017 11:36:09
-   size of file: 3034
+   modified on: 23 Aug 2017 14:12:44
+   size of file: 4918
 ./release/paper/ondeck.pdf:
-   modified on: 23 Aug 2017 11:36:28
+   modified on: 23 Aug 2017 14:13:37
    size of file: 18274
 ./release/paper/online_appendix.pdf:
-   modified on: 23 Aug 2017 11:36:30
+   modified on: 23 Aug 2017 14:13:38
    size of file: 45354
+./release/paper/paper.aux:
+   modified on: 22 Aug 2017 21:26:48
+   size of file: 342
 ./release/paper/paper.pdf:
-   modified on: 23 Aug 2017 11:36:32
-   size of file: 57712
+   modified on: 23 Aug 2017 14:13:40
+   size of file: 57850
 ./release/paper/sconscript.log:
-   modified on: 23 Aug 2017 11:36:32
+   modified on: 23 Aug 2017 14:13:40
    size of file: 342
 ./release/paper/text.pdf:
-   modified on: 23 Aug 2017 11:36:32
+   modified on: 23 Aug 2017 14:13:40
    size of file: 18274
 ./release/talk/sconscript.log:
-   modified on: 23 Aug 2017 11:36:34
+   modified on: 23 Aug 2017 14:13:42
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 23 Aug 2017 11:36:34
-   size of file: 28823
+   modified on: 23 Aug 2017 14:13:42
+   size of file: 28674
 ./source/figures/figure.lyx:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 22 Aug 2017 20:38:54
    size of file: 2214
 ./source/paper/ondeck.lyx:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 23 Aug 2017 12:37:50
    size of file: 2522
 ./source/paper/online_appendix.lyx:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 23 Aug 2017 12:37:50
    size of file: 3610
 ./source/paper/paper.lyx:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 23 Aug 2017 12:37:50
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 23 Aug 2017 12:37:50
    size of file: 558
 ./source/paper/text.lyx:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 23 Aug 2017 12:37:50
    size of file: 2522
 ./source/tables/SConscript:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 22 Aug 2017 20:38:54
    size of file: 233
 ./source/tables/table.lyx:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 22 Aug 2017 20:38:54
    size of file: 4082
 ./source/talk/SConscript:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 22 Aug 2017 20:38:54
    size of file: 237
 ./source/talk/slides.lyx:
-   modified on: 23 Aug 2017 10:30:46
+   modified on: 22 Aug 2017 20:38:54
    size of file: 4697

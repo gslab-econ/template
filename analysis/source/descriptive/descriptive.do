@@ -8,7 +8,8 @@ program main
     yaml local build = YAML.build.descriptive
 
     import delimited "`data'/data.txt", delimiter("|") clear
-    hist x, discrete width(0.5)
+
+    hist x, bin(10)
     graph export "`build'/plot.eps", replace
 
     sum x
@@ -16,6 +17,7 @@ program main
     file write outfile "<tab:table>" _n
     file write outfile (r(mean)) _n (r(sd)) _n (r(max)) _n (r(min))
     file close outfile
+
 end
 
 * EXECUTE
