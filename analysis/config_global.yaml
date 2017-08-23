@@ -7,3 +7,9 @@ build:
 source:
   prepare_data: source/prepare_data
   descriptive: source/descriptive
+
+# Required softwares
+git-lfs: No
+Stata: No
+R: No
+Lyx: No
