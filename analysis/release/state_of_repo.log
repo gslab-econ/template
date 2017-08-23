@@ -1,0 +1,93 @@
+WARNING: Information about .sconsign.dblite may be misleading 
+as it can be edited after state_of_repo.log finishes running
+
+===================================
+
+ GIT STATUS
+
+===================================
+Last commit:
+
+commit a055392a3b4988d80fac2567059a7065243e828e
+Author: Frank Yang <frank@siepr-mg-ra-imac-5.stanford.edu>
+Date:   Wed Aug 23 10:42:09 2017 -0700
+
+    #93 aux first pass
+
+
+Files changed since last commit:
+
+analysis/SConstruct
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
+analysis/sconstruct.log
+analysis/state_of_repo.log
+
+===================================
+
+ FILE STATUS
+
+===================================
+./config_global.yaml:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 297
+./config_user.yaml:
+   modified on: 23 Aug 2017 10:48:34
+   size of file: 168
+./config_user_template.yaml:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 168
+./configuration_test.py:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 2395
+./SConstruct:
+   modified on: 23 Aug 2017 11:24:16
+   size of file: 2022
+./sconstruct.log:
+   modified on: 23 Aug 2017 11:24:19
+   size of file: 250
+./state_of_repo.log:
+   modified on: 23 Aug 2017 11:24:19
+   size of file: 596
+./build/descriptive/plot.eps:
+   modified on: 23 Aug 2017 11:22:08
+   size of file: 12183
+./build/descriptive/sconscript_descriptive.log:
+   modified on: 23 Aug 2017 11:22:08
+   size of file: 2211
+./build/descriptive/table.txt:
+   modified on: 23 Aug 2017 11:22:08
+   size of file: 31
+./build/prepare_data/data.txt:
+   modified on: 23 Aug 2017 11:22:07
+   size of file: 53
+./build/prepare_data/sconscript_create_data.log:
+   modified on: 23 Aug 2017 11:22:07
+   size of file: 1627
+./release/sconstruct.log:
+   modified on: 23 Aug 2017 11:22:08
+   size of file: 431
+./release/state_of_repo.log:
+   modified on: 23 Aug 2017 11:06:15
+   size of file: 2375
+./release/descriptive/plot.eps:
+   modified on: 23 Aug 2017 11:22:08
+   size of file: 12183
+./release/descriptive/sconscript_descriptive.log:
+   modified on: 23 Aug 2017 11:22:08
+   size of file: 2211
+./release/descriptive/table.txt:
+   modified on: 23 Aug 2017 11:22:08
+   size of file: 31
+./source/descriptive/descriptive.do:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 550
+./source/descriptive/SConscript:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 463
+./source/prepare_data/create_data.do:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 275
+./source/prepare_data/SConscript:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 234
