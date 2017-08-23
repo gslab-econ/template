@@ -26,7 +26,7 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     config.check_python(gslab_python_version = gslab_python_version, 
                         packages = ["yaml", "gslab_scons", "gslab_fill"])
 
-    
+    # Read YAML file and check if the softwares are required. 
     lfs_require    = misc.load_yaml_value("config_global.yaml", "git-lfs")
     r_require      = misc.load_yaml_value("config_global.yaml", "R")
     stata_require  = misc.load_yaml_value("config_global.yaml", "Stata")
@@ -40,7 +40,7 @@ def configuration_test(ARGUMENTS, gslab_python_version):
         config.check_stata()
     if lyx_require:
         config.check_lyx()
-        
+
     if not os.path.isfile("config_user.yaml"):
         copyfile("config_user_template.yaml", "config_user.yaml")
 

@@ -8,7 +8,7 @@ source:
   prepare_data: source/prepare_data
   descriptive: source/descriptive
 
-# Required softwares
+# Switch to 'Yes' if any of the following softwares are required
 git-lfs: No
 Stata: No
 R: No

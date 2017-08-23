@@ -1,5 +1,4 @@
 # User configuration 
-stata_executable: stata-mp
 cache_directory: /Users/Example_User/Dropbox/cache/template
 release_directory: /Users/Example_User/Dropbox/release/
 
