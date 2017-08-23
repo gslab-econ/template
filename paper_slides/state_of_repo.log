@@ -8,15 +8,41 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 82be137cbe6022ac268e0c45c053eae525d1b04f
-Author: Quan Le <lequan@stanford.edu>
-Date:   Tue Aug 22 20:48:26 2017 -0700
+commit 1e579d10b0b73fada6309adbe98d5e7c1f3d1e38
+Author: Quan <lequan@stanford.edu>
+Date:   Wed Aug 23 12:44:04 2017 -0700
 
-    #67 change hist in default stata code to limit number of pins
+    Pull request for #67: Create release/lg for large files (#73)
+    
+    * #67 add code to fake lg dataset, add lg to gitignore
+    
+    * #67 add lg protocol to readme.md
+    
+    * Update constants.yaml
+    
+    * #67 blow up data file to do large release
+    
+    * #67 change hist in default stata code to limit number of pins
+    
+    * #67 delete old logs
+    
+    * #67 readme change
+    
+    * #67 manually copy new analysis files to paper input
 
 
 Files changed since last commit:
 
+analysis/release/descriptive/sconscript_descriptive.log
+analysis/sconstruct.log
+analysis/state_of_repo.log
+paper_slides/release/paper/ondeck.pdf
+paper_slides/release/paper/online_appendix.pdf
+paper_slides/release/paper/paper.pdf
+paper_slides/release/paper/sconscript.log
+paper_slides/release/paper/text.pdf
+paper_slides/release/talk/sconscript.log
+paper_slides/release/talk/slides.pdf
 paper_slides/sconstruct.log
 paper_slides/state_of_repo.log
 
@@ -35,74 +61,74 @@ paper_slides/state_of_repo.log
    modified on: 23 Aug 2017 12:36:12
    size of file: 1780
 ./sconstruct.log:
-   modified on: 23 Aug 2017 12:37:55
-   size of file: 199
+   modified on: 23 Aug 2017 13:20:19
+   size of file: 730
 ./state_of_repo.log:
-   modified on: 23 Aug 2017 12:37:55
-   size of file: 512
+   modified on: 23 Aug 2017 13:20:19
+   size of file: 1284
 ./build/paper/ondeck.pdf:
-   modified on: 22 Aug 2017 21:24:41
-   size of file: 18072
+   modified on: 23 Aug 2017 13:20:11
+   size of file: 18274
 ./build/paper/online_appendix.pdf:
-   modified on: 22 Aug 2017 21:24:42
+   modified on: 23 Aug 2017 13:20:12
    size of file: 45354
 ./build/paper/paper.aux:
    modified on: 22 Aug 2017 21:26:48
    size of file: 342
 ./build/paper/paper.pdf:
-   modified on: 23 Aug 2017 12:37:15
-   size of file: 57705
+   modified on: 23 Aug 2017 13:20:15
+   size of file: 57850
 ./build/paper/sconscript.log:
-   modified on: 23 Aug 2017 12:37:15
-   size of file: 587
+   modified on: 23 Aug 2017 13:20:16
+   size of file: 342
 ./build/paper/text.pdf:
-   modified on: 22 Aug 2017 21:26:48
-   size of file: 18072
+   modified on: 23 Aug 2017 13:20:16
+   size of file: 18274
 ./build/tables/sconscript.log:
-   modified on: 22 Aug 2017 21:26:48
+   modified on: 23 Aug 2017 13:20:12
    size of file: 157
 ./build/tables/table.lyx:
-   modified on: 22 Aug 2017 21:26:48
-   size of file: 4082
+   modified on: 23 Aug 2017 13:20:12
+   size of file: 4094
 ./build/talk/sconscript.log:
-   modified on: 22 Aug 2017 21:26:50
+   modified on: 23 Aug 2017 13:20:19
    size of file: 589
 ./build/talk/slides.pdf:
-   modified on: 22 Aug 2017 21:26:50
-   size of file: 28820
+   modified on: 23 Aug 2017 13:20:19
+   size of file: 28674
 ./input/plot.eps:
-   modified on: 23 Aug 2017 12:36:12
-   size of file: 12183
+   modified on: 23 Aug 2017 12:37:01
+   size of file: 11148
 ./input/provenance.txt:
    modified on: 22 Aug 2017 20:38:54
    size of file: 78
 ./input/table.txt:
-   modified on: 23 Aug 2017 12:36:12
-   size of file: 31
+   modified on: 23 Aug 2017 12:37:01
+   size of file: 39
 ./release/paper/ondeck.pdf:
-   modified on: 23 Aug 2017 12:37:50
-   size of file: 18072
+   modified on: 23 Aug 2017 13:20:11
+   size of file: 18274
 ./release/paper/online_appendix.pdf:
-   modified on: 23 Aug 2017 12:37:50
+   modified on: 23 Aug 2017 13:20:12
    size of file: 45354
 ./release/paper/paper.aux:
    modified on: 22 Aug 2017 21:26:48
    size of file: 342
 ./release/paper/paper.pdf:
-   modified on: 23 Aug 2017 12:37:50
-   size of file: 66452
+   modified on: 23 Aug 2017 13:20:15
+   size of file: 57850
 ./release/paper/sconscript.log:
-   modified on: 23 Aug 2017 12:37:50
+   modified on: 23 Aug 2017 13:20:16
    size of file: 342
 ./release/paper/text.pdf:
-   modified on: 23 Aug 2017 12:37:50
-   size of file: 18072
+   modified on: 23 Aug 2017 13:20:16
+   size of file: 18274
 ./release/talk/sconscript.log:
-   modified on: 23 Aug 2017 12:36:19
+   modified on: 23 Aug 2017 13:20:19
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 23 Aug 2017 12:36:20
-   size of file: 28835
+   modified on: 23 Aug 2017 13:20:19
+   size of file: 28674
 ./source/figures/figure.lyx:
    modified on: 22 Aug 2017 20:38:54
    size of file: 2214
