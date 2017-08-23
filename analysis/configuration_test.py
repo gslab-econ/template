@@ -24,13 +24,13 @@ def configuration_test(ARGUMENTS, gslab_python_version):
         raise Exception(message)
 
     config.check_python(gslab_python_version = gslab_python_version, 
-                        packages = ["yaml", "gslab_scons", "gslab_fill"])
+                        packages = ['yaml', 'gslab_scons', 'gslab_fill'])
 
     # Read YAML file and check if the softwares are required. 
-    lfs_require    = misc.load_yaml_value("config_global.yaml", "git-lfs")
-    r_require      = misc.load_yaml_value("config_global.yaml", "R")
-    stata_require  = misc.load_yaml_value("config_global.yaml", "Stata")
-    lyx_require    = misc.load_yaml_value("config_global.yaml", "Lyx")    
+    lfs_require    = misc.load_yaml_value('config_global.yaml', 'git-lfs')
+    r_require      = misc.load_yaml_value('config_global.yaml', 'R')
+    stata_require  = misc.load_yaml_value('config_global.yaml', 'Stata')
+    lyx_require    = misc.load_yaml_value('config_global.yaml', 'Lyx')    
 
     if lfs_require:
         config.check_lfs()
@@ -41,21 +41,21 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     if lyx_require:
         config.check_lyx()
 
-    if not os.path.isfile("config_user.yaml"):
-        copyfile("config_user_template.yaml", "config_user.yaml")
+    if not os.path.isfile('config_user.yaml'):
+        copyfile('config_user_template.yaml', 'config_user.yaml')
 
     # Loads arguments and configurations
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 
     # Checks mode/version
     if not (mode in ['develop', 'cache']):
-        message = "Error: %s is not a defined mode" % mode
+        message = 'Error: %s is not a defined mode' % mode
         raise _exception_classes.PrerequisiteError(message)
 
-    stata_executable = misc.load_yaml_value("config_user.yaml", "stata_executable")
+    stata_executable = misc.load_yaml_value('config_user.yaml', 'stata_executable')
     # Get return list
     if mode == 'cache':
-        cache_dir   = misc.load_yaml_value("config_user.yaml", "cache_directory")
+        cache_dir   = misc.load_yaml_value('config_user.yaml', 'cache_directory')
         cache_dir   = misc.check_and_expand_path(cache_dir)
         return_list = [mode, stata_executable, cache_dir]
     else:
