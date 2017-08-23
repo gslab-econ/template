@@ -1,0 +1,154 @@
+WARNING: Information about .sconsign.dblite may be misleading 
+as it can be edited after state_of_repo.log finishes running
+
+===================================
+
+ GIT STATUS
+
+===================================
+Last commit:
+
+commit db9f853e00d877242f9e0c6767e10ab0feaffa20
+Author: Frank Yang <frank@siepr-mg-ra-imac-5.stanford.edu>
+Date:   Wed Aug 23 11:27:40 2017 -0700
+
+    #93 first pass
+
+
+Files changed since last commit:
+
+analysis/SConstruct
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
+paper_slides/SConstruct
+paper_slides/release/paper/ondeck.pdf
+paper_slides/release/paper/online_appendix.pdf
+paper_slides/release/paper/paper.pdf
+paper_slides/release/paper/sconscript.log
+paper_slides/release/paper/text.pdf
+paper_slides/release/talk/sconscript.log
+paper_slides/release/talk/slides.pdf
+paper_slides/sconstruct.log
+paper_slides/state_of_repo.log
+
+===================================
+
+ FILE STATUS
+
+===================================
+./config_global.yaml:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 332
+./config_user.yaml:
+   modified on: 23 Aug 2017 11:36:09
+   size of file: 141
+./config_user_template.yaml:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 141
+./configuration_test.py:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 2043
+./SConstruct:
+   modified on: 23 Aug 2017 11:36:21
+   size of file: 1801
+./sconstruct.log:
+   modified on: 23 Aug 2017 11:36:34
+   size of file: 730
+./state_of_repo.log:
+   modified on: 23 Aug 2017 11:36:35
+   size of file: 969
+./build/paper/ondeck.pdf:
+   modified on: 23 Aug 2017 11:36:28
+   size of file: 18274
+./build/paper/online_appendix.pdf:
+   modified on: 23 Aug 2017 11:36:30
+   size of file: 45354
+./build/paper/paper.pdf:
+   modified on: 23 Aug 2017 11:36:32
+   size of file: 57712
+./build/paper/sconscript.log:
+   modified on: 23 Aug 2017 11:36:32
+   size of file: 342
+./build/paper/text.pdf:
+   modified on: 23 Aug 2017 11:36:32
+   size of file: 18274
+./build/tables/sconscript.log:
+   modified on: 23 Aug 2017 11:36:30
+   size of file: 157
+./build/tables/table.lyx:
+   modified on: 23 Aug 2017 11:36:30
+   size of file: 4082
+./build/talk/sconscript.log:
+   modified on: 23 Aug 2017 11:36:34
+   size of file: 589
+./build/talk/slides.pdf:
+   modified on: 23 Aug 2017 11:36:34
+   size of file: 28823
+./input/plot.eps:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 12183
+./input/provenance.txt:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 78
+./input/table.txt:
+   modified on: 23 Aug 2017 10:30:45
+   size of file: 31
+./release/sconstruct.log:
+   modified on: 23 Aug 2017 11:36:09
+   size of file: 92
+./release/state_of_repo.log:
+   modified on: 23 Aug 2017 11:36:09
+   size of file: 3034
+./release/paper/ondeck.pdf:
+   modified on: 23 Aug 2017 11:36:28
+   size of file: 18274
+./release/paper/online_appendix.pdf:
+   modified on: 23 Aug 2017 11:36:30
+   size of file: 45354
+./release/paper/paper.pdf:
+   modified on: 23 Aug 2017 11:36:32
+   size of file: 57712
+./release/paper/sconscript.log:
+   modified on: 23 Aug 2017 11:36:32
+   size of file: 342
+./release/paper/text.pdf:
+   modified on: 23 Aug 2017 11:36:32
+   size of file: 18274
+./release/talk/sconscript.log:
+   modified on: 23 Aug 2017 11:36:34
+   size of file: 589
+./release/talk/slides.pdf:
+   modified on: 23 Aug 2017 11:36:34
+   size of file: 28823
+./source/figures/figure.lyx:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 2214
+./source/paper/ondeck.lyx:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 2522
+./source/paper/online_appendix.lyx:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 3610
+./source/paper/paper.lyx:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 5236
+./source/paper/SConscript:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 558
+./source/paper/text.lyx:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 2522
+./source/tables/SConscript:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 233
+./source/tables/table.lyx:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 4082
+./source/talk/SConscript:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 237
+./source/talk/slides.lyx:
+   modified on: 23 Aug 2017 10:30:46
+   size of file: 4697

@@ -1,0 +1,75 @@
+*** New build: {2017-08-23 11:36:27} ***
+scons: done reading SConscript files.
+scons: Building targets ...
+build_lyx(["build/paper/ondeck.pdf"], ["source/paper/ondeck.lyx"])
+build_lyx(["build/paper/online_appendix.pdf"], ["source/paper/online_appendix.lyx"])
+build_tables(["build/tables/table.lyx"], ["source/tables/table.lyx", "input/table.txt"])
+source/tables/table.lyx filled successfully by tablefill
+build_lyx(["build/paper/paper.pdf"], ["source/paper/paper.lyx"])
+build_lyx(["build/paper/text.pdf"], ["source/paper/text.lyx"])
+build_lyx(["build/talk/slides.pdf"], ["source/talk/slides.lyx"])
+Install directory: "build/paper" as "release/paper"
+Install directory: "build/talk" as "release/talk"
+scons: done building targets.
+*** Build completed: {2017-08-23 11:36:35} ***
+ 
+ 
+./release/talk/sconscript.log
+*** Builder log created: {2017-08-23 11:36:32} 
+*** Builder log completed: {2017-08-23 11:36:34} 
+ This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+./build/talk/sconscript.log
+*** Builder log created: {2017-08-23 11:36:32} 
+*** Builder log completed: {2017-08-23 11:36:34} 
+ This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./slides.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+./build/paper/sconscript.log
+*** Builder log created: {2017-08-23 11:36:32} 
+*** Builder log completed: {2017-08-23 11:36:32} 
+ This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./text.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+./release/paper/sconscript.log
+*** Builder log created: {2017-08-23 11:36:32} 
+*** Builder log completed: {2017-08-23 11:36:32} 
+ This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./text.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+./build/tables/sconscript.log
+*** Builder log created: {2017-08-23 11:36:30} 
+*** Builder log completed: {2017-08-23 11:36:30} 
+ source/tables/table.lyx filled successfully by tablefill
+

@@ -8,11 +8,11 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit a055392a3b4988d80fac2567059a7065243e828e
+commit db9f853e00d877242f9e0c6767e10ab0feaffa20
 Author: Frank Yang <frank@siepr-mg-ra-imac-5.stanford.edu>
-Date:   Wed Aug 23 10:42:09 2017 -0700
+Date:   Wed Aug 23 11:27:40 2017 -0700
 
-    #93 aux first pass
+    #93 first pass
 
 
 Files changed since last commit:
@@ -20,8 +20,8 @@ Files changed since last commit:
 analysis/SConstruct
 analysis/release/descriptive/plot.eps
 analysis/release/descriptive/sconscript_descriptive.log
-analysis/sconstruct.log
-analysis/state_of_repo.log
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
 
 ===================================
 
@@ -41,43 +41,43 @@ analysis/state_of_repo.log
    modified on: 23 Aug 2017 10:30:45
    size of file: 2395
 ./SConstruct:
-   modified on: 23 Aug 2017 11:24:16
-   size of file: 2022
+   modified on: 23 Aug 2017 11:34:18
+   size of file: 1992
 ./sconstruct.log:
-   modified on: 23 Aug 2017 11:24:19
-   size of file: 250
+   modified on: 23 Aug 2017 11:34:37
+   size of file: 431
 ./state_of_repo.log:
-   modified on: 23 Aug 2017 11:24:19
-   size of file: 596
+   modified on: 23 Aug 2017 11:34:37
+   size of file: 608
 ./build/descriptive/plot.eps:
-   modified on: 23 Aug 2017 11:22:08
+   modified on: 23 Aug 2017 11:34:37
    size of file: 12183
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 23 Aug 2017 11:22:08
+   modified on: 23 Aug 2017 11:34:37
    size of file: 2211
 ./build/descriptive/table.txt:
-   modified on: 23 Aug 2017 11:22:08
+   modified on: 23 Aug 2017 11:34:37
    size of file: 31
 ./build/prepare_data/data.txt:
-   modified on: 23 Aug 2017 11:22:07
+   modified on: 23 Aug 2017 11:34:37
    size of file: 53
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 23 Aug 2017 11:22:07
+   modified on: 23 Aug 2017 11:34:37
    size of file: 1627
 ./release/sconstruct.log:
-   modified on: 23 Aug 2017 11:22:08
-   size of file: 431
+   modified on: 23 Aug 2017 11:34:29
+   size of file: 250
 ./release/state_of_repo.log:
-   modified on: 23 Aug 2017 11:06:15
-   size of file: 2375
+   modified on: 23 Aug 2017 11:34:29
+   size of file: 2477
 ./release/descriptive/plot.eps:
-   modified on: 23 Aug 2017 11:22:08
+   modified on: 23 Aug 2017 11:34:37
    size of file: 12183
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 23 Aug 2017 11:22:08
+   modified on: 23 Aug 2017 11:34:37
    size of file: 2211
 ./release/descriptive/table.txt:
-   modified on: 23 Aug 2017 11:22:08
+   modified on: 23 Aug 2017 11:34:37
    size of file: 31
 ./source/descriptive/descriptive.do:
    modified on: 23 Aug 2017 10:30:45

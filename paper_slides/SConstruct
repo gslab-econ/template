@@ -49,7 +49,7 @@ debrief_env = {'MAXIT' : 10,
                # Soft limits on file sizes
                'file_MB_limit' : 2,
                'total_MB_limit' : 500}
+               
 atexit.register(log.end_log)
 atexit.register(gs.misc.scons_debrief, target = 'state_of_repo.log', env = debrief_env)
-log.move_log()
 

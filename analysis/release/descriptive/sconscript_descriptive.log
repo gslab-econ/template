@@ -1,9 +1,9 @@
-*** Builder log created: {2017-08-22 15:31:04} 
-*** Builder log completed: {2017-08-22 15:31:07} 
+*** Builder log created: {2017-08-23 11:34:37} 
+*** Builder log completed: {2017-08-23 11:34:37} 
  
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LLC
+___/   /   /___/   /   /___/   14.1   Copyright 1985-2015 StataCorp LP
   Statistics/Data Analysis            StataCorp
                                       4905 Lakeway Drive
      MP - Parallel Edition            College Station, Texas 77845 USA
@@ -11,10 +11,10 @@ ___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LLC
                                       979-696-4600        stata@stata.com
                                       979-696-4601 (fax)
 
-8-user 4-core Stata network perpetual license:
-       Serial number:  501406225577
-         Licensed to:  Andres Shahidinejad
-                       GSLab
+Unlimited-user 4-core Stata network license expires 21 Jul 2018:
+       Serial number:  501509201134
+         Licensed to:  Frank Yang
+                       Stanford University
 
 Notes:
       1.  Stata is running in batch mode.
@@ -35,7 +35,7 @@ running /Applications/Stata/profile.do ...
 
 . 
 . program main
-  1.     yaml read YAML using constants.yaml
+  1.     yaml read YAML using config_global.yaml
   2.     yaml local data  = YAML.build.prepare_data
   3.     yaml local build = YAML.build.descriptive
   4. 
