@@ -8,7 +8,8 @@ program main
     yaml local build = YAML.build.descriptive
 
     import delimited "`data'/data.txt", delimiter("|") clear
-    hist x, discrete width(0.5)
+
+    hist x, bin(10)
     graph export "`build'/plot.eps", replace
 
     sum x
@@ -16,11 +17,6 @@ program main
     file write outfile "<tab:table>" _n
     file write outfile (r(mean)) _n (r(sd)) _n (r(max)) _n (r(min))
     file close outfile
-
-    drop x
-    set obs 1000000
-    egen y = fill(1 3 5 7 9)
-    save "`build_analysis'/lg_dataset.dta", replace
 
 end
 
