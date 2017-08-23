@@ -1,5 +1,0 @@
-Import('env')
-
-env.Tablefill(target = ['#%s/table.lyx' % env['PATHS']['build']['tables']],
-              source = ['#%s/table.lyx' % env['PATHS']['source']['tables'],
-                        '#%s/table.txt' % env['PATHS']['build']['analysis']])

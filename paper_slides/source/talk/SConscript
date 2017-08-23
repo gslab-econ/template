@@ -1,0 +1,9 @@
+Import('env')
+
+build  = env['PATHS']['build']['talk']
+source = env['PATHS']['source']['talk']
+
+env.BuildLyx(target = '#%s/slides.pdf'  % build, 
+             source = ['#%s/slides.lyx' % source])
+
+env.Install('#release', '#%s/' % build)

@@ -1,0 +1,7 @@
+Import('env')
+
+env.BuildStata(target  = ['#%s/data.txt'       % env['PATHS']['build']['prepare_data']],
+               source  = ['#%s/create_data.do' % env['PATHS']['source']['prepare_data']],
+               log_ext =  'create_data')
+
+env.Install('#release/lg', '#%s/data.txt' % env['PATHS']['build']['prepare_data'])

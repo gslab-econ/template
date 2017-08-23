@@ -1,6 +1,7 @@
-user-config.yaml
-/build/
-/release/lg/
+analysis/user-config.yaml
+analysis/build/
+analysis/release/lg/
+paper_slides/build/
 *.pyc
 *.lyx~
 *.lyx#
