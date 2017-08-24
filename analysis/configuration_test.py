@@ -41,9 +41,6 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     if lyx_require:
         config.check_lyx()
 
-    if not os.path.isfile('config_user.yaml'):
-        copyfile('config_user_template.yaml', 'config_user.yaml')
-
     # Loads arguments and configurations
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'
 

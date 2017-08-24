@@ -38,15 +38,15 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
         ```
     * To build a single target that has been modified and all of its dependencies that have been modified.
         ```
-        scons build/path/to/file.ext
+        scons build/path/to/file.txt
         ```
+3. To customize this repository and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
 
 ## Copying the template
 
 If you want to create a repository with the same structure as this template you can fork it. If you want a repository without any of our git history, follow these instructions. 
 * Create an empty repository in GitHub and clone it. 
 * Copy the contents of this template into the empty repository. Make sure to exclude the `.git` folder, but include the [`.gitattributes`](https://git-scm.com/docs/gitattributes) and [`.gitignore`](https://git-scm.com/docs/gitignore) files. 
-* Create a `config_user.yaml` file following `config_user_template.yaml` and run `scons` (If no `config_user.yaml` is detected, `config_user_template.yaml` will be copied as `config_user.yaml`). 
 * Commit the changes and push to the new repository **(Do not commit `config_user.yaml`)**.
 
 ## FAQ 
