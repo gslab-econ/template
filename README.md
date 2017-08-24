@@ -38,8 +38,9 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
         ```
     * To build a single target that has been modified and all of its dependencies that have been modified.
         ```
-        scons build/path/to/file.ext
+        scons build/path/to/file.txt
         ```
+3. To customize this repository and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
 
 ## Copying the template
 
