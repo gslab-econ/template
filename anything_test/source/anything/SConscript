@@ -1,0 +1,9 @@
+Import('env')
+
+build = 'build/anything'
+source = 'source/anything/'
+
+env.BuildAnything(target = ['#%s/data.txt'    % build],
+                  source = ['#%s/create_data.do' % source],
+                  do = 'statamp -e source/anything/create_data.do')
+

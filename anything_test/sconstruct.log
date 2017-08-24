@@ -1,0 +1,12 @@
+*** New build: {2017-08-24 15:54:17} ***
+scons: done reading SConscript files.
+scons: Building targets ...
+build_anything(["build/anything/data.txt"], ["source/anything/create_data.do"])
+scons: done building targets.
+*** Build completed: {2017-08-24 15:54:18} ***
+ 
+ 
+./build/anything/sconscript.log
+*** Builder log created: {2017-08-24 15:54:17} 
+*** Builder log completed: {2017-08-24 15:54:18} 
+ 
