@@ -1,5 +1,5 @@
-*** Builder log created: {2017-08-22 15:31:04} 
-*** Builder log completed: {2017-08-22 15:31:07} 
+*** Builder log created: {2017-08-23 14:13:20} 
+*** Builder log completed: {2017-08-23 14:13:21} 
  
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -11,10 +11,10 @@ ___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LLC
                                       979-696-4600        stata@stata.com
                                       979-696-4601 (fax)
 
-8-user 4-core Stata network perpetual license:
-       Serial number:  501406225577
-         Licensed to:  Andres Shahidinejad
-                       GSLab
+Unlimited-user 4-core Stata network license expires 21 Jul 2018:
+       Serial number:  501509201134
+         Licensed to:  Quan Le
+                       Stanford University
 
 Notes:
       1.  Stata is running in batch mode.
@@ -35,12 +35,13 @@ running /Applications/Stata/profile.do ...
 
 . 
 . program main
-  1.     yaml read YAML using constants.yaml
+  1.     yaml read YAML using config_global.yaml
   2.     yaml local data  = YAML.build.prepare_data
   3.     yaml local build = YAML.build.descriptive
   4. 
 .     import delimited "`data'/data.txt", delimiter("|") clear
-  5.     hist x, discrete width(0.5)
+  5. 
+.     hist x, bin(10)
   6.     graph export "`build'/plot.eps", replace
   7. 
 .     sum x
@@ -48,19 +49,20 @@ running /Applications/Stata/profile.do ...
   9.     file write outfile "<tab:table>" _n
  10.     file write outfile (r(mean)) _n (r(sd)) _n (r(max)) _n (r(min))
  11.     file close outfile
- 12. end
+ 12. 
+. end
 
 . 
 . * EXECUTE
 . main
-(1 var, 20 obs)
-(start=1, width=.5)
+(1 var, 300,000 obs)
+(bin=10, start=1, width=29999.9)
 (note: file build/descriptive/plot.eps not found)
 (file build/descriptive/plot.eps written in EPS format)
 
     Variable |        Obs        Mean    Std. Dev.       Min        Max
 -------------+---------------------------------------------------------
-           x |         20        10.5     5.91608          1         20
+           x |    300,000    150000.5    86602.68          1     300000
 (note: file build/descriptive/table.txt not found)
 
 . 
