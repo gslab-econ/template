@@ -21,6 +21,8 @@ env = Environment(ENV = {'PATH': os.environ['PATH']},
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {'Tablefill':   Builder(action = gs.build_tables),
                               'BuildLyx':    Builder(action = gs.build_lyx),
+                              'BuildR':      Builder(action = gs.build_r),
+                              'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildStata':  Builder(action = gs.build_stata),
                               'BuildPython': Builder(action = gs.build_python)},
                   stata_executable = stata_executable)
