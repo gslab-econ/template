@@ -9,7 +9,7 @@ source:
   descriptive: source/descriptive
 
 # Switch to 'Yes' if any of the following softwares are required
-git-lfs: No
+git-lfs: Yes
 Latex: No
 Lyx: No
 Matlab: No
