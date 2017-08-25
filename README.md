@@ -21,7 +21,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     * [yaml](https://github.com/gslab-econ/stata-misc) a Stata ado file for parsing YAML files.
     * [preliminaries](https://github.com/gslab-econ/gslab_stata/tree/master/gslab_misc) a Stata ado file to set up declarations from the user or set to default values.
     * [matrix_to_txt](https://github.com/gslab-econ/gslab_stata/tree/master/gslab_misc) a Stata ado file for output matrix to text.
-    * To install:
+    * To install, enter the following at the Stata console:
     ```
     net from https://raw.githubusercontent.com/gslab-econ/stata-misc/master/
     cap net uninstall yaml
