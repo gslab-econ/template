@@ -1,16 +1,14 @@
-
+*** Builder log created: {2017-08-24 20:38:56} 
+*** Builder log completed: {2017-08-24 20:38:57} 
+ 
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp L
-> LC
+___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LLC
   Statistics/Data Analysis            StataCorp
                                       4905 Lakeway Drive
-     MP - Parallel Edition            College Station, Texas 77845 US
-> A
-                                      800-STATA-PC        http://www.
-> stata.com
-                                      979-696-4600        stata@stata
-> .com
+     MP - Parallel Edition            College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
                                       979-696-4601 (fax)
 
 Unlimited-user 4-core Stata network license expires 21 Jul 2018:
@@ -21,15 +19,13 @@ Unlimited-user 4-core Stata network license expires 21 Jul 2018:
 Notes:
       1.  Stata is running in batch mode.
       2.  Unicode is supported; see help unicode_advice.
-      3.  More than 2 billion observations are allowed; see help
-          obs_advice.
-      4.  Maximum number of variables is set to 5000; see help
-          set_maxvar.
+      3.  More than 2 billion observations are allowed; see help obs_advice.
+      4.  Maximum number of variables is set to 5000; see help set_maxvar.
 
 
 running /Applications/Stata/profile.do ...
 
-. do "source/anything/create_data.do" 
+. do "source/anything/create_data_1.do" 
 
 . version 14
 
@@ -43,16 +39,16 @@ running /Applications/Stata/profile.do ...
   2.     yaml local build = YAML.build.prepare_data
   3. 
 .     set obs 300000
-  4.     egen x = fill(1 2 3 4 5 6 7 8)
-  5.     export delimited "`build'/data.txt", delimiter("|") replace 
+  4.     egen x = fill(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16)
+  5.     export delimited "`build'/data_1.txt", delimiter("|") replace 
   6. end
 
 . 
 . * EXECUTE
 . main
 number of observations (_N) was 0, now 300,000
-(note: file build/anything/data.txt not found)
-file build/anything/data.txt saved
+(note: file build/anything/data_1.txt not found)
+file build/anything/data_1.txt saved
 
 . 
 end of do-file
