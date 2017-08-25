@@ -32,6 +32,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     cap net uninstall preliminaries
     net install preliminaries
     ```
+    If you have previously installed these packages using other methods, please delete the old packages manually.
 
 ## Getting started
 
