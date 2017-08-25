@@ -1,23 +1,20 @@
 version 14
-clear all
 set more off
+preliminaries
 
 program main
     yaml read YAML using config_global.yaml
-    yaml local data  = YAML.build.prepare_data
-    yaml local build = YAML.build.descriptive
+    yaml global data  = YAML.build.prepare_data
+    yaml global build = YAML.build.descriptive
 
-    import delimited "`data'/data.txt", delimiter("|") clear
+    import delimited "$data/data.txt", delimiter("|") clear
 
     hist x, bin(10)
-    graph export "`build'/plot.eps", replace
+    graph export "$build/plot.eps", replace
 
-    sum x
-    file open  outfile using "`build'/table.txt", write replace
-    file write outfile "<tab:table>" _n
-    file write outfile (r(mean)) _n (r(sd)) _n (r(max)) _n (r(min))
-    file close outfile
-
+    tabstat x, stat(mean sd max min) save
+    matrix stats = r(StatTotal)
+    matrix_to_txt, matrix(stats) saving("$build/table.txt") title("<tab:table>") replace
 end
 
 * EXECUTE
