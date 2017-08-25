@@ -27,16 +27,13 @@ def configuration_test(ARGUMENTS, gslab_python_version):
                         packages = ['yaml', 'gslab_scons', 'gslab_fill'])
 
     # Read YAML file and check if the softwares are required.
-    gitlfs_require = misc.load_yaml_value('config_global.yaml', 'git-lfs')
-    latex_require  = misc.load_yaml_value('config_global.yaml', 'Latex')
-    lyx_require    = misc.load_yaml_value('config_global.yaml', 'Lyx')
-
-    if gitlfs_require:
-        config.check_lfs()
-    if latex_require:
-        pass
-    if lyx_require:
-        config.check_lyx()
+    prereq_checks = {'git-lfs': config.check_lfs,
+                     'Latex'  : (lambda *args: None),
+                     'Lyx'    : config.check_lyx}
+    for prereq in prereq_checks.keys():
+        require = misc.load_yaml_value('config_global.yaml', 'prereq_%s' % prereq)
+        if require:
+            prereq_checks[prereq]()
 
     # Loads arguments and configurations
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'

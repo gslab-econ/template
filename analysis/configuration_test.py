@@ -26,26 +26,17 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     config.check_python(gslab_python_version = gslab_python_version, 
                         packages = ['yaml', 'gslab_scons', 'gslab_fill'])
 
-    # Read YAML file and check if the softwares are required. 
-    gitlfs_require = misc.load_yaml_value('config_global.yaml', 'git-lfs')
-    latex_require  = misc.load_yaml_value('config_global.yaml', 'Latex')
-    lyx_require    = misc.load_yaml_value('config_global.yaml', 'Lyx')
-    matlab_require = misc.load_yaml_value('config_global.yaml', 'Matlab')
-    r_require      = misc.load_yaml_value('config_global.yaml', 'R')
-    stata_require  = misc.load_yaml_value('config_global.yaml', 'Stata')
-
-    if gitlfs_require:
-        config.check_lfs()
-    if latex_require:
-        pass
-    if lyx_require:
-        config.check_lyx()
-    if matlab_require:
-        pass
-    if r_require:
-        config.check_r()
-    if stata_require:
-        config.check_stata()
+    # Read YAML file and check if the softwares are required.
+    prereq_checks = {'git-lfs': config.check_lfs,
+                     'Latex'  : (lambda *args: None),
+                     'Lyx'    : config.check_lyx,
+                     'Matlab' : (lambda *args: None),
+                     'R'      : config.check_r,
+                     'Stata'  : config.check_stata}
+    for prereq in prereq_checks.keys():
+        require = misc.load_yaml_value('config_global.yaml', 'prereq_%s' % prereq)
+        if require:
+            prereq_checks[prereq]()
 
     # Loads arguments and configurations
     mode = ARGUMENTS.get('mode', 'develop') # Gets mode; defaults to 'develop'

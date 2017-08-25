@@ -8,11 +8,11 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 2ca80c15a98a72811467d7093b4c8762a6b0f008
+commit 5fafb61cb4248d84dd6a94b523b948768c8d2dda
 Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Thu Aug 24 15:41:39 2017 -0700
+Date:   Thu Aug 24 17:02:41 2017 -0700
 
-    #64 add examples for python stata matlab R, mute everything except python
+    #64 turn on git-lfs
 
 
 Files changed since last commit:
@@ -20,9 +20,16 @@ Files changed since last commit:
 analysis/SConstruct
 analysis/config_global.yaml
 analysis/configuration_test.py
-paper_slides/SConstruct
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
+analysis/source/descriptive/SConscript
+analysis/source/descriptive/descriptive.do
+analysis/source/descriptive/descriptive.m
+analysis/source/descriptive/descriptive.r
 paper_slides/config_global.yaml
 paper_slides/configuration_test.py
+paper_slides/release/sconstruct.log
+paper_slides/release/state_of_repo.log
 
 ===================================
 
@@ -30,83 +37,74 @@ paper_slides/configuration_test.py
 
 ===================================
 ./config_global.yaml:
-   modified on: 24 Aug 2017 16:38:32
-   size of file: 318
+   modified on: 25 Aug 2017 16:30:56
+   size of file: 361
 ./config_user.yaml:
-   modified on: 24 Aug 2017 11:08:40
-   size of file: 26
+   modified on: 25 Aug 2017 11:06:38
+   size of file: 70
 ./configuration_test.py:
-   modified on: 24 Aug 2017 16:47:50
-   size of file: 2506
+   modified on: 25 Aug 2017 16:30:59
+   size of file: 2286
 ./SConstruct:
-   modified on: 24 Aug 2017 16:37:17
+   modified on: 25 Aug 2017 16:06:56
    size of file: 2226
 ./sconstruct.log:
-   modified on: 24 Aug 2017 16:48:51
+   modified on: 25 Aug 2017 16:33:50
    size of file: 199
 ./state_of_repo.log:
-   modified on: 24 Aug 2017 16:48:51
-   size of file: 637
+   modified on: 25 Aug 2017 16:33:50
+   size of file: 867
 ./build/descriptive/plot.eps:
-   modified on: 24 Aug 2017 15:33:21
+   modified on: 25 Aug 2017 16:23:12
    size of file: 15385
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 24 Aug 2017 15:33:21
+   modified on: 25 Aug 2017 16:23:12
    size of file: 99
 ./build/descriptive/table.txt:
-   modified on: 24 Aug 2017 15:33:21
+   modified on: 25 Aug 2017 16:23:11
    size of file: 39
 ./build/prepare_data/data.txt:
-   modified on: 24 Aug 2017 14:08:59
+   modified on: 25 Aug 2017 16:23:09
    size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 24 Aug 2017 14:08:59
+   modified on: 25 Aug 2017 16:23:09
    size of file: 99
 ./release/sconstruct.log:
-   modified on: 24 Aug 2017 15:40:35
+   modified on: 25 Aug 2017 16:31:02
    size of file: 250
 ./release/state_of_repo.log:
-   modified on: 24 Aug 2017 15:40:35
-   size of file: 3319
+   modified on: 25 Aug 2017 16:31:02
+   size of file: 3088
 ./release/descriptive/plot.eps:
-   modified on: 24 Aug 2017 15:33:21
+   modified on: 25 Aug 2017 16:23:51
    size of file: 15385
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 24 Aug 2017 15:33:21
+   modified on: 25 Aug 2017 16:23:55
    size of file: 99
 ./release/descriptive/table.txt:
-   modified on: 24 Aug 2017 15:33:21
+   modified on: 25 Aug 2017 16:23:11
    size of file: 39
 ./release/lg/data.txt:
    modified on: 24 Aug 2017 14:08:59
    size of file: 1988897
-./source/descriptive/descriptive.do:
-   modified on: 24 Aug 2017 15:31:56
-   size of file: 556
-./source/descriptive/descriptive.m:
-   modified on: 24 Aug 2017 15:37:28
-   size of file: 466
 ./source/descriptive/descriptive.py:
-   modified on: 24 Aug 2017 15:31:51
+   modified on: 25 Aug 2017 16:05:28
    size of file: 544
-./source/descriptive/descriptive.r:
-   modified on: 24 Aug 2017 15:32:20
-   size of file: 502
 ./source/descriptive/SConscript:
-   modified on: 24 Aug 2017 15:40:12
-   size of file: 1307
+   modified on: 25 Aug 2017 16:33:41
+   size of file: 468
 ./source/prepare_data/create_data.do:
-   modified on: 24 Aug 2017 14:22:32
+   modified on: 25 Aug 2017 16:05:28
    size of file: 265
 ./source/prepare_data/create_data.m:
-   modified on: 24 Aug 2017 15:34:15
+   modified on: 25 Aug 2017 16:05:28
    size of file: 206
 ./source/prepare_data/create_data.py:
-   modified on: 24 Aug 2017 14:08:24
+   modified on: 25 Aug 2017 16:05:28
    size of file: 257
 ./source/prepare_data/create_data.r:
-   modified on: 24 Aug 2017 14:22:40
+   modified on: 25 Aug 2017 16:05:28
    size of file: 249
 ./source/prepare_data/SConscript:
-   modified on: 24 Aug 2017 15:40:06
+   modified on: 25 Aug 2017 16:05:28
    size of file: 817

@@ -10,22 +10,4 @@ env.BuildPython(target  = ['#%s/plot.eps'       % build,
                            '#%s/data.txt'       % data],
                 log_ext = 'descriptive')
 
-# env.BuildStata(target  = ['#%s/plot_stata.eps'  % build,
-#                           '#%s/table_stata.txt' % build],
-#                source  = ['#%s/descriptive.do'  % source,
-#                           '#%s/data_stata.txt'  % data],
-#                log_ext = 'descriptive_stata')
-
-# env.BuildR(target  = ['#%s/plot_r.eps'    % build,
-#                       '#%s/table_r.txt'   % build],
-#            source  = ['#%s/descriptive.r' % source,
-#                       '#%s/data_r.txt'    % data],
-#            log_ext = 'descriptive_r')
-
-# env.BuildMatlab(target  = ['#%s/plot_matlab.eps'  % build,
-#                            '#%s/table_matlab.txt' % build],
-#                 source  = ['#%s/descriptive.m'    % source,
-#                            '#%s/data_matlab.txt'  % data],
-#                 log_ext = 'descriptive_matlab')
-
 env.Install('#release', '#%s/' % build)

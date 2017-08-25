@@ -19,8 +19,8 @@ log.start_log(mode, vers)
 # Define the SCons environment
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
-                  BUILDERS = {'BuildLyx':    Builder(action = gs.build_lyx),
-                              'BuildLatex':  Builder(action = gs.build_latex),
+                  BUILDERS = {'BuildLatex':  Builder(action = gs.build_latex),
+                              'BuildLyx':    Builder(action = gs.build_lyx),
                               'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
                               'BuildR':      Builder(action = gs.build_r),

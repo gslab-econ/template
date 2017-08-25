@@ -8,11 +8,11 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 2ca80c15a98a72811467d7093b4c8762a6b0f008
+commit 5fafb61cb4248d84dd6a94b523b948768c8d2dda
 Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Thu Aug 24 15:41:39 2017 -0700
+Date:   Thu Aug 24 17:02:41 2017 -0700
 
-    #64 add examples for python stata matlab R, mute everything except python
+    #64 turn on git-lfs
 
 
 Files changed since last commit:
@@ -22,20 +22,10 @@ analysis/config_global.yaml
 analysis/configuration_test.py
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
-paper_slides/SConstruct
 paper_slides/config_global.yaml
 paper_slides/configuration_test.py
-paper_slides/input/plot.eps
-paper_slides/release/paper/ondeck.pdf
-paper_slides/release/paper/online_appendix.pdf
-paper_slides/release/paper/paper.pdf
-paper_slides/release/paper/sconscript.log
-paper_slides/release/paper/text.pdf
 paper_slides/release/sconstruct.log
 paper_slides/release/state_of_repo.log
-paper_slides/release/talk/sconscript.log
-paper_slides/release/talk/slides.pdf
-paper_slides/source/paper/SConscript
 
 ===================================
 
@@ -43,20 +33,20 @@ paper_slides/source/paper/SConscript
 
 ===================================
 ./config_global.yaml:
-   modified on: 24 Aug 2017 16:45:49
-   size of file: 343
+   modified on: 25 Aug 2017 16:32:20
+   size of file: 365
 ./configuration_test.py:
-   modified on: 24 Aug 2017 16:47:44
-   size of file: 2035
+   modified on: 25 Aug 2017 16:32:33
+   size of file: 2016
 ./SConstruct:
-   modified on: 24 Aug 2017 16:48:37
+   modified on: 25 Aug 2017 16:05:28
    size of file: 1877
 ./sconstruct.log:
-   modified on: 24 Aug 2017 17:00:23
+   modified on: 25 Aug 2017 16:32:49
    size of file: 199
 ./state_of_repo.log:
-   modified on: 24 Aug 2017 17:00:23
-   size of file: 1122
+   modified on: 25 Aug 2017 16:32:49
+   size of file: 701
 ./build/paper/ondeck.pdf:
    modified on: 24 Aug 2017 16:51:29
    size of file: 18193
@@ -103,7 +93,7 @@ paper_slides/source/paper/SConscript
    modified on: 24 Aug 2017 16:52:19
    size of file: 29971
 ./input/plot.eps:
-   modified on: 24 Aug 2017 15:33:21
+   modified on: 25 Aug 2017 16:05:28
    size of file: 15385
 ./input/provenance.txt:
    modified on: 23 Aug 2017 12:00:48
@@ -112,31 +102,31 @@ paper_slides/source/paper/SConscript
    modified on: 24 Aug 2017 15:33:21
    size of file: 39
 ./release/sconstruct.log:
-   modified on: 24 Aug 2017 17:00:10
+   modified on: 25 Aug 2017 16:32:38
    size of file: 250
 ./release/state_of_repo.log:
-   modified on: 24 Aug 2017 17:00:10
-   size of file: 4900
+   modified on: 25 Aug 2017 16:32:38
+   size of file: 4478
 ./release/paper/ondeck.pdf:
-   modified on: 24 Aug 2017 16:51:29
+   modified on: 25 Aug 2017 16:05:28
    size of file: 18193
 ./release/paper/online_appendix.pdf:
-   modified on: 24 Aug 2017 16:51:31
+   modified on: 25 Aug 2017 16:05:28
    size of file: 45354
 ./release/paper/paper.pdf:
-   modified on: 24 Aug 2017 16:52:18
+   modified on: 25 Aug 2017 16:05:28
    size of file: 58961
 ./release/paper/sconscript.log:
-   modified on: 24 Aug 2017 16:58:50
+   modified on: 25 Aug 2017 16:05:28
    size of file: 6473
 ./release/paper/text.pdf:
-   modified on: 24 Aug 2017 16:51:32
+   modified on: 25 Aug 2017 16:05:28
    size of file: 18193
 ./release/talk/sconscript.log:
-   modified on: 24 Aug 2017 16:52:19
+   modified on: 25 Aug 2017 16:05:28
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 24 Aug 2017 16:52:19
+   modified on: 25 Aug 2017 16:05:28
    size of file: 29971
 ./source/figures/figure.lyx:
    modified on: 23 Aug 2017 12:00:56
@@ -151,13 +141,13 @@ paper_slides/source/paper/SConscript
    modified on: 23 Aug 2017 12:00:56
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 24 Aug 2017 17:00:19
+   modified on: 25 Aug 2017 16:05:28
    size of file: 676
 ./source/paper/text.lyx:
    modified on: 23 Aug 2017 12:00:56
    size of file: 2522
 ./source/paper/text.tex:
-   modified on: 24 Aug 2017 16:58:23
+   modified on: 25 Aug 2017 16:05:28
    size of file: 1300
 ./source/tables/SConscript:
    modified on: 23 Aug 2017 12:00:56
