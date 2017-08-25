@@ -10,6 +10,8 @@ source:
 
 # Switch to 'Yes' if any of the following softwares are required
 git-lfs: No
-Stata: No
-R: No
+Latex: No
 Lyx: No
+Matlab: No
+R: No
+Stata: No

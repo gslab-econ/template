@@ -8,24 +8,21 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 9c2c109530e29955efef8e5b95485aab7a8f7039
-Author: Frank Yang <frank@siepr-mg-ra-imac-5.stanford.edu>
-Date:   Thu Aug 24 11:11:39 2017 -0700
+commit 2ca80c15a98a72811467d7093b4c8762a6b0f008
+Author: chuanyu <yuchuan2016@gmail.com>
+Date:   Thu Aug 24 15:41:39 2017 -0700
 
-    rm unused config_user_template
+    #64 add examples for python stata matlab R, mute everything except python
 
 
 Files changed since last commit:
 
 analysis/SConstruct
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
-analysis/release/sconstruct.log
-analysis/release/state_of_repo.log
-analysis/source/descriptive/SConscript
-analysis/source/descriptive/descriptive.do
-analysis/source/prepare_data/SConscript
-analysis/source/prepare_data/create_data.do
+analysis/config_global.yaml
+analysis/configuration_test.py
+paper_slides/SConstruct
+paper_slides/config_global.yaml
+paper_slides/configuration_test.py
 
 ===================================
 
@@ -33,23 +30,23 @@ analysis/source/prepare_data/create_data.do
 
 ===================================
 ./config_global.yaml:
-   modified on: 24 Aug 2017 11:08:22
-   size of file: 297
+   modified on: 24 Aug 2017 16:38:32
+   size of file: 318
 ./config_user.yaml:
    modified on: 24 Aug 2017 11:08:40
    size of file: 26
 ./configuration_test.py:
-   modified on: 24 Aug 2017 11:08:22
-   size of file: 2281
+   modified on: 24 Aug 2017 16:47:50
+   size of file: 2506
 ./SConstruct:
-   modified on: 24 Aug 2017 14:32:37
-   size of file: 2147
+   modified on: 24 Aug 2017 16:37:17
+   size of file: 2226
 ./sconstruct.log:
-   modified on: 24 Aug 2017 15:40:35
+   modified on: 24 Aug 2017 16:48:51
    size of file: 199
 ./state_of_repo.log:
-   modified on: 24 Aug 2017 15:40:35
-   size of file: 790
+   modified on: 24 Aug 2017 16:48:51
+   size of file: 637
 ./build/descriptive/plot.eps:
    modified on: 24 Aug 2017 15:33:21
    size of file: 15385
@@ -66,11 +63,11 @@ analysis/source/prepare_data/create_data.do
    modified on: 24 Aug 2017 14:08:59
    size of file: 99
 ./release/sconstruct.log:
-   modified on: 24 Aug 2017 15:40:33
-   size of file: 351
+   modified on: 24 Aug 2017 15:40:35
+   size of file: 250
 ./release/state_of_repo.log:
-   modified on: 24 Aug 2017 15:40:33
-   size of file: 3147
+   modified on: 24 Aug 2017 15:40:35
+   size of file: 3319
 ./release/descriptive/plot.eps:
    modified on: 24 Aug 2017 15:33:21
    size of file: 15385
