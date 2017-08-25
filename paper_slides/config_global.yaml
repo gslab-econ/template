@@ -15,5 +15,6 @@ source:
   talk: source/talk
 
 # Switch to 'Yes' if any of the following softwares are required
-Lyx: Yes
 git-lfs: No
+Latex: No
+Lyx: Yes
