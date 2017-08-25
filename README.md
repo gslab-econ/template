@@ -1,10 +1,10 @@
 # GSLab Template 
 
-The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use SCons and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.   
+The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use SCons and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.
 
 ## Prerequisites
 
-You'll need the following to run the template. [Homebrew](https://brew.sh/) for Mac and [Linuxbrew](http://linuxbrew.sh/) for Linux make this easier.   
+You'll need the following to run the template. [Homebrew](https://brew.sh/) for Mac and [Linuxbrew](http://linuxbrew.sh/) for Linux make this easier.
 * Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
 * [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
     * [gslab_python](https://github.com/gslab-econ/gslab_python) version 4.1.0 or later.
@@ -18,7 +18,21 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     * The beamer theme [`metropolis`](https://github.com/matze/mtheme). This is part of MikTeX since Dec 2014. 
 * [Stata](http://www.stata.com/)
     * Add Stata to your PATH for [Windows](http://www.computerhope.com/issues/ch000549.htm), [Mac](http://hathaway.cc/post/69201163472/how-to-edit-your-path-environment-variables-on-mac), and [Linux](http://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux).
-    * [yaml](https://github.com/gslab-econ/stata-misc) a Stata ado file for parsing YAML files. 
+    * [yaml](https://github.com/gslab-econ/stata-misc) a Stata ado file for parsing YAML files.
+    * [preliminaries](https://github.com/gslab-econ/gslab_stata/tree/master/gslab_misc) a Stata ado file to set up declarations from the user or set to default values.
+    * [matrix_to_txt](https://github.com/gslab-econ/gslab_stata/tree/master/gslab_misc) a Stata ado file for output matrix to text.
+    * To install, enter the following at the Stata console:
+    ```
+    net from https://raw.githubusercontent.com/gslab-econ/stata-misc/master/
+    cap net uninstall yaml
+    net install yaml
+    net from https://raw.githubusercontent.com/gslab-econ/gslab_stata/master/gslab_misc/ado
+    cap net uninstall matrix_to_txt
+    net install matrix_to_txt
+    cap net uninstall preliminaries
+    net install preliminaries
+    ```
+    If you have previously installed these packages using other methods, please delete the old packages manually.
 
 ## Getting started
 

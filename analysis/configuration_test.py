@@ -30,14 +30,14 @@ def configuration_test(ARGUMENTS, gslab_python_version):
     lfs_require    = misc.load_yaml_value('config_global.yaml', 'git-lfs')
     r_require      = misc.load_yaml_value('config_global.yaml', 'R')
     stata_require  = misc.load_yaml_value('config_global.yaml', 'Stata')
-    lyx_require    = misc.load_yaml_value('config_global.yaml', 'Lyx')    
+    lyx_require    = misc.load_yaml_value('config_global.yaml', 'Lyx')
 
     if lfs_require:
         config.check_lfs()
     if r_require:
         config.check_r()
     if stata_require:
-        config.check_stata()
+        config.check_stata(packages = ['yaml', 'preliminaries', 'matrix_to_txt'])
     if lyx_require:
         config.check_lyx()
 
