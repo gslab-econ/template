@@ -8,28 +8,15 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 5fafb61cb4248d84dd6a94b523b948768c8d2dda
+commit 51118d95fb71cbf0d79faa6fbdbab85d8c2c8973
 Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Thu Aug 24 17:02:41 2017 -0700
+Date:   Fri Aug 25 16:36:03 2017 -0700
 
-    #64 turn on git-lfs
+    #64 response to PR
 
 
 Files changed since last commit:
 
-analysis/SConstruct
-analysis/config_global.yaml
-analysis/configuration_test.py
-analysis/release/sconstruct.log
-analysis/release/state_of_repo.log
-analysis/source/descriptive/SConscript
-analysis/source/descriptive/descriptive.do
-analysis/source/descriptive/descriptive.m
-analysis/source/descriptive/descriptive.r
-paper_slides/config_global.yaml
-paper_slides/configuration_test.py
-paper_slides/release/sconstruct.log
-paper_slides/release/state_of_repo.log
 
 ===================================
 
@@ -49,11 +36,11 @@ paper_slides/release/state_of_repo.log
    modified on: 25 Aug 2017 16:06:56
    size of file: 2226
 ./sconstruct.log:
-   modified on: 25 Aug 2017 16:33:50
+   modified on: 25 Aug 2017 17:03:54
    size of file: 199
 ./state_of_repo.log:
-   modified on: 25 Aug 2017 16:33:50
-   size of file: 867
+   modified on: 25 Aug 2017 17:03:54
+   size of file: 412
 ./build/descriptive/plot.eps:
    modified on: 25 Aug 2017 16:23:12
    size of file: 15385
@@ -64,17 +51,17 @@ paper_slides/release/state_of_repo.log
    modified on: 25 Aug 2017 16:23:11
    size of file: 39
 ./build/prepare_data/data.txt:
-   modified on: 25 Aug 2017 16:23:09
+   modified on: 25 Aug 2017 16:58:52
    size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 25 Aug 2017 16:23:09
+   modified on: 25 Aug 2017 16:58:52
    size of file: 99
 ./release/sconstruct.log:
-   modified on: 25 Aug 2017 16:31:02
+   modified on: 25 Aug 2017 16:58:57
    size of file: 250
 ./release/state_of_repo.log:
-   modified on: 25 Aug 2017 16:31:02
-   size of file: 3088
+   modified on: 25 Aug 2017 16:58:57
+   size of file: 2904
 ./release/descriptive/plot.eps:
    modified on: 25 Aug 2017 16:23:51
    size of file: 15385
@@ -94,17 +81,17 @@ paper_slides/release/state_of_repo.log
    modified on: 25 Aug 2017 16:33:41
    size of file: 468
 ./source/prepare_data/create_data.do:
-   modified on: 25 Aug 2017 16:05:28
-   size of file: 265
+   modified on: 25 Aug 2017 16:56:20
+   size of file: 259
 ./source/prepare_data/create_data.m:
-   modified on: 25 Aug 2017 16:05:28
-   size of file: 206
+   modified on: 25 Aug 2017 16:57:26
+   size of file: 200
 ./source/prepare_data/create_data.py:
    modified on: 25 Aug 2017 16:05:28
    size of file: 257
 ./source/prepare_data/create_data.r:
-   modified on: 25 Aug 2017 16:05:28
-   size of file: 249
+   modified on: 25 Aug 2017 16:56:34
+   size of file: 247
 ./source/prepare_data/SConscript:
-   modified on: 25 Aug 2017 16:05:28
-   size of file: 817
+   modified on: 25 Aug 2017 16:58:49
+   size of file: 802

@@ -8,7 +8,7 @@ program main
 
     set obs 300000
     gen x = _n
-    export delimited "`build'/data_stata.txt", delimiter("|") replace 
+    export delimited "`build'/data.txt", delimiter("|") replace 
 end
 
 * EXECUTE

@@ -7,16 +7,16 @@ env.BuildPython(target  = ['#%s/data.txt'       % build],
                 source  = ['#%s/create_data.py' % source],
                 log_ext =  'create_data')
 
-# env.BuildStata(target  = ['#%s/data_stata.txt' % build],
+# env.BuildStata(target  = ['#%s/data.txt'       % build],
 #                source  = ['#%s/create_data.do' % source],
-#                log_ext =  'create_data_stata')
+#                log_ext =  'create_data')
 
-# env.BuildR(target  = ['#%s/data_r.txt'    % build],
+# env.BuildR(target  = ['#%s/data.txt'      % build],
 #            source  = ['#%s/create_data.r' % source],
-#            log_ext =  'create_data_r')
+#            log_ext =  'create_data')
 
-# env.BuildMatlab(target  = ['#%s/data_matlab.txt' % build],
+# env.BuildMatlab(target  = ['#%s/data.txt'        % build],
 #                 source  = ['#%s/create_data.m'   % source],
-#                 log_ext =  'create_data_matlab')
+#                 log_ext =  'create_data')
 
 env.Install('#release/lg', '#%s/data.txt' % build)
