@@ -1,5 +1,5 @@
-*** Builder log created: {2017-08-23 14:13:20} 
-*** Builder log completed: {2017-08-23 14:13:21} 
+*** Builder log created: {2017-08-25 10:26:59} 
+*** Builder log completed: {2017-08-25 10:27:02} 
  
   ___  ____  ____  ____  ____ (R)
  /__    /   ____/   /   ____/
@@ -11,10 +11,10 @@ ___/   /   /___/   /   /___/   14.2   Copyright 1985-2015 StataCorp LLC
                                       979-696-4600        stata@stata.com
                                       979-696-4601 (fax)
 
-Unlimited-user 4-core Stata network license expires 21 Jul 2018:
-       Serial number:  501509201134
-         Licensed to:  Quan Le
-                       Stanford University
+8-user 4-core Stata network perpetual license:
+       Serial number:  501406225577
+         Licensed to:  Andres Shahidinejad
+                       GSLab
 
 Notes:
       1.  Stata is running in batch mode.
@@ -29,28 +29,25 @@ running /Applications/Stata/profile.do ...
 
 . version 14
 
-. clear all
-
 . set more off
+
+. preliminaries
 
 . 
 . program main
   1.     yaml read YAML using config_global.yaml
-  2.     yaml local data  = YAML.build.prepare_data
-  3.     yaml local build = YAML.build.descriptive
+  2.     yaml global data  = YAML.build.prepare_data
+  3.     yaml global build = YAML.build.descriptive
   4. 
-.     import delimited "`data'/data.txt", delimiter("|") clear
+.     import delimited "$data/data.txt", delimiter("|") clear
   5. 
 .     hist x, bin(10)
-  6.     graph export "`build'/plot.eps", replace
+  6.     graph export "$build/plot.eps", replace
   7. 
-.     sum x
-  8.     file open  outfile using "`build'/table.txt", write replace
-  9.     file write outfile "<tab:table>" _n
- 10.     file write outfile (r(mean)) _n (r(sd)) _n (r(max)) _n (r(min))
- 11.     file close outfile
- 12. 
-. end
+.     tabstat x, stat(mean sd max min) save
+  8.     matrix stats = r(StatTotal)
+  9.     matrix_to_txt, matrix(stats) saving("$build/table.txt") title("<tab:table>") replace
+ 10. end
 
 . 
 . * EXECUTE
@@ -60,9 +57,10 @@ running /Applications/Stata/profile.do ...
 (note: file build/descriptive/plot.eps not found)
 (file build/descriptive/plot.eps written in EPS format)
 
-    Variable |        Obs        Mean    Std. Dev.       Min        Max
--------------+---------------------------------------------------------
-           x |    300,000    150000.5    86602.68          1     300000
+    variable |      mean        sd       max       min
+-------------+----------------------------------------
+           x |  150000.5  86602.68    300000         1
+------------------------------------------------------
 (note: file build/descriptive/table.txt not found)
 
 . 
