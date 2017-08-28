@@ -8,15 +8,35 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
+<<<<<<< HEAD
 commit 51118d95fb71cbf0d79faa6fbdbab85d8c2c8973
 Author: chuanyu <yuchuan2016@gmail.com>
 Date:   Fri Aug 25 16:36:03 2017 -0700
 
     #64 response to PR
+=======
+commit 9c2c109530e29955efef8e5b95485aab7a8f7039
+Author: Frank Yang <frank@siepr-mg-ra-imac-5.stanford.edu>
+Date:   Thu Aug 24 11:11:39 2017 -0700
+
+    rm unused config_user_template
+>>>>>>> 4.1.0
 
 
 Files changed since last commit:
 
+<<<<<<< HEAD
+=======
+README.md
+analysis/configuration_test.py
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
+analysis/release/descriptive/table.txt
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
+analysis/source/descriptive/descriptive.do
+analysis/source/prepare_data/create_data.do
+>>>>>>> 4.1.0
 
 ===================================
 
@@ -24,6 +44,7 @@ Files changed since last commit:
 
 ===================================
 ./config_global.yaml:
+<<<<<<< HEAD
    modified on: 25 Aug 2017 16:30:56
    size of file: 361
 ./config_user.yaml:
@@ -95,3 +116,67 @@ Files changed since last commit:
 ./source/prepare_data/SConscript:
    modified on: 25 Aug 2017 16:58:49
    size of file: 802
+=======
+   modified on: 25 Aug 2017 09:57:59
+   size of file: 297
+./config_user.yaml:
+   modified on: 24 Aug 2017 11:08:40
+   size of file: 26
+./configuration_test.py:
+   modified on: 25 Aug 2017 10:38:10
+   size of file: 2330
+./SConstruct:
+   modified on: 25 Aug 2017 09:57:59
+   size of file: 1992
+./sconstruct.log:
+   modified on: 25 Aug 2017 10:38:19
+   size of file: 199
+./state_of_repo.log:
+   modified on: 25 Aug 2017 10:38:19
+   size of file: 771
+./build/descriptive/plot.eps:
+   modified on: 25 Aug 2017 10:27:02
+   size of file: 11148
+./build/descriptive/sconscript_descriptive.log:
+   modified on: 25 Aug 2017 10:27:02
+   size of file: 2154
+./build/descriptive/table.txt:
+   modified on: 25 Aug 2017 10:27:02
+   size of file: 56
+./build/prepare_data/data.txt:
+   modified on: 25 Aug 2017 10:38:16
+   size of file: 1988897
+./build/prepare_data/sconscript_create_data.log:
+   modified on: 25 Aug 2017 10:38:16
+   size of file: 1597
+./release/sconstruct.log:
+   modified on: 25 Aug 2017 10:38:16
+   size of file: 1950
+./release/state_of_repo.log:
+   modified on: 25 Aug 2017 10:38:16
+   size of file: 2736
+./release/descriptive/plot.eps:
+   modified on: 25 Aug 2017 10:27:02
+   size of file: 11148
+./release/descriptive/sconscript_descriptive.log:
+   modified on: 25 Aug 2017 10:27:02
+   size of file: 2154
+./release/descriptive/table.txt:
+   modified on: 25 Aug 2017 10:27:02
+   size of file: 56
+./release/lg/data.txt:
+   modified on: 24 Aug 2017 14:08:59
+   size of file: 1988897
+./source/descriptive/descriptive.do:
+   modified on: 25 Aug 2017 10:26:57
+   size of file: 501
+./source/descriptive/SConscript:
+   modified on: 25 Aug 2017 09:57:59
+   size of file: 463
+./source/prepare_data/create_data.do:
+   modified on: 25 Aug 2017 10:27:53
+   size of file: 262
+./source/prepare_data/SConscript:
+   modified on: 25 Aug 2017 09:57:59
+   size of file: 319
+>>>>>>> 4.1.0
