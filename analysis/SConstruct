@@ -51,9 +51,14 @@ if mode == 'cache':
 debrief_env = {'MAXIT' : 10,
                # Folders to look in for large versioned files
                'look_in' : 'release;source',
-               # Soft limits on file sizes
-               'file_MB_limit' : 2,
-               'total_MB_limit' : 500}
+               # Soft limits on file sizes (w/ LFS);
+               'file_MB_limit_lfs' : 2,
+               'total_MB_limit_lfs' : 500,   
+               # Soft limits on file sizes (w/o LFS);
+               'file_MB_limit' : 0.5,
+               'total_MB_limit' : 125,   
+               # Check if the repo requires LFS
+               'lfs_required' : misc.load_yaml_value('config_global.yaml', 'git-lfs')}
 
 atexit.register(log.end_log)
 atexit.register(gs.misc.scons_debrief, target = 'state_of_repo.log', env = debrief_env)
