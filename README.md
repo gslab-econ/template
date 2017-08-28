@@ -16,23 +16,6 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 * [LyX](https://www.lyx.org/Download) (with instructions for LaTeX) 
     * Add LyX to your PATH for [Windows](http://www.computerhope.com/issues/ch000549.htm), [Mac](http://hathaway.cc/post/69201163472/how-to-edit-your-path-environment-variables-on-mac), and [Linux](http://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux).
     * The beamer theme [`metropolis`](https://github.com/matze/mtheme). This is part of MikTeX since Dec 2014. 
-* [Stata](http://www.stata.com/)
-    * Add Stata to your PATH for [Windows](http://www.computerhope.com/issues/ch000549.htm), [Mac](http://hathaway.cc/post/69201163472/how-to-edit-your-path-environment-variables-on-mac), and [Linux](http://stackoverflow.com/questions/14637979/how-to-permanently-set-path-on-linux).
-    * [yaml](https://github.com/gslab-econ/stata-misc) a Stata ado file for parsing YAML files.
-    * [preliminaries](https://github.com/gslab-econ/gslab_stata/tree/master/gslab_misc) a Stata ado file to set up declarations from the user or set to default values.
-    * [matrix_to_txt](https://github.com/gslab-econ/gslab_stata/tree/master/gslab_misc) a Stata ado file for output matrix to text.
-    * To install, enter the following at the Stata console:
-    ```
-    net from https://raw.githubusercontent.com/gslab-econ/stata-misc/master/
-    cap net uninstall yaml
-    net install yaml
-    net from https://raw.githubusercontent.com/gslab-econ/gslab_stata/master/gslab_misc/ado
-    cap net uninstall matrix_to_txt
-    net install matrix_to_txt
-    cap net uninstall preliminaries
-    net install preliminaries
-    ```
-    If you have previously installed these packages using other methods, please delete the old packages manually.
 
 ## Getting started
 
@@ -92,7 +75,10 @@ We are agnostic about how you incorporate external data into the template. There
 
 ##### Can I use other software for data analysis?
 
-Yes. We have custom builders for Python and R. You can also use them with the same syntax as the Stata builder. If you're using R, make sure it's been added to your PATH and that you have a YAML-parsing package, such as [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf). 
+Yes. We have custom builders for R, Stata, and Matlab. You can also use them with the same syntax as the Python builder. You can turn on these builders in `config_global.yaml`. See `analysis/prepare_data/` for sample scripts. Uncomment certain blocks in `analysis/prepare_data/SConscript` to run the sample scripts. Note that since all sample scripts produce the same output, only one block is allowed to run at each time. If you uncomment the block for some other software, you need to comment out the block for Python.
+- If you're using R, make sure it's been added to your PATH, and that you have a YAML-parsing package, such as [yaml](https://cran.r-project.org/web/packages/yaml/yaml.pdf).
+- If you're using Stata, make sure the executable is stored in `config_user.yaml` with the key `stata_executable`, and that you have installed the Stata YAML parser following the instruction [here](https://github.com/gslab-econ/stata-misc/tree/44958575f812c7d3ba72d7415a6fb11b79c56998).
+- If you're using Matlab, make sure it's been added to your PATH, and that you have installed the Matlab YAML parser following the instruction [here](https://github.com/gslab-econ/gslab_matlab/blob/f11eff492e0c982cf344c60b7e7ce0e7b7a66872/README.md#installation-instructions-for-matlab-r2016b).
 
 ##### Can I pass "command line style" arguments to a script?
 
@@ -106,7 +92,7 @@ After all the steps in the build are completed, we'll comb through the directory
 
 ##### Can I write my paper in LaTeX instead of LyX?
 
-We don't have a custom builder for LaTeX. You can still write in it, but you will have to use [SCons's native builder](http://www.scons.org/doc/0.96.91/HTML/scons-user/a5334.html). You can still use our custom table builder to fill LaTeX tables. 
+Yes. We also have the LaTeX builder. See `paper_slides/source/paper` for demonstration.
 
 ##### Can I release my repository?
 

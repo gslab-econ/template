@@ -4,10 +4,10 @@ build  = env['PATHS']['build']['descriptive']
 source = env['PATHS']['source']['descriptive']
 data   = env['PATHS']['build']['prepare_data']
 
-env.BuildStata(target  = ['#%s/plot.eps'       % build,
-                          '#%s/table.txt'      % build],
-               source  = ['#%s/descriptive.do' % source,
-                          '#%s/data.txt'       % data],
-               log_ext = 'descriptive')
+env.BuildPython(target  = ['#%s/plot.eps'       % build,
+                           '#%s/table.txt'      % build],
+                source  = ['#%s/descriptive.py' % source,
+                           '#%s/data.txt'       % data],
+                log_ext = 'descriptive')
 
 env.Install('#release', '#%s/' % build)

@@ -9,7 +9,9 @@ source:
   descriptive: source/descriptive
 
 # Switch to 'Yes' if any of the following softwares are required
-git-lfs: No
-Stata: No
-R: No
-Lyx: No
+prereq_git-lfs: Yes
+prereq_Latex: No
+prereq_Lyx: No
+prereq_Matlab: No
+prereq_R: No
+prereq_Stata: No

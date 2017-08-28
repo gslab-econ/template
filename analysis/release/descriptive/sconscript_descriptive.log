@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+*** Builder log created: {2017-08-24 15:33:19} 
+*** Builder log completed: {2017-08-24 15:33:21} 
+ 
+=======
 *** Builder log created: {2017-08-25 10:26:59} 
 *** Builder log completed: {2017-08-25 10:27:02} 
  
@@ -65,3 +70,4 @@ running /Applications/Stata/profile.do ...
 
 . 
 end of do-file
+>>>>>>> 4.1.0

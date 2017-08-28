@@ -15,4 +15,7 @@ env.BuildLyx(target = ['#%s/text.pdf' % build],
 env.BuildLyx(target = ['#%s/ondeck.pdf' % build], 
              source = ['#%s/ondeck.lyx' % source])
 
+# env.BuildLatex(target = ['#%s/text_latex.pdf' % build],
+#                source = ['#%s/text.tex'       % source])
+
 env.Install('#release', '#%s/' % build)
