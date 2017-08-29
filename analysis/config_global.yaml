@@ -8,10 +8,6 @@ source:
   prepare_data: source/prepare_data
   descriptive: source/descriptive
 
-# Switch to 'Yes' if any of the following softwares are required
-prereq_git-lfs: Yes
-prereq_Latex: No
-prereq_Lyx: No
-prereq_Matlab: No
-prereq_R: No
-prereq_Stata: No
+Stata: yaml, preliminaries, matrix_to_txt
+R: yaml
+Matlab: yaml

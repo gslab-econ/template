@@ -8,6 +8,7 @@ from configuration_test import configuration_test
 [mode, stata_executable, cache_dir] = configuration_test(ARGUMENTS, gslab_python_version = '4.1.0')
 import gslab_scons as gs
 import gslab_scons.log as log
+from gslab_scons import configuration_tests as config
 import yaml
 import atexit
 
@@ -19,14 +20,19 @@ log.start_log(mode, vers)
 # Define the SCons environment
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
-                  BUILDERS = {'BuildLatex':  Builder(action = gs.build_latex),
-                              'BuildLyx':    Builder(action = gs.build_lyx),
-                              'BuildMatlab': Builder(action = gs.build_matlab),
+                  BUILDERS = {
+                              # 'BuildLatex' : Builder(action = gs.build_latex),
+                              'BuildLyx'   : Builder(action = gs.build_lyx),
+                              # 'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
-                              'BuildR':      Builder(action = gs.build_r),
-                              'BuildStata':  Builder(action = gs.build_stata),
-                              'Tablefill':   Builder(action = gs.build_tables)},
+                              # 'BuildR'     : Builder(action = gs.build_r),
+                              # 'BuildStata' : Builder(action = gs.build_stata),
+                              'Tablefill'  : Builder(action = gs.build_tables)
+                              },
                   stata_executable = stata_executable)
+
+# Check requirements for all builders
+config.check_builders(env)
 
 # Only computes hash if time-stamp changed
 env.Decider('MD5-timestamp') 

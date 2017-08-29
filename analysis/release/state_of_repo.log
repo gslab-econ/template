@@ -8,30 +8,18 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 7529e71e04591eb9fd0a5683e112ff1b0cd6d224
-Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Sun Aug 27 17:17:02 2017 -0700
+commit 7dfbad4d62e1eab5d0b6a588f0cf321a86509d23
+Author: Quan Le <lequan@stanford.edu>
+Date:   Mon Aug 28 10:20:14 2017 -0700
 
-    Pull Request for #64: Port example scripts to multiple languages (#76)
-    
-    * #64 add examples for python stata matlab R, mute everything except python
-    
-    * #64 add example of latex
-    
-    * #64 modify dependencies
-    
-    * #64 turn on git-lfs
-    
-    * #64 response to PR
-    
-    * #64 update readme and modify sample code
+    rm accidental commit of local scripts
 
 
 Files changed since last commit:
 
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
-analysis/release/descriptive/table.txt
+analysis/SConstruct
+analysis/config_global.yaml
+analysis/configuration_test.py
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
 
@@ -41,55 +29,55 @@ analysis/release/state_of_repo.log
 
 ===================================
 ./config_global.yaml:
-   modified on: 28 Aug 2017 09:19:50
-   size of file: 361
+   modified on: 29 Aug 2017 16:00:37
+   size of file: 259
 ./config_user.yaml:
    modified on: 25 Aug 2017 11:06:38
    size of file: 70
 ./configuration_test.py:
-   modified on: 28 Aug 2017 09:19:50
-   size of file: 2286
+   modified on: 29 Aug 2017 15:33:37
+   size of file: 1759
 ./SConstruct:
-   modified on: 28 Aug 2017 09:19:50
-   size of file: 2226
+   modified on: 29 Aug 2017 16:00:39
+   size of file: 2416
 ./sconstruct.log:
-   modified on: 28 Aug 2017 09:22:05
+   modified on: 29 Aug 2017 16:04:05
    size of file: 199
 ./state_of_repo.log:
-   modified on: 28 Aug 2017 09:22:05
-   size of file: 933
+   modified on: 29 Aug 2017 16:04:06
+   size of file: 575
 ./build/descriptive/plot.eps:
-   modified on: 28 Aug 2017 09:22:02
+   modified on: 28 Aug 2017 16:48:11
    size of file: 15385
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 28 Aug 2017 09:22:02
+   modified on: 28 Aug 2017 16:48:11
    size of file: 99
 ./build/descriptive/table.txt:
-   modified on: 28 Aug 2017 09:22:01
+   modified on: 28 Aug 2017 16:48:11
    size of file: 39
 ./build/prepare_data/data.txt:
-   modified on: 28 Aug 2017 09:21:59
+   modified on: 28 Aug 2017 09:58:31
    size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 28 Aug 2017 09:21:59
+   modified on: 28 Aug 2017 09:58:31
    size of file: 99
 ./release/sconstruct.log:
-   modified on: 28 Aug 2017 09:22:02
-   size of file: 484
+   modified on: 29 Aug 2017 16:00:43
+   size of file: 250
 ./release/state_of_repo.log:
-   modified on: 28 Aug 2017 09:22:02
-   size of file: 3111
+   modified on: 29 Aug 2017 16:00:43
+   size of file: 2820
 ./release/descriptive/plot.eps:
-   modified on: 28 Aug 2017 09:22:02
+   modified on: 29 Aug 2017 13:34:54
    size of file: 15385
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 28 Aug 2017 09:22:02
+   modified on: 29 Aug 2017 13:34:54
    size of file: 99
 ./release/descriptive/table.txt:
-   modified on: 28 Aug 2017 09:22:01
+   modified on: 28 Aug 2017 16:48:11
    size of file: 39
 ./release/lg/data.txt:
-   modified on: 24 Aug 2017 14:08:59
+   modified on: 28 Aug 2017 09:58:31
    size of file: 1988897
 ./source/descriptive/descriptive.py:
    modified on: 28 Aug 2017 09:19:50
@@ -98,7 +86,7 @@ analysis/release/state_of_repo.log
    modified on: 28 Aug 2017 09:19:50
    size of file: 468
 ./source/prepare_data/create_data.do:
-   modified on: 28 Aug 2017 09:16:17
+   modified on: 28 Aug 2017 09:58:27
    size of file: 262
 ./source/prepare_data/create_data.m:
    modified on: 28 Aug 2017 09:19:50
@@ -110,5 +98,5 @@ analysis/release/state_of_repo.log
    modified on: 28 Aug 2017 09:19:50
    size of file: 247
 ./source/prepare_data/SConscript:
-   modified on: 28 Aug 2017 09:19:50
+   modified on: 28 Aug 2017 09:58:27
    size of file: 802
