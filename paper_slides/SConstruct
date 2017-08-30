@@ -54,7 +54,7 @@ debrief_env = {'MAXIT' : 10,
                'file_MB_limit' : 0.5,
                'total_MB_limit' : 125,   
                # Check if the repo requires LFS
-               'lfs_required' : misc.load_yaml_value('config_global.yaml', 'git-lfs')}
+               'lfs_required' : gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs')}
 
                
 atexit.register(log.end_log)
