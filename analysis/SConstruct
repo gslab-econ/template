@@ -48,7 +48,9 @@ Default('./build', './release')
 if mode == 'cache':
     CacheDir(cache_dir)
 
-debrief_env = {'MAXIT' : 10,
+# Debrief args is a dictionary storing the arguments that are useful for functions to run 
+# after all Scons targets have been built. Scons_debrief will pass these args into those functions. 
+debrief_args = {'MAXIT' : 10,
                # Folders to look in for large versioned files
                'look_in' : 'release;source',
                # Soft limits on file sizes (w/ LFS);
@@ -60,7 +62,10 @@ debrief_env = {'MAXIT' : 10,
                # Check if the repo requires LFS:
                'lfs_required' : gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs'),
                # .gitattributes location: 
-               'git_attrib_path' : '../.gitattributes'}
+               'git_attrib_path' : '../.gitattributes', 
+               # state of repo log file location:
+               'log' : 'state_of_repo.log'}
+
 
 atexit.register(log.end_log)
-atexit.register(gs.misc.scons_debrief, target = 'state_of_repo.log', env = debrief_env)
+atexit.register(gs.misc.scons_debrief, args = debrief_args)
