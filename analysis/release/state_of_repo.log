@@ -8,18 +8,17 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 7dfbad4d62e1eab5d0b6a588f0cf321a86509d23
-Author: Quan Le <lequan@stanford.edu>
-Date:   Mon Aug 28 10:20:14 2017 -0700
+commit 465b8d9f106e4753bbe020d28d944c38128b1324
+Author: chuanyu <yuchuan2016@gmail.com>
+Date:   Tue Aug 29 16:12:39 2017 -0700
 
-    rm accidental commit of local scripts
+    #63 add builder check
 
 
 Files changed since last commit:
 
-analysis/SConstruct
-analysis/config_global.yaml
-analysis/configuration_test.py
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
 
@@ -29,31 +28,28 @@ analysis/release/state_of_repo.log
 
 ===================================
 ./config_global.yaml:
-   modified on: 29 Aug 2017 16:00:37
-   size of file: 259
+   modified on: 30 Aug 2017 13:28:40
+   size of file: 195
 ./config_user.yaml:
    modified on: 25 Aug 2017 11:06:38
    size of file: 70
-./configuration_test.py:
-   modified on: 29 Aug 2017 15:33:37
-   size of file: 1759
 ./SConstruct:
-   modified on: 29 Aug 2017 16:00:39
-   size of file: 2416
+   modified on: 30 Aug 2017 16:02:14
+   size of file: 2250
 ./sconstruct.log:
-   modified on: 29 Aug 2017 16:04:05
+   modified on: 30 Aug 2017 16:06:12
    size of file: 199
 ./state_of_repo.log:
-   modified on: 29 Aug 2017 16:04:06
-   size of file: 575
+   modified on: 30 Aug 2017 16:06:12
+   size of file: 576
 ./build/descriptive/plot.eps:
-   modified on: 28 Aug 2017 16:48:11
+   modified on: 30 Aug 2017 16:06:06
    size of file: 15385
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 28 Aug 2017 16:48:11
+   modified on: 30 Aug 2017 16:06:06
    size of file: 99
 ./build/descriptive/table.txt:
-   modified on: 28 Aug 2017 16:48:11
+   modified on: 30 Aug 2017 16:06:06
    size of file: 39
 ./build/prepare_data/data.txt:
    modified on: 28 Aug 2017 09:58:31
@@ -62,19 +58,19 @@ analysis/release/state_of_repo.log
    modified on: 28 Aug 2017 09:58:31
    size of file: 99
 ./release/sconstruct.log:
-   modified on: 29 Aug 2017 16:00:43
-   size of file: 250
+   modified on: 30 Aug 2017 16:06:06
+   size of file: 692
 ./release/state_of_repo.log:
-   modified on: 29 Aug 2017 16:00:43
-   size of file: 2820
+   modified on: 30 Aug 2017 16:06:06
+   size of file: 2737
 ./release/descriptive/plot.eps:
-   modified on: 29 Aug 2017 13:34:54
+   modified on: 30 Aug 2017 16:06:06
    size of file: 15385
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 29 Aug 2017 13:34:54
+   modified on: 30 Aug 2017 16:06:06
    size of file: 99
 ./release/descriptive/table.txt:
-   modified on: 28 Aug 2017 16:48:11
+   modified on: 30 Aug 2017 16:06:06
    size of file: 39
 ./release/lg/data.txt:
    modified on: 28 Aug 2017 09:58:31

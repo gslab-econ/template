@@ -7,7 +7,3 @@ build:
 source:
   prepare_data: source/prepare_data
   descriptive: source/descriptive
-
-Stata: yaml, preliminaries, matrix_to_txt
-R: yaml
-Matlab: yaml

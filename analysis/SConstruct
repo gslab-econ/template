@@ -1,20 +1,18 @@
 # Preliminaries
 import os
 import sys
+import atexit
+import yaml
+sys.path.append('../config')
 sys.dont_write_bytecode = True # Don't write .pyc files
 
-# Test for proper prerequisites and setup
-from configuration_test import configuration_test
-[mode, stata_executable, cache_dir] = configuration_test(ARGUMENTS, gslab_python_version = '4.1.0')
+# Setup
+from configuration import configuration
+[mode, vers, cache_dir] = configuration(ARGUMENTS)
 import gslab_scons as gs
-import gslab_scons.log as log
-from gslab_scons import configuration_tests as config
-import yaml
-import atexit
+from gslab_scons import log, misc
 
-# Start log after getting mode and release version
-mode = ARGUMENTS.get('mode', 'develop') 
-vers = ARGUMENTS.get('version', '') 
+# Start log
 log.start_log(mode, vers)
 
 # Define the SCons environment
@@ -28,11 +26,8 @@ env = Environment(ENV = {'PATH': os.environ['PATH']},
                               # 'BuildR'     : Builder(action = gs.build_r),
                               # 'BuildStata' : Builder(action = gs.build_stata),
                               'Tablefill'  : Builder(action = gs.build_tables)
-                              },
-                  stata_executable = stata_executable)
+                              })
 
-# Check requirements for all builders
-config.check_builders(env)
 
 # Only computes hash if time-stamp changed
 env.Decider('MD5-timestamp') 
@@ -41,6 +36,9 @@ env.EXTENSIONS = ['.eps', '.pdf', '.lyx']
 SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True))
 # Load paths
 env['PATHS'] = yaml.load(open('config_global.yaml', 'rU'))
+# Load Stata executable if Stata builder is defined
+if 'BuildStata' in env['BUILDERS'].keys():
+   env['stata_executable'] = misc.load_yaml_value('config_user.yaml', 'stata_executable')
 
 # Export environment
 Export('env')
