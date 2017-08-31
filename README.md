@@ -1,6 +1,6 @@
 # GSLab Template 
 
-The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use SCons and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.
+The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use [SCons](http://scons.org/) and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.
 
 ## Prerequisites
 
@@ -9,7 +9,6 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 * [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
     * [gslab_python](https://github.com/gslab-econ/gslab_python) version 4.1.0 or later.
     * [PyYAML](http://pyyaml.org/wiki/PyYAML) a Python module for parsing YAML files. 
-* [SCons](http://scons.org/pages/download.html) version 2.4 or later.
 * [git](https://git-scm.com/downloads) for version control.
     * [git-lfs](https://git-lfs.github.com/) for versioning large files. 
     * You'll need both git and git-lfs to clone the repository. 
@@ -20,24 +19,32 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 ## Getting started
 
 1. Open a shell, clone the repository, and navigate to its root.
-    ```
+    ```bash
     git clone https://github.com/gslab-econ/template.git
     cd template
     ```
-2. You're ready to go. We'll prompt you to enter any necessary information and store it in `config_user.yaml` as your scripts run. 
-    * To build everything that has been modified or with dependencies in the repository that have been modified.
-        ```
-        scons
+2. Unzip `scons.zip` to `scons`.
+    ```bash
+    unzip scons.zip -d scons
+    ```
+3. Navigate to the `analysis` or `paper_slides` subdirectory.  
+    ```bash
+    cd analysis
+    ```
+4. You're ready to go. We'll prompt you to enter any necessary information and store it in `config_user.yaml` as your scripts run. 
+    * To build everything in the subdirectory that has been modified or with dependencies in the subdirectory that have been modified.
+        ```bash
+        python ../scons/scons.py
         ```
     * To build everything in a single directory of targets that has been modified and all of their dependencies that have been modified.
-        ```
-        scons build/path/to/directory
+        ```bash
+        python ../scons/scons.py build/path/to/directory
         ```
     * To build a single target that has been modified and all of its dependencies that have been modified.
+        ```bash
+        python ../scons/scons.py build/path/to/file.txt
         ```
-        scons build/path/to/file.txt
-        ```
-3. To customize this repository and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
+5. To customize the subdirectory and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
 
 ## Copying the template
 
