@@ -8,22 +8,24 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 5fafb61cb4248d84dd6a94b523b948768c8d2dda
+commit 5d85886f5a4b83fbe91cb9988373921cdbbba603
 Author: chuanyu <yuchuan2016@gmail.com>
-Date:   Thu Aug 24 17:02:41 2017 -0700
+Date:   Wed Aug 30 16:07:40 2017 -0700
 
-    #64 turn on git-lfs
+    #63 add autimatic config scripts
 
 
 Files changed since last commit:
 
 analysis/SConstruct
 analysis/config_global.yaml
-analysis/configuration_test.py
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
+config/config_python.py
+config/config_r.r
+config/configuration.py
+paper_slides/SConstruct
 paper_slides/config_global.yaml
-paper_slides/configuration_test.py
 paper_slides/release/sconstruct.log
 paper_slides/release/state_of_repo.log
 
@@ -33,20 +35,20 @@ paper_slides/release/state_of_repo.log
 
 ===================================
 ./config_global.yaml:
-   modified on: 25 Aug 2017 16:32:20
-   size of file: 365
+   modified on: 31 Aug 2017 09:00:44
+   size of file: 357
 ./configuration_test.py:
-   modified on: 25 Aug 2017 16:32:33
+   modified on: 28 Aug 2017 09:19:50
    size of file: 2016
 ./SConstruct:
-   modified on: 25 Aug 2017 16:05:28
-   size of file: 1877
+   modified on: 31 Aug 2017 09:01:21
+   size of file: 1820
 ./sconstruct.log:
-   modified on: 25 Aug 2017 16:32:49
+   modified on: 31 Aug 2017 09:01:30
    size of file: 199
 ./state_of_repo.log:
-   modified on: 25 Aug 2017 16:32:49
-   size of file: 701
+   modified on: 31 Aug 2017 09:01:30
+   size of file: 738
 ./build/paper/ondeck.pdf:
    modified on: 24 Aug 2017 16:51:29
    size of file: 18193
@@ -93,7 +95,7 @@ paper_slides/release/state_of_repo.log
    modified on: 24 Aug 2017 16:52:19
    size of file: 29971
 ./input/plot.eps:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 15385
 ./input/provenance.txt:
    modified on: 23 Aug 2017 12:00:48
@@ -102,31 +104,31 @@ paper_slides/release/state_of_repo.log
    modified on: 24 Aug 2017 15:33:21
    size of file: 39
 ./release/sconstruct.log:
-   modified on: 25 Aug 2017 16:32:38
+   modified on: 31 Aug 2017 08:59:45
    size of file: 250
 ./release/state_of_repo.log:
-   modified on: 25 Aug 2017 16:32:38
-   size of file: 4478
+   modified on: 31 Aug 2017 08:59:45
+   size of file: 4589
 ./release/paper/ondeck.pdf:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 18193
 ./release/paper/online_appendix.pdf:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 45354
 ./release/paper/paper.pdf:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 58961
 ./release/paper/sconscript.log:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 6473
 ./release/paper/text.pdf:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 18193
 ./release/talk/sconscript.log:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 29971
 ./source/figures/figure.lyx:
    modified on: 23 Aug 2017 12:00:56
@@ -141,13 +143,13 @@ paper_slides/release/state_of_repo.log
    modified on: 23 Aug 2017 12:00:56
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 25 Aug 2017 16:05:28
-   size of file: 676
+   modified on: 28 Aug 2017 09:19:50
+   size of file: 677
 ./source/paper/text.lyx:
    modified on: 23 Aug 2017 12:00:56
    size of file: 2522
 ./source/paper/text.tex:
-   modified on: 25 Aug 2017 16:05:28
+   modified on: 28 Aug 2017 09:19:50
    size of file: 1300
 ./source/tables/SConscript:
    modified on: 23 Aug 2017 12:00:56
