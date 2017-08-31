@@ -1,27 +1,29 @@
 # Preliminaries
 import os
 import sys
+import atexit
+import yaml
+sys.path.append('../config')
 sys.dont_write_bytecode = True # Don't write .pyc files
 
-# Test for proper prerequisites and setup
-from configuration_test import configuration_test
-[mode, cache_dir] = configuration_test(ARGUMENTS, gslab_python_version = '4.1.0')
+# Setup
+from configuration import configuration
+[mode, vers, cache_dir] = configuration(ARGUMENTS, paper = True)
 import gslab_scons as gs
-import gslab_scons.log as log
-import yaml
-import atexit
+from gslab_scons import log
+from gslab_scons import misc
 
-# Start log after getting mode and release version
-mode = ARGUMENTS.get('mode', 'develop') 
-vers = ARGUMENTS.get('version', '') 
+# Start log
 log.start_log(mode, vers)
 
 # Define the SCons environment
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
-                  BUILDERS = {'BuildLyx':   Builder(action = gs.build_lyx),
-                              'BuildLatex': Builder(action = gs.build_latex),
-                              'Tablefill':  Builder(action = gs.build_tables)})
+                  BUILDERS = {
+                              'BuildLyx':   Builder(action = gs.build_lyx),
+                              # 'BuildLatex': Builder(action = gs.build_latex),
+                              'Tablefill':  Builder(action = gs.build_tables),
+                              })
 
 # Only computes hash if time-stamp changed
 env.Decider('MD5-timestamp') 

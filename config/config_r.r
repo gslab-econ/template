@@ -1,7 +1,10 @@
-Main <- function(){
-    CRAN_packages   <- c("yaml", "ggplot2")
-    GitHub_packages <- NULL
-    # GitHub packages should be the full path to the relevant repo
+# Required packages installed from CRAN.
+CRAN_packages   <- c("yaml")
+# Required packages installed from Github. Should be the full path to the relevant repo.
+GitHub_packages <- NULL
+
+main <- function(CRAN_packages = NULL, GitHub_packages = NULL) {
+    # If there are packages installed from Github, first make sure "devtools" is installed 
     if (!is.null(GitHub_packages)) {
         CRAN_packages <- c(CRAN_packages, "devtools")
     }
@@ -25,4 +28,4 @@ install_CRAN <- function(pkg, repo, dependency, quiet){
     }
 }
 
-Main()
+main(CRAN_packages, GitHub_packages)

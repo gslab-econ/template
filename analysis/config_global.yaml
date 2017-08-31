@@ -7,3 +7,6 @@ build:
 source:
   prepare_data: source/prepare_data
   descriptive: source/descriptive
+
+# Switch to 'Yes' if it's required and 'No' if it's not.
+prereq_git-lfs: Yes

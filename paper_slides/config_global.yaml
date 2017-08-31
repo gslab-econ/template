@@ -14,7 +14,7 @@ source:
   tables: source/tables
   talk: source/talk
 
-# Switch to 'Yes' if any of the following softwares are required
+# Switch to 'Yes' if it's required and 'No' if it's not.
 prereq_git-lfs: Yes
 prereq_Latex: No
 prereq_Lyx: Yes

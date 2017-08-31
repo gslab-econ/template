@@ -1,13 +1,16 @@
 import pip
 import pkg_resources
+# The collection of required packages.
+# Packages with value True will be updated if it's already installed.
+# Packages with value False will be skipped if it's already installed.
+packages = {'pyyaml': True}
 
-def main():
+def main(packages):
     # Install gslab_tools if it's not installed yet or it has the wrong version
     if not check_gslab_tools('4.1.0'):
         pip.main(['install', 'git+http://git@github.com/gslab-econ/gslab_python.git@4.1.0'])
 
     # Install required packages using pip
-    packages = {'pyyaml': True}
     installed_packages = [pkg.key for pkg in pip.get_installed_distributions()]
     for pkg in packages.keys():
         if pkg not in installed_packages or packages[pkg]:
@@ -31,4 +34,4 @@ def check_gslab_tools(gslab_python_version):
     else:
         return True
 
-main()
+main(packages)

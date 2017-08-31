@@ -19,13 +19,10 @@ log.start_log(mode, vers)
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
-                              # 'BuildLatex' : Builder(action = gs.build_latex),
-                              'BuildLyx'   : Builder(action = gs.build_lyx),
                               # 'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
                               # 'BuildR'     : Builder(action = gs.build_r),
                               # 'BuildStata' : Builder(action = gs.build_stata),
-                              'Tablefill'  : Builder(action = gs.build_tables)
                               })
 
 
