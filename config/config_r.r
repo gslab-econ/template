@@ -13,7 +13,8 @@ main <- function(CRAN_packages = NULL, GitHub_packages = NULL,
 
     # Install packages from CRAN
     if (!is.null(CRAN_packages)) {
-        lapply(CRAN_packages, install_CRAN, CRAN_repo, dependency, quiet, upgrade)
+        lapply(CRAN_packages, install_CRAN, repo = CRAN_repo, dependency = dependency,
+               quiet = quiet, upgrade = upgrade)
     }
 
     # Install packages from GitHub
