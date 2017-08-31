@@ -25,7 +25,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     ```
 2. Unzip `scons.zip` to `scons`.
     ```bash
-    unzip scons.zip -d scons
+    unzip config/scons.zip -d config/scons # Not Windows
     ```
 3. Navigate to the `analysis` or `paper_slides` subdirectory.  
     ```bash
@@ -34,15 +34,15 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 4. You're ready to go. We'll prompt you to enter any necessary information and store it in `config_user.yaml` as your scripts run. 
     * To build everything in the subdirectory that has been modified or with dependencies in the subdirectory that have been modified.
         ```bash
-        python ../scons/scons.py
+        python scons.py
         ```
     * To build everything in a single directory of targets that has been modified and all of their dependencies that have been modified.
         ```bash
-        python ../scons/scons.py build/path/to/directory
+        python scons.py build/path/to/directory
         ```
     * To build a single target that has been modified and all of its dependencies that have been modified.
         ```bash
-        python ../scons/scons.py build/path/to/file.txt
+        python scons.py build/path/to/file.txt
         ```
 5. To customize the subdirectory and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
 
