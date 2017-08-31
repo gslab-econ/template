@@ -4,7 +4,8 @@ CRAN_packages   <- c("yaml")
 GitHub_packages <- NULL
 
 main <- function(CRAN_packages = NULL, GitHub_packages = NULL,
-                 CRAN_dependency = TRUE, CRAN_quiet = TRUE, upgrade = FALSE) {
+                 CRAN_repo = "http://cran.cnr.Berkeley.edu/",
+                 dependency = TRUE, quiet = TRUE, upgrade = FALSE) {
     # If there are packages installed from Github, first make sure "devtools" is installed 
     if (!is.null(GitHub_packages)) {
         CRAN_packages <- c(CRAN_packages, "devtools")
@@ -12,8 +13,7 @@ main <- function(CRAN_packages = NULL, GitHub_packages = NULL,
 
     # Install packages from CRAN
     if (!is.null(CRAN_packages)) {
-        lapply(CRAN_packages, install_CRAN, repo = "http://cran.cnr.Berkeley.edu/",
-               dependency = CRAN_dependency, quiet = CRAN_quiet, upgrade)
+        lapply(CRAN_packages, install_CRAN, CRAN_repo, dependency, quiet, upgrade)
     }
 
     # Install packages from GitHub
