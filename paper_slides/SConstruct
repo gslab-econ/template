@@ -44,19 +44,19 @@ Default('./build', './release')
 if mode == 'cache':
     CacheDir(cache_dir)
 
-debrief_env = {'MAXIT' : 10,
-               # Folders to look in for large versioned files
-               'look_in' : 'release;source',
-               # Soft limits on file sizes (w/ LFS);
-               'file_MB_limit_lfs' : 2,
-               'total_MB_limit_lfs' : 500,   
-               # Soft limits on file sizes (w/o LFS);
-               'file_MB_limit' : 0.5,
-               'total_MB_limit' : 125,   
-               # Check if the repo requires LFS:
-               'lfs_required' : gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs'),
-               # .gitattributes location: 
-               'git_attrib_path' : '../.gitattributes'}
+# Debrief args is a dictionary storing the arguments that are useful for functions to run 
+# after all Scons targets have been built. Scons_debrief will pass these args into those functions. 
+debrief_args = {
+               'look_in'            : 'release;source',    # Folders to look in for large versioned files
+               'file_MB_limit_lfs'  : 2,                   # Soft limit on file size (w/ LFS);
+               'total_MB_limit_lfs' : 500,                 # Soft limit on total size (w/ LFS);  
+               'file_MB_limit'      : 0.5,                 # Soft limit on file size (w/o LFS);
+               'total_MB_limit'     : 125,                 # Soft limit on total size (w/o LFS);  
+               'lfs_required'       : gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs'), # Check if the repo requires LFS
+               'git_attrib_path'    : '../.gitattributes', # .gitattributes location
+               'MAXIT'              : 10,                  # max number of iterations to write file information to log
+               'log'                : 'state_of_repo.log'  # state of repo log file location
+               }
 
                
 atexit.register(log.end_log)
