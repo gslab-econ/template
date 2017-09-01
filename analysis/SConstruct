@@ -58,7 +58,7 @@ debrief_args = {
                'total_MB_limit'     : 125,                 # Soft limit on total size (w/o LFS);  
                'lfs_required'       : gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs'), # Check if the repo requires LFS
                'git_attrib_path'    : '../.gitattributes', # .gitattributes location
-			      'MAXIT'              : 10,				        # max number of iterations to write file information to log
+               'MAXIT'              : 10,				        # max number of iterations to write file information to log
                'log'                : 'state_of_repo.log'  # state of repo log file location
                }
 
