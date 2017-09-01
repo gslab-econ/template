@@ -1,7 +1,7 @@
 import sys
 import subprocess
 
-execute_path = '../config/scons/scons.py'
+execute_script = '../config/scons/scons.py'
 
 def main(execute_script):
     '''
@@ -18,4 +18,4 @@ def main(execute_script):
     # Execute
     subprocess.call(call, shell = True)
 
-main()
+main(execute_script)
