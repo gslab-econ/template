@@ -23,7 +23,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     git clone https://github.com/gslab-econ/template.git
     cd template
     ```
-2. Unzip `scons.zip` to `scons`.
+2. Unzip `config/scons.zip` to `config/scons`. This is the local scons distribution we use.
     ```bash
     unzip config/scons.zip -d config/scons # Not Windows
     ```
@@ -34,15 +34,15 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 4. You're ready to go. We'll prompt you to enter any necessary information and store it in `config_user.yaml` as your scripts run. 
     * To build everything in the subdirectory that has been modified or with dependencies in the subdirectory that have been modified.
         ```bash
-        python scons.py
+        python run.py
         ```
     * To build everything in a single directory of targets that has been modified and all of their dependencies that have been modified.
         ```bash
-        python scons.py build/path/to/directory
+        python run.py build/path/to/directory
         ```
     * To build a single target that has been modified and all of its dependencies that have been modified.
         ```bash
-        python scons.py build/path/to/file.txt
+        python run.py build/path/to/file.txt
         ```
 5. To customize the subdirectory and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
 
@@ -110,6 +110,14 @@ Every file intended for release should be added to the `release` directory. File
 ##### What if there are large files I need to put in `release` but cannot be versioned?
 
 For large files to be released, our protocol is to keep them in a designated subfolder named `release/lg`. By default, `release/lg` is in `.gitignore`. When you use our custom release tool, `release/lg` will be included in the local destination release and not pushed to GitHub.
+
+##### What if I want to use my global SCons installation?
+
+That's fine, but you'll need version 2.4.0 or later. Just replace `python run.py` with `scons`. Everything else stays the same. You can also skip the unzip step under Getting started.
+
+Be aware that the [formatting of the cache](https://bitbucket.org/scons/scons/src/rel_2.5.1/src/CHANGES.txt?at=2.5.1&fileviewer=file-view-default#CHANGES.txt-60) changed in version 2.5.0 of SCons. A cache can get messy and fall out of sync if collaborators use a mix of older and newer versions. 
+
+The local distribution of SCons in this repository is version 2.5.1.
 
 #### License
 
