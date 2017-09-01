@@ -1,6 +1,6 @@
 # GSLab Template 
 
-The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use SCons and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.
+The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use [SCons](http://scons.org/) and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.
 
 ## Prerequisites
 
@@ -9,7 +9,6 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 * [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
     * [gslab_python](https://github.com/gslab-econ/gslab_python) version 4.1.0 or later.
     * [PyYAML](http://pyyaml.org/wiki/PyYAML) a Python module for parsing YAML files. 
-* [SCons](http://scons.org/pages/download.html) version 2.4 or later.
 * [git](https://git-scm.com/downloads) for version control.
     * [git-lfs](https://git-lfs.github.com/) for versioning large files. 
     * You'll need both git and git-lfs to clone the repository. 
@@ -20,24 +19,32 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 ## Getting started
 
 1. Open a shell, clone the repository, and navigate to its root.
-    ```
+    ```bash
     git clone https://github.com/gslab-econ/template.git
     cd template
     ```
-2. You're ready to go. We'll prompt you to enter any necessary information and store it in `config_user.yaml` as your scripts run. 
-    * To build everything that has been modified or with dependencies in the repository that have been modified.
-        ```
-        scons
+2. Unzip `config/scons.zip` to `config/scons`. This is the local scons distribution we use.
+    ```bash
+    unzip config/scons.zip -d config/scons # Not Windows
+    ```
+3. Navigate to the `analysis` or `paper_slides` subdirectory.  
+    ```bash
+    cd analysis
+    ```
+4. You're ready to go. We'll prompt you to enter any necessary information and store it in `config_user.yaml` as your scripts run. 
+    * To build everything in the subdirectory that has been modified or with dependencies in the subdirectory that have been modified.
+        ```bash
+        python run.py
         ```
     * To build everything in a single directory of targets that has been modified and all of their dependencies that have been modified.
-        ```
-        scons build/path/to/directory
+        ```bash
+        python run.py build/path/to/directory
         ```
     * To build a single target that has been modified and all of its dependencies that have been modified.
+        ```bash
+        python run.py build/path/to/file.txt
         ```
-        scons build/path/to/file.txt
-        ```
-3. To customize this repository and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
+5. To customize the subdirectory and switch on/off any required softwares per your need, please go to `config_global.yaml` and follow the instruction there. 
 
 ## Copying the template
 
@@ -103,6 +110,14 @@ Every file intended for release should be added to the `release` directory. File
 ##### What if there are large files I need to put in `release` but cannot be versioned?
 
 For large files to be released, our protocol is to keep them in a designated subfolder named `release/lg`. By default, `release/lg` is in `.gitignore`. When you use our custom release tool, `release/lg` will be included in the local destination release and not pushed to GitHub.
+
+##### What if I want to use my global SCons installation?
+
+That's fine, but you'll need version 2.4.0 or later. Just replace `python run.py` with `scons`. Everything else stays the same. You can also skip the unzip step under Getting started.
+
+Be aware that the [formatting of the cache](https://bitbucket.org/scons/scons/src/rel_2.5.1/src/CHANGES.txt?at=2.5.1&fileviewer=file-view-default#CHANGES.txt-60) changed in version 2.5.0 of SCons. A cache can get messy and fall out of sync if collaborators use a mix of older and newer versions. 
+
+The local distribution of SCons in this repository is version 2.5.1.
 
 #### License
 
