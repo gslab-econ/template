@@ -18,7 +18,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 
 1. Open a shell, clone the repository, and navigate to its root.
     ```bash
-    git clone https://github.com/gslab-econ/template.git
+    git lfs clone https://github.com/gslab-econ/template.git
     cd template
     ```
 2. Install Python dependencies.
@@ -61,8 +61,8 @@ echo "Enter the empty repository's name."
 read REPO_NAME      
 
 # Clone new repository and template
-git clone git@github.com:gslab-econ/$REPO_NAME
-git clone git@github.com:gslab-econ/template
+git clone https://github.com/gslab-econ/$REPO_NAME
+git lfs clone https://github.com/gslab-econ/template.git
 
 # Copy template's contents to new repository and clean up
 rm -rf  template/.git       
@@ -104,7 +104,7 @@ We are agnostic about how you incorporate external data into the template. There
 
 * When a large dataset is stored externally, there are a few options. 
     * The top-level readme can specify manual download and storage instructions. This is simple, easy to customize, and unlikely to cause errors during a SCons build. It does, however, require each user to successfully download the same dataset, perhaps in an unstructured manner. 
-    * The download can be incorporated into the SCons build. We either execute a program to transfer data (e.g., `rsync` or `rclone`) using our "anything build" or from within a script executed by one of our other custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to failure.
+    * The download can be incorporated into the SCons build. We either execute a program to transfer data (e.g., `rsync` or `rclone`) using our "anything builder" or from within a script executed by one of our other custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to failure.
     * Regardless of the download method, the path to the dataset should be added to `config_global.yaml` and `.gitignore` if it is stored within the repository and to `config_user.yaml` if it is stored elsewhere. 
 
 #### How do I use the outputs of `analysis` as inputs for `paper_slides`?
@@ -114,6 +114,18 @@ We recommend that you manually copy the desired files or directories from the `r
 There are lighter-weight methods to connect these subdirectories, but they may make your project more prone to errors.
 * Create a symlink between `analysis/release` and `paper_slides/input` (not platform-independent).
 * Point to `analysis/release` from the `config_global.yaml` in `paper_slides` (hard to parse YAML in LyX and LaTeX).
+
+You can recouple the SCons subdirectories by [installing](http://scons.org/doc/1.2.0/HTML/scons-user/c2848.html) the output from `analysis` into `paper_slides` Add the following line to the SConstruct in `analysis`
+
+```  
+env.Install('../paper-slides/input', '#release/') 
+```
+
+You'll also need to give SCons permission to build targets outside the `analysis` directory; so run
+
+```bash
+python run.py ../paper_slides
+```
 
 #### What software can I use for data analysis?
 
