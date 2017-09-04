@@ -24,4 +24,4 @@ scons/
 *.toc
 *.out
 *.svn
-
+*.ipynb
