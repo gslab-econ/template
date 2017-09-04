@@ -1,17 +1,9 @@
-*** New build: {2017-09-04 13:10:20} ***
+*** New build: {2017-09-04 15:20:37} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-build_anything(["build/prepare_data/data.txt"], ["source/prepare_data"])
-build_python(["build/descriptive/plot.eps", "build/descriptive/table.txt"], ["source/descriptive/descriptive.py", "build/prepare_data/data.txt"])
-Install directory: "build/descriptive" as "release/descriptive"
+scons: `build' is up to date.
+scons: `release' is up to date.
 scons: done building targets.
-*** Build completed: {2017-09-04 13:10:23} ***
+*** Build completed: {2017-09-04 15:20:38} ***
  
- 
-./release/descriptive/sconscript_descriptive.log
-*** Builder log created: {2017-09-04 13:10:20} 
-*** Builder log completed: {2017-09-04 13:10:23} 
- ./build/descriptive/sconscript_descriptive.log
-*** Builder log created: {2017-09-04 13:10:20} 
-*** Builder log completed: {2017-09-04 13:10:23} 
  

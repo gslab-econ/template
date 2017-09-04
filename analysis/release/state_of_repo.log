@@ -8,17 +8,15 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit a25a968a465b1ba1bfad975fa9d9a6e601fe6a87
+commit e911a32ac747e9ec61e45c6dd16462a3df4199f0
 Author: Quan Le <lequan@stanford.edu>
-Date:   Mon Sep 4 12:05:52 2017 -0700
+Date:   Mon Sep 4 15:19:36 2017 -0700
 
-    #82 add jupyter notebooks to .gitignore
+    #82 output
 
 
 Files changed since last commit:
 
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
 analysis/source/prepare_data/SConscript
@@ -38,11 +36,11 @@ analysis/source/prepare_data/SConscript
    modified on: 04 Sep 2017 12:46:36
    size of file: 2884
 ./sconstruct.log:
-   modified on: 04 Sep 2017 13:10:23
-   size of file: 420
+   modified on: 04 Sep 2017 15:20:37
+   size of file: 199
 ./state_of_repo.log:
-   modified on: 04 Sep 2017 13:10:23
-   size of file: 631
+   modified on: 04 Sep 2017 15:20:38
+   size of file: 508
 ./build/descriptive/plot.eps:
    modified on: 04 Sep 2017 13:10:23
    size of file: 15385
@@ -53,17 +51,17 @@ analysis/source/prepare_data/SConscript
    modified on: 04 Sep 2017 13:10:22
    size of file: 39
 ./build/prepare_data/data.txt:
-   modified on: 04 Sep 2017 13:10:20
+   modified on: 04 Sep 2017 15:20:32
    size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 04 Sep 2017 13:10:20
+   modified on: 04 Sep 2017 15:20:32
    size of file: 99
 ./release/sconstruct.log:
-   modified on: 04 Sep 2017 13:09:59
-   size of file: 1331
+   modified on: 04 Sep 2017 15:20:32
+   size of file: 453
 ./release/state_of_repo.log:
-   modified on: 04 Sep 2017 13:09:59
-   size of file: 2696
+   modified on: 04 Sep 2017 15:20:32
+   size of file: 2689
 ./release/descriptive/plot.eps:
    modified on: 04 Sep 2017 13:10:23
    size of file: 15385
@@ -98,5 +96,5 @@ analysis/source/prepare_data/SConscript
    modified on: 04 Sep 2017 13:09:42
    size of file: 82
 ./source/prepare_data/SConscript:
-   modified on: 04 Sep 2017 13:10:17
-   size of file: 1090
+   modified on: 04 Sep 2017 15:20:22
+   size of file: 1078
