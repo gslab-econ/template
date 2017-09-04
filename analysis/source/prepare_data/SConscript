@@ -20,9 +20,10 @@ env.BuildPython(target  = ['#%s/data.txt'       % build],
 #                 source  = ['#%s/create_data.m'   % source],
 #                 log_ext =  'create_data')
 
+# # Invalid syntax for Windows.
 # gs._build_anything(target  = ['#%s/data.txt' % build], 
 #                    source  = [''],
-#                    action  = 'sh source/prepare_data/create_data.sh', 
+#                    action  = 'sh source/prepare_data/create_data.sh',
 #                    log_ext = 'create_data',
 #                    env     = env)
 

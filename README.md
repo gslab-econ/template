@@ -129,9 +129,9 @@ python run.py ../paper_slides
 
 #### What software can I use for data analysis?
 
-We have custom builders for R, Stata, and MATLAB. They all use the same syntax as the Python builder. You'll need to add the builders to the SCons environment by uncommenting their definitions in the SConstruct. Also check that the executable has been added to your PATH. 
+We have custom builders for Python, R, Stata, and MATLAB. They all use the same syntax. You'll need to add the a builder to the SCons environment by uncommenting its definition in the SConstruct. Also check that its executable has been added to your PATH. 
 
-See `analysis/source/prepare_data/` for sample scripts in each language. To run one of the sample scripts, uncomment its block in `analysis/source/prepare_data/SConscript` and its builder in `analysis/SConstruct`. Note that all sample scripts produce the same output, so only one block is allowed to run for each SCons build. If you uncomment the block for some other software, you need to comment out the block for Python.
+See `analysis/source/prepare_data/` for sample scripts in each language. To run one of the sample scripts, uncomment its block in `analysis/source/prepare_data/SConscript` and its builder in `analysis/SConstruct`. Note that all sample scripts produce the same output, so only one block is allowed to run for each SCons build. If you uncomment the block for one software, you need to comment out the blocks for all others.
 
 * If you're using R, make sure you've installed its dependencies. 
 ```bash
@@ -149,7 +149,9 @@ Yes. We also have the LaTeX builder. See `paper_slides/source/paper` for a demon
 
 #### Is there support for other software?
 
-We support additional software through our "anything builder." It let's you specify arbitrary commands for a build step using the syntax, logging, and error management of our other custom builders. We turn your commands into a SCons node at runtime, and SCons will track your dependencies and build the node if necessary. An example using standard Bash commands is in `analysis/source/prepare_data/SConscript`.
+We support additional software through our "anything builder." It let's you execute shell commands as a build step using the syntax, logging, and error management of our other custom builders. We turn your commands into a SCons node at runtime, and SCons will track your dependencies and build the node if necessary. SCons will always execute your commands using your system's shell, and you can use this functionality to incorporate arbitrary steps into your build.
+
+An example using standard Bash commands is in `analysis/source/prepare_data/SConscript` and `analysis/source/prepare_data/build_data.sh`. This code won't run on Windows.
 
 #### Can I pass "command line style" arguments to a script?
 
