@@ -18,8 +18,8 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
 
 1. Open a shell, clone the repository, and navigate to its root.
     ```bash
-    git lfs clone https://github.com/gslab-econ/template.git
-    cd template
+    git lfs clone https://github.com/gslab-econ/template.git YourProjectName
+    cd YourProjectName
     ```
 2. Install Python dependencies.
     ```bash
@@ -27,7 +27,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     ```
 3. Unzip the scons package.
     ```bash
-    unzip config/scons.zip -d config/scons # Not Windows
+    unzip config/scons.zip -d config/scons # Do manually on Windows
     ```
 4. Navigate to the `analysis` or `paper_slides` subdirectory.  
     ```bash
@@ -104,7 +104,7 @@ We are agnostic about how you incorporate external data into the template. There
 
 * When a large dataset is stored externally, there are a few options. 
     * The top-level readme can specify manual download and storage instructions. This is simple, easy to customize, and unlikely to cause errors during a SCons build. It does, however, require each user to successfully download the same dataset, perhaps in an unstructured manner. 
-    * The download can be incorporated into the SCons build. We either execute a program to transfer data (e.g., `rsync` or `rclone`) using our "anything builder" or from within a script executed by one of our other custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to failure.
+    * The download can be incorporated into the SCons build. We either execute a program to transfer data (e.g., `rsync` or `rclone`) using our "Anything builder" or from within a script executed by one of our other custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to failure.
     * Regardless of the download method, the path to the dataset should be added to `config_global.yaml` and `.gitignore` if it is stored within the repository and to `config_user.yaml` if it is stored elsewhere. 
 
 #### How do I use the outputs of `analysis` as inputs for `paper_slides`?
@@ -149,7 +149,7 @@ Yes. We also have the LaTeX builder. See `paper_slides/source/paper` for a demon
 
 #### Is there support for other software?
 
-We support additional software through our "anything builder." It let's you execute shell commands as a build step using the syntax, logging, and error management of our other custom builders. We turn your commands into a SCons node at runtime, and SCons will track your dependencies and build the node if necessary. SCons will always execute your commands using your system's shell, and you can use this functionality to incorporate arbitrary steps into your build.
+We support additional software through our "Anything builder." It let's you execute shell commands as a build step using the syntax, logging, and error management of our other custom builders. We turn your commands into a SCons node at runtime, and SCons will track your dependencies and build the node if necessary. SCons will always execute your commands using your system's shell, and you can use this functionality to incorporate arbitrary steps into your build.
 
 An example using standard Bash commands is in `analysis/source/prepare_data/SConscript` and `analysis/source/prepare_data/build_data.sh`. This code won't run on Windows.
 
