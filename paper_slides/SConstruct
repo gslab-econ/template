@@ -59,8 +59,7 @@ debrief_args = {
                'MAXIT'              : 10,                  # max number of iterations to write file information to log
                'log'                : 'state_of_repo.log'  # state of repo log file location
                }
-
                
 atexit.register(log.end_log)
-atexit.register(gs.misc.scons_debrief, target = 'state_of_repo.log', env = debrief_env)
+atexit.register(gs.misc.scons_debrief, args = debrief_args)
 
