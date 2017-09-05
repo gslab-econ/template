@@ -187,6 +187,10 @@ The version of SCons packaged with this repository is scons-local-2.5.1. Our `ru
 
 Required packages for Python, R, and Stata should be added to their configuration scripts under `config`. If you require the installation of many packages for another language, we suggest you set up a new configuration script in the same location. Other requirements can be added a la carte to the Prerequisites section of this readme. 
 
+#### I use Sublime Text. Is there a custom theme for GSLab-produced logs? 
+
+See [here](https://github.com/gslab-econ/template/wiki/Sublime-Text-syntax-highlighting).
+
 ## License
 
 The MIT License (MIT)
