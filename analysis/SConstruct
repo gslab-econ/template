@@ -8,7 +8,7 @@ sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Setup
 from configuration import configuration
-[mode, vers, cache_dir] = configuration(ARGUMENTS)
+[mode, vers, cache_dir, PATHS] = configuration(ARGUMENTS)
 import gslab_scons as gs
 
 # Start log
@@ -18,12 +18,13 @@ gs.log.start_log(mode, vers)
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
-                              # 'BuildMatlab': Builder(action = gs.build_matlab),
+                              'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
-                              # 'BuildR'     : Builder(action = gs.build_r),
-                              # 'BuildStata' : Builder(action = gs.build_stata),
+                              'BuildR'     : Builder(action = gs.build_r),
+                              'BuildStata' : Builder(action = gs.build_stata),
                               })
-
+# Store PATHS from configuration
+env['PATHS'] = PATHS
 # Only computes hash if time-stamp changed
 env.Decider('MD5-timestamp') 
 # Extensions to be used when scanning for source files in BuildLyx.
@@ -32,17 +33,6 @@ SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True
 # Load Stata executable if Stata builder is defined
 if 'BuildStata' in env['BUILDERS'].keys():
     env['stata_executable'] = gs.misc.load_yaml_value('config_user.yaml', 'stata_executable')
-# Load global and user config file, record contents of their external directories
-for config_type in ['global', 'user']:
-   config_file = 'config_%s.yaml' % config_type
-   if os.path.isfile(config_file):
-       config_paths = 'paths_%s' % config_type
-       env[config_paths] = yaml.load(open(config_file, 'rU'))
-   else:
-       continue
-   if 'external' in env[config_paths].keys() and type(env[config_paths]['external']) is dict:
-       for name, path in env[config_paths]['external'].iteritems():
-           gs.record_dir.record_dir(path, name)
 
 # Export environment
 Export('env')

@@ -1,7 +1,7 @@
 Import('env')
 
-build  = env['PATHS']['build']['paper']
-source = env['PATHS']['source']['paper']
+build  = env['PATHS']['global']['build']['paper']
+source = env['PATHS']['global']['source']['paper']
 
 env.BuildLyx(target = ['#%s/paper.pdf' % build],
              source = ['#%s/paper.lyx' % source])
