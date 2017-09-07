@@ -8,34 +8,31 @@ sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Setup
 from configuration import configuration
-[mode, vers, cache_dir] = configuration(ARGUMENTS)
+[mode, vers, cache_dir, PATHS] = configuration(ARGUMENTS)
 import gslab_scons as gs
-from gslab_scons import log, misc
 
 # Start log
-log.start_log(mode, vers)
+gs.log.start_log(mode, vers)
 
 # Define the SCons environment
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
-                              # 'BuildMatlab': Builder(action = gs.build_matlab),
+                              'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
-                              # 'BuildR'     : Builder(action = gs.build_r),
-                              # 'BuildStata' : Builder(action = gs.build_stata),
+                              'BuildR'     : Builder(action = gs.build_r),
+                              'BuildStata' : Builder(action = gs.build_stata),
                               })
-
-
+# Store PATHS from configuration
+env['PATHS'] = PATHS
 # Only computes hash if time-stamp changed
 env.Decider('MD5-timestamp') 
 # Extensions to be used when scanning for source files in BuildLyx.
 env.EXTENSIONS = ['.eps', '.pdf', '.lyx']
 SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True))
-# Load paths
-env['PATHS'] = yaml.load(open('config_global.yaml', 'rU'))
 # Load Stata executable if Stata builder is defined
 if 'BuildStata' in env['BUILDERS'].keys():
-   env['stata_executable'] = misc.load_yaml_value('config_user.yaml', 'stata_executable')
+    env['stata_executable'] = gs.misc.load_yaml_value('config_user.yaml', 'stata_executable')
 
 # Export environment
 Export('env')
@@ -63,5 +60,5 @@ debrief_args = {
                'log'                : 'state_of_repo.log'  # state of repo log file location
                }
 
-atexit.register(log.end_log)
+atexit.register(gs.log.end_log)
 atexit.register(gs.misc.scons_debrief, args = debrief_args)

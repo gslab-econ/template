@@ -4,15 +4,16 @@ build:
   tables: build/tables
   talk: build/talk
 
-# Input Directories
-input: input
-
 # Source Directories
 source:
   figures: source/figures
   paper: source/paper
   tables: source/tables
   talk: source/talk
+
+# Input Directories (will record contents)
+input: 
+  input: input
 
 # Switch to 'Yes' if it's required and 'No' if it's not.
 prereq_git-lfs: Yes

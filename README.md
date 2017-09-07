@@ -107,6 +107,8 @@ We are agnostic about how you incorporate external data into the template. There
     * The download can be incorporated into the SCons build. We either execute a program to transfer data (e.g., `rsync` or `rclone`) using our "Anything builder" or from within a script executed by one of our other custom builders. These methods have the benefits of automation and dependency tracking, but they can introduce idiosyncratic errors if the download steps are prone to failure.
     * Regardless of the download method, the path to the dataset should be added to `config_global.yaml` and `.gitignore` if it is stored within the repository and to `config_user.yaml` if it is stored elsewhere. 
 
+* Any pointers to directories you store under the `external` key in either configuration yaml file will have their contents checked and recorded at runtime. We complete the check using our `record_dir` function and store its contents in `release/state_of_external.log`.
+
 #### How do I use the outputs of `analysis` as inputs for `paper_slides`?
 
 We recommend that you manually copy the desired files or directories from the `release` directory in `analysis` to a directory called `input` in `paper_slides`. We uncouple these top-level subdirectories to compartmentalize the research process. A busy coauthor can build `paper_slides` in a reproducible manner without wrangling data or repeating a lengthy analysis.  

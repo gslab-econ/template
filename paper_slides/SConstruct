@@ -8,13 +8,11 @@ sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Setup
 from configuration import configuration
-[mode, vers, cache_dir] = configuration(ARGUMENTS, paper = True)
+[mode, vers, cache_dir, PATHS] = configuration(ARGUMENTS, paper = True)
 import gslab_scons as gs
-from gslab_scons import log
-from gslab_scons import misc
 
 # Start log
-log.start_log(mode, vers)
+gs.log.start_log(mode, vers)
 
 # Define the SCons environment
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
@@ -24,14 +22,13 @@ env = Environment(ENV = {'PATH': os.environ['PATH']},
                               # 'BuildLatex': Builder(action = gs.build_latex),
                               'Tablefill':  Builder(action = gs.build_tables),
                               })
-
+# Store PATHS from configuration
+env['PATHS'] = PATHS
 # Only computes hash if time-stamp changed
 env.Decider('MD5-timestamp') 
 # Extensions to be used when scanning for source files in BuildLyx.
 env.EXTENSIONS = ['.eps', '.pdf', '.lyx']
 SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True))
-# Load paths
-env['PATHS'] = yaml.load(open('config_global.yaml', 'rU'))
 
 # Export environment
 Export('env')
@@ -60,6 +57,6 @@ debrief_args = {
                'log'                : 'state_of_repo.log'  # state of repo log file location
                }
                
-atexit.register(log.end_log)
+atexit.register(gs.log.end_log)
 atexit.register(gs.misc.scons_debrief, args = debrief_args)
 

@@ -1,9 +1,67 @@
-*** New build: {2017-09-04 15:20:37} ***
-scons: done reading SConscript files.
-scons: Building targets ...
-scons: `build' is up to date.
-scons: `release' is up to date.
-scons: done building targets.
-*** Build completed: {2017-09-04 15:20:38} ***
+*** New build: {2017-09-07 09:58:29} ***
+*** Build completed: {2017-09-07 09:59:30} ***
  
  
+*** Warning!!! The log below does not have timestamps, the Sconscript may not have finished.
+./build/prepare_data/sconscript_create_data.log
+[?1h=
+                                                               < M A T L A B (R) >
+                                                     Copyright 1984-2016 The MathWorks, Inc.
+                                                      R2016b (9.1.0.441655) 64-bit (maci64)
+                                                                September 7, 2016
+
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/hooks] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/info] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/logs] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/logs/refs] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/logs/refs/heads] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/logs/refs/remotes] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/logs/refs/remotes/origin] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/objects] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/objects/info] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/objects/pack] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/refs] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/refs/heads] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/refs/remotes] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/refs/remotes/origin] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/.git/refs/tags] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/gslab_misc] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/gslab_misc/log] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/gslab_misc/m] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/gslab_misc/test] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/gslab_misc/test/input] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/architecture] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/architecture/html] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/doc] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/doc/example_quick_start] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/doc/example_subfunction_tests] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/doc/examples_general] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/doc/html] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/matlab-xunit] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/obsolete] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/obsolete/tests] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/obsolete/tests/cwd_test] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/src] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/tests] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/tests/cwd_test] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/tests/dir1] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/tests/dir2] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/matlab_xunit/tests/helper_classes] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/numerical_derivatives] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/numerical_derivatives/log] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/numerical_derivatives/m] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/numerical_derivatives/test] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/trans] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/trans/docs] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/trans/log] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/trans/m] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/trans/test] 
+[Warning: Name is nonexistent or not a directory: /Users/arosenbe/Desktop/gslab_matlab/trans/test/input] 
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+>> 
