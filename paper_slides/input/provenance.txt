@@ -1,1 +1,0 @@
-All files in `paper_slides/input` are manually copied from `analysis/release`.
