@@ -18,10 +18,10 @@ gs.log.start_log(mode, vers)
 env = Environment(ENV = {'PATH': os.environ['PATH']}, 
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
-                              'BuildMatlab': Builder(action = gs.build_matlab),
+                              # 'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
-                              'BuildR'     : Builder(action = gs.build_r),
-                              'BuildStata' : Builder(action = gs.build_stata),
+                              # 'BuildR'     : Builder(action = gs.build_r),
+                              # 'BuildStata' : Builder(action = gs.build_stata),
                               })
 # Store PATHS from configuration
 env['PATHS'] = PATHS
