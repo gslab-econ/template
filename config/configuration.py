@@ -14,7 +14,7 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
     if not debug:
         # Hide traceback for configuration test only
         # http://stackoverflow.com/questions/27674602/hide-traceback-unless-a-debug-flag-is-set
-        sys.tracebacklimit = 0
+        sys.tracebacklimit = 100
 
     # Checks git-lfs
     prereq_gitlfs = misc.load_yaml_value(config_global_yaml, 'prereq_git-lfs')
@@ -55,10 +55,18 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
             del PATHS[key]
     
     # Records contents of input directories
+    # Values of PATHS at input_assets_key can be string or (nested) dict.
     for key, val in PATHS.items():
-        if input_assets_key in val.keys() and type(val[input_assets_key]) is dict:
-            for name, path in val[input_assets_key].items():
+        if not input_assets_key in val.keys():
+            continue
+        elif type(val[input_assets_key]) is dict:
+            input_dict = misc.flatten_dict(val[input_assets_key])
+            for name, path in input_dict.items():
                 record_dir.record_dir(path, name)
+        elif type(val[input_assets_key]) is str:
+            record_dir.record_dir(val[input_assets_key], input_assets_key)
+        else:
+            pass
     
     # Get return list
     return_list = [mode, vers, cache_dir, PATHS]

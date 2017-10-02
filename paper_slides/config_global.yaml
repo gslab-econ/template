@@ -12,8 +12,7 @@ source:
   talk: source/talk
 
 # Input Directories (will record contents)
-input: 
-  input: input
+input: input
 
 # Switch to 'Yes' if it's required and 'No' if it's not.
 prereq_git-lfs: Yes
