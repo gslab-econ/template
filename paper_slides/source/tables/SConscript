@@ -2,4 +2,4 @@ Import('env')
 
 env.Tablefill(target = ['#%s/table.lyx' % env['PATHS']['global']['build']['tables']],
               source = ['#%s/table.lyx' % env['PATHS']['global']['source']['tables'],
-                        '#%s/table.txt' % env['PATHS']['global']['input']['input']])
+                        '#%s/table.txt' % env['PATHS']['global']['input']])
