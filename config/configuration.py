@@ -57,7 +57,7 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
     # Records contents of input directories
     # Values of PATHS at input_assets_key can be string or (nested) dict.
     for key, val in PATHS.items():
-        if not input_assets_key in val.keys():
+        if input_assets_key not in val.keys():
             continue
         elif type(val[input_assets_key]) is dict:
             input_dict = misc.flatten_dict(val[input_assets_key])
