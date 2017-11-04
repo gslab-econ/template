@@ -53,6 +53,12 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
             PATHS[key] = yaml.load(open(val, 'rU'))
         else:
             del PATHS[key]
+
+    # Stores PYTHONPATH
+    try:
+        pythonpath = os.environ['PYTHONPATH']
+    except KeyError:
+        pythonpath = ''
     
     # Records contents of input directories
     # Values of PATHS at input_assets_key can be string or (nested) dict.
@@ -69,7 +75,7 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
             pass
     
     # Get return list
-    return_list = [mode, vers, cache_dir, PATHS]
+    return_list = [mode, vers, cache_dir, PATHS, pythonpath]
 
     # Restore default tracebacklimit and return values
     sys.tracebacklimit = 1000

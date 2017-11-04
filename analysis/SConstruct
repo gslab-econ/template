@@ -8,14 +8,14 @@ sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Setup
 from configuration import configuration
-[mode, vers, cache_dir, PATHS] = configuration(ARGUMENTS)
+[mode, vers, cache_dir, PATHS, pythonpath] = configuration(ARGUMENTS)
 import gslab_scons as gs
 
 # Start log
 gs.log.start_log(mode, vers)
 
 # Define the SCons environment
-env = Environment(ENV = {'PATH': os.environ['PATH']}, 
+env = Environment(ENV = {'PATH': os.environ['PATH'], 'PYTHONPATH': pythonpath},
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
                               # 'BuildMatlab': Builder(action = gs.build_matlab),
