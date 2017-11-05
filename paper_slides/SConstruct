@@ -15,10 +15,6 @@ import gslab_scons as gs
 gs.log.start_log(mode, vers)
 
 # Define the SCons environment
-try:
-   pythonpath = os.environ['PYTHONPATH']
-except:
-   pythonpath = ''
 env = Environment(ENV = {'PATH': os.environ['PATH'], 'PYTHONPATH': pythonpath},
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
