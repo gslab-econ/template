@@ -179,7 +179,7 @@ Our protocol is to keep these files in a designated subdirectory named `release/
 
 #### Can I use my system-wide SCons installation?
 
-That's fine, but you'll need version 2.4.0 or later. Just switch `python run.py` to `scons`. Everything else stays the same. You can also skip the unzip step of the Quick start.
+That's fine, but you'll need version 2.4.0 or later. Just switch `python run.py` to `scons`. Everything else stays the same. You can also skip the unzip step of the Quick Start.
 
 Be aware that the [formatting of the cache](https://bitbucket.org/scons/scons/src/rel_2.5.1/src/CHANGES.txt?at=2.5.1&fileviewer=file-view-default#CHANGES.txt-60) changed in version 2.5.0 of SCons. A cache can get messy and fall out of sync if collaborators use a mix of older and newer versions. 
 
