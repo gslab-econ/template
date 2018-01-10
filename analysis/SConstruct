@@ -7,12 +7,9 @@ sys.path.append('../config')
 sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Setup
-from configuration import configuration
+from configuration import configuration, record_input_dirs
 [mode, vers, cache_dir, PATHS, pythonpath] = configuration(ARGUMENTS)
 import gslab_scons as gs
-
-# Start log
-gs.log.start_log(mode, vers)
 
 # Define the SCons environment
 env = Environment(ENV = {'PATH': os.environ['PATH'], 'PYTHONPATH': pythonpath},
@@ -33,32 +30,35 @@ SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True
 # Load Stata executable if Stata builder is defined
 if 'BuildStata' in env['BUILDERS'].keys():
     env['stata_executable'] = gs.misc.load_yaml_value('config_user.yaml', 'stata_executable')
-
 # Export environment
 Export('env')
+# Additional mode options
+if mode == 'cache':
+    CacheDir(cache_dir)
+
+# Logging (except on dry run)
+if not gs.misc.is_scons_dry_run(cl_args_list = sys.argv):
+    # Log build process
+    gs.log.start_log(mode, vers)
+    atexit.register(gs.log.end_log)
+    # Log input directories
+    record_input_dirs(PATHS)
+    # Log final state of repository (numerous settings stored as debrief_args)
+    require_lfs = gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs')
+    debrief_args = {
+                   'look_in'            : 'release;source',    # Folders to look in for large versioned files
+                   'file_MB_limit_lfs'  : 2,                   # Soft limit on file size (w/ LFS)
+                   'total_MB_limit_lfs' : 500,                 # Soft limit on total size (w/ LFS)  
+                   'file_MB_limit'      : 0.5,                 # Soft limit on file size (w/o LFS)
+                   'total_MB_limit'     : 125,                 # Soft limit on total size (w/o LFS)
+                   'lfs_required'       : require_lfs,         # Check if the repo requires LFS
+                   'git_attrib_path'    : '../.gitattributes', # Location of .gitattributes
+                   'MAXIT'              : 10,                  # Max number of files in directory to log
+                   'log'                : 'state_of_repo.log'  # Log name
+                   }
+    atexit.register(gs.misc.scons_debrief, args = debrief_args)
 
 # Run sub-trees
 SConscript('source/prepare_data/SConscript')
 SConscript('source/descriptive/SConscript')
 Default('./build', './release')
-
-# Additional mode options
-if mode == 'cache':
-    CacheDir(cache_dir)
-
-# Debrief args is a dictionary storing the arguments that are useful for functions to run 
-# after all Scons targets have been built. Scons_debrief will pass these args into those functions. 
-debrief_args = {
-               'look_in'            : 'release;source',    # Folders to look in for large versioned files
-               'file_MB_limit_lfs'  : 2,                   # Soft limit on file size (w/ LFS);
-               'total_MB_limit_lfs' : 500,                 # Soft limit on total size (w/ LFS);  
-               'file_MB_limit'      : 0.5,                 # Soft limit on file size (w/o LFS);
-               'total_MB_limit'     : 125,                 # Soft limit on total size (w/o LFS);  
-               'lfs_required'       : gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs'), # Check if the repo requires LFS
-               'git_attrib_path'    : '../.gitattributes', # .gitattributes location
-               'MAXIT'              : 10,                  # max number of iterations to write file information to log
-               'log'                : 'state_of_repo.log'  # state of repo log file location
-               }
-
-atexit.register(gs.log.end_log)
-atexit.register(gs.misc.scons_debrief, args = debrief_args)

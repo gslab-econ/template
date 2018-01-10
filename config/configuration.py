@@ -7,8 +7,7 @@ from gslab_scons import _exception_classes, misc, record_dir
 from gslab_scons import configuration_tests as config
 
 def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml',
-                  config_global_yaml = 'config_global.yaml', 
-                  input_assets_key = 'input'):
+                  config_global_yaml = 'config_global.yaml'):
     # Determines whether to print traceback messages
     debug = ARGUMENTS.get('debug', False)
     if not debug:
@@ -60,8 +59,20 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
     except KeyError:
         pythonpath = ''
     
-    # Records contents of input directories
-    # Values of PATHS at input_assets_key can be string or (nested) dict.
+    # Get return list
+    return_list = [mode, vers, cache_dir, PATHS, pythonpath]
+
+    # Restore default tracebacklimit and return values
+    sys.tracebacklimit = 1000
+
+    return return_list
+
+
+def record_input_dirs(PATHS, input_assets_key = 'input'):
+    '''
+    Records contents of input directories
+    Values of PATHS at input_assets_key can be string or (nested) dict.
+    '''
     for key, val in PATHS.items():
         if input_assets_key not in val.keys():
             continue
@@ -73,11 +84,5 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
             record_dir.record_dir(val[input_assets_key], input_assets_key)
         else:
             pass
-    
-    # Get return list
-    return_list = [mode, vers, cache_dir, PATHS, pythonpath]
+    return None
 
-    # Restore default tracebacklimit and return values
-    sys.tracebacklimit = 1000
-
-    return return_list
