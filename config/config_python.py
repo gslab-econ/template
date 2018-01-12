@@ -5,7 +5,7 @@ packages = ['pyyaml']
 
 def main(packages, upgrade = False):
     # Install gslab_tools if it's not installed yet or it has the wrong version
-    pip.main(['install', '--upgrade', 'git+http://git@github.com/gslab-econ/gslab_python.git@v4.1.0'])
+    pip.main(['install', '--upgrade', 'git+http://git@github.com/gslab-econ/gslab_python.git@4.1.0'])
 
     # Install required packages using pip
     installed_packages = [pkg.key for pkg in pip.get_installed_distributions()]
