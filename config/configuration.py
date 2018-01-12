@@ -3,12 +3,11 @@ import os
 import sys
 import warnings
 import yaml
-from gslab_scons import _exception_classes, misc, record_dir
+from gslab_scons import _exception_classes, misc
 from gslab_scons import configuration_tests as config
 
 def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml',
-                  config_global_yaml = 'config_global.yaml', 
-                  input_assets_key = 'input'):
+                  config_global_yaml = 'config_global.yaml'):
     # Determines whether to print traceback messages
     debug = ARGUMENTS.get('debug', False)
     if not debug:
@@ -59,20 +58,6 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
         pythonpath = os.environ['PYTHONPATH']
     except KeyError:
         pythonpath = ''
-    
-    # Records contents of input directories
-    # Values of PATHS at input_assets_key can be string or (nested) dict.
-    for key, val in PATHS.items():
-        if input_assets_key not in val.keys():
-            continue
-        elif type(val[input_assets_key]) is dict:
-            input_dict = misc.flatten_dict(val[input_assets_key])
-            for name, path in input_dict.items():
-                record_dir.record_dir(path, name)
-        elif type(val[input_assets_key]) is str:
-            record_dir.record_dir(val[input_assets_key], input_assets_key)
-        else:
-            pass
     
     # Get return list
     return_list = [mode, vers, cache_dir, PATHS, pythonpath]

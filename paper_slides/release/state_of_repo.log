@@ -8,29 +8,24 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit eb7e81eecbe8d1740e9447a784ce27f42af73bc2
+commit 43b9f14e1028c0dde6e48ba1ea283dc85e70c9d6
 Author: Adam Rosenberg <arosenbe@stanford.edu>
-Date:   Wed Sep 27 14:22:02 2017 -0700
+Date:   Wed Dec 20 10:54:14 2017 -0800
 
-    #88 allow inputs specificed as str or dict
+    Capitalization in readme
 
 
 Files changed since last commit:
 
 
-analysis/config_global.yaml
-paper_slides/config_global.yaml
-paper_slides/release/paper/ondeck.pdf
-paper_slides/release/paper/online_appendix.pdf
-paper_slides/release/paper/paper.pdf
-paper_slides/release/paper/sconscript.log
-paper_slides/release/paper/text.pdf
-paper_slides/release/sconstruct.log
-paper_slides/release/state_of_input.log
-paper_slides/release/state_of_repo.log
-paper_slides/release/talk/sconscript.log
-paper_slides/release/talk/slides.pdf
-paper_slides/source/tables/SConscript
+README.md
+analysis/SConstruct
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
+config/configuration.py
+paper_slides/SConstruct
 
 ===================================
 
@@ -38,23 +33,23 @@ paper_slides/source/tables/SConscript
 
 ===================================
 ./config_global.yaml:
-   modified on: 02 Oct 2017 11:25:11
+   modified on: 09 Jan 2018 08:11:40
    size of file: 380
 ./run.py:
-   modified on: 01 Sep 2017 08:26:58
+   modified on: 09 Jan 2018 08:11:40
    size of file: 458
 ./SConstruct:
-   modified on: 27 Sep 2017 14:21:29
-   size of file: 2628
+   modified on: 10 Jan 2018 13:37:22
+   size of file: 2800
 ./sconstruct.log:
-   modified on: 02 Oct 2017 11:26:20
+   modified on: 10 Jan 2018 13:37:35
    size of file: 199
 ./state_of_input.log:
-   modified on: 02 Oct 2017 11:26:20
+   modified on: 10 Jan 2018 13:37:35
    size of file: 147
 ./state_of_repo.log:
-   modified on: 02 Oct 2017 11:26:20
-   size of file: 942
+   modified on: 10 Jan 2018 13:37:35
+   size of file: 672
 ./build/paper/ondeck.pdf:
    modified on: 02 Oct 2017 11:25:42
    size of file: 17994
@@ -83,71 +78,71 @@ paper_slides/source/tables/SConscript
    modified on: 02 Oct 2017 11:25:45
    size of file: 29958
 ./input/plot.eps:
-   modified on: 04 Sep 2017 16:01:51
+   modified on: 09 Jan 2018 08:11:40
    size of file: 15385
 ./input/table.txt:
-   modified on: 04 Sep 2017 16:01:51
+   modified on: 09 Jan 2018 08:11:40
    size of file: 39
 ./release/sconstruct.log:
-   modified on: 02 Oct 2017 11:26:09
+   modified on: 09 Jan 2018 08:11:40
    size of file: 250
 ./release/state_of_input.log:
-   modified on: 02 Oct 2017 11:26:08
+   modified on: 09 Jan 2018 08:11:40
    size of file: 147
 ./release/state_of_repo.log:
-   modified on: 02 Oct 2017 11:26:09
-   size of file: 4177
+   modified on: 09 Jan 2018 08:11:40
+   size of file: 4264
 ./release/paper/ondeck.pdf:
-   modified on: 02 Oct 2017 11:25:42
+   modified on: 09 Jan 2018 08:11:40
    size of file: 17994
 ./release/paper/online_appendix.pdf:
-   modified on: 02 Oct 2017 11:25:42
+   modified on: 09 Jan 2018 08:11:40
    size of file: 45660
 ./release/paper/paper.pdf:
-   modified on: 02 Oct 2017 11:25:43
+   modified on: 09 Jan 2018 08:11:40
    size of file: 59109
 ./release/paper/sconscript.log:
-   modified on: 02 Oct 2017 11:25:44
+   modified on: 09 Jan 2018 08:11:40
    size of file: 342
 ./release/paper/text.pdf:
-   modified on: 02 Oct 2017 11:25:44
+   modified on: 09 Jan 2018 08:11:40
    size of file: 17994
 ./release/talk/sconscript.log:
-   modified on: 02 Oct 2017 11:25:45
+   modified on: 09 Jan 2018 08:11:40
    size of file: 589
 ./release/talk/slides.pdf:
-   modified on: 02 Oct 2017 11:25:45
+   modified on: 09 Jan 2018 08:11:40
    size of file: 29958
 ./source/figures/figure.lyx:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 2214
 ./source/paper/ondeck.lyx:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 2522
 ./source/paper/online_appendix.lyx:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 3610
 ./source/paper/paper.lyx:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 07 Sep 2017 15:00:58
+   modified on: 09 Jan 2018 08:11:40
    size of file: 697
 ./source/paper/text.lyx:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 2522
 ./source/paper/text.tex:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 1300
 ./source/tables/SConscript:
-   modified on: 02 Oct 2017 11:25:36
+   modified on: 09 Jan 2018 08:11:40
    size of file: 263
 ./source/tables/table.lyx:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 4082
 ./source/talk/SConscript:
-   modified on: 07 Sep 2017 15:00:58
+   modified on: 09 Jan 2018 08:11:40
    size of file: 257
 ./source/talk/slides.lyx:
-   modified on: 01 Sep 2017 08:26:55
+   modified on: 09 Jan 2018 08:11:40
    size of file: 4697
