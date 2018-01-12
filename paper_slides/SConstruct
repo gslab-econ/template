@@ -7,8 +7,8 @@ sys.path.append('../config')
 sys.dont_write_bytecode = True # Don't write .pyc files
 
 # Setup
-from configuration import configuration, record_input_dirs
-[mode, vers, cache_dir, PATHS, pythonpath] = configuration(ARGUMENTS, paper = True)
+from configuration import configuration
+[mode, vers, cache_dir, PATHS, pythonpath] = configuration(ARGUMENTS)
 import gslab_scons as gs
 
 # Start log
@@ -36,26 +36,25 @@ if mode == 'cache':
     CacheDir(cache_dir)
 
 # Logging (except on dry run)
-if not gs.misc.is_scons_dry_run(cl_args_list = sys.argv):
-    # Log build process
-    gs.log.start_log(mode, vers)
-    atexit.register(gs.log.end_log)
-    # Log input directories
-    record_input_dirs(PATHS)
-    # Log final state of repository (numerous settings stored as debrief_args)
-    require_lfs = gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs')
-    debrief_args = {
-                   'look_in'            : 'release;source',    # Folders to look in for large versioned files
-                   'file_MB_limit_lfs'  : 2,                   # Soft limit on file size (w/ LFS)
-                   'total_MB_limit_lfs' : 500,                 # Soft limit on total size (w/ LFS)  
-                   'file_MB_limit'      : 0.5,                 # Soft limit on file size (w/o LFS)
-                   'total_MB_limit'     : 125,                 # Soft limit on total size (w/o LFS)
-                   'lfs_required'       : require_lfs,         # Check if the repo requires LFS
-                   'git_attrib_path'    : '../.gitattributes', # Location of .gitattributes
-                   'MAXIT'              : 10,                  # Max number of files in directory to log
-                   'log'                : 'state_of_repo.log'  # Log name
-                   }
-    atexit.register(gs.misc.scons_debrief, args = debrief_args)
+# Log build process
+gs.log.start_log(mode, vers)
+atexit.register(gs.log.end_log)
+# Log input directories
+gs.log_paths_dict(PATHS)
+# Log final state of repository (numerous settings stored as debrief_args)
+require_lfs = gs.misc.load_yaml_value('config_global.yaml', 'prereq_git-lfs')
+debrief_args = {
+               'look_in'            : 'release;source',    # Folders to look in for large versioned files
+               'file_MB_limit_lfs'  : 2,                   # Soft limit on file size (w/ LFS)
+               'total_MB_limit_lfs' : 500,                 # Soft limit on total size (w/ LFS)  
+               'file_MB_limit'      : 0.5,                 # Soft limit on file size (w/o LFS)
+               'total_MB_limit'     : 125,                 # Soft limit on total size (w/o LFS)
+               'lfs_required'       : require_lfs,         # Check if the repo requires LFS
+               'git_attrib_path'    : '../.gitattributes', # Location of .gitattributes
+               'MAXIT'              : 10,                  # Max number of files in directory to log
+               'log'                : 'state_of_repo.log'  # Log name
+               }
+atexit.register(gs.scons_debrief, args = debrief_args)
 
 # Run sub-trees
 SConscript('source/tables/SConscript')
