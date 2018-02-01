@@ -131,7 +131,7 @@ python run.py ../paper_slides
 
 #### What software can I use for data analysis?
 
-We have custom builders for Python, R, Stata, and MATLAB. They all use the same syntax. You'll need to add the a builder to the SCons environment by uncommenting its definition in the SConstruct. Also check that its executable has been added to your PATH. 
+We have custom builders for Python, R, Stata, and MATLAB. They all use the same syntax. You'll need to add the builder to the SCons environment by uncommenting its definition in the SConstruct. Also check that its executable has been added to your PATH. 
 
 See `analysis/source/prepare_data/` for sample scripts in each language. To run one of the sample scripts, uncomment its block in `analysis/source/prepare_data/SConscript` and its builder in `analysis/SConstruct`. Note that all sample scripts produce the same output, so only one block is allowed to run for each SCons build. If you uncomment the block for one software, you need to comment out the blocks for all others.
 
