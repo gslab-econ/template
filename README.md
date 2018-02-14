@@ -183,7 +183,7 @@ That's fine, but you'll need version 2.4.0 or later. Just switch `python run.py`
 
 Be aware that the [formatting of the cache](https://bitbucket.org/scons/scons/src/rel_2.5.1/src/CHANGES.txt?at=2.5.1&fileviewer=file-view-default#CHANGES.txt-60) changed in version 2.5.0 of SCons. A cache can get messy and fall out of sync if collaborators use a mix of older and newer versions. 
 
-The version of SCons packaged with this repository is scons-local-2.5.1. Our `run.py` scripts are just wrappers around the `scons.py` included in scons-local.
+The version of SCons packaged with this repository is scons-local-3.0.1. Our `run.py` scripts are just wrappers around the `scons.py` included in scons-local.
 
 #### Where should I track the prerequisites for my repository?
 
