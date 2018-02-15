@@ -1,7 +1,7 @@
 Import('env')
 
-build  = env['PATHS']['global']['build']['talk']
-source = env['PATHS']['global']['source']['talk']
+build  = env['CONFIG']['global']['build']['talk']
+source = env['CONFIG']['global']['source']['talk']
 
 env.BuildLyx(target = '#%s/slides.pdf'  % build, 
              source = ['#%s/slides.lyx' % source])

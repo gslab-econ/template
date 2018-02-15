@@ -5,8 +5,8 @@ The GSLab Template is a minimal working demonstration of the tools and organizat
 ## Prerequisites
 
 You'll need the following to run the template. [Homebrew](https://brew.sh/) for Mac and [Linuxbrew](http://linuxbrew.sh/) for Linux make this easier.
-* Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`. 
-* [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
+* Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`.
+* [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) and [pip](https://pip.pypa.io/en/stable/installing/) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
 * [git](https://git-scm.com/downloads) for version control.
     * [git-lfs](https://git-lfs.github.com/) for versioning large files. 
     * You'll need both git and git-lfs to clone the repository. 
@@ -80,21 +80,19 @@ git push
 
 #### What is `config_user.yaml`?
 
-Each user is allowed to have different local specifications: We don't put any restrictions on where you keep large files, what you call your executables, or how you manage shared directories. We do need to find these things, and that's what `config_user.yaml` is for. Each user maintains an **unversioned** [YAML file](http://yaml.org/) with these sorts of specifications. Each script uses its associated YAML-parsing module to read these specifications each time the script is run. 
+Each user is allowed to have different local specifications: We don't put any restrictions on where you keep large files, what you call your executables, or how you manage shared directories. We do need to find these things, and that's what `config_user.yaml` is for. Each user maintains an **unversioned** [YAML file](http://yaml.org/) with these sorts of specifications. Each script uses its associated YAML-parsing module to read these specifications each time the script is run.
+
+If you try to build a directory without `config_user.yaml`, we'll copy a template to your current working directory.
 
 #### What do I put in `config_user.yaml`?
 
 There's no "default" for `config_user.yaml` because it depends on system specifications and user preferences. Three things we do recommend keeping in `config_user.yaml` are the name of your Stata executable, the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html), and the location of a release directory. These fields don't have to be specified if you're not using them, and we'll prompt you for their values at runtime if you've forgotten to specify them and they're necessary. A Mac example where Example_User is running a factory-fresh StataMP and has local access to directories named cache/template and release on Dropbox would be 
 
-```YAML
-stata_executable: stata-mp
-cache_directory: /Users/Example_User/Dropbox/cache/template
-release_directory: /Users/Example_User/Dropbox/release/
-```
-
 #### What is `config_global.yaml`?
 
 The `config_global.yaml` tracks paths, specifications, variables, and software checks that are constant across users. We treat this file in the same manner as `config_user.yaml`, except that we do version `config_global.yaml`.
+
+One important function of `config_global.yaml` is that it tracks the version of [gslab-python](https://github.com/gslab-econ/gslab_python) you expect your users to be using.
 
 #### How do I handle data external to my repository?
 
