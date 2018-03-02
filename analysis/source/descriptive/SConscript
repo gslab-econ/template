@@ -1,8 +1,8 @@
 Import('env')
 
-build  = env['PATHS']['global']['build']['descriptive']
-source = env['PATHS']['global']['source']['descriptive']
-data   = env['PATHS']['global']['build']['prepare_data']
+build  = env['CONFIG']['global']['build']['descriptive']
+source = env['CONFIG']['global']['source']['descriptive']
+data   = env['CONFIG']['global']['build']['prepare_data']
 
 env.BuildPython(target  = ['#%s/plot.eps'       % build,
                            '#%s/table.txt'      % build],

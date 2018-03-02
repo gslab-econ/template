@@ -2,8 +2,9 @@ clear all
 set more off
 
 program main
-    * Install packages using ssc
+    * *** Add required packages from SSC to this list ***
     local ssc_packages ""
+    * *** Add required packages from SSC to this list ***
 
     if !missing("`ssc_packages'") {
         foreach pkg in "`ssc_packages'" {

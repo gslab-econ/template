@@ -1,0 +1,28 @@
+# # Store path to SCons cache directory here
+# cache_directory: # /Users/Example_User/Dropbox/cache/template
+
+# # Store path to local directory for releases here
+# release_directory: #  /Users/Example_User/Dropbox/release/
+
+# # Input Directories (will record contents)
+# input: None
+
+# # Executable names
+# executable_names:
+#   python: None
+#   r: None
+#   stata: None
+#   matlab: None
+#   lyx: none
+#   latex: None
+
+# # If True, check that application is installed/up-to-date before SCons run
+# prereq_checks:
+#   git_lfs: Yes
+#   gslab_python: Yes
+#   python: Yes
+#   r: No
+#   stata: No
+#   matlab: No
+#   lyx: No
+#   latex: No

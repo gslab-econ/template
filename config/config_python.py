@@ -1,7 +1,8 @@
 import pip
 import pkg_resources
-# The collection of required packages
-packages = ['pyyaml']
+# *** Add required packages to this list ***
+packages = ['pyyaml', 'numpy', 'matplotlib']
+# *** Add required packages to this list ***
 
 def main(packages, upgrade = False):
     # Install gslab_tools if it's not installed yet or it has the wrong version

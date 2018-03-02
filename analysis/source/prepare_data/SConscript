@@ -1,8 +1,8 @@
 Import('env')
 import gslab_scons as gs
 
-build  = env['PATHS']['global']['build']['prepare_data']
-source = env['PATHS']['global']['source']['prepare_data']
+build  = env['CONFIG']['global']['build']['prepare_data']
+source = env['CONFIG']['global']['source']['prepare_data']
 
 env.BuildPython(target  = ['#%s/data.txt'       % build],
                 source  = ['#%s/create_data.py' % source],
@@ -21,10 +21,10 @@ env.BuildPython(target  = ['#%s/data.txt'       % build],
 #                 log_ext =  'create_data')
 
 # # Invalid syntax for Windows.
-# gs._build_anything(target  = ['#%s/data.txt' % build], 
-#                    source  = [''],
-#                    action  = 'sh source/prepare_data/create_data.sh',
-#                    log_ext = 'create_data',
-#                    env     = env)
+# gs.build_anything(target  = ['#%s/data.txt' % build], 
+#                   source  = [''],
+#                   action  = 'sh source/prepare_data/create_data.sh',
+#                   log_ext = 'create_data',
+#                   env     = env)
 
 env.Install('#release/lg', '#%s/data.txt' % build)
