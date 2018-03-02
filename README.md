@@ -86,13 +86,13 @@ If you try to build a directory without `config_user.yaml`, we'll copy a templat
 
 #### What do I put in `config_user.yaml`?
 
-There's no "default" for `config_user.yaml` because it depends on system specifications and user preferences. Three things we do recommend keeping in `config_user.yaml` are the name of your Stata executable, the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html), and the location of a release directory. These fields don't have to be specified if you're not using them, and we'll prompt you for their values at runtime if you've forgotten to specify them and they're necessary. A Mac example where Example_User is running a factory-fresh StataMP and has local access to directories named cache/template and release on Dropbox would be 
+There's no "default" for `config_user.yaml` because it depends on system specifications and user preferences. Three things we do recommend keeping in `config_user.yaml` are the name of your Stata executable, the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html), and the location of a release directory. These fields don't have to be specified if you're not using them, and we'll prompt you for their values at runtime if you've forgotten to specify them and they're necessary.
 
 #### What is `config_global.yaml`?
 
 The `config_global.yaml` tracks paths, specifications, variables, and software checks that are constant across users. We treat this file in the same manner as `config_user.yaml`, except that we do version `config_global.yaml`.
 
-One important function of `config_global.yaml` is that it tracks the version of [gslab-python](https://github.com/gslab-econ/gslab_python) you expect your users to be using.
+One important function of `config_global.yaml` is that it tracks the version of [gslab-python](https://github.com/gslab-econ/gslab_python) you expect your users to have installed.
 
 #### How do I handle data external to my repository?
 
