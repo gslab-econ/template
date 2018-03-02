@@ -8,46 +8,17 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit d19ddc8f098f7d2f54a75d8ad297b154985b1be8
+commit 2c30ad8bb276736db4d645000f715810767e2a33
 Author: Adam Rosenberg <arosenbe@stanford.edu>
-Date:   Mon Feb 12 09:08:14 2018 -0800
+Date:   Thu Feb 15 10:43:55 2018 -0800
 
-    #95 switch to scons 3
+    #96 drop _ before anything builder
 
 
 Files changed since last commit:
 
 
 README.md
-analysis/SConstruct
-analysis/config_global.yaml
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
-analysis/release/sconstruct.log
-analysis/release/state_of_repo.log
-analysis/source/descriptive/SConscript
-analysis/source/descriptive/descriptive.py
-analysis/source/prepare_data/SConscript
-analysis/source/prepare_data/create_data.m
-analysis/source/prepare_data/create_data.py
-analysis/source/prepare_data/create_data.r
-config/config_python.py
-config/configuration.py
-paper_slides/SConstruct
-paper_slides/config_global.yaml
-paper_slides/release/paper/ondeck.pdf
-paper_slides/release/paper/online_appendix.pdf
-paper_slides/release/paper/paper.pdf
-paper_slides/release/paper/sconscript.log
-paper_slides/release/paper/text.pdf
-paper_slides/release/sconstruct.log
-paper_slides/release/state_of_input.log
-paper_slides/release/state_of_repo.log
-paper_slides/release/talk/sconscript.log
-paper_slides/release/talk/slides.pdf
-paper_slides/source/paper/SConscript
-paper_slides/source/tables/SConscript
-paper_slides/source/talk/SConscript
 
 ===================================
 
@@ -55,7 +26,7 @@ paper_slides/source/talk/SConscript
 
 ===================================
 ./config_global.yaml:
-   modified on: 14 Feb 2018 21:20:15
+   modified on: 02 Mar 2018 10:03:34
    size of file: 1264
 ./config_user.yaml:
    modified on: 14 Feb 2018 21:21:10
@@ -64,40 +35,49 @@ paper_slides/source/talk/SConscript
    modified on: 12 Feb 2018 13:11:33
    size of file: 458
 ./SConstruct:
-   modified on: 14 Feb 2018 21:09:27
+   modified on: 02 Mar 2018 10:11:38
    size of file: 1878
 ./sconstruct.log:
-   modified on: 14 Feb 2018 21:21:58
-   size of file: 502
+   modified on: 02 Mar 2018 10:12:12
+   size of file: 255
 ./state_of_repo.log:
-   modified on: 14 Feb 2018 21:21:58
-   size of file: 1509
+   modified on: 02 Mar 2018 10:12:12
+   size of file: 453
 ./build/descriptive/plot.eps:
-   modified on: 14 Feb 2018 21:21:58
+   modified on: 02 Mar 2018 09:46:49
    size of file: 12351
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 14 Feb 2018 21:21:58
+   modified on: 02 Mar 2018 09:46:49
    size of file: 96
 ./build/descriptive/table.txt:
-   modified on: 14 Feb 2018 21:21:58
+   modified on: 02 Mar 2018 09:46:49
    size of file: 39
 ./build/prepare_data/data.txt:
-   modified on: 14 Feb 2018 21:21:56
+   modified on: 02 Mar 2018 10:12:12
    size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 14 Feb 2018 21:21:56
+   modified on: 02 Mar 2018 10:12:12
    size of file: 96
+./release/create_data.log:
+   modified on: 02 Mar 2018 10:02:13
+   size of file: 1498
+./release/sconstruct.log:
+   modified on: 02 Mar 2018 10:10:51
+   size of file: 841
+./release/state_of_repo.log:
+   modified on: 02 Mar 2018 10:10:51
+   size of file: 3673
 ./release/descriptive/plot.eps:
-   modified on: 14 Feb 2018 21:21:58
+   modified on: 02 Mar 2018 10:10:51
    size of file: 12351
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 14 Feb 2018 21:21:58
+   modified on: 02 Mar 2018 10:10:51
    size of file: 96
 ./release/descriptive/table.txt:
-   modified on: 14 Feb 2018 21:21:58
+   modified on: 02 Mar 2018 09:46:49
    size of file: 39
 ./release/lg/data.txt:
-   modified on: 14 Feb 2018 21:21:56
+   modified on: 02 Mar 2018 09:46:45
    size of file: 1988897
 ./source/descriptive/descriptive.py:
    modified on: 12 Feb 2018 10:17:21
@@ -121,5 +101,5 @@ paper_slides/source/talk/SConscript
    modified on: 09 Jan 2018 08:11:40
    size of file: 81
 ./source/prepare_data/SConscript:
-   modified on: 14 Feb 2018 20:00:25
-   size of file: 1131
+   modified on: 02 Mar 2018 10:12:04
+   size of file: 1126
