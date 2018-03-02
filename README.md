@@ -23,6 +23,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     ```
 2. Install Python dependencies.
     ```bash
+    # Store package names in this script.
     python config/config_python.py
     ```
 3. Unzip the scons package.
@@ -82,7 +83,7 @@ git push
 
 Each user is allowed to have different local specifications: We don't put any restrictions on where you keep large files, what you call your executables, or how you manage shared directories. We do need to find these things, and that's what `config_user.yaml` is for. Each user maintains an **unversioned** [YAML file](http://yaml.org/) with these sorts of specifications. Each script uses its associated YAML-parsing module to read these specifications each time the script is run.
 
-If you try to build a directory without `config_user.yaml`, we'll copy a template to your current working directory.
+If you try to build a directory without `config_user.yaml`, we'll copy a template to your current working directory. You can always switch back to this template by deleting your current `config_user.yaml` and rerunning.
 
 #### What do I put in `config_user.yaml`?
 
