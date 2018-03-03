@@ -3,3 +3,5 @@
 *.rds filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+release/sconstruct.log filter=lfs diff=lfs merge=lfs -text

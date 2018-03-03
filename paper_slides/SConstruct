@@ -1,0 +1,52 @@
+# Preliminaries
+import os
+import sys
+import atexit
+import yaml
+
+sys.path.append('../config')
+sys.dont_write_bytecode = True # Don't write .pyc files
+
+# Setup
+from configuration import configuration
+[mode, cache_dir, CONFIG, executable_names, prereqs, pythonpath] = configuration(ARGUMENTS)
+import gslab_scons as gs
+
+# Define the SCons environment
+env = Environment(ENV = {'PATH': os.environ['PATH'], 'PYTHONPATH': pythonpath},
+                  IMPLICIT_COMMAND_DEPENDENCIES = 0,
+                  BUILDERS = {
+                              'BuildLyx':   Builder(action = gs.build_lyx),
+                              # 'BuildLatex': Builder(action = gs.build_latex),
+                              'Tablefill':  Builder(action = gs.build_tables),
+                              })
+# Load environment variables from configuration
+env['CONFIG'] = CONFIG
+env['executable_names'] = executable_names
+# Only computes hash if time-stamp changed
+env.Decider('MD5-timestamp') 
+# Extensions to be used when scanning for source files in BuildLyx.
+env.EXTENSIONS = ['.eps', '.pdf', '.lyx']
+SourceFileScanner.add_scanner('.lyx', Scanner(gs.misc.lyx_scan, recursive = True))
+# Export environment
+Export('env')
+# Additional mode options
+if mode == 'cache':
+    CacheDir(cache_dir)
+
+# Logging (except on dry run)
+# Log build process
+gs.log.start_log(mode, CONFIG['global']['gslab_version'])
+atexit.register(gs.log.end_log)
+# Log input directories
+gs.log_paths_dict(CONFIG)
+# Log final state of repository 
+debrief_args = CONFIG['global']['scons_debrief_args']
+debrief_args['lfs_required'] = bool('git_lfs' in prereqs)
+atexit.register(gs.scons_debrief, args = debrief_args)
+
+# Run sub-trees
+SConscript('source/tables/SConscript')
+SConscript('source/paper/SConscript')
+SConscript('source/talk/SConscript')
+Default('./build', './release')

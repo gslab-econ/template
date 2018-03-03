@@ -1,0 +1,21 @@
+Import('env')
+
+build  = env['CONFIG']['global']['build']['paper']
+source = env['CONFIG']['global']['source']['paper']
+
+env.BuildLyx(target = ['#%s/paper.pdf' % build],
+             source = ['#%s/paper.lyx' % source])
+
+env.BuildLyx(target = ['#%s/online_appendix.pdf' % build], 
+             source = ['#%s/online_appendix.lyx' % source])
+
+env.BuildLyx(target = ['#%s/text.pdf' % build],
+             source = ['#%s/text.lyx' % source])
+
+env.BuildLyx(target = ['#%s/ondeck.pdf' % build], 
+             source = ['#%s/ondeck.lyx' % source])
+
+# env.BuildLatex(target = ['#%s/text_latex.pdf' % build],
+#                source = ['#%s/text.tex'       % source])
+
+env.Install('#release', '#%s/' % build)

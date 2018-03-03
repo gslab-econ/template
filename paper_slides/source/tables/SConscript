@@ -1,0 +1,5 @@
+Import('env')
+
+env.Tablefill(target = ['#%s/table.lyx' % env['CONFIG']['global']['build']['tables']],
+              source = ['#%s/table.lyx' % env['CONFIG']['global']['source']['tables'],
+                        '#%s/table.txt' % env['CONFIG']['global']['input']])
