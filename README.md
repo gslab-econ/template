@@ -87,7 +87,7 @@ If you try to build a directory without `config_user.yaml`, we'll copy a templat
 
 #### What do I put in `config_user.yaml`?
 
-There's no "default" for `config_user.yaml` because it depends on system specifications and user preferences. Three things we do recommend keeping in `config_user.yaml` are the name of your Stata executable, the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html), and the location of a release directory. These fields don't have to be specified if you're not using them, and we'll prompt you for their values at runtime if you've forgotten to specify them and they're necessary.
+There's no "default" for `config_user.yaml` because it depends on system specifications and user preferences. Three things we do recommend keeping in `config_user.yaml` are the names of your executables, the location of a [SCons cache directory](http://scons.org/doc/2.0.1/HTML/scons-user/c4213.html), and the location of a release directory. These fields don't have to be specified if you're not using them, and we'll prompt you for their values at runtime if you've forgotten to specify them and they're necessary.
 
 #### What is `config_global.yaml`?
 
@@ -130,7 +130,7 @@ python run.py ../paper_slides
 
 #### What software can I use for data analysis?
 
-We have custom builders for Python, R, Stata, and MATLAB. They all use the same syntax. You'll need to add the builder to the SCons environment by uncommenting its definition in the SConstruct. Also check that its executable has been added to your PATH. 
+We have custom builders for Python, R, Stata, and MATLAB. They all use the same syntax. You'll need to add the builder to the SCons environment by uncommenting its definition in the SConstruct. Also check that its executable has been added to your PATH and recorded in `config_user.yaml`.
 
 See `analysis/source/prepare_data/` for sample scripts in each language. To run one of the sample scripts, uncomment its block in `analysis/source/prepare_data/SConscript` and its builder in `analysis/SConstruct`. Note that all sample scripts produce the same output, so only one block is allowed to run for each SCons build. If you uncomment the block for one software, you need to comment out the blocks for all others.
 
