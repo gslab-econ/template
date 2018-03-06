@@ -9,12 +9,12 @@
 
 # # Executable names
 # executable_names:
-#   python: None
-#   r: None
-#   stata: None
-#   matlab: None
-#   lyx: none
-#   latex: None
+#   python: python
+#   r: Rscript
+#   stata: stata-mp
+#   matlab: matlab
+#   lyx: lyx
+#   latex: pdflatex
 
 # # If True, check that application is installed/up-to-date before SCons run
 # prereq_checks:
