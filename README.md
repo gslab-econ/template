@@ -1,6 +1,6 @@
 # GSLab Template 
 
-The GSLab Template is a minimal working demonstration of the tools and organization used by projects in the GSLab. We use [SCons](http://scons.org/) and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.
+The GSLab Template is a minimal working demonstration of the [tools and organization](https://github.com/gslab-econ/ra-manual/wiki/Getting-Started) used by projects in the GSLab. We use [SCons](http://scons.org/) and a few custom builders to execute scripts and track dependencies in a portable and flexible manner.
 
 ## Prerequisites
 
