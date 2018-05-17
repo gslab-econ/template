@@ -7,7 +7,6 @@ The GSLab Template is a minimal working demonstration of the [tools and organiza
 You'll need the following to run the template. [Homebrew](https://brew.sh/) for Mac and [Linuxbrew](http://linuxbrew.sh/) for Linux make this easier.
 * Windows `cmd.exe`, Mac OS X `bash`, or Linux `bash`.
 * [Python 2.7.X](https://wiki.python.org/moin/BeginnersGuide/Download) and [pip](https://pip.pypa.io/en/stable/installing/) for [Windows](https://docs.python.org/2/using/windows.html), [Mac](https://docs.python.org/2/using/mac.html) or [Linux](https://docs.python.org/2/using/unix.html).
-* [GSLab Python v4.1.0](https://github.com/gslab-econ/gslab_python/tree/v4.1.0).
 * [git](https://git-scm.com/downloads) for version control.
     * [git-lfs](https://git-lfs.github.com/) for versioning large files. 
     * You'll need both git and git-lfs to clone the repository. 
@@ -22,7 +21,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     git lfs clone https://github.com/gslab-econ/template.git YourProjectName
     cd YourProjectName
     ```
-2. Install Python dependencies.
+2. Install Python dependencies ([GSLab Python v4.1.0](https://github.com/gslab-econ/gslab_python/tree/v4.1.0), [PyYAML](http://pyyaml.org/), [numpy](http://www.numpy.org/), and [matplotlib]('matplotlib'),.
     ```bash
     # Store package names in this script.
     python config/config_python.py
