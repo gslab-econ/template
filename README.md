@@ -21,7 +21,7 @@ You'll need the following to run the template. [Homebrew](https://brew.sh/) for 
     git lfs clone https://github.com/gslab-econ/template.git YourProjectName
     cd YourProjectName
     ```
-2. Install Python dependencies.
+2. Install Python dependencies ([GSLab Python v4.1.0](https://github.com/gslab-econ/gslab_python/tree/v4.1.0), [PyYAML](http://pyyaml.org/), [numpy](http://www.numpy.org/), and [matplotlib]('matplotlib')).
     ```bash
     # Store package names in this script.
     python config/config_python.py
