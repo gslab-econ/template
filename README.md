@@ -140,7 +140,7 @@ Rscript config/config_r.r
 ```
 * If you're using Stata, make sure the executable is stored in `config_user.yaml` with the key `stata_executable` and that you've installed its dependencies.
 ```
-statamp config/config_stata.do // Stata executable may be different
+statamp -e config/config_stata.do // Stata executable may be different
 ```
 * If you're using Matlab, make sure it's been added to your PATH and that you have installed the Matlab YAML parser following the instructions [here](https://github.com/gslab-econ/gslab_matlab/blob/f11eff492e0c982cf344c60b7e7ce0e7b7a66872/README.md#installation-instructions-for-matlab-r2016b).
 
