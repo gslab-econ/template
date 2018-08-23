@@ -31,11 +31,11 @@ prereq_checks:
   git_lfs: Yes
   gslab_python: Yes
   python: Yes
-  r: No
-  stata: No
-  matlab: No
+  r: Yes
+  stata: Yes
+  matlab: Yes
   lyx: Yes
-  latex: No
+  latex: Yes
 
 # Repository logging at end of SCons run
 scons_debrief_args:

@@ -35,8 +35,8 @@ prereq_checks:
   r: Yes
   stata: Yes
   matlab: Yes
-  lyx: No
-  latex: No
+  lyx: Yes
+  latex: Yes
 
 # Repository logging at end of SCons run
 scons_debrief_args:

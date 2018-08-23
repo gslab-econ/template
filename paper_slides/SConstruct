@@ -17,8 +17,8 @@ env = Environment(ENV = {'PATH': os.environ['PATH'], 'PYTHONPATH': pythonpath},
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
                               'BuildLyx':   Builder(action = gs.build_lyx),
-                              # 'BuildLatex': Builder(action = gs.build_latex),
-                              'Tablefill':  Builder(action = gs.build_tables),
+                              'BuildLatex': Builder(action = gs.build_latex),
+                              'Tablefill':  Builder(action = gs.build_tables)
                               })
 # Load environment variables from configuration
 env['CONFIG'] = CONFIG

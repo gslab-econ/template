@@ -8,38 +8,21 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 053c30c6c0e38bbbd422a9f6314d95cb53aa86f5
+commit 25e0785ba0df7ff9b732cdddc7d476815d0c6959
 Author: Linda <mengsong.ouyang@hotmail.com>
-Date:   Wed Aug 22 14:23:13 2018 -0700
+Date:   Wed Aug 22 17:28:06 2018 -0700
 
-    Use the data from Dropbox to do descriptive analysis
+    gslab-econ/admin/#152 Run all the code in analysis
 
 
 Files changed since last commit:
 
 
-analysis/SConstruct
-analysis/build/.DS_Store
-analysis/build/prepare_data/data.txt
-analysis/build/prepare_data/sconscript_create_data.log
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
-analysis/release/descriptive/table.txt
-analysis/release/sconstruct.log
-analysis/release/state_of_repo.log
-config/scons.zip
+analysis/config_global.yaml
+paper_slides/SConstruct
 paper_slides/config_global.yaml
-paper_slides/input/plot.eps
-paper_slides/input/table.txt
-paper_slides/release/paper/ondeck.pdf
-paper_slides/release/paper/online_appendix.pdf
-paper_slides/release/paper/paper.pdf
 paper_slides/release/paper/sconscript.log
-paper_slides/release/paper/text.pdf
-paper_slides/release/sconstruct.log
-paper_slides/release/state_of_repo.log
-paper_slides/release/talk/sconscript.log
-paper_slides/release/talk/slides.pdf
+paper_slides/source/paper/SConscript
 
 ===================================
 
@@ -47,8 +30,8 @@ paper_slides/release/talk/slides.pdf
 
 ===================================
 ./config_global.yaml:
-   modified on: 22 Aug 2018 14:50:51
-   size of file: 1283
+   modified on: 22 Aug 2018 17:31:01
+   size of file: 1287
 ./config_user.yaml:
    modified on: 22 Aug 2018 14:49:54
    size of file: 646
@@ -56,17 +39,17 @@ paper_slides/release/talk/slides.pdf
    modified on: 20 Aug 2018 10:41:21
    size of file: 458
 ./SConstruct:
-   modified on: 20 Aug 2018 10:41:21
-   size of file: 1818
+   modified on: 22 Aug 2018 17:31:29
+   size of file: 1815
 ./sconstruct.log:
-   modified on: 22 Aug 2018 15:17:39
-   size of file: 515
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 260
 ./state_of_input.log:
-   modified on: 22 Aug 2018 15:17:34
+   modified on: 22 Aug 2018 17:33:20
    size of file: 154
 ./state_of_repo.log:
-   modified on: 22 Aug 2018 15:17:39
-   size of file: 1254
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 619
 ./build/paper/ondeck.pdf:
    modified on: 22 Aug 2018 14:51:11
    size of file: 18210
@@ -77,10 +60,19 @@ paper_slides/release/talk/slides.pdf
    modified on: 22 Aug 2018 15:17:37
    size of file: 62210
 ./build/paper/sconscript.log:
-   modified on: 22 Aug 2018 15:17:37
-   size of file: 584
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 6470
 ./build/paper/text.pdf:
    modified on: 22 Aug 2018 14:51:15
+   size of file: 18210
+./build/paper/text_latex.aux:
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 166
+./build/paper/text_latex.log:
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 20216
+./build/paper/text_latex.pdf:
+   modified on: 22 Aug 2018 17:33:20
    size of file: 18210
 ./build/tables/sconscript.log:
    modified on: 22 Aug 2018 15:17:35
@@ -101,14 +93,14 @@ paper_slides/release/talk/slides.pdf
    modified on: 22 Aug 2018 14:17:15
    size of file: 55
 ./release/sconstruct.log:
-   modified on: 22 Aug 2018 14:52:01
-   size of file: 214
+   modified on: 22 Aug 2018 15:17:39
+   size of file: 3208
 ./release/state_of_input.log:
-   modified on: 22 Aug 2018 14:52:01
+   modified on: 22 Aug 2018 15:17:34
    size of file: 154
 ./release/state_of_repo.log:
-   modified on: 22 Aug 2018 14:52:01
-   size of file: 4600
+   modified on: 22 Aug 2018 15:17:39
+   size of file: 4656
 ./release/paper/ondeck.pdf:
    modified on: 22 Aug 2018 14:51:11
    size of file: 18210
@@ -119,10 +111,19 @@ paper_slides/release/talk/slides.pdf
    modified on: 22 Aug 2018 15:17:37
    size of file: 62210
 ./release/paper/sconscript.log:
-   modified on: 22 Aug 2018 15:17:37
-   size of file: 584
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 6470
 ./release/paper/text.pdf:
    modified on: 22 Aug 2018 14:51:15
+   size of file: 18210
+./release/paper/text_latex.aux:
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 166
+./release/paper/text_latex.log:
+   modified on: 22 Aug 2018 17:33:20
+   size of file: 20216
+./release/paper/text_latex.pdf:
+   modified on: 22 Aug 2018 17:33:20
    size of file: 18210
 ./release/talk/sconscript.log:
    modified on: 22 Aug 2018 15:17:39
@@ -143,8 +144,8 @@ paper_slides/release/talk/slides.pdf
    modified on: 20 Aug 2018 10:41:21
    size of file: 5236
 ./source/paper/SConscript:
-   modified on: 20 Aug 2018 10:41:21
-   size of file: 699
+   modified on: 22 Aug 2018 17:32:14
+   size of file: 695
 ./source/paper/text.lyx:
    modified on: 20 Aug 2018 10:41:21
    size of file: 2522
