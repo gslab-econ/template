@@ -1,9 +1,124 @@
-*** Builder log created: {2018-02-14 21:10:37}
-*** Builder log completed: {2018-02-14 21:10:38}
+*** Builder log created: {2018-08-22 17:33:20}
+*** Builder log completed: {2018-08-22 17:33:20}
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(./text.tex
+(./source/paper/text.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/mathptmx.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latin9.def))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/sectsty/sectsty.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/datetime/datetime.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fcnumparser.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fc-english.def))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/datetime/datetime-defaults.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))))
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def)))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/footmisc/footmisc.sty)
 
+LaTeX Warning: Unused global option(s):
+    [hyperfootnotes=false].
+
+No file build/paper/text_latex.aux.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty)))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd)
+pdfTeX warning (Object streams): \pdfobjcompresslevel > 0 requires \pdfminorver
+sion > 4. Object streams disabled now.
+[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./build/paper/text_latex.aux) )
+(see the transcript file for additional information){/usr/local/texlive/2016/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb>
+Output written on build/paper/text_latex.pdf (1 page, 18210 bytes).
+Transcript written on build/paper/text_latex.log.

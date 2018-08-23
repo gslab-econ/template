@@ -8,17 +8,44 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 2c30ad8bb276736db4d645000f715810767e2a33
-Author: Adam Rosenberg <arosenbe@stanford.edu>
-Date:   Thu Feb 15 10:43:55 2018 -0800
+commit 053c30c6c0e38bbbd422a9f6314d95cb53aa86f5
+Author: Linda <mengsong.ouyang@hotmail.com>
+Date:   Wed Aug 22 14:23:13 2018 -0700
 
-    #96 drop _ before anything builder
+    Use the data from Dropbox to do descriptive analysis
 
 
 Files changed since last commit:
 
 
-README.md
+analysis/SConstruct
+analysis/build/.DS_Store
+analysis/build/prepare_data/data.txt
+analysis/build/prepare_data/sconscript_create_data.log
+analysis/config_global.yaml
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
+analysis/release/descriptive/table.txt
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
+analysis/source/prepare_data/SConscript
+analysis/source/prepare_data/create_data.m
+analysis/source/prepare_data/create_data.py
+analysis/source/prepare_data/create_data.sh
+config/scons.zip
+paper_slides/config_global.yaml
+paper_slides/input/plot.eps
+paper_slides/input/table.txt
+paper_slides/release/paper/ondeck.pdf
+paper_slides/release/paper/online_appendix.pdf
+paper_slides/release/paper/paper.pdf
+paper_slides/release/paper/sconscript.log
+paper_slides/release/paper/text.pdf
+paper_slides/release/sconstruct.log
+paper_slides/release/state_of_input.log
+paper_slides/release/state_of_repo.log
+paper_slides/release/talk/sconscript.log
+paper_slides/release/talk/slides.pdf
 
 ===================================
 
@@ -26,80 +53,115 @@ README.md
 
 ===================================
 ./config_global.yaml:
-   modified on: 02 Mar 2018 10:03:34
-   size of file: 1264
+   modified on: 22 Aug 2018 15:56:59
+   size of file: 1359
 ./config_user.yaml:
-   modified on: 14 Feb 2018 21:21:10
-   size of file: 619
+   modified on: 20 Aug 2018 14:41:20
+   size of file: 646
 ./run.py:
-   modified on: 12 Feb 2018 13:11:33
-   size of file: 458
+   modified on: 20 Aug 2018 10:41:21
+   size of file: 449
 ./SConstruct:
-   modified on: 02 Mar 2018 10:11:38
-   size of file: 1878
+   modified on: 22 Aug 2018 15:44:11
+   size of file: 1922
 ./sconstruct.log:
-   modified on: 02 Mar 2018 10:12:12
-   size of file: 255
+   modified on: 22 Aug 2018 17:20:31
+   size of file: 438
 ./state_of_repo.log:
-   modified on: 02 Mar 2018 10:12:12
-   size of file: 453
+   modified on: 22 Aug 2018 17:20:31
+   size of file: 1493
 ./build/descriptive/plot.eps:
-   modified on: 02 Mar 2018 09:46:49
-   size of file: 12351
+   modified on: 22 Aug 2018 14:17:15
+   size of file: 17845
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 02 Mar 2018 09:46:49
+   modified on: 22 Aug 2018 14:17:15
    size of file: 96
 ./build/descriptive/table.txt:
-   modified on: 02 Mar 2018 09:46:49
-   size of file: 39
+   modified on: 22 Aug 2018 14:17:15
+   size of file: 55
 ./build/prepare_data/data.txt:
-   modified on: 02 Mar 2018 10:12:12
+   modified on: 16 Jan 2018 08:28:52
+   size of file: 3453388
+./build/prepare_data/data_matlab.txt:
+   modified on: 22 Aug 2018 17:20:29
    size of file: 1988897
-./build/prepare_data/sconscript_create_data.log:
-   modified on: 02 Mar 2018 10:12:12
+./build/prepare_data/data_python.txt:
+   modified on: 22 Aug 2018 17:20:31
+   size of file: 1988897
+./build/prepare_data/data_r.txt:
+   modified on: 22 Aug 2018 13:40:22
+   size of file: 1988897
+./build/prepare_data/data_shell.txt:
+   modified on: 22 Aug 2018 17:20:31
+   size of file: 1988897
+./build/prepare_data/data_stata.txt:
+   modified on: 22 Aug 2018 13:40:23
+   size of file: 1988897
+./build/prepare_data/sconscript_create_data_matlab.log:
+   modified on: 22 Aug 2018 17:20:31
+   size of file: 579
+./build/prepare_data/sconscript_create_data_python.log:
+   modified on: 22 Aug 2018 17:20:31
    size of file: 96
-./release/create_data.log:
-   modified on: 02 Mar 2018 10:02:13
-   size of file: 1498
+./build/prepare_data/sconscript_create_data_r.log:
+   modified on: 22 Aug 2018 13:40:23
+   size of file: 261
+./build/prepare_data/sconscript_create_data_shell.log:
+   modified on: 22 Aug 2018 17:20:31
+   size of file: 96
+MAX ITERATIONS (10) HIT IN DIRECTORY: ./build/prepare_data
 ./release/sconstruct.log:
-   modified on: 02 Mar 2018 10:10:51
-   size of file: 841
+   modified on: 22 Aug 2018 16:35:02
+   size of file: 745
 ./release/state_of_repo.log:
-   modified on: 02 Mar 2018 10:10:51
-   size of file: 3673
+   modified on: 22 Aug 2018 16:35:02
+   size of file: 5294
 ./release/descriptive/plot.eps:
-   modified on: 02 Mar 2018 10:10:51
-   size of file: 12351
+   modified on: 22 Aug 2018 14:17:15
+   size of file: 17845
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 02 Mar 2018 10:10:51
+   modified on: 22 Aug 2018 14:17:15
    size of file: 96
 ./release/descriptive/table.txt:
-   modified on: 02 Mar 2018 09:46:49
-   size of file: 39
+   modified on: 22 Aug 2018 14:17:15
+   size of file: 55
 ./release/lg/data.txt:
-   modified on: 02 Mar 2018 09:46:45
-   size of file: 1988897
+   modified on: 16 Jan 2018 08:28:52
+   size of file: 3453388
 ./source/descriptive/descriptive.py:
-   modified on: 12 Feb 2018 10:17:21
+   modified on: 20 Aug 2018 10:41:21
    size of file: 548
 ./source/descriptive/SConscript:
-   modified on: 12 Feb 2018 10:16:38
+   modified on: 21 Aug 2018 17:22:26
    size of file: 501
+./source/prepare_data/.create_data.r.swp:
+   modified on: 20 Aug 2018 10:42:43
+   size of file: 12288
+./source/prepare_data/.RData:
+   modified on: 20 Aug 2018 18:15:35
+   size of file: 3111
+./source/prepare_data/.Rhistory:
+   modified on: 22 Aug 2018 11:47:28
+   size of file: 1521
+./source/prepare_data/config_stata.log:
+   modified on: 21 Aug 2018 13:25:48
+   size of file: 1092
 ./source/prepare_data/create_data.do:
-   modified on: 09 Jan 2018 08:11:40
-   size of file: 262
+   modified on: 22 Aug 2018 11:47:38
+   size of file: 268
+./source/prepare_data/create_data.log:
+   modified on: 21 Aug 2018 13:21:33
+   size of file: 1581
 ./source/prepare_data/create_data.m:
-   modified on: 12 Feb 2018 10:17:58
-   size of file: 202
+   modified on: 22 Aug 2018 15:37:49
+   size of file: 209
 ./source/prepare_data/create_data.py:
-   modified on: 14 Feb 2018 21:21:44
-   size of file: 260
+   modified on: 22 Aug 2018 15:38:13
+   size of file: 267
 ./source/prepare_data/create_data.r:
-   modified on: 12 Feb 2018 10:19:10
-   size of file: 249
+   modified on: 22 Aug 2018 11:47:26
+   size of file: 251
 ./source/prepare_data/create_data.sh:
-   modified on: 09 Jan 2018 08:11:40
-   size of file: 81
-./source/prepare_data/SConscript:
-   modified on: 02 Mar 2018 10:12:04
-   size of file: 1126
+   modified on: 22 Aug 2018 15:38:31
+   size of file: 93
+MAX ITERATIONS (10) HIT IN DIRECTORY: ./source/prepare_data

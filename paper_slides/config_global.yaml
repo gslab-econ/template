@@ -1,5 +1,5 @@
 # GSLab Python Version
-gslab_version: 4.1.1
+gslab_version: 4.1.0
 
 # Build Directories
 build:
@@ -31,11 +31,11 @@ prereq_checks:
   git_lfs: Yes
   gslab_python: Yes
   python: Yes
-  r: No
-  stata: No
-  matlab: No
+  r: Yes
+  stata: Yes
+  matlab: Yes
   lyx: Yes
-  latex: No
+  latex: Yes
 
 # Repository logging at end of SCons run
 scons_debrief_args:

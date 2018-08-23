@@ -1,0 +1,5 @@
+*** Builder log created: {2018-08-22 13:40:22}
+*** Builder log completed: {2018-08-22 13:40:22}
+running
+  '/usr/local/Cellar/r/3.3.2/R.framework/Versions/3.3/Resources/bin/R --slave --no-restore --no-save --no-restore --file=source/prepare_data/create_data.r'
+

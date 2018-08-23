@@ -16,10 +16,10 @@ import gslab_scons as gs
 env = Environment(ENV = {'PATH': os.environ['PATH'], 'PYTHONPATH': pythonpath},
                   IMPLICIT_COMMAND_DEPENDENCIES = 0,
                   BUILDERS = {
-                              # 'BuildMatlab': Builder(action = gs.build_matlab),
+                              'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
-                              # 'BuildR'     : Builder(action = gs.build_r),
-                              # 'BuildStata' : Builder(action = gs.build_stata),
+                              'BuildR'     : Builder(action = gs.build_r),
+                              'BuildStata' : Builder(action = gs.build_stata)
                               })
 # Load environment variables from configuration
 env['CONFIG'] = CONFIG
@@ -50,3 +50,5 @@ atexit.register(gs.scons_debrief, args = debrief_args)
 SConscript('source/prepare_data/SConscript')
 SConscript('source/descriptive/SConscript')
 Default('./build', './release')
+
+env.Install('../paper-slides/input', '#release/')
