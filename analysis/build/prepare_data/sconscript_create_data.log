@@ -1,7 +1,0 @@
-*** Builder log created: {2018-08-21 13:30:06}
-*** Builder log completed: {2018-08-21 13:30:06}
-running
-  '/usr/local/Cellar/r/3.3.2/R.framework/Versions/3.3/Resources/bin/R --slave --no-restore --no-save --no-restore --file=source/prepare_data/create_data.r'
-
-Warning message:
-In readLines(con) : incomplete final line found on 'config_global.yaml'

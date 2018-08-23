@@ -1,5 +1,5 @@
 # GSLab Python Version
-gslab_version: 4.1.1
+gslab_version: 4.1.0
 
 # Build Directories
 build:
@@ -10,6 +10,10 @@ build:
 source:
   prepare_data: source/prepare_data
   descriptive: source/descriptive
+
+# GSLab Dropbox Directories
+dropbox:
+  ra_practice_task: gslab_data/raw/ra_practice_task
 
 # Input Directories (will record contents)
 input: None
@@ -28,9 +32,9 @@ prereq_checks:
   git_lfs: Yes
   gslab_python: Yes
   python: Yes
-  r: No
-  stata: No
-  matlab: No
+  r: Yes
+  stata: Yes
+  matlab: Yes
   lyx: No
   latex: No
 
@@ -44,3 +48,5 @@ scons_debrief_args:
   git_attrib_path: ../.gitattributes # Location of .gitattributes
   MAXIT: 10                          # Max number of files in directory to log
   log: state_of_repo.log             # Log name
+
+

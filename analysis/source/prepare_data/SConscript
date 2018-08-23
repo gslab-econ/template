@@ -5,9 +5,9 @@ build  = env['CONFIG']['global']['build']['prepare_data']
 source = env['CONFIG']['global']['source']['prepare_data']
 dbox   = env['CONFIG']['global']['dropbox']['ra_practice_task']
 
-# env.BuildPython(target  = ['#%s/data.txt'       % build],
-#                 source  = ['#%s/create_data.py' % source],
-#                 log_ext =  'create_data')
+env.BuildPython(target  = ['#%s/data_python.txt'    % build],
+                source  = ['#%s/create_data.py'     % source],
+                log_ext =  'create_data_python')
 
 env.BuildStata(target  = ['#%s/data_stata.txt'  % build],
                source  = ['#%s/create_data.do'  % source],
@@ -17,15 +17,21 @@ env.BuildR(target  = ['#%s/data_r.txt'     % build],
            source  = ['#%s/create_data.r'  % source],
            log_ext = 'create_data_r')
 
-# env.BuildMatlab(target  = ['#%s/data.txt'        % build],
-#                 source  = ['#%s/create_data.m'   % source],
-#                 log_ext =  'create_data')
+env.BuildMatlab(target  = ['#%s/data_matlab.txt'   % build],
+                source  = ['#%s/create_data.m'     % source],
+                log_ext =  'create_data_matlab')
 
 # # Invalid syntax for Windows.
+
+gs.build_anything(target  = ['#%s/data_shell.txt'    % build], 
+                  source  = [''],
+                  action  = 'sh source/prepare_data/create_data.sh',
+                  log_ext = 'create_data_shell',
+                  env     = env)
+
 gs.build_anything(target  = ['#%s/data.txt'            % build], 
                   source  = [''],
                   action  = 'rclone copy gsbox:%s %s'  % (dbox, build),
                   log_ext = 'load_dropbox_data',
                   env     = env)
-
 env.Install('#release/lg', '#%s/data.txt' % build)

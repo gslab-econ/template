@@ -1,9 +1,31 @@
-*** New build: {2018-03-02 10:12:12} ***
+*** New build: {2018-08-22 17:20:21} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-build_python(["build/prepare_data/data.txt"], ["source/prepare_data/create_data.py"])
+build_matlab(["build/prepare_data/data_matlab.txt"], ["source/prepare_data/create_data.m"])
+build_python(["build/prepare_data/data_python.txt"], ["source/prepare_data/create_data.py"])
+execute_system_call(["build/prepare_data/data_shell.txt"], ["source/prepare_data"])
 scons: `release' is up to date.
 scons: done building targets.
-*** Build completed: {2018-03-02 10:12:12} ***
+*** Build completed: {2018-08-22 17:20:32} ***
  
  
+./build/prepare_data/sconscript_create_data_shell.log
+*** Builder log created: {2018-08-22 17:20:31}
+*** Builder log completed: {2018-08-22 17:20:31}
+./build/prepare_data/sconscript_create_data_python.log
+*** Builder log created: {2018-08-22 17:20:31}
+*** Builder log completed: {2018-08-22 17:20:31}
+./build/prepare_data/sconscript_create_data_matlab.log
+*** Builder log created: {2018-08-22 17:20:21}
+*** Builder log completed: {2018-08-22 17:20:31}
+[?1h=
+                                                               < M A T L A B (R) >
+                                                     Copyright 1984-2016 The MathWorks, Inc.
+                                                      R2016b (9.1.0.441655) 64-bit (maci64)
+                                                                September 7, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[?1l>
