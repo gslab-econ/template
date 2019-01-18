@@ -3,31 +3,35 @@ gslab_version: 4.1.1
 
 # Build Directories
 build:
-  prepare_data: build/prepare_data
-  descriptive: build/descriptive
+  data: build/data
+  tables: build/tables
+  raw:
+    compare: build/raw/compare
+    auxiliary: build/raw/auxiliary
+    payments: build/raw/payments
 
 # Source Directories
 source:
-  prepare_data: source/prepare_data
-  descriptive: source/descriptive
+  data: source/data
+  tables: source/tables
 
 # Input Directories (will record contents)
 input: None
 
 # Executable names
 executable_names:
-  python: None
-  r: None
-  stata: None
+  python: python
+  r: Rscript
+  stata: stata-se
   matlab: None
   lyx: none
-  latex: None
+  latex: pdflatex
 
 # If True, check that application is installed/up-to-date before SCons run
 prereq_checks:
-  git_lfs: Yes
-  gslab_python: Yes
-  python: Yes
+  git_lfs: No
+  gslab_python: No
+  python: No
   r: No
   stata: No
   matlab: No

@@ -1,0 +1,44 @@
+Import('env')
+import gslab_scons as gs
+
+payments  = env['CONFIG']['global']['build']['raw']['payments']
+comparedir  = env['CONFIG']['global']['build']['raw']['compare']
+auxiliary = env['CONFIG']['global']['build']['raw']['auxiliary']
+data = env['CONFIG']['global']['build']['data']
+source = env['CONFIG']['global']['source']['data']
+
+general = ['#%s/%s/OP_DTL_GNRL_PGYR%s_P06292018' % (payments, year, year) for year in range(2013, 2018)]
+compare = ['%s_%s' % (month, year) for month in ['april','july','october'] for year in range(2015, 2018)] + \
+['december_%s' % year for year in [2014, 2016]] + ['%s_2014' % month for month in ['june','march','september']] + \
+['november_2015']               
+compare = ['#%s/compare_%s.csv' % (comparedir, c) for c in compare] + ['#%s/compare_january_2019.tsv' % comparedir]
+
+zip2fips   = '#%s/zip2fips.csv' % auxiliary
+income     = '#%s/income_acs17.csv' % auxiliary
+population = '#%s/population_acs17.csv' % auxiliary
+
+merge = '%s/merge.R'
+
+env.BuildR(target  = ['#%s/%s_all.fst' % (name, data) for name in ['compare','payments']],
+           source  = ['#%s/merge.R' % source] + zip2fips + income + population + compare + general)
+
+# env.BuildStata(target  = ['#%s/data.txt'       % build],
+#                source  = ['#%s/create_data.do' % source],
+#                log_ext =  'create_data')
+
+# env.BuildR(target  = ['#%s/data.txt'      % build],
+#            source  = ['#%s/create_data.r' % source],
+#            log_ext =  'create_data')
+
+# env.BuildMatlab(target  = ['#%s/data.txt'        % build],
+#                 source  = ['#%s/create_data.m'   % source],
+#                 log_ext =  'create_data')
+
+# # Invalid syntax for Windows.
+# gs.build_anything(target  = ['#%s/data.txt' % build], 
+#                   source  = [''],
+#                   action  = 'sh source/prepare_data/create_data.sh',
+#                   log_ext = 'create_data',
+#                   env     = env)
+
+#env.Install('#release/lg', '#%s/data.txt' % build)

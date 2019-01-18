@@ -1,0 +1,81 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym,amssymb,textcomp,setspace,natbib}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{fullpage}
+\usepackage{longtable}
+\usepackage{verbatim}
+\usepackage{pdflscape}
+\usepackage{appendix}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage[left=1in,top=1in,right=1in]{geometry}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{lscape}
+%\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{mdwlist}
+\usepackage{paralist}
+\usepackage{IEEEtrantools}  	% replacing arrays and tables
+\usepackage{CJKutf8}  		% display Chinese
+\usepackage{hyperref} 		% display URL
+\usepackage[utf8]{inputenc}
+\usepackage{epigraph}
+\usepackage{pdfpages}
+\usepackage{array} %for flush left in tabular-p environment
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{threeparttablex}
+\usepackage{environ}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\bibliographystyle{aer}
+
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{light-gray}{gray}{0.75}
+
+\def\ds{\rule{0pt}{2.2ex}}
+
+\newsavebox{\tablebox}
+\newlength{\tableboxwidth}
+
+\begin{document}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} 
+\section{Dependent variable in levels}
+\input{regressions-levels-no-clustering}
+\input{regressions-levels-state-clustering}
+
+\section{Dependent variable in logs}
+\input{regressions-logs-no-clustering}
+\input{regressions-logs-state-clustering}
+\end{document}
