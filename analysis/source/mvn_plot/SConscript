@@ -1,0 +1,11 @@
+Import('env')
+import gslab_scons as gs
+
+build_plot  = env['CONFIG']['global']['build']['mvn_plot']
+build_draws  = env['CONFIG']['global']['build']['mvn_draws']
+source = env['CONFIG']['global']['source']['mvn_plot']
+
+env.BuildR(target  = ['#%s/mvn_plot.pdf' % build_plot],
+           source  = ['#%s/plot_draws.R'  % source,
+           			  '#%s/mvn_draws.csv' % build_draws],
+           log_ext =  'create_plot')

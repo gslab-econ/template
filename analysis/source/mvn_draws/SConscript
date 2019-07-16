@@ -1,0 +1,9 @@
+Import('env')
+import gslab_scons as gs
+
+build  = env['CONFIG']['global']['build']['mvn_draws']
+source = env['CONFIG']['global']['source']['mvn_draws']
+
+env.BuildR(target  = ['#%s/mvn_draws.csv' % build],
+           source  = ['#%s/make_draws.R'  % source],
+           log_ext =  'create_data')
