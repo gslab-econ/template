@@ -8,17 +8,23 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 2c30ad8bb276736db4d645000f715810767e2a33
-Author: Adam Rosenberg <arosenbe@stanford.edu>
-Date:   Thu Feb 15 10:43:55 2018 -0800
+commit c2de9459af2d00c124ed3e834ba5d41b1cf762a0
+Author: AakaashRao <aakaash@uchicago.edu>
+Date:   Fri Jan 18 11:05:05 2019 -0600
 
-    #96 drop _ before anything builder
+    Revert "initial commit". I mistakenly committed to the template in this repo rather than to my forked version.
+    
+    This reverts commit d5e73ab4c8cd863a32e910e91224e7669031013d.
 
 
 Files changed since last commit:
 
 
-README.md
+analysis/release/descriptive/plot.eps
+analysis/release/descriptive/sconscript_descriptive.log
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
+analysis/source/prepare_data/create_data.r
 
 ===================================
 
@@ -26,80 +32,77 @@ README.md
 
 ===================================
 ./config_global.yaml:
-   modified on: 02 Mar 2018 10:03:34
+   modified on: 23 Jul 2019 09:17:16
    size of file: 1264
 ./config_user.yaml:
-   modified on: 14 Feb 2018 21:21:10
-   size of file: 619
+   modified on: 23 Jul 2019 09:24:33
+   size of file: 646
 ./run.py:
-   modified on: 12 Feb 2018 13:11:33
-   size of file: 458
+   modified on: 23 Jul 2019 09:17:16
+   size of file: 449
 ./SConstruct:
-   modified on: 02 Mar 2018 10:11:38
+   modified on: 23 Jul 2019 09:17:16
    size of file: 1878
 ./sconstruct.log:
-   modified on: 02 Mar 2018 10:12:12
-   size of file: 255
+   modified on: 23 Jul 2019 09:40:25
+   size of file: 180
 ./state_of_repo.log:
-   modified on: 02 Mar 2018 10:12:12
-   size of file: 453
+   modified on: 23 Jul 2019 09:40:25
+   size of file: 789
 ./build/descriptive/plot.eps:
-   modified on: 02 Mar 2018 09:46:49
+   modified on: 23 Jul 2019 09:24:42
    size of file: 12351
 ./build/descriptive/sconscript_descriptive.log:
-   modified on: 02 Mar 2018 09:46:49
+   modified on: 23 Jul 2019 09:24:42
    size of file: 96
 ./build/descriptive/table.txt:
-   modified on: 02 Mar 2018 09:46:49
+   modified on: 23 Jul 2019 09:24:42
    size of file: 39
 ./build/prepare_data/data.txt:
-   modified on: 02 Mar 2018 10:12:12
+   modified on: 23 Jul 2019 09:24:35
    size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 02 Mar 2018 10:12:12
+   modified on: 23 Jul 2019 09:24:35
    size of file: 96
-./release/create_data.log:
-   modified on: 02 Mar 2018 10:02:13
-   size of file: 1498
 ./release/sconstruct.log:
-   modified on: 02 Mar 2018 10:10:51
+   modified on: 23 Jul 2019 09:24:42
    size of file: 841
 ./release/state_of_repo.log:
-   modified on: 02 Mar 2018 10:10:51
-   size of file: 3673
+   modified on: 23 Jul 2019 09:24:42
+   size of file: 3014
 ./release/descriptive/plot.eps:
-   modified on: 02 Mar 2018 10:10:51
+   modified on: 23 Jul 2019 09:24:42
    size of file: 12351
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 02 Mar 2018 10:10:51
+   modified on: 23 Jul 2019 09:24:42
    size of file: 96
 ./release/descriptive/table.txt:
-   modified on: 02 Mar 2018 09:46:49
+   modified on: 23 Jul 2019 09:24:42
    size of file: 39
 ./release/lg/data.txt:
-   modified on: 02 Mar 2018 09:46:45
+   modified on: 23 Jul 2019 09:24:35
    size of file: 1988897
 ./source/descriptive/descriptive.py:
-   modified on: 12 Feb 2018 10:17:21
+   modified on: 23 Jul 2019 09:17:16
    size of file: 548
 ./source/descriptive/SConscript:
-   modified on: 12 Feb 2018 10:16:38
+   modified on: 23 Jul 2019 09:17:16
    size of file: 501
 ./source/prepare_data/create_data.do:
-   modified on: 09 Jan 2018 08:11:40
+   modified on: 23 Jul 2019 09:17:16
    size of file: 262
 ./source/prepare_data/create_data.m:
-   modified on: 12 Feb 2018 10:17:58
+   modified on: 23 Jul 2019 09:17:16
    size of file: 202
 ./source/prepare_data/create_data.py:
-   modified on: 14 Feb 2018 21:21:44
+   modified on: 23 Jul 2019 09:17:16
    size of file: 260
 ./source/prepare_data/create_data.r:
-   modified on: 12 Feb 2018 10:19:10
-   size of file: 249
+   modified on: 23 Jul 2019 09:40:04
+   size of file: 275
 ./source/prepare_data/create_data.sh:
-   modified on: 09 Jan 2018 08:11:40
+   modified on: 23 Jul 2019 09:17:16
    size of file: 81
 ./source/prepare_data/SConscript:
-   modified on: 02 Mar 2018 10:12:04
+   modified on: 23 Jul 2019 09:17:16
    size of file: 1126
