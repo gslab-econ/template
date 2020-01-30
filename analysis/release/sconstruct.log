@@ -1,9 +1,20 @@
-*** New build: {2018-03-02 10:12:12} ***
+*** New build: {2020-01-29 21:07:56} ***
 scons: done reading SConscript files.
 scons: Building targets ...
 build_python(["build/prepare_data/data.txt"], ["source/prepare_data/create_data.py"])
-scons: `release' is up to date.
+build_python(["build/descriptive/plot.eps", "build/descriptive/table.txt"], ["source/descriptive/descriptive.py", "build/prepare_data/data.txt"])
+Install directory: "build/descriptive" as "release/descriptive"
+Install file: "build/prepare_data/data.txt" as "release/lg/data.txt"
 scons: done building targets.
-*** Build completed: {2018-03-02 10:12:12} ***
+*** Build completed: {2020-01-29 21:08:02} ***
  
  
+./release/descriptive/sconscript_descriptive.log
+*** Builder log created: {2020-01-29 21:07:57}
+*** Builder log completed: {2020-01-29 21:08:02}
+./build/descriptive/sconscript_descriptive.log
+*** Builder log created: {2020-01-29 21:07:57}
+*** Builder log completed: {2020-01-29 21:08:02}
+./build/prepare_data/sconscript_create_data.log
+*** Builder log created: {2020-01-29 21:07:56}
+*** Builder log completed: {2020-01-29 21:07:57}
