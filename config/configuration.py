@@ -39,7 +39,7 @@ def configuration(ARGUMENTS, paper = False, config_user_yaml = 'config_user.yaml
     # Loads config yaml files
     CONFIG = {'user': config_user_yaml, 'global': config_global_yaml}
     for key, val in CONFIG.items():
-        CONFIG[key] = yaml.load(open(val, 'rU'))
+        CONFIG[key] = yaml.load(open(val, 'rU'), Loader = yaml.FullLoader)
         if not CONFIG[key]:
             del CONFIG[key]
 
