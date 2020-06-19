@@ -7,7 +7,7 @@ GitHub_packages <- NULL
 # *** Add required packages from GitHub (UserName/RepositoryName) to this vector ***
 
 main <- function(CRAN_packages = NULL, GitHub_packages = NULL,
-                 CRAN_repo = "http://cran.wustl.edu//",
+                 CRAN_repo = "http://cran.wustl.edu/",
                  dependency = TRUE, quiet = TRUE, upgrade = FALSE) {
     # If there are packages installed from Github, first make sure "devtools" is installed 
     if (!is.null(GitHub_packages)) {
