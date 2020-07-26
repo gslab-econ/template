@@ -1,0 +1,12 @@
+Import('env')
+
+build  = env['CONFIG']['global']['build']['plot']
+source = env['CONFIG']['global']['source']['plot']
+data   = env['CONFIG']['global']['build']['draw_data']
+
+env.BuildPython(target  = ['#%s/plot.eps'       % build],
+                source  = ['#%s/plot.py' 	% source,
+                           '#%s/data.csv'       % data],
+                log_ext = 'plot')
+
+env.Install('#release', '#%s/' % build)

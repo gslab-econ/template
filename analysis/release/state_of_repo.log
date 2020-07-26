@@ -8,11 +8,11 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit bff92bda0e8e406d9317e2c2060a23ff8e3cd529
+commit 575831ebddbcbf32558c1c138e6322aa8bf00226
 Author: yu-jia-wang <yw3311@columbia.edu>
-Date:   Sun Jul 26 19:49:10 2020 +0800
+Date:   Sun Jul 26 19:55:08 2020 +0800
 
-    #175 Update paper and slides using new results from analysis/release/descriptive.
+    #175 Takes 10,000 simulation draws from a multivariate normal distribution and store in build/draw_data/data.csv.
 
 
 Files changed since last commit:
@@ -35,17 +35,23 @@ analysis/release/state_of_repo.log
    modified on: 26 Jul 2020 19:25:14
    size of file: 449
 ./state_of_repo.log:
-   modified on: 26 Jul 2020 19:53:14
-   size of file: 600
+   modified on: 26 Jul 2020 19:58:42
+   size of file: 632
 ./SConstruct:
-   modified on: 26 Jul 2020 19:50:43
-   size of file: 1979
+   modified on: 26 Jul 2020 19:58:08
+   size of file: 2016
 ./config_global.yaml:
-   modified on: 26 Jul 2020 19:53:09
-   size of file: 1341
+   modified on: 26 Jul 2020 19:56:29
+   size of file: 1380
 ./sconstruct.log:
-   modified on: 26 Jul 2020 19:53:14
-   size of file: 280
+   modified on: 26 Jul 2020 19:58:41
+   size of file: 278
+./source/plot/plot.py:
+   modified on: 26 Jul 2020 19:55:59
+   size of file: 784
+./source/plot/SConscript:
+   modified on: 22 Jul 2020 23:01:16
+   size of file: 414
 ./source/draw_data/draw_data.do:
    modified on: 22 Jul 2020 20:29:54
    size of file: 342
@@ -80,11 +86,17 @@ analysis/release/state_of_repo.log
    modified on: 26 Jul 2020 19:39:24
    size of file: 938897
 ./release/state_of_repo.log:
-   modified on: 26 Jul 2020 19:52:44
-   size of file: 3133
+   modified on: 26 Jul 2020 19:57:25
+   size of file: 3606
 ./release/sconstruct.log:
-   modified on: 26 Jul 2020 19:52:44
+   modified on: 26 Jul 2020 19:57:25
    size of file: 92
+./release/plot/plot.eps:
+   modified on: 26 Jul 2020 19:58:41
+   size of file: 10627270
+./release/plot/sconscript_plot.log:
+   modified on: 26 Jul 2020 19:58:41
+   size of file: 96
 ./release/descriptive/sconscript_descriptive.log:
    modified on: 26 Jul 2020 19:39:35
    size of file: 96
@@ -100,6 +112,12 @@ analysis/release/state_of_repo.log
 ./release/lg/data.txt:
    modified on: 26 Jul 2020 19:30:47
    size of file: 1988897
+./build/plot/plot.eps:
+   modified on: 26 Jul 2020 19:58:41
+   size of file: 10627270
+./build/plot/sconscript_plot.log:
+   modified on: 26 Jul 2020 19:58:41
+   size of file: 96
 ./build/draw_data/data.csv:
    modified on: 26 Jul 2020 19:53:14
    size of file: 187724
