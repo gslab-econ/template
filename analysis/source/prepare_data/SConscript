@@ -8,13 +8,13 @@ source = env['CONFIG']['global']['source']['prepare_data']
 #                 source  = ['#%s/create_data.py' % source],
 #                 log_ext =  'create_data')
 
-# env.BuildStata(target  = ['#%s/data.txt'       % build],
-#                source  = ['#%s/create_data.do' % source],
-#                log_ext =  'create_data')
+env.BuildStata(target  = ['#%s/data.txt'       % build],
+               source  = ['#%s/create_data.do' % source],
+               log_ext =  'create_data')
 
-env.BuildR(target  = ['#%s/data.txt'      % build],
-           source  = ['#%s/create_data.r' % source],
-           log_ext =  'create_data')
+# env.BuildR(target  = ['#%s/data.txt'      % build],
+#            source  = ['#%s/create_data.r' % source],
+#            log_ext =  'create_data')
 
 # env.BuildMatlab(target  = ['#%s/data.txt'        % build],
 #                 source  = ['#%s/create_data.m'   % source],

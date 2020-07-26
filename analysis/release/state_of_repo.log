@@ -8,21 +8,19 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 49dc78a56e9c0fde514f36d3c2f2fe2b1a1101d2
-Author: Zane Kashner <zkashner@stanford.edu>
-Date:   Sun Jun 21 22:04:07 2020 -0500
+commit 60eb64cd3906a370110abeb14dd045098eb33648
+Author: yu-jia-wang <yw3311@columbia.edu>
+Date:   Sun Jul 26 19:29:06 2020 +0800
 
-    Pull request for: #115 Update CRAN mirror (#116)
-    
-    * #115 updated to use WUSTL CRAN mirror instead
-    
-    * #115 deleted slash
+    #175 Execute analysis/source/prepare_data/create_data.r.
 
 
 Files changed since last commit:
 
 
 analysis/SConstruct
+analysis/release/sconstruct.log
+analysis/release/state_of_repo.log
 analysis/source/prepare_data/SConscript
 
 ===================================
@@ -31,23 +29,23 @@ analysis/source/prepare_data/SConscript
 
 ===================================
 ./config_user.yaml:
-   modified on: 26 Jul 2020 19:28:01
-   size of file: 646
+   modified on: 26 Jul 2020 19:30:37
+   size of file: 632
 ./run.py:
    modified on: 26 Jul 2020 19:25:14
    size of file: 449
 ./state_of_repo.log:
-   modified on: 26 Jul 2020 19:28:02
-   size of file: 602
+   modified on: 26 Jul 2020 19:30:47
+   size of file: 587
 ./SConstruct:
-   modified on: 26 Jul 2020 19:27:45
-   size of file: 1876
+   modified on: 26 Jul 2020 19:29:15
+   size of file: 1874
 ./config_global.yaml:
    modified on: 26 Jul 2020 19:25:14
    size of file: 1264
 ./sconstruct.log:
-   modified on: 26 Jul 2020 19:28:02
-   size of file: 217
+   modified on: 26 Jul 2020 19:30:47
+   size of file: 222
 ./source/prepare_data/create_data.m:
    modified on: 26 Jul 2020 19:25:14
    size of file: 202
@@ -58,7 +56,7 @@ analysis/source/prepare_data/SConscript
    modified on: 26 Jul 2020 19:25:14
    size of file: 262
 ./source/prepare_data/SConscript:
-   modified on: 26 Jul 2020 19:27:31
+   modified on: 26 Jul 2020 19:29:45
    size of file: 1126
 ./source/prepare_data/create_data.py:
    modified on: 26 Jul 2020 19:25:14
@@ -73,11 +71,11 @@ analysis/source/prepare_data/SConscript
    modified on: 26 Jul 2020 19:25:14
    size of file: 501
 ./release/state_of_repo.log:
-   modified on: 26 Jul 2020 19:25:14
-   size of file: 2860
+   modified on: 26 Jul 2020 19:30:14
+   size of file: 2396
 ./release/sconstruct.log:
-   modified on: 26 Jul 2020 19:25:14
-   size of file: 985
+   modified on: 26 Jul 2020 19:30:14
+   size of file: 1789
 ./release/descriptive/sconscript_descriptive.log:
    modified on: 26 Jul 2020 19:25:14
    size of file: 96
@@ -88,8 +86,8 @@ analysis/source/prepare_data/SConscript
    modified on: 26 Jul 2020 19:25:14
    size of file: 39
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 26 Jul 2020 19:28:02
-   size of file: 257
+   modified on: 26 Jul 2020 19:30:47
+   size of file: 1463
 ./build/prepare_data/data.txt:
-   modified on: 26 Jul 2020 19:28:02
+   modified on: 26 Jul 2020 19:30:47
    size of file: 1988897

@@ -19,7 +19,7 @@ env = Environment(ENV = {'PATH': os.environ['PATH'], 'PYTHONPATH': pythonpath},
                               # 'BuildMatlab': Builder(action = gs.build_matlab),
                               'BuildPython': Builder(action = gs.build_python),
                               'BuildR'     : Builder(action = gs.build_r),
-                              # 'BuildStata' : Builder(action = gs.build_stata),
+                              'BuildStata' : Builder(action = gs.build_stata),
                               })
 # Load environment variables from configuration
 env['CONFIG'] = CONFIG
