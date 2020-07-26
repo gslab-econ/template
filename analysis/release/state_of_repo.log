@@ -8,18 +8,22 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit b02e51d5a0b9c1090cda24367c2d68c7f4fb131b
-Author: David Ritzwoller <David.Ritzwoller@gmail.com>
-Date:   Wed Jan 29 21:06:58 2020 -0800
+commit 49dc78a56e9c0fde514f36d3c2f2fe2b1a1101d2
+Author: Zane Kashner <zkashner@stanford.edu>
+Date:   Sun Jun 21 22:04:07 2020 -0500
 
-    #110 add Loader
+    Pull request for: #115 Update CRAN mirror (#116)
+    
+    * #115 updated to use WUSTL CRAN mirror instead
+    
+    * #115 deleted slash
 
 
 Files changed since last commit:
 
 
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
+analysis/SConstruct
+analysis/source/prepare_data/SConscript
 
 ===================================
 
@@ -27,77 +31,65 @@ analysis/release/descriptive/sconscript_descriptive.log
 
 ===================================
 ./config_user.yaml:
-   modified on: 29 Jan 2020 21:07:56
+   modified on: 26 Jul 2020 19:28:01
    size of file: 646
 ./run.py:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 449
 ./state_of_repo.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 525
+   modified on: 26 Jul 2020 19:28:02
+   size of file: 602
 ./SConstruct:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 1878
+   modified on: 26 Jul 2020 19:27:45
+   size of file: 1876
 ./config_global.yaml:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 1264
 ./sconstruct.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 502
+   modified on: 26 Jul 2020 19:28:02
+   size of file: 217
 ./source/prepare_data/create_data.m:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 202
 ./source/prepare_data/create_data.sh:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 81
 ./source/prepare_data/create_data.do:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 262
 ./source/prepare_data/SConscript:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:27:31
    size of file: 1126
 ./source/prepare_data/create_data.py:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 260
 ./source/prepare_data/create_data.r:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 249
 ./source/descriptive/descriptive.py:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 548
 ./source/descriptive/SConscript:
-   modified on: 23 Aug 2019 16:10:40
+   modified on: 26 Jul 2020 19:25:14
    size of file: 501
 ./release/state_of_repo.log:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 2874
+   modified on: 26 Jul 2020 19:25:14
+   size of file: 2860
 ./release/sconstruct.log:
-   modified on: 23 Aug 2019 16:10:40
-   size of file: 306
+   modified on: 26 Jul 2020 19:25:14
+   size of file: 985
 ./release/descriptive/sconscript_descriptive.log:
-   modified on: 29 Jan 2020 21:08:02
+   modified on: 26 Jul 2020 19:25:14
    size of file: 96
 ./release/descriptive/plot.eps:
-   modified on: 29 Jan 2020 21:08:02
+   modified on: 26 Jul 2020 19:25:14
    size of file: 12351
 ./release/descriptive/table.txt:
-   modified on: 29 Jan 2020 21:08:01
+   modified on: 26 Jul 2020 19:25:14
    size of file: 39
-./release/lg/data.txt:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 1988897
 ./build/prepare_data/sconscript_create_data.log:
-   modified on: 29 Jan 2020 21:07:57
-   size of file: 96
+   modified on: 26 Jul 2020 19:28:02
+   size of file: 257
 ./build/prepare_data/data.txt:
-   modified on: 29 Jan 2020 21:07:57
+   modified on: 26 Jul 2020 19:28:02
    size of file: 1988897
-./build/descriptive/sconscript_descriptive.log:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 96
-./build/descriptive/plot.eps:
-   modified on: 29 Jan 2020 21:08:02
-   size of file: 12351
-./build/descriptive/table.txt:
-   modified on: 29 Jan 2020 21:08:01
-   size of file: 39
