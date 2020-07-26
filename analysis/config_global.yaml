@@ -10,6 +10,7 @@ build:
 source:
   prepare_data: source/prepare_data
   descriptive: source/descriptive
+  raw: source/raw
 
 # Input Directories (will record contents)
 input: None

@@ -1,5 +1,6 @@
 *config_user.yaml
 analysis/build/
+analysis/source/raw/
 analysis/release/lg/
 paper_slides/build/
 paper_slides/input/lg
