@@ -15,7 +15,9 @@ source:
   talk: source/talk
 
 # Input Directories (will record contents)
-input: input
+input:
+  root: input
+  descriptive: input/descriptive
 
 # Executable names
 executable_names:

@@ -1,15 +1,8 @@
-*** New build: {2020-07-26 19:39:33} ***
+*** New build: {2020-07-26 19:43:19} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-build_python(["build/descriptive/plot.eps", "build/descriptive/table.txt"], ["source/descriptive/descriptive.py", "source/raw/data.txt"])
-Install directory: "build/descriptive" as "release/descriptive"
+Install directory: "release/descriptive" as "/Users/benjaminwang/Desktop/GSLab/practice_task/repo_#175/paper_slides/input/descriptive"
 scons: done building targets.
-*** Build completed: {2020-07-26 19:39:35} ***
+*** Build completed: {2020-07-26 19:43:19} ***
  
  
-./release/descriptive/sconscript_descriptive.log
-*** Builder log created: {2020-07-26 19:39:33}
-*** Builder log completed: {2020-07-26 19:39:35}
-./build/descriptive/sconscript_descriptive.log
-*** Builder log created: {2020-07-26 19:39:33}
-*** Builder log completed: {2020-07-26 19:39:35}

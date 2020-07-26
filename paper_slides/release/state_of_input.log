@@ -1,9 +1,23 @@
 ===================================
 
- *** global:input ***
+ *** global:input:descriptive ***
+
+===================================
+file path|file size in bytes
+sconscript_descriptive.log|96
+plot.eps|13581
+table.txt|38
+
+===================================
+
+ *** global:input:root ***
 
 ===================================
 file path|file size in bytes
 plot.eps|15385
+.DS_Store|8196
 table.txt|39
+descriptive/sconscript_descriptive.log|96
+descriptive/plot.eps|13581
+descriptive/table.txt|38
 

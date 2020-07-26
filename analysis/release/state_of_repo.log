@@ -8,25 +8,19 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 12ace91a59582287e5a32aff7e83ec6634dbe33a
+commit 324f20dde2ce7317c77430c6b3ee37e6ef4b17fa
 Author: yu-jia-wang <yw3311@columbia.edu>
-Date:   Sun Jul 26 19:31:37 2020 +0800
+Date:   Sun Jul 26 19:41:37 2020 +0800
 
-    #175 Execute analysis/source/prepare_data/create_data.do.
+    #175 Use data.txt from Dropbox to produce desctiptive/plot.eps and descriptive/table.txt.
 
 
 Files changed since last commit:
 
 
-.gitignore
-analysis/config_global.yaml
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
-analysis/release/descriptive/table.txt
+analysis/SConstruct
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
-analysis/source/descriptive/SConscript
-analysis/source/descriptive/descriptive.py
 
 ===================================
 
@@ -40,17 +34,17 @@ analysis/source/descriptive/descriptive.py
    modified on: 26 Jul 2020 19:25:14
    size of file: 449
 ./state_of_repo.log:
-   modified on: 26 Jul 2020 19:39:35
-   size of file: 782
+   modified on: 26 Jul 2020 19:43:19
+   size of file: 580
 ./SConstruct:
-   modified on: 26 Jul 2020 19:29:15
-   size of file: 1874
+   modified on: 26 Jul 2020 19:43:15
+   size of file: 1937
 ./config_global.yaml:
    modified on: 26 Jul 2020 19:34:34
    size of file: 1282
 ./sconstruct.log:
-   modified on: 26 Jul 2020 19:39:35
-   size of file: 339
+   modified on: 26 Jul 2020 19:43:19
+   size of file: 272
 ./source/prepare_data/create_data.m:
    modified on: 26 Jul 2020 19:25:14
    size of file: 202
@@ -79,11 +73,11 @@ analysis/source/descriptive/descriptive.py
    modified on: 26 Jul 2020 19:39:24
    size of file: 938897
 ./release/state_of_repo.log:
-   modified on: 26 Jul 2020 19:36:54
-   size of file: 3071
+   modified on: 26 Jul 2020 19:42:33
+   size of file: 2934
 ./release/sconstruct.log:
-   modified on: 26 Jul 2020 19:36:54
-   size of file: 250
+   modified on: 26 Jul 2020 19:42:33
+   size of file: 307
 ./release/descriptive/sconscript_descriptive.log:
    modified on: 26 Jul 2020 19:39:35
    size of file: 96

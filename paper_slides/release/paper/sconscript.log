@@ -1,9 +1,8 @@
-*** Builder log created: {2018-02-14 21:10:37}
-*** Builder log completed: {2018-02-14 21:10:38}
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+*** Builder log created: {2020-07-26 19:46:37}
+*** Builder log completed: {2020-07-26 19:46:38}
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
 (./text.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
-
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
