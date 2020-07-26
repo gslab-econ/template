@@ -8,17 +8,18 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 324f20dde2ce7317c77430c6b3ee37e6ef4b17fa
+commit bff92bda0e8e406d9317e2c2060a23ff8e3cd529
 Author: yu-jia-wang <yw3311@columbia.edu>
-Date:   Sun Jul 26 19:41:37 2020 +0800
+Date:   Sun Jul 26 19:49:10 2020 +0800
 
-    #175 Use data.txt from Dropbox to produce desctiptive/plot.eps and descriptive/table.txt.
+    #175 Update paper and slides using new results from analysis/release/descriptive.
 
 
 Files changed since last commit:
 
 
 analysis/SConstruct
+analysis/config_global.yaml
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
 
@@ -34,17 +35,23 @@ analysis/release/state_of_repo.log
    modified on: 26 Jul 2020 19:25:14
    size of file: 449
 ./state_of_repo.log:
-   modified on: 26 Jul 2020 19:43:19
-   size of file: 580
+   modified on: 26 Jul 2020 19:53:14
+   size of file: 600
 ./SConstruct:
-   modified on: 26 Jul 2020 19:43:15
-   size of file: 1937
+   modified on: 26 Jul 2020 19:50:43
+   size of file: 1979
 ./config_global.yaml:
-   modified on: 26 Jul 2020 19:34:34
-   size of file: 1282
+   modified on: 26 Jul 2020 19:53:09
+   size of file: 1341
 ./sconstruct.log:
-   modified on: 26 Jul 2020 19:43:19
-   size of file: 272
+   modified on: 26 Jul 2020 19:53:14
+   size of file: 280
+./source/draw_data/draw_data.do:
+   modified on: 22 Jul 2020 20:29:54
+   size of file: 342
+./source/draw_data/SConscript:
+   modified on: 22 Jul 2020 20:27:54
+   size of file: 356
 ./source/prepare_data/create_data.m:
    modified on: 26 Jul 2020 19:25:14
    size of file: 202
@@ -73,11 +80,11 @@ analysis/release/state_of_repo.log
    modified on: 26 Jul 2020 19:39:24
    size of file: 938897
 ./release/state_of_repo.log:
-   modified on: 26 Jul 2020 19:42:33
-   size of file: 2934
+   modified on: 26 Jul 2020 19:52:44
+   size of file: 3133
 ./release/sconstruct.log:
-   modified on: 26 Jul 2020 19:42:33
-   size of file: 307
+   modified on: 26 Jul 2020 19:52:44
+   size of file: 92
 ./release/descriptive/sconscript_descriptive.log:
    modified on: 26 Jul 2020 19:39:35
    size of file: 96
@@ -87,9 +94,18 @@ analysis/release/state_of_repo.log
 ./release/descriptive/table.txt:
    modified on: 26 Jul 2020 19:39:34
    size of file: 38
+./release/lg/data.csv:
+   modified on: 26 Jul 2020 19:53:14
+   size of file: 187724
 ./release/lg/data.txt:
    modified on: 26 Jul 2020 19:30:47
    size of file: 1988897
+./build/draw_data/data.csv:
+   modified on: 26 Jul 2020 19:53:14
+   size of file: 187724
+./build/draw_data/sconscript_draw_data.log:
+   modified on: 26 Jul 2020 19:53:14
+   size of file: 1526
 ./build/prepare_data/sconscript_create_data.log:
    modified on: 26 Jul 2020 19:30:47
    size of file: 1463

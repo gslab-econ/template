@@ -1,8 +1,9 @@
-*** New build: {2020-07-26 19:43:19} ***
+*** New build: {2020-07-26 19:53:14} ***
 scons: done reading SConscript files.
 scons: Building targets ...
-Install directory: "release/descriptive" as "/Users/benjaminwang/Desktop/GSLab/practice_task/repo_#175/paper_slides/input/descriptive"
+build_stata(["build/draw_data/data.csv"], ["source/draw_data/draw_data.do"])
+Install file: "build/draw_data/data.csv" as "release/lg/data.csv"
 scons: done building targets.
-*** Build completed: {2020-07-26 19:43:19} ***
+*** Build completed: {2020-07-26 19:53:14} ***
  
  
