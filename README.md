@@ -119,7 +119,7 @@ There are lighter-weight methods to connect these subdirectories, but they may m
 You can recouple the SCons subdirectories by [installing](http://scons.org/doc/1.2.0/HTML/scons-user/c2848.html) the output from `analysis` into `paper_slides` Add the following line to the SConstruct in `analysis`
 
 ```  
-env.Install('../paper-slides/input', '#release/') 
+env.Install('../paper_slides/input', '#release/') 
 ```
 
 You'll also need to give SCons permission to build targets outside the `analysis` directory; so run
